@@ -1,0 +1,32 @@
+# Env / secrets
+.env
+.env.local
+*.local
+
+# Node
+node_modules/
+dist/
+build/
+.next/
+coverage/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Large/regenerable data caches (keep the small curated extracts, not raw pulls)
+data/routing/*.osrm*
+data/**/*.tmp
