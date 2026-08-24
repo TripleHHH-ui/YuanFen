@@ -102,5 +102,21 @@ export function registerRoutes(app: FastifyInstance, client: AtlasClient): void 
     },
   );
 
+  // Wildcard reveal (FR-007): the sealed stop's identity ships only when the
+  // user taps to reveal.
+  app.get<{ Params: { city: string; placeId: string } }>(
+    "/api/reveal/:city/:placeId",
+    async (req, reply) => {
+      try {
+        const { loadCity } = await import("./data.js");
+        const place = loadCity(req.params.city).places.find((p) => p.id === req.params.placeId);
+        if (!place) return reply.code(404).send({ error: "Unknown place" });
+        return { place };
+      } catch {
+        return reply.code(404).send({ error: "Unknown city" });
+      }
+    },
+  );
+
   app.get("/api/evidence", async () => ({ mode: client.mode, environment: client.environment, calls: evidenceLog() }));
 }

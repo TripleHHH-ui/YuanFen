@@ -93,3 +93,24 @@ describe("rankHand (FR-009, FR-010)", () => {
     expect(a).toEqual(b);
   });
 });
+
+describe("observed-fare badge (FR-011)", async () => {
+  const { showObservedBadge } = await import("../src/index.js");
+  const night = (dest: string, day: number, mode: "cli" | "fixture"): FareSnapshotEntry => ({
+    ...entry(dest, 150, 40),
+    fetchedAt: `2026-08-${String(day).padStart(2, "0")}T02:00:00+08:00`,
+    mode,
+  });
+
+  it("stays hidden below 7 real nights and shows at 7", () => {
+    const six = Array.from({ length: 6 }, (_, i) => night("DAD", i + 1, "cli"));
+    expect(showObservedBadge(six, "DAD")).toBe(false);
+    const seven = [...six, night("DAD", 7, "cli")];
+    expect(showObservedBadge(seven, "DAD")).toBe(true);
+  });
+
+  it("fixture-mode snapshots never count toward the badge", () => {
+    const fixtures = Array.from({ length: 10 }, (_, i) => night("DAD", i + 1, "fixture"));
+    expect(showObservedBadge(fixtures, "DAD")).toBe(false);
+  });
+});

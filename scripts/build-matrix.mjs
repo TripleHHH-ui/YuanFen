@@ -40,6 +40,7 @@ for (const file of await readdir(PLACES_DIR)) {
   if (!file.endsWith(".json")) continue;
   const cityData = JSON.parse(await readFile(path.join(PLACES_DIR, file), "utf8"));
   const places = cityData.places;
+  if (!Array.isArray(places)) continue; // e.g. destinations.json profile map
   const n = places.length;
 
   let osrm = null;

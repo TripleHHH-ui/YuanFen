@@ -1,14 +1,98 @@
 {
-  "note": "Candidate set for the nightly fare board: SIN outbound, 8 destinations. tags drive taste ranking; hasCityFile means a full places+matrix dataset exists so a card can expand into a real planned trip (wildcard eligibility).",
+  "note": "Candidate set for the nightly fare board: SIN outbound, 8 destinations. tags drive taste ranking; every destination carries a full places+matrix dataset so ANY card in the hand can expand into a real planned trip.",
   "origin": "SIN",
   "destinations": {
-    "DAD": { "iata": "DAD", "cityName": "Da Nang", "city": "da-nang", "tags": ["beach", "food", "nature", "views"], "hasCityFile": true },
-    "DPS": { "iata": "DPS", "cityName": "Bali", "city": "bali", "tags": ["beach", "culture", "nature", "chill"], "hasCityFile": true },
-    "CNX": { "iata": "CNX", "cityName": "Chiang Mai", "city": "chiang-mai", "tags": ["culture", "food", "nature", "history"], "hasCityFile": true },
-    "KCH": { "iata": "KCH", "cityName": "Kuching", "city": "kuching", "tags": ["nature", "adventure", "culture"], "hasCityFile": true },
-    "KUL": { "iata": "KUL", "cityName": "Kuala Lumpur", "city": "kuala-lumpur", "tags": ["food", "shopping", "culture"], "hasCityFile": false },
-    "PEN": { "iata": "PEN", "cityName": "Penang", "city": "penang", "tags": ["food", "culture", "history"], "hasCityFile": false },
-    "BKK": { "iata": "BKK", "cityName": "Bangkok", "city": "bangkok", "tags": ["food", "nightlife", "shopping", "culture"], "hasCityFile": false },
-    "HKT": { "iata": "HKT", "cityName": "Phuket", "city": "phuket", "tags": ["beach", "nightlife", "chill"], "hasCityFile": false }
+    "DAD": {
+      "iata": "DAD",
+      "cityName": "Da Nang",
+      "city": "da-nang",
+      "tags": [
+        "beach",
+        "food",
+        "nature",
+        "views"
+      ],
+      "hasCityFile": true
+    },
+    "DPS": {
+      "iata": "DPS",
+      "cityName": "Bali",
+      "city": "bali",
+      "tags": [
+        "beach",
+        "culture",
+        "nature",
+        "chill"
+      ],
+      "hasCityFile": true
+    },
+    "CNX": {
+      "iata": "CNX",
+      "cityName": "Chiang Mai",
+      "city": "chiang-mai",
+      "tags": [
+        "culture",
+        "food",
+        "nature",
+        "history"
+      ],
+      "hasCityFile": true
+    },
+    "KCH": {
+      "iata": "KCH",
+      "cityName": "Kuching",
+      "city": "kuching",
+      "tags": [
+        "nature",
+        "adventure",
+        "culture"
+      ],
+      "hasCityFile": true
+    },
+    "KUL": {
+      "iata": "KUL",
+      "cityName": "Kuala Lumpur",
+      "city": "kuala-lumpur",
+      "tags": [
+        "food",
+        "shopping",
+        "culture"
+      ],
+      "hasCityFile": true
+    },
+    "PEN": {
+      "iata": "PEN",
+      "cityName": "Penang",
+      "city": "penang",
+      "tags": [
+        "food",
+        "culture",
+        "history"
+      ],
+      "hasCityFile": true
+    },
+    "BKK": {
+      "iata": "BKK",
+      "cityName": "Bangkok",
+      "city": "bangkok",
+      "tags": [
+        "food",
+        "nightlife",
+        "shopping",
+        "culture"
+      ],
+      "hasCityFile": true
+    },
+    "HKT": {
+      "iata": "HKT",
+      "cityName": "Phuket",
+      "city": "phuket",
+      "tags": [
+        "beach",
+        "nightlife",
+        "chill"
+      ],
+      "hasCityFile": true
+    }
   }
 }

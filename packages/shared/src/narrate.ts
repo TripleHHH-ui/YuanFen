@@ -58,12 +58,13 @@ export function narrateSwap(
   }
 
   const { dayOneStopsBefore: before, dayOneStopsAfter: after } = delta;
+  const plural = (n: number) => `${n} stop${n === 1 ? "" : "s"}`;
   const dayOne =
     after > before
-      ? `day one grows from ${before} to ${after} stops`
+      ? `day one grows from ${plural(before)} to ${plural(after)}`
       : after < before
-        ? `day one slims from ${before} to ${after} stops`
-        : `day one keeps its ${after} stops`;
+        ? `day one slims from ${plural(before)} to ${plural(after)}`
+        : `day one keeps its ${plural(after)}`;
 
   const currency = newOut.price.currency;
   const budget =

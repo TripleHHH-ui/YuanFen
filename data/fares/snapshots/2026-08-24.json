@@ -1,0 +1,306 @@
+{
+  "weekend": {
+    "holiday": "Deepavali",
+    "start": "2026-11-07",
+    "end": "2026-11-09",
+    "nights": 2
+  },
+  "entries": [
+    {
+      "origin": "SIN",
+      "destination": "DAD",
+      "depart": "2026-11-06",
+      "offer": {
+        "offer_id": "fxo-tr318-1106",
+        "carrier": {
+          "iata": "TR",
+          "name": "Scoot"
+        },
+        "flight_no": "TR318",
+        "origin": "SIN",
+        "destination": "DAD",
+        "departDate": "2026-11-06",
+        "departLocal": "21:40",
+        "arriveDate": "2026-11-06",
+        "arriveLocal": "23:20",
+        "departIso": "2026-11-06T21:40:00+08:00",
+        "arriveIso": "2026-11-06T23:20:00+07:00",
+        "duration_min": 160,
+        "stops": 0,
+        "price": {
+          "base": 138,
+          "currency": "SGD"
+        },
+        "bags": {
+          "included": false,
+          "checked_fee": 42
+        },
+        "price_status": "current",
+        "bookable": true,
+        "fare_family": "Economy"
+      },
+      "fetchedAt": "2026-08-24T01:50:33.712Z",
+      "request_id": "fx-search-1",
+      "mode": "fixture"
+    },
+    {
+      "origin": "SIN",
+      "destination": "DPS",
+      "depart": "2026-11-06",
+      "offer": {
+        "offer_id": "fxo-qz509-1106",
+        "carrier": {
+          "iata": "QZ",
+          "name": "Indonesia AirAsia"
+        },
+        "flight_no": "QZ509",
+        "origin": "SIN",
+        "destination": "DPS",
+        "departDate": "2026-11-06",
+        "departLocal": "20:35",
+        "arriveDate": "2026-11-06",
+        "arriveLocal": "23:15",
+        "departIso": "2026-11-06T20:35:00+08:00",
+        "arriveIso": "2026-11-06T23:15:00+08:00",
+        "duration_min": 160,
+        "stops": 0,
+        "price": {
+          "base": 176,
+          "currency": "SGD"
+        },
+        "bags": {
+          "included": false,
+          "checked_fee": 48
+        },
+        "price_status": "current",
+        "bookable": true,
+        "fare_family": "Value"
+      },
+      "fetchedAt": "2026-08-24T01:50:33.712Z",
+      "request_id": "fx-search-2",
+      "mode": "fixture"
+    },
+    {
+      "origin": "SIN",
+      "destination": "CNX",
+      "depart": "2026-11-06",
+      "offer": {
+        "offer_id": "fxo-tr250-1106",
+        "carrier": {
+          "iata": "TR",
+          "name": "Scoot"
+        },
+        "flight_no": "TR250",
+        "origin": "SIN",
+        "destination": "CNX",
+        "departDate": "2026-11-06",
+        "departLocal": "16:45",
+        "arriveDate": "2026-11-06",
+        "arriveLocal": "18:55",
+        "departIso": "2026-11-06T16:45:00+08:00",
+        "arriveIso": "2026-11-06T18:55:00+07:00",
+        "duration_min": 190,
+        "stops": 0,
+        "price": {
+          "base": 214,
+          "currency": "SGD"
+        },
+        "bags": {
+          "included": false,
+          "checked_fee": 48
+        },
+        "price_status": "current",
+        "bookable": true,
+        "fare_family": "Economy"
+      },
+      "fetchedAt": "2026-08-24T01:50:33.712Z",
+      "request_id": "fx-search-3",
+      "mode": "fixture"
+    },
+    {
+      "origin": "SIN",
+      "destination": "KCH",
+      "depart": "2026-11-06",
+      "offer": {
+        "offer_id": "fxo-ak5719-1106",
+        "carrier": {
+          "iata": "AK",
+          "name": "AirAsia"
+        },
+        "flight_no": "AK5719",
+        "origin": "SIN",
+        "destination": "KCH",
+        "departDate": "2026-11-06",
+        "departLocal": "19:50",
+        "arriveDate": "2026-11-06",
+        "arriveLocal": "21:15",
+        "departIso": "2026-11-06T19:50:00+08:00",
+        "arriveIso": "2026-11-06T21:15:00+08:00",
+        "duration_min": 85,
+        "stops": 0,
+        "price": {
+          "base": 96,
+          "currency": "SGD"
+        },
+        "bags": {
+          "included": false,
+          "checked_fee": 38
+        },
+        "price_status": "current",
+        "bookable": true,
+        "fare_family": "Value"
+      },
+      "fetchedAt": "2026-08-24T01:50:33.712Z",
+      "request_id": "fx-search-4",
+      "mode": "fixture"
+    },
+    {
+      "origin": "SIN",
+      "destination": "KUL",
+      "depart": "2026-11-06",
+      "offer": {
+        "offer_id": "fxo-ak720-1106",
+        "carrier": {
+          "iata": "AK",
+          "name": "AirAsia"
+        },
+        "flight_no": "AK720",
+        "origin": "SIN",
+        "destination": "KUL",
+        "departDate": "2026-11-06",
+        "departLocal": "20:15",
+        "arriveDate": "2026-11-06",
+        "arriveLocal": "21:20",
+        "departIso": "2026-11-06T20:15:00+08:00",
+        "arriveIso": "2026-11-06T21:20:00+08:00",
+        "duration_min": 65,
+        "stops": 0,
+        "price": {
+          "base": 74,
+          "currency": "SGD"
+        },
+        "bags": {
+          "included": false,
+          "checked_fee": 36
+        },
+        "price_status": "current",
+        "bookable": true,
+        "fare_family": "Value"
+      },
+      "fetchedAt": "2026-08-24T01:50:33.712Z",
+      "request_id": "fx-search-5",
+      "mode": "fixture"
+    },
+    {
+      "origin": "SIN",
+      "destination": "PEN",
+      "depart": "2026-11-06",
+      "offer": {
+        "offer_id": "fxo-tr426-1106",
+        "carrier": {
+          "iata": "TR",
+          "name": "Scoot"
+        },
+        "flight_no": "TR426",
+        "origin": "SIN",
+        "destination": "PEN",
+        "departDate": "2026-11-06",
+        "departLocal": "17:55",
+        "arriveDate": "2026-11-06",
+        "arriveLocal": "19:20",
+        "departIso": "2026-11-06T17:55:00+08:00",
+        "arriveIso": "2026-11-06T19:20:00+08:00",
+        "duration_min": 85,
+        "stops": 0,
+        "price": {
+          "base": 118,
+          "currency": "SGD"
+        },
+        "bags": {
+          "included": false,
+          "checked_fee": 40
+        },
+        "price_status": "current",
+        "bookable": true,
+        "fare_family": "Economy"
+      },
+      "fetchedAt": "2026-08-24T01:50:33.712Z",
+      "request_id": "fx-search-6",
+      "mode": "fixture"
+    },
+    {
+      "origin": "SIN",
+      "destination": "BKK",
+      "depart": "2026-11-06",
+      "offer": {
+        "offer_id": "fxo-tr610-1106",
+        "carrier": {
+          "iata": "TR",
+          "name": "Scoot"
+        },
+        "flight_no": "TR610",
+        "origin": "SIN",
+        "destination": "BKK",
+        "departDate": "2026-11-06",
+        "departLocal": "18:40",
+        "arriveDate": "2026-11-06",
+        "arriveLocal": "20:05",
+        "departIso": "2026-11-06T18:40:00+08:00",
+        "arriveIso": "2026-11-06T20:05:00+07:00",
+        "duration_min": 145,
+        "stops": 0,
+        "price": {
+          "base": 152,
+          "currency": "SGD"
+        },
+        "bags": {
+          "included": false,
+          "checked_fee": 44
+        },
+        "price_status": "current",
+        "bookable": true,
+        "fare_family": "Economy"
+      },
+      "fetchedAt": "2026-08-24T01:50:33.712Z",
+      "request_id": "fx-search-7",
+      "mode": "fixture"
+    },
+    {
+      "origin": "SIN",
+      "destination": "HKT",
+      "depart": "2026-11-06",
+      "offer": {
+        "offer_id": "fxo-tr650-1106",
+        "carrier": {
+          "iata": "TR",
+          "name": "Scoot"
+        },
+        "flight_no": "TR650",
+        "origin": "SIN",
+        "destination": "HKT",
+        "departDate": "2026-11-06",
+        "departLocal": "15:30",
+        "arriveDate": "2026-11-06",
+        "arriveLocal": "16:25",
+        "departIso": "2026-11-06T15:30:00+08:00",
+        "arriveIso": "2026-11-06T16:25:00+07:00",
+        "duration_min": 115,
+        "stops": 0,
+        "price": {
+          "base": 168,
+          "currency": "SGD"
+        },
+        "bags": {
+          "included": false,
+          "checked_fee": 44
+        },
+        "price_status": "current",
+        "bookable": true,
+        "fare_family": "Economy"
+      },
+      "fetchedAt": "2026-08-24T01:50:33.712Z",
+      "request_id": "fx-search-8",
+      "mode": "fixture"
+    }
+  ]
+}
