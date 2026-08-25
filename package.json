@@ -1,0 +1,21 @@
+{
+  "name": "trip-graph-agent",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w @yuanfen/api\" \"npm run dev -w @yuanfen/web\"",
+    "test": "vitest run",
+    "fareboard": "tsx apps/api/src/jobs/run_fareboard.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "concurrently": "^9.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.1"
+  }
+}

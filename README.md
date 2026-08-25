@@ -58,6 +58,31 @@ docs/
 | Use of Qoder (80%+ gate) | Spec-driven, agentic dev evidence, or the whole category scores 0 | `docs/qoder-evidence-checklist.md` |
 | Demo | Completeness + presentation, tiered scoring | `docs/demo-script.md` |
 
+## Running it (local-first build)
+
+```bash
+npm install
+npm test          # 51 tests: taste / calendar / fare ranking / route+reflow / atlas / api
+npm run dev       # api on :8787, web on :5173
+npm run fareboard # the nightly fare-board batch, manually (writes data/fares/snapshots/)
+```
+
+Open http://localhost:5173 and walk the golden path: pick 5 vibes → swipe 15 cards →
+type the S1 phrase ("Day trip in Singapore CBD, must eat chicken rice, then somewhere
+quiet") → the long-weekend alert lands unprompted (S3) → expand a card → swap the
+flight and watch day one reflow with the budget delta (S4) → book (verify → masked
+summary → exact-total consent → test order/PNR/ticket) → open "receipts" for the
+evidence log.
+
+`ATLAS_MODE=fixture` (default) runs fully offline on checked-in envelope fixtures,
+labeled FIXTURE everywhere. `ATLAS_MODE=cli` shells to the authorized `atlas-flight`
+CLI in Sandbox with zero app changes (do the browser authorization + 
+`atlas-flight environment use sandbox` first — see the Atlas Skill user guide).
+
 ## Status
 
-Scaffold only — no application code yet. Next step: wire the Atlas Sandbox credentials (`.env.example`) and start on `RouteAgent`, since the reflow mechanic is the highest-leverage thing to prove works early.
+Local-first vertical slice complete (built in Claude Code as reference + spec — see
+`docs/local-first-design.md` for the Qoder-gate plan and `docs/qoder-platform-notes.md`
+for how to re-drive it through Qoder quests). Next: Atlas Sandbox auth on the demo
+machine, Qoder quest re-drive per `docs/plans/2026-08-24-local-first-mvp.md`, demo shoot
+per `docs/demo-script.md`.

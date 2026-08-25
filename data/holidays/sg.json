@@ -1,0 +1,30 @@
+{
+  "country": "SG",
+  "source": "https://www.mom.gov.sg/employment-practices/public-holidays",
+  "fetchedAt": "2026-08-24",
+  "note": "Observed dates included where the holiday falls on a Sunday (following Monday is a public holiday). Never source holidays from model memory — refresh from MOM at build time.",
+  "holidays": [
+    { "name": "New Year's Day", "date": "2026-01-01" },
+    { "name": "Chinese New Year", "date": "2026-02-17" },
+    { "name": "Chinese New Year (Day 2)", "date": "2026-02-18" },
+    { "name": "Hari Raya Puasa", "date": "2026-03-21" },
+    { "name": "Good Friday", "date": "2026-04-03" },
+    { "name": "Labour Day", "date": "2026-05-01" },
+    { "name": "Hari Raya Haji", "date": "2026-05-27" },
+    { "name": "Vesak Day", "date": "2026-05-31", "observed": "2026-06-01" },
+    { "name": "National Day", "date": "2026-08-09", "observed": "2026-08-10" },
+    { "name": "Deepavali", "date": "2026-11-08", "observed": "2026-11-09" },
+    { "name": "Christmas Day", "date": "2026-12-25" },
+    { "name": "New Year's Day", "date": "2027-01-01" },
+    { "name": "Chinese New Year", "date": "2027-02-06" },
+    { "name": "Chinese New Year (Day 2)", "date": "2027-02-07", "observed": "2027-02-08" },
+    { "name": "Hari Raya Puasa", "date": "2027-03-10" },
+    { "name": "Good Friday", "date": "2027-03-26" },
+    { "name": "Labour Day", "date": "2027-05-01" },
+    { "name": "Hari Raya Haji", "date": "2027-05-17" },
+    { "name": "Vesak Day", "date": "2027-05-20" },
+    { "name": "National Day", "date": "2027-08-09" },
+    { "name": "Deepavali", "date": "2027-10-28" },
+    { "name": "Christmas Day", "date": "2027-12-25" }
+  ]
+}
