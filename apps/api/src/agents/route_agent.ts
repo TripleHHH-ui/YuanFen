@@ -14,6 +14,7 @@ import { loadCity, loadDestinations, loadMatrix } from "../data.js";
 import { parseIntent, type ParsedIntent } from "../intent.js";
 import type { AtlasClient } from "../atlas/types.js";
 import { departDateFor, nextLongWeekend } from "./fare_board.js";
+import { tasteState } from "./taste_agent.js";
 
 /**
  * RouteAgent: owns the trip graph — S1 day routes, S3 deal expansion into a
@@ -131,6 +132,8 @@ export async function createTripFromDeal(
   const out = [...options].sort((a, b) => totalWithBag(a) - totalWithBag(b))[0]!;
   const city = loadCity(profile.city);
   const matrix = loadMatrix(profile.city);
+  // FR-020: pre-swiped must-gos for this destination seed the trip's mustPlaceIds.
+  const mustPlaceIds = tasteState()?.mustGoByDestination[profile.city] ?? [];
   tripCounter += 1;
   const graph = buildTrip({
     id: `trip-${tripCounter}`,
@@ -143,6 +146,7 @@ export async function createTripFromDeal(
     places: city.places,
     matrix,
     taste,
+    mustPlaceIds,
   });
   trips.set(graph.id, { graph, cityId: profile.city, flightOptions: options, taste });
   return { trip: tripView(graph.id)! };
@@ -170,7 +174,12 @@ export function swapFlight(id: string, offerId: string) {
   if (!next) return { error: "Unknown offer for this trip" };
   const city = loadCity(stored.cityId);
   const matrix = loadMatrix(stored.cityId);
-  const result = reflow(stored.graph, next, { places: city.places, matrix, taste: stored.taste });
+  const result = reflow(stored.graph, next, {
+    places: city.places,
+    matrix,
+    taste: stored.taste,
+    mustPlaceIds: tasteState()?.mustGoByDestination[stored.cityId] ?? [],
+  });
   stored.graph = result.graph;
   return { trip: tripView(id)!, delta: result.delta, narration: result.graph.narration };
 }

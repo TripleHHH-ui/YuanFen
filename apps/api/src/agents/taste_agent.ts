@@ -20,7 +20,10 @@ const DECK_SIZE = 15;
 const MIN_VIBES = 5;
 
 let state: TasteState | null = null;
-let deckCache: DeckCard[] | null = null;
+const deckCache = new Map<string, DeckCard[]>();
+/** Deck-session progress per destination key — each deck is its own 15-card session. */
+const deckProgress = new Map<string, number>();
+const deckLog: string[] = [];
 
 export function seedTaste(tags: VibeTag[]): { ok: boolean; error?: string } {
   const valid = tags.filter((t) => (VIBE_TAGS as readonly string[]).includes(t));
@@ -30,9 +33,10 @@ export function seedTaste(tags: VibeTag[]): { ok: boolean; error?: string } {
 }
 
 /** Deterministic diverse pick: round-robin across primary vibe tags. */
-export function tasteDeck(): DeckCard[] {
-  if (deckCache) return deckCache;
-  const places = loadCity("singapore").places;
+export function tasteDeck(city = "singapore"): DeckCard[] {
+  const cached = deckCache.get(city);
+  if (cached) return cached;
+  const places = loadCity(city).places;
   const buckets = new Map<string, typeof places>();
   for (const p of places) {
     const key = p.vibeTags[0] ?? "chill";
@@ -58,22 +62,32 @@ export function tasteDeck(): DeckCard[] {
     }
     round += 1;
   }
-  deckCache = cards;
+  deckCache.set(city, cards);
   return cards;
 }
 
-export function swipe(cardId: string, action: SwipeAction): { state: TasteState; done: boolean } | { error: string } {
+export function swipe(
+  cardId: string,
+  action: SwipeAction,
+  destination = "home",
+): { state: TasteState; done: boolean } | { error: string } {
   if (!state) return { error: "Seed vibes first" };
-  if (state.swipeCount >= DECK_SIZE) return { state, done: true };
-  const card = tasteDeck().find((c) => c.id === cardId);
+  if ((deckProgress.get(destination) ?? 0) >= DECK_SIZE) return { state, done: true };
+  const deck = destination === "home" ? tasteDeck() : tasteDeck(destination);
+  const card = deck.find((c) => c.id === cardId);
   if (!card) return { error: `Unknown card ${cardId}` };
-  state = applySwipe(state, card, action);
-  return { state, done: state.swipeCount >= DECK_SIZE };
+  state = applySwipe(state, card, action, destination);
+  const swiped = (deckProgress.get(destination) ?? 0) + 1;
+  deckProgress.set(destination, swiped);
+  deckLog.push(destination);
+  return { state, done: swiped >= DECK_SIZE };
 }
 
 export function undo(): { state: TasteState } | { error: string } {
   if (!state) return { error: "Seed vibes first" };
   state = undoSwipe(state);
+  const last = deckLog.pop();
+  if (last) deckProgress.set(last, (deckProgress.get(last) ?? 1) - 1);
   return { state };
 }
 
@@ -88,7 +102,7 @@ export function tasteSummary() {
   return {
     vector: state.vector,
     topTags: sorted.slice(0, 3),
-    mustGo: state.mustGo,
+    mustGo: state.mustGoByDestination.home ?? [],
     swipeCount: state.swipeCount,
     deckSize: DECK_SIZE,
     strength: Math.min(1, positive / 6),
@@ -98,4 +112,6 @@ export function tasteSummary() {
 /** Test/demo hook: reset the profile. */
 export function resetTaste(): void {
   state = null;
+  deckProgress.clear();
+  deckLog.length = 0;
 }

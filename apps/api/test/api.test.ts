@@ -158,4 +158,24 @@ describe("golden path API", () => {
     expect(res.calls[0].request_id).toBeTruthy();
     expect(JSON.stringify(res.calls)).not.toContain("TRAVELER");
   });
+
+  it("S2: a pre-swiped destination must-go is routed into the trip (FR-019/020)", async () => {
+    await seedAndSwipe();
+    const dnDeck = (await app.inject({ method: "GET", url: "/api/taste/deck/da-nang" })).json();
+    expect(dnDeck.cards.length).toBeGreaterThan(0);
+    expect(dnDeck.cards[0].placeId).toMatch(/^da-nang-/);
+    const card = dnDeck.cards.find((c: { placeId?: string }) => c.placeId === "da-nang-my-khe-beach");
+    const swipeRes = await app.inject({
+      method: "POST",
+      url: "/api/taste/swipe",
+      payload: { cardId: card.id, action: "mustgo", destination: "da-nang" },
+    });
+    expect(swipeRes.statusCode).toBe(200);
+    const trip = (await app.inject({ method: "POST", url: "/api/trips", payload: { destination: "DAD" } })).json();
+    expect(trip.graph.days.length).toBeGreaterThanOrEqual(3);
+    const stopIds: string[] = trip.graph.days.flatMap((d: { stops: Array<{ placeId: string }> }) =>
+      d.stops.map((s: { placeId: string }) => s.placeId),
+    );
+    expect(stopIds).toContain("da-nang-my-khe-beach");
+  });
 });

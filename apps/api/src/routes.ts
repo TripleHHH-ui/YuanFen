@@ -13,17 +13,29 @@ export function registerRoutes(app: FastifyInstance, client: AtlasClient): void 
 
   app.get("/api/taste/deck", async () => ({ cards: tasteDeck() }));
 
+  // FR-019: pre-trip swiping — same bucket-round-robin deck, any city's places.
+  app.get<{ Params: { destination: string } }>("/api/taste/deck/:destination", async (req, reply) => {
+    try {
+      return { cards: tasteDeck(req.params.destination) };
+    } catch {
+      return reply.code(404).send({ error: "Unknown destination" });
+    }
+  });
+
   app.post<{ Body: { tags: VibeTag[] } }>("/api/taste/seed", async (req, reply) => {
     const result = seedTaste(req.body?.tags ?? []);
     if (!result.ok) return reply.code(400).send({ error: result.error });
     return { ok: true, summary: tasteSummary() };
   });
 
-  app.post<{ Body: { cardId: string; action: SwipeAction } }>("/api/taste/swipe", async (req, reply) => {
-    const result = swipe(req.body?.cardId ?? "", req.body?.action ?? "like");
-    if ("error" in result) return reply.code(400).send(result);
-    return { done: result.done, summary: tasteSummary() };
-  });
+  app.post<{ Body: { cardId: string; action: SwipeAction; destination?: string } }>(
+    "/api/taste/swipe",
+    async (req, reply) => {
+      const result = swipe(req.body?.cardId ?? "", req.body?.action ?? "like", req.body?.destination ?? "home");
+      if ("error" in result) return reply.code(400).send(result);
+      return { done: result.done, summary: tasteSummary() };
+    },
+  );
 
   app.post("/api/taste/undo", async (_req, reply) => {
     const result = undo();

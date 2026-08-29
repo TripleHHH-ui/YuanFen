@@ -24,21 +24,28 @@ export function seedVector(picked: VibeTag[]): TasteVector {
 }
 
 export function initialTasteState(vector: TasteVector): TasteState {
-  return { vector, mustGo: [], swipeCount: 0, history: [] };
+  return { vector, mustGoByDestination: {}, swipeCount: 0, history: [] };
 }
 
-export function applySwipe(state: TasteState, card: DeckCard, action: SwipeAction): TasteState {
+export function applySwipe(
+  state: TasteState,
+  card: DeckCard,
+  action: SwipeAction,
+  destination = "home",
+): TasteState {
   const vector = { ...state.vector };
   for (const tag of card.vibeTags) {
     vector[tag] = Math.min(MAX_W, Math.max(MIN_W, vector[tag] + WEIGHTS[action]));
   }
-  const mustGo =
-    action === "mustgo" && card.placeId ? [...state.mustGo, card.placeId] : [...state.mustGo];
+  const mustGoByDestination = { ...state.mustGoByDestination };
+  if (action === "mustgo" && card.placeId) {
+    mustGoByDestination[destination] = [...(mustGoByDestination[destination] ?? []), card.placeId];
+  }
   return {
     vector,
-    mustGo,
+    mustGoByDestination,
     swipeCount: state.swipeCount + 1,
-    history: [...state.history, { vector: state.vector, mustGo: state.mustGo }],
+    history: [...state.history, { vector: state.vector, mustGoByDestination: state.mustGoByDestination }],
   };
 }
 
@@ -47,7 +54,7 @@ export function undoSwipe(state: TasteState): TasteState {
   if (!prev) return state;
   return {
     vector: prev.vector,
-    mustGo: prev.mustGo,
+    mustGoByDestination: prev.mustGoByDestination,
     swipeCount: state.swipeCount - 1,
     history: state.history.slice(0, -1),
   };
