@@ -389,6 +389,14 @@ input { font-family: var(--body); }
 }
 .stop:hover .swap-stop-btn { opacity: 1; }
 .swap-stop-btn:hover { background: var(--line); color: var(--ink); }
+.stop-swapping .stop-body {
+  background: rgba(200, 55, 45, 0.05);
+  border-radius: 10px;
+  margin: -4px -6px 0;
+  padding: 4px 6px 0;
+}
+.stop-swapping .stop-name { padding-right: 34px; }
+.stop-swapping .swap-stop-btn { opacity: 1; color: var(--thread); border-color: rgba(200, 55, 45, 0.4); }
 .stop-swapped { animation: swap-flash 1.2s ease; }
 @keyframes swap-flash {
   0% { background: rgba(201, 162, 39, 0.25); }
@@ -399,22 +407,30 @@ input { font-family: var(--body); }
   text-transform: uppercase; padding: 2px 7px; border-radius: 99px;
   background: rgba(201, 162, 39, 0.16); color: var(--gold-deep);
 }
-.alt-list {
-  margin: 6px 0 2px 39px; display: flex; flex-direction: column; gap: 2px;
-  animation: rise 0.25s both;
+.alt-list { margin: 8px 0 2px; animation: rise 0.25s both; }
+.alt-head {
+  font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase;
+  font-weight: 800; color: var(--thread); margin-bottom: 5px;
+}
+.alt-scroll {
+  --alt-h: 36px;
+  display: flex; flex-direction: column; gap: 2px;
+  max-height: calc(var(--alt-h) * 5 + 8px);
+  overflow-y: auto; scrollbar-width: thin; overscroll-behavior: contain;
 }
 .alt-row {
-  display: flex; gap: 8px; align-items: center; width: 100%;
+  display: flex; gap: 8px; align-items: center; width: 100%; flex: 0 0 auto;
+  height: var(--alt-h);
   background: var(--card); border: 1px solid var(--line); border-radius: 8px;
-  padding: 6px 10px; font-size: 13px; cursor: pointer; text-align: left;
+  padding: 0 10px; font-size: 13px; cursor: pointer; text-align: left;
   transition: border-color 0.15s;
 }
 .alt-row:hover { border-color: var(--thread); }
-.alt-emoji { font-size: 16px; }
-.alt-name { font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.alt-tags { font-size: 11px; color: var(--ink-soft); }
-.alt-cost { font-family: var(--mono); font-size: 11.5px; color: var(--thread-deep); }
-.alt-travel { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); }
+.alt-emoji { font-size: 16px; line-height: 1; flex: 0 0 auto; }
+.alt-name { font-weight: 600; flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.alt-tags { font-size: 11px; color: var(--ink-soft); white-space: nowrap; flex: 0 0 auto; }
+.alt-cost { font-family: var(--mono); font-size: 11.5px; color: var(--thread-deep); white-space: nowrap; flex: 0 0 auto; }
+.alt-travel { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); white-space: nowrap; flex: 0 0 auto; }
 .alt-empty { font-size: 12px; color: var(--ink-soft); font-style: italic; padding: 4px 0; }
 .stop-swap-deltas {
   display: flex; gap: 8px; padding: 6px 0 2px; flex-wrap: wrap;
@@ -797,6 +813,8 @@ input { font-family: var(--body); }
   .deal-taste { padding: 0 14px; }
   .close { width: 44px; height: 44px; }
   .day-tabs button { padding: 10px 4px; }
+  .alt-scroll { --alt-h: 44px; }
+  .alt-travel { display: none; }
 
   /* flight rows wrap the action under the details */
   .flight-row { flex-wrap: wrap; }

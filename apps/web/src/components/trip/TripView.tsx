@@ -1,6 +1,7 @@
 import { useStore } from "../../store";
-import type { Offer, StopAlternative, WireStop } from "../../api";
+import type { Offer } from "../../api";
 import { DestinationDeck } from "../plan/DestinationDeck";
+import { SwappableStop } from "../shared/SwappableStop";
 import { useState } from "react";
 
 /** S4 surface: flight strip (node zero), day timeline, budget bar (FR-013/014). */
@@ -72,7 +73,7 @@ export function TripPanel() {
       <ol className={`stop-list day-stops ${reflowing ? "reflowing" : ""}`} key={`${day.date}-${current.offer_id}`}>
         {day.stops.length === 0 && <li className="stop empty">a travel day — wheels up</li>}
         {day.stops.map((s, i) => (
-          <TripStop
+          <SwappableStop
             key={s.placeId}
             stop={s}
             index={i}
@@ -167,84 +168,3 @@ function BudgetBar({ flight, ground, total, delta }: { flight: number; ground: n
   );
 }
 
-function TripStop({
-  stop,
-  index,
-  cityId,
-  revealed,
-  onReveal,
-  isChanged,
-  isSwapping,
-  alternatives,
-  onOpenSwap,
-  onCloseSwap,
-  onSwapStop,
-}: {
-  stop: WireStop;
-  index: number;
-  cityId: string;
-  revealed: Record<string, { name: string; emoji: string; blurb: string }>;
-  onReveal: (city: string, placeId: string) => Promise<void>;
-  isChanged: boolean;
-  isSwapping: boolean;
-  alternatives: StopAlternative[] | null;
-  onOpenSwap: () => void;
-  onCloseSwap: () => void;
-  onSwapStop: (placeId: string) => void;
-}) {
-  const open = revealed[stop.placeId];
-  if (stop.sealed && !open) {
-    return (
-      <li className="stop sealed" style={{ animationDelay: `${index * 70}ms` }} onClick={() => void onReveal(cityId, stop.placeId)}>
-        <span className="stop-n wax">?</span>
-        <div className="stop-body">
-          <div className="stop-name">Sealed wildcard</div>
-          <div className="stop-meta">{stop.arrive} · tap to break the seal</div>
-        </div>
-        <span className="seal-glyph">缘</span>
-      </li>
-    );
-  }
-  const name = open?.name ?? stop.place?.name ?? stop.placeId;
-  const emoji = open?.emoji ?? stop.place?.emoji ?? "📍";
-  return (
-    <li
-      className={`stop ${isChanged ? "stop-swapped" : ""} ${stop.role === "wildcard" ? "revealed-wild" : ""}`}
-      style={{ animationDelay: `${index * 70}ms` }}
-    >
-      <span className="stop-n">{index + 1}</span>
-      <div className="stop-body">
-        <div className="stop-name">
-          {emoji} {name}
-          {stop.role === "wildcard" && <span className="wild-mark">wildcard</span>}
-          {isChanged && <span className="swapped-mark">swapped</span>}
-        </div>
-        <div className="stop-meta">
-          {stop.arrive}–{stop.depart}
-          {stop.travelMinFromPrev > 0 && index > 0 && <> · {stop.travelMinFromPrev} min hop</>}
-        </div>
-        <button
-          className="swap-stop-btn"
-          onClick={(e) => { e.stopPropagation(); isSwapping ? onCloseSwap() : onOpenSwap(); }}
-          title={isSwapping ? "Close" : "Swap this stop"}
-        >
-          ⇄
-        </button>
-      </div>
-      {isSwapping && alternatives && (
-        <div className="alt-list">
-          {alternatives.length === 0 && <div className="alt-empty">No alternatives fit this slot.</div>}
-          {alternatives.map((a) => (
-            <button key={a.id} className="alt-row" onClick={() => onSwapStop(a.id)}>
-              <span className="alt-emoji">{a.emoji}</span>
-              <span className="alt-name">{a.name}</span>
-              <span className="alt-tags">{a.vibeTags.slice(0, 2).join(" · ")}</span>
-              <span className="alt-cost">{a.estCostSGD > 0 ? `~S$${a.estCostSGD}` : "free"}</span>
-              <span className="alt-travel">{a.travelMinFromPrev} min</span>
-            </button>
-          ))}
-        </div>
-      )}
-    </li>
-  );
-}

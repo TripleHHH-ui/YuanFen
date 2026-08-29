@@ -1,5 +1,19 @@
 import { create } from "zustand";
 import {
+  alternativesForStop,
+  narrateStopSwap,
+  swapStop as engineSwapStop,
+  toMin,
+  type CityPlaces,
+  type DayPlan,
+  type DayRouteOptions,
+  type Place,
+  type StopNode,
+  type StopRole,
+  type TasteVector,
+  type TravelMatrix,
+} from "@yuanfen/shared";
+import {
   api,
   type AlertResult,
   type Card,
@@ -7,6 +21,7 @@ import {
   type StopAlternative,
   type TasteSummary,
   type TripView,
+  type WireStop,
 } from "./api";
 
 export type Phase = "vibes" | "deck" | "home" | "trip";
@@ -22,6 +37,71 @@ const HOME_CITY: CityRef = {
   name: "Singapore",
   center: { lat: 1.2903, lng: 103.852 },
 };
+
+const cityModules = import.meta.glob<{ default: CityPlaces }>("../../../data/places/*.json");
+const matrixModules = import.meta.glob<{ default: TravelMatrix }>("../../../data/routing/*.json");
+
+async function loadPlanCityData(city: string): Promise<{ places: Place[]; matrix: TravelMatrix } | null> {
+  const placeMod = cityModules[`../../../data/places/${city}.json`];
+  const matrixMod = matrixModules[`../../../data/routing/${city}.json`];
+  if (!placeMod || !matrixMod) return null;
+  const [placesJson, matrixJson] = await Promise.all([placeMod(), matrixMod()]);
+  return { places: placesJson.default.places, matrix: matrixJson.default };
+}
+
+function planDayOpts(plan: PlanResult, taste: TasteVector): DayRouteOptions | null {
+  if (!plan.date) return null;
+  return {
+    date: plan.date,
+    startMin: toMin("09:30"),
+    endMin: toMin("21:30"),
+    taste,
+    mustTags: plan.intent?.mustTags,
+    moodTags: plan.intent?.moodTags as DayRouteOptions["moodTags"],
+    area: plan.intent?.area,
+  };
+}
+
+function enrichStops(stops: StopNode[], places: Place[]): WireStop[] {
+  return stops.map((s) => {
+    const p = places.find((x) => x.id === s.placeId) ?? null;
+    return {
+      ...s,
+      place: p
+        ? s.sealed
+          ? {
+              id: p.id,
+              name: "???",
+              lat: p.lat,
+              lng: p.lng,
+              emoji: "🎁",
+              blurb: "Sealed wildcard — tap to reveal",
+              area: p.area,
+              vibeTags: [],
+              estCostSGD: p.estCostSGD,
+            }
+          : {
+              id: p.id,
+              name: p.name,
+              lat: p.lat,
+              lng: p.lng,
+              emoji: p.emoji,
+              blurb: p.blurb,
+              area: p.area,
+              vibeTags: p.vibeTags,
+              estCostSGD: p.estCostSGD,
+            }
+        : null,
+    };
+  });
+}
+
+function wireStopsToDay(stops: WireStop[], date: string): DayPlan {
+  return {
+    date,
+    stops: stops.map((s) => ({ ...s, role: s.role as StopRole })),
+  };
+}
 
 interface YuanFenState {
   phase: Phase;
@@ -228,7 +308,13 @@ export const useStore = create<YuanFenState>((set, get) => ({
 
   setAlt(i) {
     const n = get().plan?.alternatives?.length ?? 0;
-    if (n) set({ planAlt: ((i % n) + n) % n });
+    if (!n) return;
+    set({
+      planAlt: ((i % n) + n) % n,
+      swappingStop: null,
+      stopSwapDelta: null,
+      changedStopId: null,
+    });
   },
 
   openAlert(open) {
@@ -274,14 +360,49 @@ export const useStore = create<YuanFenState>((set, get) => ({
   },
 
   async openStopSwap(dayIndex, stopIndex) {
-    const { trip } = get();
-    if (!trip) return;
-    try {
-      const res = await api.stopAlternatives(trip.graph.id, dayIndex, stopIndex);
-      set({ swappingStop: { dayIndex, stopIndex, alternatives: res.alternatives } });
-    } catch {
-      set({ swappingStop: null });
+    const { trip, plan, summary, planAlt } = get();
+    if (trip) {
+      try {
+        const res = await api.stopAlternatives(trip.graph.id, dayIndex, stopIndex);
+        set({ swappingStop: { dayIndex, stopIndex, alternatives: res.alternatives } });
+      } catch {
+        set({ swappingStop: null });
+      }
+      return;
     }
+    if (!plan?.alternatives || !plan.city || !summary?.vector) {
+      set({ swappingStop: null });
+      return;
+    }
+    const data = await loadPlanCityData(plan.city.id);
+    const opts = data && planDayOpts(plan, summary.vector as TasteVector);
+    const alt = plan.alternatives[planAlt];
+    if (!data || !opts || !alt) {
+      set({ swappingStop: null });
+      return;
+    }
+    const day = wireStopsToDay(alt.stops, opts.date);
+    const prevPlaceId = stopIndex > 0 ? day.stops[stopIndex - 1]!.placeId : null;
+    const places = alternativesForStop({ day, stopIndex, places: data.places, matrix: data.matrix, opts });
+    set({
+      swappingStop: {
+        dayIndex,
+        stopIndex,
+        alternatives: places.map((p) => {
+          const i = data.matrix.ids.indexOf(prevPlaceId ?? "");
+          const j = data.matrix.ids.indexOf(p.id);
+          const travelMin = prevPlaceId ? (data.matrix.minutes[i]?.[j] ?? 15) : 15;
+          return {
+            id: p.id,
+            name: p.name,
+            emoji: p.emoji,
+            vibeTags: p.vibeTags,
+            estCostSGD: p.estCostSGD,
+            travelMinFromPrev: travelMin,
+          };
+        }),
+      },
+    });
   },
 
   closeStopSwap() {
@@ -289,20 +410,51 @@ export const useStore = create<YuanFenState>((set, get) => ({
   },
 
   async swapStop(dayIndex, stopIndex, placeId) {
-    const { trip } = get();
-    if (!trip) return;
+    const { trip, plan, summary, planAlt } = get();
     set({ swappingStop: null });
-    try {
-      const res = await api.swapStop(trip.graph.id, dayIndex, stopIndex, placeId);
-      set({
-        trip: res.trip,
-        stopSwapDelta: { costDeltaSGD: res.costDeltaSGD, travelDeltaMin: res.travelDeltaMin },
-        swapNarration: res.narration,
-        changedStopId: placeId,
-      });
-    } catch (e) {
-      set({ error: String(e instanceof Error ? e.message : e) });
+    if (trip) {
+      try {
+        const res = await api.swapStop(trip.graph.id, dayIndex, stopIndex, placeId);
+        set({
+          trip: res.trip,
+          stopSwapDelta: { costDeltaSGD: res.costDeltaSGD, travelDeltaMin: res.travelDeltaMin },
+          swapNarration: res.narration,
+          changedStopId: placeId,
+        });
+      } catch (e) {
+        set({ error: String(e instanceof Error ? e.message : e) });
+      }
+      return;
     }
+    if (!plan?.alternatives || !plan.city || !summary?.vector) return;
+    const data = await loadPlanCityData(plan.city.id);
+    const opts = data && planDayOpts(plan, summary.vector as TasteVector);
+    const alt = plan.alternatives[planAlt];
+    if (!data || !opts || !alt) {
+      set({ error: "Could not load city data for this swap." });
+      return;
+    }
+    const day = wireStopsToDay(alt.stops, opts.date);
+    const oldPlace = data.places.find((p) => p.id === day.stops[stopIndex]!.placeId);
+    const newPlace = data.places.find((p) => p.id === placeId);
+    if (!newPlace) {
+      set({ error: "Unknown replacement place." });
+      return;
+    }
+    const result = engineSwapStop({ day, stopIndex, replacementPlaceId: placeId, places: data.places, matrix: data.matrix, opts });
+    const newStops = enrichStops(result.day.stops, data.places);
+    const narration = narrateStopSwap(oldPlace?.name ?? "a stop", newPlace.name, {
+      costDeltaSGD: result.costDeltaSGD,
+      travelDeltaMin: result.travelDeltaMin,
+      droppedStops: result.droppedStops,
+    });
+    const alternatives = [...plan.alternatives];
+    alternatives[planAlt] = { ...alt, stops: newStops };
+    set({
+      plan: { ...plan, alternatives, narration },
+      stopSwapDelta: { costDeltaSGD: result.costDeltaSGD, travelDeltaMin: result.travelDeltaMin },
+      changedStopId: placeId,
+    });
   },
 
   async revealStop(city, placeId) {

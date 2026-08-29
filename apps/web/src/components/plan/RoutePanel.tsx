@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useStore } from "../../store";
-import type { WireStop } from "../../api";
 import { NearbyPanel } from "./NearbyPanel";
+import { SwappableStop } from "../shared/SwappableStop";
 
 const EXAMPLE_PROMPTS = [
   "ArtScience Museum, must eat chicken rice, then somewhere quiet",
@@ -11,7 +11,12 @@ const EXAMPLE_PROMPTS = [
 
 /** S1 surface: chat bar + route card with swipeable alternatives (FR-004/005/006/007). */
 export function RoutePanel() {
-  const { plan, planAlt, setAlt, sendChat, planLoading, revealStop, revealed } = useStore();
+  const {
+    plan, planAlt, setAlt, sendChat, planLoading,
+    revealStop, revealed,
+    swappingStop, stopSwapDelta, changedStopId,
+    openStopSwap, closeStopSwap, swapStop,
+  } = useStore();
   const [text, setText] = useState("");
 
   const alt = plan?.alternatives?.[planAlt];
@@ -83,9 +88,40 @@ export function RoutePanel() {
           </div>
           <ol className="stop-list">
             {alt.stops.map((s, i) => (
-              <StopRow key={s.placeId} stop={s} index={i} cityId={plan.city!.id} revealed={revealed} onReveal={revealStop} />
+              <SwappableStop
+                key={s.placeId}
+                stop={s}
+                index={i}
+                cityId={plan.city!.id}
+                revealed={revealed}
+                onReveal={revealStop}
+                isChanged={changedStopId === s.placeId}
+                isSwapping={swappingStop?.dayIndex === 0 && swappingStop?.stopIndex === i}
+                alternatives={swappingStop?.dayIndex === 0 && swappingStop?.stopIndex === i ? swappingStop.alternatives : null}
+                onOpenSwap={() => void openStopSwap(0, i)}
+                onCloseSwap={closeStopSwap}
+                onSwapStop={(placeId) => void swapStop(0, i, placeId)}
+                showCost
+                showMustBadge
+              />
             ))}
           </ol>
+
+          {stopSwapDelta && (
+            <div className="stop-swap-deltas">
+              {stopSwapDelta.costDeltaSGD !== 0 && (
+                <span className={`delta-chip ${stopSwapDelta.costDeltaSGD > 0 ? "up" : "down"}`}>
+                  {stopSwapDelta.costDeltaSGD > 0 ? "+" : "−"}S${Math.abs(Math.round(stopSwapDelta.costDeltaSGD))} ground
+                </span>
+              )}
+              {stopSwapDelta.travelDeltaMin !== 0 && (
+                <span className="delta-chip travel">
+                  {stopSwapDelta.travelDeltaMin > 0 ? "+" : "−"}{Math.abs(stopSwapDelta.travelDeltaMin)} min travel
+                </span>
+              )}
+            </div>
+          )}
+
           {alt.explanations.map((e) => (
             <div key={e} className="explain-line">⚑ {e}</div>
           ))}
@@ -95,49 +131,3 @@ export function RoutePanel() {
   );
 }
 
-function StopRow({
-  stop,
-  index,
-  cityId,
-  revealed,
-  onReveal,
-}: {
-  stop: WireStop;
-  index: number;
-  cityId: string;
-  revealed: Record<string, { name: string; emoji: string; blurb: string }>;
-  onReveal: (city: string, placeId: string) => Promise<void>;
-}) {
-  const open = revealed[stop.placeId];
-  if (stop.sealed && !open) {
-    return (
-      <li className="stop sealed" onClick={() => void onReveal(cityId, stop.placeId)}>
-        <span className="stop-n wax">?</span>
-        <div className="stop-body">
-          <div className="stop-name">Sealed wildcard</div>
-          <div className="stop-meta">{stop.arrive} · tap to break the seal</div>
-        </div>
-        <span className="seal-glyph">缘</span>
-      </li>
-    );
-  }
-  const name = open?.name ?? stop.place?.name ?? stop.placeId;
-  const emoji = open?.emoji ?? stop.place?.emoji ?? "📍";
-  return (
-    <li className={`stop ${stop.role === "wildcard" ? "revealed-wild" : ""}`}>
-      <span className="stop-n">{index + 1}</span>
-      <div className="stop-body">
-        <div className="stop-name">
-          {emoji} {name}
-          {stop.role === "must" && <span className="must-mark">must-go</span>}
-          {stop.role === "wildcard" && <span className="wild-mark">wildcard</span>}
-        </div>
-        <div className="stop-meta">
-          {stop.arrive}–{stop.depart}
-          {stop.travelMinFromPrev > 0 && index > 0 && <> · {stop.travelMinFromPrev} min hop</>}
-          {stop.place && stop.place.estCostSGD > 0 && <> · ~S${stop.place.estCostSGD}</>}
-        </div>
-      </div>
-    </li>
-  );
-}
