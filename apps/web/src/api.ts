@@ -137,8 +137,8 @@ export const api = {
       method: "POST",
       body: JSON.stringify({ destination }),
     }),
-  planChat: (text: string) =>
-    req<PlanResult>("/api/plan/chat", { method: "POST", body: JSON.stringify({ text }) }),
+  planChat: (text: string, city?: string) =>
+    req<PlanResult>("/api/plan/chat", { method: "POST", body: JSON.stringify({ text, city }) }),
   alert: () => req<AlertResult>("/api/fareboard/alert"),
   createTrip: (destination: string) =>
     req<TripView>("/api/trips", { method: "POST", body: JSON.stringify({ destination }) }),

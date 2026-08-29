@@ -10,9 +10,17 @@ export interface MapStop {
   emoji?: string;
 }
 
+export interface MapRec {
+  lat: number;
+  lng: number;
+  label: string;
+  emoji: string;
+}
+
 interface Props {
   center: { lat: number; lng: number };
   stops: MapStop[];
+  recommendations?: MapRec[];
 }
 
 // Desaturated OSM basemap: the vermilion thread owns the color.
@@ -31,10 +39,11 @@ const STYLE: maplibregl.StyleSpecification = {
   ],
 };
 
-export function MapCanvas({ center, stops }: Props) {
+export function MapCanvas({ center, stops, recommendations = [] }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MLMap | null>(null);
   const markersRef = useRef<Marker[]>([]);
+  const recMarkersRef = useRef<Marker[]>([]);
   const readyRef = useRef(false);
   // Latest props live in refs so the style-load callback and the effect both
   // draw the CURRENT stops — a plan arriving before the style finishes loading
@@ -43,6 +52,30 @@ export function MapCanvas({ center, stops }: Props) {
   stopsRef.current = stops;
   const centerRef = useRef(center);
   centerRef.current = center;
+  const recsRef = useRef(recommendations);
+  recsRef.current = recommendations;
+
+  function syncRecs() {
+    const map = mapRef.current;
+    if (!map || !readyRef.current) return;
+    for (const m of recMarkersRef.current) m.remove();
+    recMarkersRef.current = [];
+    // Only show rec markers when there are no route stops
+    if (stopsRef.current.length > 0) return;
+    for (const r of recsRef.current) {
+      const el = document.createElement("div");
+      el.className = "pin-wrap";
+      const pin = document.createElement("div");
+      pin.className = "pin-rec";
+      pin.setAttribute("title", r.label);
+      const emojiSpan = document.createElement("span");
+      emojiSpan.className = "pin-rec-emoji";
+      emojiSpan.textContent = r.emoji;
+      pin.appendChild(emojiSpan);
+      el.appendChild(pin);
+      recMarkersRef.current.push(new Marker({ element: el }).setLngLat([r.lng, r.lat]).addTo(map));
+    }
+  }
 
   function sync() {
     const map = mapRef.current;
@@ -66,6 +99,7 @@ export function MapCanvas({ center, stops }: Props) {
       el.title = s.label;
       markersRef.current.push(new Marker({ element: el }).setLngLat([s.lng, s.lat]).addTo(map));
     });
+    syncRecs();
     if (line.length > 1) {
       const b = line.reduce(
         (acc, c) => acc.extend(c),
@@ -119,6 +153,11 @@ export function MapCanvas({ center, stops }: Props) {
     sync();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [JSON.stringify(stops), center.lat, center.lng]);
+
+  useEffect(() => {
+    syncRecs();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [JSON.stringify(recommendations), JSON.stringify(stops)]);
 
   return <div ref={containerRef} className="map-canvas" />;
 }

@@ -10,6 +10,18 @@ import {
 
 export type Phase = "vibes" | "deck" | "home" | "trip";
 
+export interface CityRef {
+  id: string;
+  name: string;
+  center: { lat: number; lng: number };
+}
+
+const HOME_CITY: CityRef = {
+  id: "singapore",
+  name: "Singapore",
+  center: { lat: 1.2903, lng: 103.852 },
+};
+
 interface YuanFenState {
   phase: Phase;
   mode: string;
@@ -19,6 +31,7 @@ interface YuanFenState {
   deck: Card[];
   deckIndex: number;
   destinationDecks: Record<string, { deck: Card[]; index: number; summary: TasteSummary | null }>;
+  currentCity: CityRef;
   plan: PlanResult | null;
   planAlt: number;
   planLoading: boolean;
@@ -67,6 +80,7 @@ export const useStore = create<YuanFenState>((set, get) => ({
   deck: [],
   deckIndex: 0,
   destinationDecks: {},
+  currentCity: HOME_CITY,
   plan: null,
   planAlt: 0,
   planLoading: false,
@@ -195,7 +209,7 @@ export const useStore = create<YuanFenState>((set, get) => ({
   async sendChat(text) {
     set({ planLoading: true });
     try {
-      const plan = await api.planChat(text);
+      const plan = await api.planChat(text, get().currentCity.id);
       set({ plan, planAlt: 0, planLoading: false });
     } catch (e) {
       set({ planLoading: false, error: String(e instanceof Error ? e.message : e) });

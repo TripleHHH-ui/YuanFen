@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useStore } from "./store";
-import { MapCanvas, type MapStop } from "./components/map/MapCanvas";
+import { MapCanvas, type MapStop, type MapRec } from "./components/map/MapCanvas";
 import { VibePicker } from "./components/onboarding/VibePicker";
 import { TasteDeck } from "./components/onboarding/TasteDeck";
 import { RoutePanel } from "./components/plan/RoutePanel";
@@ -10,15 +10,26 @@ import { TripPanel } from "./components/trip/TripView";
 import { BookingFlow } from "./components/booking/BookingFlow";
 import { EvidencePanel } from "./components/evidence/EvidencePanel";
 
-const SG_CENTER = { lat: 1.2903, lng: 103.852 };
-
 export default function App() {
   const s = useStore();
+  const [recs, setRecs] = useState<MapRec[]>([]);
 
   useEffect(() => {
     void s.init();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (s.phase !== "home" || s.plan?.alternatives) { setRecs([]); return; }
+    fetch(`/api/places/nearby/${s.currentCity.id}`)
+      .then((r) => r.json() as Promise<{ places: Array<{ id: string; name: string; lat: number; lng: number; emoji: string }> }>)
+      .then((data) => {
+        setRecs(
+          (data.places ?? []).map((p) => ({ lat: p.lat, lng: p.lng, label: p.name, emoji: p.emoji }))
+        );
+      })
+      .catch(() => { /* silently skip */ });
+  }, [s.phase, s.plan?.alternatives, s.currentCity.id]);
 
   if (s.phase === "vibes") {
     return (
@@ -39,7 +50,7 @@ export default function App() {
 
   const onTrip = s.phase === "trip" && s.trip;
   let stops: MapStop[] = [];
-  let center = SG_CENTER;
+  let center = s.currentCity.center;
   if (onTrip && s.trip) {
     center = s.trip.center;
     const day = s.trip.graph.days[Math.min(s.tripDay, s.trip.graph.days.length - 1)];
@@ -53,7 +64,7 @@ export default function App() {
       }));
   } else if (s.plan?.alternatives) {
     const alt = s.plan.alternatives[s.planAlt];
-    center = s.plan.city?.center ?? SG_CENTER;
+    center = s.plan.city?.center ?? s.currentCity.center;
     stops = (alt?.stops ?? [])
       .filter((st) => st.place)
       .map((st) => ({
@@ -70,7 +81,7 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <MapCanvas center={center} stops={stops} />
+      <MapCanvas center={center} stops={stops} recommendations={recs} />
       <header className="topbar">
         <div className="wordmark small">
           <span className="hanzi">缘分</span> YuanFen

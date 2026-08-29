@@ -1,4 +1,5 @@
-import type { VibeTag } from "@yuanfen/shared";
+import type { Place, VibeTag } from "@yuanfen/shared";
+import { loadCity } from "./data.js";
 
 /**
  * FR-004: deterministic S1 intent parser. No LLM in the request path — this
@@ -12,6 +13,11 @@ export interface ParsedIntent {
   mustTags: string[];
   moodTags: VibeTag[];
   raw: string;
+}
+
+export interface ParseOptions {
+  /** City currently in view; used when the user does not name one explicitly. */
+  contextCity?: string;
 }
 
 const CITIES: Array<{ id: string; name: string; aliases: string[] }> = [
@@ -38,14 +44,67 @@ const MOOD_MAP: Array<{ pattern: RegExp; tags: VibeTag[] }> = [
 
 const MUST_PATTERN = /must\s+(?:eat|try|have|see|visit|do|go\s+to)\s+([a-z][a-z\s'-]*?)(?=\s*(?:,|\.|;|!|\?|$|\bthen\b|\band\b))/gi;
 
-export function parseIntent(text: string): ParsedIntent {
+function normaliseName(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function cleanMustTag(tag: string): string {
+  return tag.replace(/^(?:the|a|an)\s+/i, "").trim();
+}
+
+function findPlaceMatches(text: string, places: Place[]): string[] {
+  const normalizedText = normaliseName(text);
+  const segments = normalizedText
+    .split(/[,;.!?]|\bthen\b|\band\b|\bnear\b|\bat\b|\bin\b|\bvisit\b|\bsee\b/)
+    .map((s) => s.trim())
+    .filter((s) => s.length >= 3);
+
+  const matches = new Set<string>();
+
+  for (const place of places) {
+    const placeNorm = normaliseName(place.name);
+    if (placeNorm.length < 3) continue;
+
+    if (normalizedText.includes(placeNorm)) {
+      matches.add(placeNorm);
+      continue;
+    }
+
+    for (const segment of segments) {
+      if (placeNorm.includes(segment) || segment.includes(placeNorm)) {
+        matches.add(segment);
+      }
+    }
+  }
+
+  return Array.from(matches);
+}
+
+export function parseIntent(text: string, options: ParseOptions = {}): ParsedIntent {
   const lower = text.toLowerCase();
-  const city = CITIES.find((c) => c.aliases.some((a) => lower.includes(a))) ?? null;
+  const explicitCity = CITIES.find((c) => c.aliases.some((a) => lower.includes(a))) ?? null;
+  const contextCity = options.contextCity ? CITIES.find((c) => c.id === options.contextCity) ?? null : null;
+  const city = explicitCity ?? contextCity;
 
   const mustTags: string[] = [];
   for (const match of text.matchAll(MUST_PATTERN)) {
-    const phrase = match[1]?.trim().toLowerCase();
+    const phrase = cleanMustTag(match[1]?.trim().toLowerCase() ?? "");
     if (phrase) mustTags.push(phrase);
+  }
+
+  let places: Place[] = [];
+  if (city) {
+    try {
+      places = loadCity(city.id).places;
+    } catch {
+      places = [];
+    }
+  }
+
+  const barePlaces = city ? findPlaceMatches(text, places) : [];
+  for (const p of barePlaces) {
+    const cleaned = cleanMustTag(p);
+    if (cleaned && !mustTags.includes(cleaned)) mustTags.push(cleaned);
   }
 
   const moodTags: VibeTag[] = [];

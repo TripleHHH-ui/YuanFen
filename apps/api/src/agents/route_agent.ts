@@ -59,8 +59,26 @@ function nextSaturday(from = new Date()): string {
   return d.toISOString().slice(0, 10);
 }
 
-export function planChat(text: string, taste: TasteVector, date?: string) {
-  const intent: ParsedIntent = parseIntent(text);
+function matchesMustTag(place: Place, tag: string): boolean {
+  const name = place.name.toLowerCase();
+  return (
+    name.includes(tag.toLowerCase()) ||
+    place.tags?.some((pt) => pt.toLowerCase() === tag.toLowerCase()) ||
+    false
+  );
+}
+
+function unknownMustError(intent: ParsedIntent, places: Place[]): string | null {
+  for (const tag of intent.mustTags) {
+    if (!places.some((p) => matchesMustTag(p, tag))) {
+      return `${tag} is not a recognised place or craving in ${intent.cityName}.`;
+    }
+  }
+  return null;
+}
+
+export function planChat(text: string, taste: TasteVector, date?: string, contextCity?: string) {
+  const intent: ParsedIntent = parseIntent(text, { contextCity });
   if (!intent.city) {
     return {
       intent,
@@ -69,6 +87,10 @@ export function planChat(text: string, taste: TasteVector, date?: string) {
   }
   const city = loadCity(intent.city);
   const matrix = loadMatrix(intent.city);
+  const missing = unknownMustError(intent, city.places);
+  if (missing) {
+    return { intent, error: missing };
+  }
   const planDate = date ?? nextSaturday();
   const alternatives = buildAlternatives(city.places, matrix, {
     date: planDate,

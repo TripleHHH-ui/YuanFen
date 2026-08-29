@@ -1,5 +1,5 @@
 import type { FastifyInstance } from "fastify";
-import { VIBE_TAGS, type SwipeAction, type VibeTag } from "@yuanfen/shared";
+import { VIBE_TAGS, scorePlace, emptyVector, type SwipeAction, type VibeTag } from "@yuanfen/shared";
 import type { AtlasClient, PassengerInput } from "./atlas/types.js";
 import { evidenceLog } from "./evidence.js";
 import { acceptPriceChange, createOrder, payOrder, verifyOffer } from "./booking.js";
@@ -49,10 +49,10 @@ export function registerRoutes(app: FastifyInstance, client: AtlasClient): void 
     return summary;
   });
 
-  app.post<{ Body: { text: string; date?: string } }>("/api/plan/chat", async (req, reply) => {
+  app.post<{ Body: { text: string; date?: string; city?: string } }>("/api/plan/chat", async (req, reply) => {
     const summary = tasteSummary();
     if (!summary) return reply.code(400).send({ error: "Seed taste first" });
-    return planChat(req.body?.text ?? "", summary.vector, req.body?.date);
+    return planChat(req.body?.text ?? "", summary.vector, req.body?.date, req.body?.city);
   });
 
   app.get("/api/fareboard/alert", async (_req, reply) => {
@@ -129,6 +129,34 @@ export function registerRoutes(app: FastifyInstance, client: AtlasClient): void 
       }
     },
   );
+
+  // Landing-screen recommendations: taste-ranked places near the city centre,
+  // shown before the user has asked for a route.
+  app.get<{ Params: { city: string } }>("/api/places/nearby/:city", async (req, reply) => {
+    try {
+      const { loadCity } = await import("./data.js");
+      const { places } = loadCity(req.params.city);
+      const summary = tasteSummary();
+      const vector = summary?.vector ?? emptyVector();
+      const scored = places
+        .map((p) => ({ p, score: scorePlace(vector, p) }))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 8)
+        .map(({ p }) => ({
+          id: p.id,
+          name: p.name,
+          lat: p.lat,
+          lng: p.lng,
+          emoji: p.emoji,
+          blurb: p.blurb,
+          area: p.area,
+          vibeTags: p.vibeTags,
+        }));
+      return { places: scored };
+    } catch {
+      return reply.code(404).send({ error: "Unknown city" });
+    }
+  });
 
   app.get("/api/evidence", async () => ({ mode: client.mode, environment: client.environment, calls: evidenceLog() }));
 }

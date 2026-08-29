@@ -1,33 +1,69 @@
 import { useState } from "react";
 import { useStore } from "../../store";
 import type { WireStop } from "../../api";
+import { NearbyPanel } from "./NearbyPanel";
+
+const EXAMPLE_PROMPTS = [
+  "ArtScience Museum, must eat chicken rice, then somewhere quiet",
+  "Quiet morning near Tiong Bahru, then somewhere with a view",
+  "History and temples in Singapore CBD, must see the Esplanade",
+];
 
 /** S1 surface: chat bar + route card with swipeable alternatives (FR-004/005/006/007). */
 export function RoutePanel() {
   const { plan, planAlt, setAlt, sendChat, planLoading, revealStop, revealed } = useStore();
-  const [text, setText] = useState("Day trip in Singapore CBD, must eat chicken rice, then somewhere quiet");
+  const [text, setText] = useState("");
 
   const alt = plan?.alternatives?.[planAlt];
+  const showLanding = !plan?.alternatives && !planLoading;
+
+  function submit(value: string) {
+    const trimmed = value.trim();
+    if (trimmed) void sendChat(trimmed);
+  }
 
   return (
     <aside className="route-panel">
-      <form
-        className="chat-bar"
-        onSubmit={(e) => {
-          e.preventDefault();
-          if (text.trim()) void sendChat(text.trim());
-        }}
-      >
-        <input
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder="Tell me the day you want…"
-          aria-label="Trip request"
-        />
-        <button type="submit" disabled={planLoading}>
-          {planLoading ? "…" : "→"}
-        </button>
-      </form>
+      <div className="composer-wrap">
+        <form
+          className="composer-bar"
+          onSubmit={(e) => {
+            e.preventDefault();
+            submit(text);
+          }}
+        >
+          <input
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Tell me the day you want — places, cravings, mood…"
+            aria-label="Trip request"
+            autoComplete="off"
+          />
+          <button type="submit" disabled={planLoading} aria-label="Plan">
+            {planLoading ? "…" : "→"}
+          </button>
+        </form>
+
+        {showLanding && (
+          <div className="example-prompts">
+            <span className="example-label">Try</span>
+            {EXAMPLE_PROMPTS.map((p) => (
+              <button
+                key={p}
+                className="example-chip"
+                onClick={() => {
+                  setText(p);
+                  submit(p);
+                }}
+              >
+                {p}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <NearbyPanel onSelect={(value) => { setText(value); submit(value); }} />
 
       {plan?.error && <div className="plan-error">{plan.error}</div>}
 
