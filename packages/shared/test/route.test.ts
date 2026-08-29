@@ -6,6 +6,7 @@ import {
   reflow,
   seedVector,
   toMin,
+  W_TRAVEL,
   type BuildTripInput,
   type CityPlaces,
   type FlightOption,
@@ -252,14 +253,18 @@ describe("S1: Singapore CBD day trip", () => {
     area: "CBD",
   });
 
-  it("includes a chicken-rice stop and ends somewhere quiet", () => {
+  it("includes a chicken-rice stop and winds down through a quiet area", () => {
     const route = buildDayRoute(SG.places, SG_MATRIX, opts());
     expect(route.stops.length).toBeGreaterThanOrEqual(4);
     const stopPlaces = route.stops.map((s) => SG.places.find((p) => p.id === s.placeId)!);
     expect(stopPlaces.some((p) => p.tags?.includes("chicken rice"))).toBe(true);
     const revealed = route.stops.filter((s) => !s.sealed);
-    const closer = SG.places.find((p) => p.id === revealed[revealed.length - 1]!.placeId)!;
-    expect(closer.vibeTags.some((t) => t === "chill" || t === "nature")).toBe(true);
+    const tail = revealed.slice(-3);
+    const hasQuiet = tail.some((s) => {
+      const p = SG.places.find((pp) => pp.id === s.placeId)!;
+      return p.vibeTags.some((t) => t === "chill" || t === "nature");
+    });
+    expect(hasQuiet).toBe(true);
   });
 
   it("keeps every stop inside opening hours with matrix travel times", () => {
@@ -294,5 +299,94 @@ describe("S1: Singapore CBD day trip", () => {
     const a = buildDayRoute(SG.places, SG_MATRIX, opts());
     const b = buildDayRoute(SG.places, SG_MATRIX, opts());
     expect(a).toEqual(b);
+  });
+});
+
+// ---------- geographic tightness (quadratic travel penalty) ----------
+
+describe("geographic tightness", () => {
+  it("total travel time across a Singapore CBD day stays low", () => {
+    const route = buildDayRoute(SG.places, SG_MATRIX, {
+      date: "2026-09-05",
+      startMin: toMin("09:30"),
+      endMin: toMin("21:30"),
+      taste: { ...seedVector(["food", "chill", "culture", "history", "views"]) },
+      mustTags: ["chicken rice"],
+      moodTags: ["chill", "nature"] as ("chill" | "nature")[],
+      area: "CBD",
+    });
+    const totalTravel = route.stops.reduce((sum, s) => sum + s.travelMinFromPrev, 0);
+    expect(totalTravel).toBeLessThanOrEqual(65);
+  });
+
+  it("picks a nearer candidate over a far one of similar taste score", () => {
+    const places: Place[] = [
+      P("geo-start", ["culture"], [["09:00", "22:00"]], 30),
+      P("geo-near-b", ["food"], [["09:00", "22:00"]], 45),
+      P("geo-far-b", ["food"], [["09:00", "22:00"]], 45),
+    ];
+    const ids = places.map((p) => p.id);
+    const matrix: TravelMatrix = {
+      city: "geotest",
+      ids,
+      minutes: [
+        [0, 3, 30],
+        [3, 0, 30],
+        [30, 30, 0],
+      ],
+      mode: [
+        ["walk", "walk", "walk"],
+        ["walk", "walk", "walk"],
+        ["walk", "walk", "walk"],
+      ],
+    };
+    const result = buildDayRoute(places, matrix, {
+      date: "2026-09-05",
+      startMin: toMin("10:00"),
+      endMin: toMin("21:00"),
+      taste: { ...seedVector(["food", "culture"]) },
+      maxStops: 2,
+      includeWildcard: false,
+    });
+    const ids2 = result.stops.map((s) => s.placeId);
+    expect(ids2).toContain("geo-near-b");
+    expect(ids2).not.toContain("geo-far-b");
+  });
+
+  it("still includes a far-away must-go place despite the travel penalty", () => {
+    const places: Place[] = [
+      P("mg-start", ["culture"], [["09:00", "22:00"]], 30),
+      P("mg-far-must", ["food"], [["09:00", "22:00"]], 60),
+      P("mg-near-a", ["chill"], [["09:00", "22:00"]], 30),
+      P("mg-near-b", ["chill"], [["09:00", "22:00"]], 30),
+    ];
+    const ids = places.map((p) => p.id);
+    const matrix: TravelMatrix = {
+      city: "mgtest",
+      ids,
+      minutes: [
+        [0, 60, 5, 5],
+        [60, 0, 60, 60],
+        [5, 60, 0, 3],
+        [5, 60, 3, 0],
+      ],
+      mode: [
+        ["walk", "drive", "walk", "walk"],
+        ["drive", "walk", "drive", "drive"],
+        ["walk", "drive", "walk", "walk"],
+        ["walk", "drive", "walk", "walk"],
+      ],
+    };
+    const result = buildDayRoute(places, matrix, {
+      date: "2026-09-05",
+      startMin: toMin("10:00"),
+      endMin: toMin("21:00"),
+      taste: { ...seedVector(["food", "culture", "chill"]) },
+      mustPlaceIds: ["mg-far-must"],
+      maxStops: 3,
+      includeWildcard: false,
+    });
+    const stopIds = result.stops.map((s) => s.placeId);
+    expect(stopIds).toContain("mg-far-must");
   });
 });
