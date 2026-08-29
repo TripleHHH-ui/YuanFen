@@ -73,7 +73,27 @@ export interface DayRouteResult {
   explanations: string[];
 }
 
+// Travel-penalty weight. Squared so short hops are nearly free but cross-town
+// treks hurt disproportionately: 5 min ≈ 0.13 pt, 10 min ≈ 0.5 pt, 20 min ≈ 2 pt.
+export const W_TRAVEL = 0.005;
+
+// Mood-arc tuning: the wind-down bonus scales linearly from MOOD_BASE (early
+// afternoon) to MOOD_BASE + MOOD_RAMP (closing hour). The ramp compensates for
+// the quadratic travel penalty so a slightly further quiet stop still wins over
+// a nearby non-quiet one when the day is winding down.
+export const MOOD_BASE = 1.0;
+export const MOOD_RAMP = 4.0;
+export const MOOD_WINDOW_MIN = 150;
+
 const FIRST_LEG_MIN = 15;
+
+// Treat two POIs within this many minutes as the same place cluster; the second
+// one is skipped so the day does not return to an already-visited complex.
+const DUPLICATE_TRAVEL_MIN = 2;
+
+// Penalty for picking the same dominant category twice in a row (food-after-food
+// being the worst offender).
+const CONSECUTIVE_SAME_CATEGORY_PENALTY = 2.5;
 const MEAL_WINDOWS: Array<[number, number]> = [
   [toMin("11:30"), toMin("13:30")],
   [toMin("18:00"), toMin("20:30")],
@@ -108,24 +128,46 @@ function roleFor(place: Place, opts: DayRouteOptions): StopNode["role"] {
   return "anchor";
 }
 
+type DominantCategory = "food" | "quiet" | "anchor";
+
+function dominantCategory(place: Place): DominantCategory {
+  if (place.vibeTags.includes("food")) return "food";
+  if (place.vibeTags.includes("chill") || place.vibeTags.includes("nature")) return "quiet";
+  return "anchor";
+}
+
+function isClusterDuplicate(place: Place, visited: Set<string>, matrix: TravelMatrix): boolean {
+  for (const id of visited) {
+    if (id === place.id) continue;
+    const travel = travelBetween(matrix, id, place.id);
+    if (travel <= DUPLICATE_TRAVEL_MIN) return true;
+  }
+  return false;
+}
+
 function slotScore(
   place: Place,
   opts: DayRouteOptions,
   arriveMin: number,
   travelMin: number,
-  remainingMin: number,
   mustSatisfied: boolean,
+  prevCategory: DominantCategory | null,
 ): number {
   let score = scorePlace(opts.taste, place);
   const isFood = place.vibeTags.includes("food");
   const inMeal = MEAL_WINDOWS.some(([a, b]) => arriveMin >= a && arriveMin <= b);
   if (isFood && inMeal) score += 1.2;
   if (isFood && !inMeal) score -= 0.8;
-  if (opts.moodTags && remainingMin < 150 && place.vibeTags.some((t) => opts.moodTags!.includes(t)))
-    score += 1.0;
+  const wildcardReserve = opts.includeWildcard !== false && !opts.nightFoodOnly ? 60 : 0;
+  const dayLeft = opts.endMin - wildcardReserve - arriveMin;
+  if (opts.moodTags && dayLeft < MOOD_WINDOW_MIN && place.vibeTags.some((t) => opts.moodTags!.includes(t))) {
+    const pressure = 1 - dayLeft / MOOD_WINDOW_MIN;
+    score += MOOD_BASE + MOOD_RAMP * pressure;
+  }
   if (opts.area && place.area.toLowerCase().includes(opts.area.toLowerCase())) score += 0.5;
   if (!mustSatisfied && isMust(place, opts)) score += 10;
-  score -= travelMin / 60;
+  if (prevCategory && dominantCategory(place) === prevCategory) score -= CONSECUTIVE_SAME_CATEGORY_PENALTY;
+  score -= W_TRAVEL * travelMin * travelMin;
   return score;
 }
 
@@ -139,7 +181,7 @@ function pickWildcard(
   matrix: TravelMatrix,
 ): StopNode | null {
   const novel = candidates
-    .filter((p) => !visited.has(p.id))
+    .filter((p) => !visited.has(p.id) && !isClusterDuplicate(p, visited, matrix))
     .filter((p) => p.vibeTags.some((t) => (opts.taste[t] ?? 0) <= 0))
     .map((p) => {
       const travel = travelBetween(matrix, prev, p.id);
@@ -173,9 +215,10 @@ export function buildDayRoute(
 
   let cur = opts.startMin;
   let prev: string | null = null;
+  let prevCategory: DominantCategory | null = null;
   const mustSatisfiedTags = new Set<string>();
 
-  let pool = places.filter((p) => !visited.has(p.id));
+  let pool = places.filter((p) => !visited.has(p.id) && !isClusterDuplicate(p, visited, matrix));
   if (opts.nightFoodOnly) {
     pool = pool.filter((p) => p.vibeTags.includes("food") || p.vibeTags.includes("nightlife"));
   }
@@ -187,7 +230,7 @@ export function buildDayRoute(
       (opts.mustTags ?? []).every((t) => mustSatisfiedTags.has(t.toLowerCase())) &&
       (opts.mustPlaceIds ?? []).every((id) => visited.has(id));
     const feasible = pool
-      .filter((p) => !visited.has(p.id))
+      .filter((p) => !visited.has(p.id) && !isClusterDuplicate(p, visited, matrix))
       .map((p) => {
         const travel = travelBetween(matrix, prev, p.id);
         const arrive = cur + travel;
@@ -199,8 +242,8 @@ export function buildDayRoute(
       )
       .sort(
         (a, b) =>
-          slotScore(b.p, opts, b.arrive, b.travel, opts.endMin - b.arrive, mustDone) -
-            slotScore(a.p, opts, a.arrive, a.travel, opts.endMin - a.arrive, mustDone) ||
+          slotScore(b.p, opts, b.arrive, b.travel, mustDone, prevCategory) -
+            slotScore(a.p, opts, a.arrive, a.travel, mustDone, prevCategory) ||
           a.p.id.localeCompare(b.p.id),
       );
     const pick = feasible[0];
@@ -218,6 +261,7 @@ export function buildDayRoute(
     }
     cur = pick.arrive + pick.p.estStayMin;
     prev = pick.p.id;
+    prevCategory = dominantCategory(pick.p);
   }
 
   if (wildcardReserve > 0) {
