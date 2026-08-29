@@ -1,0 +1,43 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: en-US
+branch: feat/breadth
+nodes_managed: true
+exported_at: "2026-08-29T11:30:04Z"
+modules:
+    "":
+        dir_name: Trip Graph Agent Monorepo
+        title: Trip Graph Agent Monorepo
+        scope:
+            - README.md
+            - .gitignore
+            - package.json
+            - package-lock.json
+            - tsconfig.base.json
+            - vitest.config.ts
+            - .env.example
+        source_files: []
+        children:
+            - data_fixtures
+            - docs_and_infra
+        depends_on: []
+        related_to: []
+    data_fixtures:
+        dir_name: Travel Planning Data Fixtures
+        title: Travel Planning Data Fixtures
+        scope:
+            - data/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    docs_and_infra:
+        dir_name: Product Documentation & Scheduled Task Specs
+        title: Product Documentation & Scheduled Task Specs
+        scope:
+            - docs/
+            - infra/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
