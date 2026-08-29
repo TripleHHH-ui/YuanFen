@@ -87,6 +87,10 @@ export const MOOD_WINDOW_MIN = 150;
 
 const FIRST_LEG_MIN = 15;
 
+// Wildcards are sealed, taste-adjacent surprises. They are scheduled as an
+// explicit shortened "drop in" visit so the fit check matches the displayed time.
+const WILDCARD_STAY_MIN = 60;
+
 // Treat two POIs within this many minutes as the same place cluster; the second
 // one is skipped so the day does not return to an already-visited complex.
 const DUPLICATE_TRAVEL_MIN = 2;
@@ -121,8 +125,18 @@ function isMust(place: Place, opts: DayRouteOptions): boolean {
   );
 }
 
-function roleFor(place: Place, opts: DayRouteOptions): StopNode["role"] {
-  if (isMust(place, opts)) return "must";
+function roleFor(
+  place: Place,
+  opts: DayRouteOptions,
+  alreadySatisfiedMustTags: Set<string> = new Set(),
+): StopNode["role"] {
+  if (opts.mustPlaceIds?.includes(place.id)) return "must";
+  if (opts.mustTags) {
+    const newlySatisfied = opts.mustTags.filter(
+      (t) => matchesMustTag(place, [t]) && !alreadySatisfiedMustTags.has(t.toLowerCase()),
+    );
+    if (newlySatisfied.length > 0) return "must";
+  }
   if (place.vibeTags.includes("food")) return "food";
   if (place.vibeTags.includes("chill") || place.vibeTags.includes("nature")) return "quiet";
   return "anchor";
@@ -158,7 +172,7 @@ function slotScore(
   const inMeal = MEAL_WINDOWS.some(([a, b]) => arriveMin >= a && arriveMin <= b);
   if (isFood && inMeal) score += 1.2;
   if (isFood && !inMeal) score -= 0.8;
-  const wildcardReserve = opts.includeWildcard !== false && !opts.nightFoodOnly ? 60 : 0;
+  const wildcardReserve = opts.includeWildcard !== false && !opts.nightFoodOnly ? WILDCARD_STAY_MIN : 0;
   const dayLeft = opts.endMin - wildcardReserve - arriveMin;
   if (opts.moodTags && dayLeft < MOOD_WINDOW_MIN && place.vibeTags.some((t) => opts.moodTags!.includes(t))) {
     const pressure = 1 - dayLeft / MOOD_WINDOW_MIN;
@@ -186,16 +200,17 @@ function pickWildcard(
     .map((p) => {
       const travel = travelBetween(matrix, prev, p.id);
       const arrive = cur + travel;
-      return { p, travel, arrive };
+      const score = scorePlace(opts.taste, p) - W_TRAVEL * travel * travel;
+      return { p, travel, arrive, score };
     })
-    .filter(({ p, arrive }) => isOpenAt(p, opts.date, arrive) && arrive + Math.min(p.estStayMin, 60) <= opts.endMin)
-    .sort((a, b) => scorePlace(opts.taste, b.p) - scorePlace(opts.taste, a.p) || a.p.id.localeCompare(b.p.id));
+    .filter(({ p, arrive }) => isOpenAt(p, opts.date, arrive) && arrive + WILDCARD_STAY_MIN <= opts.endMin)
+    .sort((a, b) => b.score - a.score || a.p.id.localeCompare(b.p.id));
   const pick = novel[0];
   if (!pick) return null;
   return {
     placeId: pick.p.id,
     arrive: fmtMin(pick.arrive),
-    depart: fmtMin(pick.arrive + Math.min(pick.p.estStayMin, 60)),
+    depart: fmtMin(pick.arrive + WILDCARD_STAY_MIN),
     travelMinFromPrev: pick.travel,
     role: "wildcard",
     sealed: true,
@@ -211,7 +226,7 @@ export function buildDayRoute(
   const stops: StopNode[] = [];
   const explanations: string[] = [];
   const maxStops = opts.nightFoodOnly ? 1 : (opts.maxStops ?? 5);
-  const wildcardReserve = opts.includeWildcard !== false && !opts.nightFoodOnly ? 60 : 0;
+  const wildcardReserve = opts.includeWildcard !== false && !opts.nightFoodOnly ? WILDCARD_STAY_MIN : 0;
 
   let cur = opts.startMin;
   let prev: string | null = null;
@@ -248,17 +263,21 @@ export function buildDayRoute(
       );
     const pick = feasible[0];
     if (!pick) break;
+    const newlySatisfiedMustTags = opts.mustTags?.filter(
+      (t) => matchesMustTag(pick.p, [t]) && !mustSatisfiedTags.has(t.toLowerCase()),
+    ) ?? [];
     stops.push({
       placeId: pick.p.id,
       arrive: fmtMin(pick.arrive),
       depart: fmtMin(pick.arrive + pick.p.estStayMin),
       travelMinFromPrev: pick.travel,
-      role: roleFor(pick.p, opts),
+      role:
+        opts.mustPlaceIds?.includes(pick.p.id) || newlySatisfiedMustTags.length > 0
+          ? "must"
+          : roleFor(pick.p, opts, mustSatisfiedTags),
     });
     visited.add(pick.p.id);
-    if (opts.mustTags) {
-      for (const t of opts.mustTags) if (matchesMustTag(pick.p, [t])) mustSatisfiedTags.add(t.toLowerCase());
-    }
+    for (const t of newlySatisfiedMustTags) mustSatisfiedTags.add(t.toLowerCase());
     cur = pick.arrive + pick.p.estStayMin;
     prev = pick.p.id;
     prevCategory = dominantCategory(pick.p);
@@ -515,4 +534,127 @@ export function reflow(graph: TripGraph, newOut: FlightOption, ctx: ReflowContex
     narration: narrateSwap(oldOut, newOut, delta),
   };
   return { graph: next, delta };
+}
+
+// ---------- stop-level swap (single stop, forward re-chain) ----------
+
+export interface SwapStopInput {
+  day: DayPlan;
+  stopIndex: number;
+  replacementPlaceId: string;
+  places: Place[];
+  matrix: TravelMatrix;
+  opts: DayRouteOptions;
+}
+
+export interface SwapStopResult {
+  day: DayPlan;
+  costDeltaSGD: number;
+  travelDeltaMin: number;
+  droppedStops: string[];
+  mustDropped: boolean;
+}
+
+function dayCost(stops: StopNode[], places: Place[]): number {
+  return stops.reduce((sum, s) => sum + (places.find((p) => p.id === s.placeId)?.estCostSGD ?? 0), 0);
+}
+
+function dayTravel(stops: StopNode[]): number {
+  return stops.reduce((sum, s) => sum + s.travelMinFromPrev, 0);
+}
+
+export function swapStop(input: SwapStopInput): SwapStopResult {
+  const { day, stopIndex, replacementPlaceId, places, matrix, opts } = input;
+  const replacement = places.find((p) => p.id === replacementPlaceId);
+  if (!replacement) throw new Error(`Unknown place: ${replacementPlaceId}`);
+  if (stopIndex < 0 || stopIndex >= day.stops.length) throw new Error(`Invalid stop index: ${stopIndex}`);
+
+  const before = day.stops.slice(0, stopIndex);
+  const oldAfter = day.stops.slice(stopIndex + 1);
+  const oldAll = day.stops;
+
+  const newStops: StopNode[] = [...before];
+  const prevStop = before.length > 0 ? before[before.length - 1]! : null;
+  const prevPlaceId = prevStop?.placeId ?? null;
+  const curMin = prevStop ? toMin(prevStop.depart) : opts.startMin;
+
+  const travel = travelBetween(matrix, prevPlaceId, replacementPlaceId);
+  const arrive = curMin + travel;
+  newStops.push({
+    placeId: replacementPlaceId,
+    arrive: fmtMin(arrive),
+    depart: fmtMin(arrive + replacement.estStayMin),
+    travelMinFromPrev: travel,
+    role: roleFor(replacement, opts),
+  });
+
+  let chainCur = arrive + replacement.estStayMin;
+  let chainPrev = replacementPlaceId;
+  const droppedStops: string[] = [];
+
+  for (const stop of oldAfter) {
+    const place = places.find((p) => p.id === stop.placeId);
+    if (!place) { droppedStops.push(stop.placeId); continue; }
+    const t = travelBetween(matrix, chainPrev, stop.placeId);
+    const a = chainCur + t;
+    if (!isOpenAt(place, opts.date, a)) { droppedStops.push(stop.placeId); continue; }
+    if (a + place.estStayMin > opts.endMin) { droppedStops.push(stop.placeId); continue; }
+    newStops.push({
+      placeId: stop.placeId,
+      arrive: fmtMin(a),
+      depart: fmtMin(a + place.estStayMin),
+      travelMinFromPrev: t,
+      role: stop.role,
+    });
+    chainCur = a + place.estStayMin;
+    chainPrev = stop.placeId;
+  }
+
+  const costDeltaSGD = dayCost(newStops, places) - dayCost(oldAll, places);
+  const travelDeltaMin = dayTravel(newStops) - dayTravel(oldAll);
+  const mustIds = new Set(opts.mustPlaceIds ?? []);
+  const mustDropped = droppedStops.some((id) => mustIds.has(id));
+
+  return {
+    day: { date: day.date, stops: newStops },
+    costDeltaSGD,
+    travelDeltaMin,
+    droppedStops,
+    mustDropped,
+  };
+}
+
+export interface AlternativesInput {
+  day: DayPlan;
+  stopIndex: number;
+  places: Place[];
+  matrix: TravelMatrix;
+  opts: DayRouteOptions;
+}
+
+export function alternativesForStop(input: AlternativesInput): Place[] {
+  const { day, stopIndex, places, matrix, opts } = input;
+  const inDay = new Set(day.stops.map((s) => s.placeId));
+  const prevPlaceId = stopIndex > 0 ? day.stops[stopIndex - 1]!.placeId : null;
+  const nextPlaceId = stopIndex < day.stops.length - 1 ? day.stops[stopIndex + 1]!.placeId : null;
+  const curMin = stopIndex > 0 ? toMin(day.stops[stopIndex - 1]!.depart) : opts.startMin;
+
+  const candidates = places
+    .filter((p) => !inDay.has(p.id))
+    .filter((p) => !isClusterDuplicate(p, inDay, matrix))
+    .map((p) => {
+      const travel = travelBetween(matrix, prevPlaceId, p.id);
+      const arrive = curMin + travel;
+      const nextTravel = nextPlaceId ? travelBetween(matrix, p.id, nextPlaceId) : 0;
+      return { p, travel, arrive, nextTravel };
+    })
+    .filter(({ p, arrive, nextTravel }) => {
+      if (!isOpenAt(p, opts.date, arrive)) return false;
+      if (arrive + p.estStayMin > opts.endMin) return false;
+      if (nextPlaceId && arrive + p.estStayMin + nextTravel > opts.endMin) return false;
+      return true;
+    })
+    .sort((a, b) => scorePlace(opts.taste, b.p) - scorePlace(opts.taste, a.p) || a.p.id.localeCompare(b.p.id));
+
+  return candidates.slice(0, 6).map((c) => c.p);
 }

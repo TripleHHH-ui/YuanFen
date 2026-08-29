@@ -380,6 +380,53 @@ input { font-family: var(--body); }
 .explain-line { font-size: 12.5px; color: var(--ink-soft); font-style: italic; padding: 6px 2px 0; }
 .stop.empty { color: var(--ink-soft); font-style: italic; }
 
+/* ---------- stop swap ---------- */
+.swap-stop-btn {
+  position: absolute; right: 4px; top: 6px;
+  background: none; border: 1px solid var(--line); border-radius: 6px;
+  width: 26px; height: 26px; font-size: 14px; cursor: pointer;
+  color: var(--ink-soft); opacity: 0; transition: opacity 0.15s;
+}
+.stop:hover .swap-stop-btn { opacity: 1; }
+.swap-stop-btn:hover { background: var(--line); color: var(--ink); }
+.stop-swapped { animation: swap-flash 1.2s ease; }
+@keyframes swap-flash {
+  0% { background: rgba(201, 162, 39, 0.25); }
+  100% { background: transparent; }
+}
+.swapped-mark {
+  margin-left: 7px; font-size: 10px; font-weight: 800; letter-spacing: 0.07em;
+  text-transform: uppercase; padding: 2px 7px; border-radius: 99px;
+  background: rgba(201, 162, 39, 0.16); color: var(--gold-deep);
+}
+.alt-list {
+  margin: 6px 0 2px 39px; display: flex; flex-direction: column; gap: 2px;
+  animation: rise 0.25s both;
+}
+.alt-row {
+  display: flex; gap: 8px; align-items: center; width: 100%;
+  background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+  padding: 6px 10px; font-size: 13px; cursor: pointer; text-align: left;
+  transition: border-color 0.15s;
+}
+.alt-row:hover { border-color: var(--thread); }
+.alt-emoji { font-size: 16px; }
+.alt-name { font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.alt-tags { font-size: 11px; color: var(--ink-soft); }
+.alt-cost { font-family: var(--mono); font-size: 11.5px; color: var(--thread-deep); }
+.alt-travel { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); }
+.alt-empty { font-size: 12px; color: var(--ink-soft); font-style: italic; padding: 4px 0; }
+.stop-swap-deltas {
+  display: flex; gap: 8px; padding: 6px 0 2px; flex-wrap: wrap;
+}
+.stop-swap-deltas .delta-chip {
+  font-size: 11.5px; font-family: var(--mono); padding: 2px 8px;
+  border-radius: 99px; font-weight: 700;
+}
+.stop-swap-deltas .delta-chip.up { background: rgba(200, 55, 45, 0.1); color: var(--thread-deep); }
+.stop-swap-deltas .delta-chip.down { background: rgba(46, 139, 87, 0.12); color: #1a7a4a; }
+.stop-swap-deltas .delta-chip.travel { background: rgba(100, 100, 120, 0.08); color: var(--ink-soft); }
+
 /* ---------- narration strip ---------- */
 .narration {
   position: absolute; z-index: 18; bottom: 26px; left: 50%; transform: translateX(-50%);

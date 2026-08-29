@@ -111,6 +111,37 @@ describe("golden path API", () => {
     expect(body.narration.trim().match(/[.!?]/g)?.length).toBe(1);
   });
 
+  it("stop swap: alternatives returns candidates, swap updates the day with cost delta", async () => {
+    await seedAndSwipe();
+    const trip = (await app.inject({ method: "POST", url: "/api/trips", payload: { destination: "DAD" } })).json();
+    const tripId = trip.graph.id;
+    const dayWithStops = trip.graph.days.find((d: { stops: unknown[] }) => d.stops.length >= 2);
+    expect(dayWithStops).toBeTruthy();
+    const dayIndex = trip.graph.days.indexOf(dayWithStops);
+    const stopIndex = 1;
+
+    const altRes = await app.inject({
+      method: "GET",
+      url: `/api/trips/${tripId}/day/${dayIndex}/stop/${stopIndex}/alternatives`,
+    });
+    expect(altRes.statusCode).toBe(200);
+    const alts = altRes.json();
+    expect(alts.alternatives.length).toBeGreaterThan(0);
+
+    const replacement = alts.alternatives[0];
+    const swapRes = await app.inject({
+      method: "POST",
+      url: `/api/trips/${tripId}/day/${dayIndex}/stop/${stopIndex}/swap`,
+      payload: { place_id: replacement.id },
+    });
+    expect(swapRes.statusCode).toBe(200);
+    const swapped = swapRes.json();
+    expect(swapped.trip.graph.days[dayIndex].stops[stopIndex].placeId).toBe(replacement.id);
+    expect(typeof swapped.costDeltaSGD).toBe("number");
+    expect(typeof swapped.travelDeltaMin).toBe("number");
+    expect(swapped.narration.trim().match(/[.!?]/g)?.length).toBe(1);
+  });
+
   it("booking: verify -> order -> pay returns order/PNR/ticket; wrong consent total is rejected (FR-015/016)", async () => {
     await seedAndSwipe();
     const verify = (await app.inject({ method: "POST", url: "/api/booking/verify", payload: { offer_id: "fxo-tr318-1106" } })).json();

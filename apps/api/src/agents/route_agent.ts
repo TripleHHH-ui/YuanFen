@@ -1,9 +1,14 @@
 import {
+  alternativesForStop,
   buildAlternatives,
   buildTrip,
+  narrateStopSwap,
   reflow,
+  swapStop,
   toMin,
   totalWithBag,
+  type DayPlan,
+  type DayRouteOptions,
   type DayRouteResult,
   type FlightOption,
   type Place,
@@ -204,6 +209,111 @@ export function swapFlight(id: string, offerId: string) {
   });
   stored.graph = result.graph;
   return { trip: tripView(id)!, delta: result.delta, narration: result.graph.narration };
+}
+
+function dayOpts(stored: StoredTrip, day: DayPlan): DayRouteOptions {
+  const { out, ret } = stored.graph.flight;
+  const isArrivalDay = day.date === out.arriveDate;
+  const isDepartDay = day.date === ret.departDate;
+  const late = toMin(out.arriveLocal) + 40 >= toMin("21:00");
+  let startMin = toMin("09:30");
+  let endMin = toMin("22:00");
+  if (isArrivalDay) {
+    startMin = Math.max(toMin("09:30"), toMin(out.arriveLocal) + 40);
+    if (late) startMin = toMin(out.arriveLocal) + 40;
+  }
+  if (isDepartDay) {
+    endMin = Math.min(endMin, toMin(ret.departLocal) - 240);
+  }
+  return {
+    date: day.date,
+    startMin,
+    endMin,
+    taste: stored.taste,
+    mustPlaceIds: tasteState()?.mustGoByDestination[stored.cityId] ?? [],
+  };
+}
+
+export function getStopAlternatives(tripId: string, dayIndex: number, stopIndex: number) {
+  const stored = trips.get(tripId);
+  if (!stored) return { error: "Unknown trip" };
+  const day = stored.graph.days[dayIndex];
+  if (!day) return { error: "Unknown day" };
+  if (stopIndex < 0 || stopIndex >= day.stops.length) return { error: "Unknown stop" };
+  const city = loadCity(stored.cityId);
+  const matrix = loadMatrix(stored.cityId);
+  const places = alternativesForStop({
+    day,
+    stopIndex,
+    places: city.places,
+    matrix,
+    opts: dayOpts(stored, day),
+  });
+  const prevPlaceId = stopIndex > 0 ? day.stops[stopIndex - 1]!.placeId : null;
+  return {
+    alternatives: places.map((p) => {
+      const i = matrix.ids.indexOf(prevPlaceId ?? "");
+      const j = matrix.ids.indexOf(p.id);
+      const travelMin = prevPlaceId ? (matrix.minutes[i]?.[j] ?? 15) : 15;
+      return {
+        id: p.id,
+        name: p.name,
+        emoji: p.emoji,
+        vibeTags: p.vibeTags,
+        estCostSGD: p.estCostSGD,
+        travelMinFromPrev: travelMin,
+      };
+    }),
+  };
+}
+
+export function performStopSwap(
+  tripId: string,
+  dayIndex: number,
+  stopIndex: number,
+  replacementPlaceId: string,
+) {
+  const stored = trips.get(tripId);
+  if (!stored) return { error: "Unknown trip" };
+  const day = stored.graph.days[dayIndex];
+  if (!day) return { error: "Unknown day" };
+  if (stopIndex < 0 || stopIndex >= day.stops.length) return { error: "Unknown stop" };
+  const city = loadCity(stored.cityId);
+  const matrix = loadMatrix(stored.cityId);
+  const oldPlace = city.places.find((p) => p.id === day.stops[stopIndex]!.placeId);
+  const newPlace = city.places.find((p) => p.id === replacementPlaceId);
+  if (!newPlace) return { error: "Unknown replacement place" };
+  const result = swapStop({
+    day,
+    stopIndex,
+    replacementPlaceId,
+    places: city.places,
+    matrix,
+    opts: dayOpts(stored, day),
+  });
+  stored.graph.days[dayIndex] = result.day;
+  const ground = stored.graph.days
+    .flatMap((d) => d.stops)
+    .reduce((sum, s) => sum + (city.places.find((p) => p.id === s.placeId)?.estCostSGD ?? 0), 0);
+  stored.graph.budget = {
+    ...stored.graph.budget,
+    ground,
+    total: stored.graph.budget.flightTotal + ground,
+  };
+  const narration = narrateStopSwap(oldPlace?.name ?? "a stop", newPlace.name, {
+    costDeltaSGD: result.costDeltaSGD,
+    travelDeltaMin: result.travelDeltaMin,
+    droppedStops: result.droppedStops,
+  });
+  stored.graph.narration = narration;
+  return {
+    trip: tripView(tripId)!,
+    costDeltaSGD: result.costDeltaSGD,
+    travelDeltaMin: result.travelDeltaMin,
+    droppedStops: result.droppedStops,
+    mustDropped: result.mustDropped,
+    narration,
+  };
 }
 
 export function resetTrips(): void {

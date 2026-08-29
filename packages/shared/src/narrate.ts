@@ -76,3 +76,24 @@ export function narrateSwap(
 
   return `Swapped to ${newOut.flight_no} — ${landing}, ${dayOne}, and ${budget}.`;
 }
+
+export function narrateStopSwap(
+  oldName: string,
+  newName: string,
+  delta: { costDeltaSGD: number; travelDeltaMin: number; droppedStops: string[] },
+): string {
+  const cost =
+    delta.costDeltaSGD > 0
+      ? `adds ${money(delta.costDeltaSGD, "SGD")}`
+      : delta.costDeltaSGD < 0
+        ? `saves ${money(Math.abs(delta.costDeltaSGD), "SGD")}`
+        : `cost stays put`;
+  const travel =
+    delta.travelDeltaMin > 0
+      ? `${delta.travelDeltaMin} min more travel`
+      : delta.travelDeltaMin < 0
+        ? `${Math.abs(delta.travelDeltaMin)} min less travel`
+        : `same travel time`;
+  const dropped = delta.droppedStops.length > 0 ? `, ${delta.droppedStops.length} later stop${delta.droppedStops.length === 1 ? "" : "s"} dropped` : "";
+  return `Swapped ${oldName} for ${newName} — ${cost}, ${travel}${dropped}.`;
+}

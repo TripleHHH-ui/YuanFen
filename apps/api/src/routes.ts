@@ -4,7 +4,7 @@ import type { AtlasClient, PassengerInput } from "./atlas/types.js";
 import { evidenceLog } from "./evidence.js";
 import { acceptPriceChange, createOrder, payOrder, verifyOffer } from "./booking.js";
 import { getAlert } from "./agents/fare_board.js";
-import { createTripFromDeal, planChat, swapFlight, tripView } from "./agents/route_agent.js";
+import { createTripFromDeal, getStopAlternatives, performStopSwap, planChat, swapFlight, tripView } from "./agents/route_agent.js";
 import { seedTaste, swipe, tasteDeck, tasteSummary, undo } from "./agents/taste_agent.js";
 
 export function registerRoutes(app: FastifyInstance, client: AtlasClient): void {
@@ -79,6 +79,29 @@ export function registerRoutes(app: FastifyInstance, client: AtlasClient): void 
     "/api/trips/:id/swap-flight",
     async (req, reply) => {
       const result = swapFlight(req.params.id, req.body?.offer_id ?? "");
+      if ("error" in result) return reply.code(400).send(result);
+      return result;
+    },
+  );
+
+  app.get<{ Params: { id: string; day: string; stop: string } }>(
+    "/api/trips/:id/day/:day/stop/:stop/alternatives",
+    async (req, reply) => {
+      const result = getStopAlternatives(req.params.id, Number(req.params.day), Number(req.params.stop));
+      if ("error" in result) return reply.code(400).send(result);
+      return result;
+    },
+  );
+
+  app.post<{ Params: { id: string; day: string; stop: string }; Body: { place_id: string } }>(
+    "/api/trips/:id/day/:day/stop/:stop/swap",
+    async (req, reply) => {
+      const result = performStopSwap(
+        req.params.id,
+        Number(req.params.day),
+        Number(req.params.stop),
+        req.body?.place_id ?? "",
+      );
       if ("error" in result) return reply.code(400).send(result);
       return result;
     },

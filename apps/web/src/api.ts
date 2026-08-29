@@ -97,6 +97,24 @@ export interface TripView {
   flightOptions: Offer[];
 }
 
+export interface StopAlternative {
+  id: string;
+  name: string;
+  emoji: string;
+  vibeTags: string[];
+  estCostSGD: number;
+  travelMinFromPrev: number;
+}
+
+export interface StopSwapResult {
+  trip: TripView;
+  costDeltaSGD: number;
+  travelDeltaMin: number;
+  droppedStops: string[];
+  mustDropped: boolean;
+  narration: string;
+}
+
 export interface EvidenceCall {
   request_id: string;
   ts: string;
@@ -146,6 +164,15 @@ export const api = {
     req<{ trip: TripView; delta: { fareDelta: number }; narration: string }>(
       `/api/trips/${tripId}/swap-flight`,
       { method: "POST", body: JSON.stringify({ offer_id: offerId }) },
+    ),
+  stopAlternatives: (tripId: string, dayIndex: number, stopIndex: number) =>
+    req<{ alternatives: StopAlternative[] }>(
+      `/api/trips/${tripId}/day/${dayIndex}/stop/${stopIndex}/alternatives`,
+    ),
+  swapStop: (tripId: string, dayIndex: number, stopIndex: number, placeId: string) =>
+    req<StopSwapResult>(
+      `/api/trips/${tripId}/day/${dayIndex}/stop/${stopIndex}/swap`,
+      { method: "POST", body: JSON.stringify({ place_id: placeId }) },
     ),
   reveal: (city: string, placeId: string) =>
     req<{ place: NonNullable<WireStop["place"]> }>(`/api/reveal/${city}/${placeId}`),

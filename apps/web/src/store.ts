@@ -4,6 +4,7 @@ import {
   type AlertResult,
   type Card,
   type PlanResult,
+  type StopAlternative,
   type TasteSummary,
   type TripView,
 } from "./api";
@@ -43,6 +44,9 @@ interface YuanFenState {
   swapNarration: string | null;
   swapDelta: number | null;
   reflowing: boolean;
+  swappingStop: { dayIndex: number; stopIndex: number; alternatives: StopAlternative[] } | null;
+  stopSwapDelta: { costDeltaSGD: number; travelDeltaMin: number } | null;
+  changedStopId: string | null;
   revealed: Record<string, { name: string; emoji: string; blurb: string }>;
   bookingOffer: string | null;
   evidenceOpen: boolean;
@@ -64,6 +68,9 @@ interface YuanFenState {
   expandDeal(destination: string): Promise<void>;
   setTripDay(i: number): void;
   swapFlight(offerId: string): Promise<void>;
+  openStopSwap(dayIndex: number, stopIndex: number): Promise<void>;
+  closeStopSwap(): void;
+  swapStop(dayIndex: number, stopIndex: number, placeId: string): Promise<void>;
   revealStop(city: string, placeId: string): Promise<void>;
   openBooking(offerId: string | null): void;
   toggleEvidence(): void;
@@ -92,6 +99,9 @@ export const useStore = create<YuanFenState>((set, get) => ({
   swapNarration: null,
   swapDelta: null,
   reflowing: false,
+  swappingStop: null,
+  stopSwapDelta: null,
+  changedStopId: null,
   revealed: {},
   bookingOffer: null,
   evidenceOpen: false,
@@ -263,6 +273,38 @@ export const useStore = create<YuanFenState>((set, get) => ({
     }
   },
 
+  async openStopSwap(dayIndex, stopIndex) {
+    const { trip } = get();
+    if (!trip) return;
+    try {
+      const res = await api.stopAlternatives(trip.graph.id, dayIndex, stopIndex);
+      set({ swappingStop: { dayIndex, stopIndex, alternatives: res.alternatives } });
+    } catch {
+      set({ swappingStop: null });
+    }
+  },
+
+  closeStopSwap() {
+    set({ swappingStop: null });
+  },
+
+  async swapStop(dayIndex, stopIndex, placeId) {
+    const { trip } = get();
+    if (!trip) return;
+    set({ swappingStop: null });
+    try {
+      const res = await api.swapStop(trip.graph.id, dayIndex, stopIndex, placeId);
+      set({
+        trip: res.trip,
+        stopSwapDelta: { costDeltaSGD: res.costDeltaSGD, travelDeltaMin: res.travelDeltaMin },
+        swapNarration: res.narration,
+        changedStopId: placeId,
+      });
+    } catch (e) {
+      set({ error: String(e instanceof Error ? e.message : e) });
+    }
+  },
+
   async revealStop(city, placeId) {
     try {
       const res = await api.reveal(city, placeId);
@@ -286,7 +328,7 @@ export const useStore = create<YuanFenState>((set, get) => ({
   },
 
   backHome() {
-    set({ phase: "home", trip: null, swapNarration: null, swapDelta: null });
+    set({ phase: "home", trip: null, swapNarration: null, swapDelta: null, stopSwapDelta: null, changedStopId: null, swappingStop: null });
   },
 
   clearError() {

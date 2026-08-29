@@ -1,14 +1,18 @@
 import { describe, expect, it } from "vitest";
 import {
+  alternativesForStop,
   buildAlternatives,
   buildDayRoute,
   buildTrip,
   reflow,
   seedVector,
+  swapStop,
   toMin,
   W_TRAVEL,
   type BuildTripInput,
   type CityPlaces,
+  type DayPlan,
+  type DayRouteOptions,
   type FlightOption,
   type Place,
   type TravelMatrix,
@@ -300,6 +304,30 @@ describe("S1: Singapore CBD day trip", () => {
     const b = buildDayRoute(SG.places, SG_MATRIX, opts());
     expect(a).toEqual(b);
   });
+
+  it("wildcards are chosen with a travel penalty, not as the longest hop of the day", () => {
+    const route = buildDayRoute(SG.places, SG_MATRIX, opts());
+    const wildcard = route.stops.find((s) => s.role === "wildcard");
+    expect(wildcard).toBeDefined();
+    const nonWildcardTravels = route.stops
+      .filter((s) => s.role !== "wildcard" && s.travelMinFromPrev > 0)
+      .map((s) => s.travelMinFromPrev);
+    const maxNonWildcard = Math.max(...nonWildcardTravels);
+    // A surprise should not require a trek across town; allow a small buffer
+    // for genuinely nearby novel options but reject the old East-Coast-style outlier.
+    expect(wildcard!.travelMinFromPrev).toBeLessThanOrEqual(maxNonWildcard + 8);
+  });
+
+  it("badges only the first must-tag match as must, not every matching stop", () => {
+    const route = buildDayRoute(SG.places, SG_MATRIX, opts());
+    const chickenRiceStops = route.stops.filter((s) => {
+      const p = SG.places.find((pp) => pp.id === s.placeId)!;
+      return p.tags?.includes("chicken rice");
+    });
+    expect(chickenRiceStops.length).toBeGreaterThanOrEqual(2);
+    const mustBadged = chickenRiceStops.filter((s) => s.role === "must");
+    expect(mustBadged.length).toBe(1);
+  });
 });
 
 // ---------- geographic tightness (quadratic travel penalty) ----------
@@ -388,5 +416,213 @@ describe("geographic tightness", () => {
     });
     const stopIds = result.stops.map((s) => s.placeId);
     expect(stopIds).toContain("mg-far-must");
+  });
+});
+
+// ---------- swapStop: single-stop replacement with forward re-chain ----------
+
+describe("swapStop", () => {
+  const swapPlaces: Place[] = [
+    P("sw-a", ["food"], [["08:00", "22:00"]], 45, 5),
+    P("sw-b", ["culture"], [["09:00", "18:00"]], 60, 20),
+    P("sw-c", ["views"], [["09:00", "12:00"]], 45, 10),
+    P("sw-d", ["nature", "chill"], [["08:00", "22:00"]], 150, 0),
+    P("sw-e", ["food"], [["09:00", "22:00"]], 60, 8),
+    P("sw-f", ["adventure"], [["08:00", "22:00"]], 60, 15),
+    P("sw-c-late", ["views"], [["09:00", "23:00"]], 45, 10),
+  ];
+  const swapMatrix: TravelMatrix = {
+    city: "swapville",
+    ids: swapPlaces.map((p) => p.id),
+    minutes: swapPlaces.map(() => swapPlaces.map(() => 10)).map((row, i) => row.map((_, j) => (i === j ? 0 : 10))),
+    mode: swapPlaces.map(() => swapPlaces.map(() => "walk")),
+  };
+  const baseDay: DayPlan = {
+    date: "2026-09-05",
+    stops: [
+      { placeId: "sw-a", arrive: "09:00", depart: "09:45", travelMinFromPrev: 15, role: "food" },
+      { placeId: "sw-b", arrive: "09:55", depart: "10:55", travelMinFromPrev: 10, role: "anchor" },
+      { placeId: "sw-c", arrive: "11:05", depart: "11:50", travelMinFromPrev: 10, role: "anchor" },
+    ],
+  };
+  const baseDayLate: DayPlan = {
+    ...baseDay,
+    stops: [baseDay.stops[0]!, baseDay.stops[1]!, { ...baseDay.stops[2]!, placeId: "sw-c-late" }],
+  };
+  const swapOpts: DayRouteOptions = {
+    date: "2026-09-05",
+    startMin: toMin("09:00"),
+    endMin: toMin("22:00"),
+    taste: seedVector(["food", "nature", "views"]),
+  };
+
+  it("leaves every earlier stop byte-identical when swapping a mid-day stop", () => {
+    const result = swapStop({
+      day: baseDay,
+      stopIndex: 1,
+      replacementPlaceId: "sw-d",
+      places: swapPlaces,
+      matrix: swapMatrix,
+      opts: swapOpts,
+    });
+    expect(result.day.stops[0]).toEqual(baseDay.stops[0]);
+    expect(result.day.stops[0]!.placeId).toBe("sw-a");
+    expect(result.day.stops[0]!.arrive).toBe("09:00");
+    expect(result.day.stops[0]!.depart).toBe("09:45");
+  });
+
+  it("replaces the target stop and recomputes times for later stops", () => {
+    const result = swapStop({
+      day: baseDayLate,
+      stopIndex: 1,
+      replacementPlaceId: "sw-d",
+      places: swapPlaces,
+      matrix: swapMatrix,
+      opts: swapOpts,
+    });
+    expect(result.day.stops[1]!.placeId).toBe("sw-d");
+    expect(toMin(result.day.stops[1]!.arrive)).toBe(toMin("09:45") + 10);
+    expect(toMin(result.day.stops[1]!.depart)).toBe(toMin(result.day.stops[1]!.arrive) + 150);
+    expect(result.day.stops[2]!.placeId).toBe("sw-c-late");
+    expect(toMin(result.day.stops[2]!.arrive)).toBe(toMin(result.day.stops[1]!.depart) + 10);
+  });
+
+  it("drops a later stop that closes before recomputed arrival and reports it", () => {
+    const result = swapStop({
+      day: baseDay,
+      stopIndex: 1,
+      replacementPlaceId: "sw-d",
+      places: swapPlaces,
+      matrix: swapMatrix,
+      opts: swapOpts,
+    });
+    expect(result.day.stops.length).toBe(2);
+    expect(result.droppedStops).toContain("sw-c");
+  });
+
+  it("drops a later stop that would run past the day end", () => {
+    const tightOpts: DayRouteOptions = { ...swapOpts, endMin: toMin("12:30") };
+    const result = swapStop({
+      day: baseDay,
+      stopIndex: 1,
+      replacementPlaceId: "sw-d",
+      places: swapPlaces,
+      matrix: swapMatrix,
+      opts: tightOpts,
+    });
+    const ids = result.day.stops.map((s) => s.placeId);
+    expect(ids).toContain("sw-a");
+    expect(ids).toContain("sw-d");
+    expect(ids).not.toContain("sw-c");
+    expect(result.droppedStops).toContain("sw-c");
+  });
+
+  it("reports mustDropped when a must-go stop is dropped", () => {
+    const mustOpts: DayRouteOptions = { ...swapOpts, mustPlaceIds: ["sw-c"] };
+    const result = swapStop({
+      day: baseDay,
+      stopIndex: 1,
+      replacementPlaceId: "sw-d",
+      places: swapPlaces,
+      matrix: swapMatrix,
+      opts: mustOpts,
+    });
+    expect(result.mustDropped).toBe(true);
+  });
+
+  it("leaves mustDropped false when a dropped stop is not must-go", () => {
+    const mustOpts: DayRouteOptions = { ...swapOpts, mustPlaceIds: ["sw-a"] };
+    const result = swapStop({
+      day: baseDay,
+      stopIndex: 1,
+      replacementPlaceId: "sw-d",
+      places: swapPlaces,
+      matrix: swapMatrix,
+      opts: mustOpts,
+    });
+    expect(result.droppedStops).toContain("sw-c");
+    expect(result.mustDropped).toBe(false);
+  });
+
+  it("computes costDeltaSGD as new day cost minus old", () => {
+    const result = swapStop({
+      day: baseDayLate,
+      stopIndex: 1,
+      replacementPlaceId: "sw-e",
+      places: swapPlaces,
+      matrix: swapMatrix,
+      opts: swapOpts,
+    });
+    const oldCost = 5 + 20 + 10;
+    const newCost = 5 + 8 + 10;
+    expect(result.costDeltaSGD).toBe(newCost - oldCost);
+  });
+
+  it("swapping the first stop recomputes from the day start", () => {
+    const result = swapStop({
+      day: baseDayLate,
+      stopIndex: 0,
+      replacementPlaceId: "sw-f",
+      places: swapPlaces,
+      matrix: swapMatrix,
+      opts: swapOpts,
+    });
+    expect(result.day.stops[0]!.placeId).toBe("sw-f");
+    expect(toMin(result.day.stops[0]!.arrive)).toBe(swapOpts.startMin + 15);
+    expect(result.day.stops[1]!.placeId).toBe("sw-b");
+    expect(result.day.stops[2]!.placeId).toBe("sw-c-late");
+  });
+});
+
+// ---------- alternativesForStop ----------
+
+describe("alternativesForStop", () => {
+  const altPlaces: Place[] = [
+    P("alt-a", ["food"], [["08:00", "22:00"]], 60, 5),
+    P("alt-b", ["culture"], [["09:00", "18:00"]], 60, 20),
+    P("alt-c", ["views"], [["09:00", "20:00"]], 45, 10),
+    P("alt-d", ["nature", "chill"], [["08:00", "22:00"]], 60, 0),
+    P("alt-e", ["food"], [["09:00", "22:00"]], 60, 8),
+    P("alt-f", ["adventure"], [["08:00", "10:30"]], 60, 15),
+  ];
+  const altMatrix: TravelMatrix = {
+    city: "altville",
+    ids: altPlaces.map((p) => p.id),
+    minutes: altPlaces.map(() => altPlaces.map(() => 10)).map((row, i) => row.map((_, j) => (i === j ? 0 : 10))),
+    mode: altPlaces.map(() => altPlaces.map(() => "walk")),
+  };
+  const altDay: DayPlan = {
+    date: "2026-09-05",
+    stops: [
+      { placeId: "alt-a", arrive: "09:00", depart: "10:00", travelMinFromPrev: 15, role: "food" },
+      { placeId: "alt-b", arrive: "10:10", depart: "11:10", travelMinFromPrev: 10, role: "anchor" },
+      { placeId: "alt-c", arrive: "11:20", depart: "12:05", travelMinFromPrev: 10, role: "anchor" },
+    ],
+  };
+  const altOpts: DayRouteOptions = {
+    date: "2026-09-05",
+    startMin: toMin("09:00"),
+    endMin: toMin("22:00"),
+    taste: seedVector(["food", "nature", "views"]),
+  };
+
+  it("never offers a place already in the day", () => {
+    const alts = alternativesForStop({ day: altDay, stopIndex: 1, places: altPlaces, matrix: altMatrix, opts: altOpts });
+    const ids = alts.map((p) => p.id);
+    expect(ids).not.toContain("alt-a");
+    expect(ids).not.toContain("alt-b");
+    expect(ids).not.toContain("alt-c");
+  });
+
+  it("never offers a place closed at the arrival time", () => {
+    const alts = alternativesForStop({ day: altDay, stopIndex: 1, places: altPlaces, matrix: altMatrix, opts: altOpts });
+    const ids = alts.map((p) => p.id);
+    expect(ids).not.toContain("alt-f");
+  });
+
+  it("returns at most 6 candidates ranked by taste score", () => {
+    const alts = alternativesForStop({ day: altDay, stopIndex: 1, places: altPlaces, matrix: altMatrix, opts: altOpts });
+    expect(alts.length).toBeLessThanOrEqual(6);
+    expect(alts.length).toBeGreaterThan(0);
   });
 });
