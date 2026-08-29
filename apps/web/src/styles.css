@@ -33,6 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 button { font-family: var(--body); cursor: pointer; }
+button:focus-visible { outline: 2px solid var(--thread); outline-offset: 2px; }
 input { font-family: var(--body); }
 
 .app-shell { position: relative; height: 100%; overflow: hidden; }
@@ -144,6 +145,16 @@ input { font-family: var(--body); }
 .knot.tied { background: var(--thread); border-color: var(--thread-deep); transform: translate(-50%, -50%) scale(1.15); }
 .meter-tags { margin-top: 8px; font-size: 13px; color: var(--ink-soft); }
 .meter-tags b { color: var(--thread); margin-left: 7px; font-weight: 700; }
+
+.dest-head { display: flex; align-items: center; gap: 12px; flex: 1; }
+.dest-title {
+  font-family: var(--display); font-size: 17px; font-weight: 500;
+  line-height: 1.2; color: var(--ink);
+}
+.dest-meter {
+  margin-top: 8px; font-size: 13px; color: var(--ink-soft);
+}
+.dest-meter span { font-weight: 600; }
 
 .deck-area { position: relative; height: 380px; margin-top: 6px; }
 .swipe-card {
@@ -379,6 +390,15 @@ input { font-family: var(--body); }
 .deal-price-note { display: block; font-size: 11px; font-weight: 600; color: var(--ink-soft); letter-spacing: 0.03em; }
 .deal-tags { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 2px; }
 .deal-expand { margin-left: auto; font-size: 12px; font-weight: 700; color: var(--thread); }
+.deal-taste {
+  border: 1px solid var(--line); border-radius: 99px;
+  background: transparent; padding: 2px 9px;
+  font-size: 11.5px; font-weight: 700; color: var(--thread);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.deal-taste:hover { border-color: var(--thread); background: rgba(200, 55, 45, 0.07); }
+.deal-taste:focus-visible { outline: 2px solid var(--thread); outline-offset: 2px; }
 .hand-foot { margin-top: 18px; font-size: 12.5px; color: var(--ink-soft); font-style: italic; }
 
 .wildcard-sealed {
@@ -416,6 +436,13 @@ input { font-family: var(--body); }
   padding: 6px 13px; font-weight: 700; font-size: 13px;
 }
 .back:hover { background: var(--ink); color: var(--paper); }
+.dest-deck-btn {
+  margin-left: auto;
+  border: 1.5px solid var(--line); background: var(--card); border-radius: 99px;
+  padding: 6px 13px; font-weight: 700; font-size: 13px; color: var(--thread);
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+.dest-deck-btn:hover { border-color: var(--thread); background: rgba(200, 55, 45, 0.07); }
 .block-label {
   font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase;
   color: var(--ink-soft); font-weight: 800; margin-bottom: 9px;

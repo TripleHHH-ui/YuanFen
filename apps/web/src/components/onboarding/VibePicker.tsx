@@ -13,6 +13,8 @@ const VIBE_META: Record<string, { emoji: string; label: string }> = {
   history: { emoji: "🏛️", label: "History" },
   beach: { emoji: "🌊", label: "Salt air" },
   views: { emoji: "🌅", label: "Big views" },
+  sports: { emoji: "🏟️", label: "Full roar" },
+  wellness: { emoji: "🧘", label: "Slow breath" },
 };
 
 export function VibePicker() {

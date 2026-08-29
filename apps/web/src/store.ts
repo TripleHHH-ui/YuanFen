@@ -18,6 +18,7 @@ interface YuanFenState {
   summary: TasteSummary | null;
   deck: Card[];
   deckIndex: number;
+  destinationDecks: Record<string, { deck: Card[]; index: number; summary: TasteSummary | null }>;
   plan: PlanResult | null;
   planAlt: number;
   planLoading: boolean;
@@ -40,6 +41,9 @@ interface YuanFenState {
   swipe(action: "like" | "pass" | "mustgo"): Promise<void>;
   undo(): Promise<void>;
   finishDeck(): Promise<void>;
+  loadDestinationDeck(destination: string): Promise<void>;
+  swipeDestination(destination: string, action: "like" | "pass" | "mustgo"): Promise<void>;
+  undoDestination(destination: string): Promise<void>;
   sendChat(text: string): Promise<void>;
   setAlt(i: number): void;
   openAlert(open: boolean): void;
@@ -62,6 +66,7 @@ export const useStore = create<YuanFenState>((set, get) => ({
   summary: null,
   deck: [],
   deckIndex: 0,
+  destinationDecks: {},
   plan: null,
   planAlt: 0,
   planLoading: false,
@@ -133,6 +138,58 @@ export const useStore = create<YuanFenState>((set, get) => ({
         /* alert stays hidden if the board is empty */
       }
     }, 2500);
+  },
+
+  async loadDestinationDeck(destination) {
+    const res = await api.destinationDeck(destination);
+    set({
+      destinationDecks: {
+        ...get().destinationDecks,
+        [destination]: { deck: res.cards, index: 0, summary: null },
+      },
+    });
+  },
+
+  async swipeDestination(destination, action) {
+    const entry = get().destinationDecks[destination];
+    if (!entry) return;
+    const card = entry.deck[entry.index];
+    if (!card) return;
+    try {
+      const res = await api.swipe(card.id, action, destination);
+      set({
+        destinationDecks: {
+          ...get().destinationDecks,
+          [destination]: {
+            ...entry,
+            index: entry.index + 1,
+            summary: res.summary,
+          },
+        },
+      });
+    } catch (e) {
+      set({ error: String(e instanceof Error ? e.message : e) });
+    }
+  },
+
+  async undoDestination(destination) {
+    const entry = get().destinationDecks[destination];
+    if (!entry || entry.index === 0) return;
+    try {
+      const res = await api.undo(destination);
+      set({
+        destinationDecks: {
+          ...get().destinationDecks,
+          [destination]: {
+            ...entry,
+            index: entry.index - 1,
+            summary: res.summary,
+          },
+        },
+      });
+    } catch (e) {
+      set({ error: String(e instanceof Error ? e.message : e) });
+    }
   },
 
   async sendChat(text) {

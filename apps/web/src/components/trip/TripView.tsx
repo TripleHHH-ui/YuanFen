@@ -1,10 +1,22 @@
 import { useStore } from "../../store";
 import type { Offer, WireStop } from "../../api";
+import { DestinationDeck } from "../plan/DestinationDeck";
+import { useState } from "react";
 
 /** S4 surface: flight strip (node zero), day timeline, budget bar (FR-013/014). */
 export function TripPanel() {
   const { trip, tripDay, setTripDay, swapFlight, reflowing, swapDelta, revealStop, revealed, openBooking, backHome, mode } = useStore();
+  const [showDestDeck, setShowDestDeck] = useState(false);
   if (!trip) return null;
+  if (showDestDeck) {
+    return (
+      <DestinationDeck
+        destination={trip.graph.city}
+        cityName={trip.cityName}
+        onClose={() => setShowDestDeck(false)}
+      />
+    );
+  }
   const g = trip.graph;
   const day = g.days[Math.min(tripDay, g.days.length - 1)]!;
   const current = g.flight.out;
@@ -19,6 +31,9 @@ export function TripPanel() {
             {g.window.holiday} · {g.window.start.slice(5)} → {g.window.end.slice(5)}
           </div>
         </div>
+        <button className="dest-deck-btn" onClick={() => setShowDestDeck(true)} title={`Swipe ${trip.cityName} favourites`}>
+          ✦ taste
+        </button>
       </div>
 
       <div className="flight-strip-block">
