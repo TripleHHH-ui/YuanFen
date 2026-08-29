@@ -100,12 +100,27 @@ export function MapCanvas({ center, stops, recommendations = [] }: Props) {
       markersRef.current.push(new Marker({ element: el }).setLngLat([s.lng, s.lat]).addTo(map));
     });
     syncRecs();
+    // On phones the itinerary lives in a bottom sheet, so the route must fit
+    // into the map strip left above it; desktop reserves the left column.
+    const phone = window.matchMedia("(max-width: 520px)").matches;
+    const frame = phone
+      ? { top: 60, bottom: Math.round(window.innerHeight * 0.68), left: 24, right: 24 }
+      : { top: 90, bottom: 140, left: 430, right: 90 };
     if (line.length > 1) {
       const b = line.reduce(
         (acc, c) => acc.extend(c),
         new maplibregl.LngLatBounds(line[0]!, line[0]!),
       );
-      map.fitBounds(b, { padding: { top: 90, bottom: 140, left: 430, right: 90 }, duration: 900, maxZoom: 14.6 });
+      map.fitBounds(b, { padding: frame, duration: 900, maxZoom: 14.6 });
+    } else if (phone) {
+      // A near-point bounds keeps fitBounds' padding math while holding the
+      // city in the strip above the sheet (maxZoom matches the desktop zoom).
+      const c = centerRef.current;
+      const eps = 0.001;
+      map.fitBounds(
+        new maplibregl.LngLatBounds([c.lng - eps, c.lat - eps], [c.lng + eps, c.lat + eps]),
+        { padding: frame, duration: 900, maxZoom: 12.4 },
+      );
     } else {
       const c = centerRef.current;
       map.easeTo({ center: [c.lng, c.lat], zoom: 12.4, duration: 900 });

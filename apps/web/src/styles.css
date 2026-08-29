@@ -714,3 +714,94 @@ input { font-family: var(--body); }
   .narration { bottom: 14px; font-size: 13.5px; }
   .evidence-toggle { bottom: 14px; }
 }
+
+/* ---------- phone (≤520px) — a native sheet, not a squeezed desktop ---------- */
+@media (max-width: 520px) {
+  /* the itinerary sheet cap; narration, receipts and attribution ride above it */
+  :root { --sheet-h: 64vh; }
+
+  /* header — wordmark on one line, tagline cedes, badge never breaks */
+  .topbar { padding: 10px 14px; }
+  .wordmark { white-space: nowrap; }
+  .tagline { display: none; }
+  .fixture-badge { white-space: nowrap; }
+
+  /* the S3 slip clears the one-line header */
+  .alert-slip {
+    top: 58px; left: 12px; right: 12px; width: auto; min-height: 44px;
+    padding: 10px 12px; font-size: 12.5px; gap: 8px;
+  }
+
+  /* itinerary — a bottom sheet filling the lower screen */
+  .route-panel, .trip-panel {
+    top: auto; bottom: 0; left: 0; right: 0; width: auto; height: auto;
+    max-height: var(--sheet-h); gap: 10px; padding: 10px 14px 16px;
+    background: var(--paper);
+    border: 1.5px solid var(--line); border-bottom: none;
+    border-radius: 20px 20px 0 0;
+  }
+  .route-panel::before {
+    content: ""; flex: 0 0 auto; align-self: center;
+    width: 40px; height: 4px; border-radius: 99px;
+    background: var(--line); margin-bottom: 8px;
+  }
+
+  /* narration + receipts share one row above the sheet */
+  .narration {
+    left: 12px; right: 148px; transform: none; max-width: none;
+    bottom: calc(var(--sheet-h) + 12px);
+    padding: 8px 16px 9px; font-size: 13px; line-height: 1.4;
+    align-items: center;
+  }
+  .narration em {
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  @keyframes slip-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  .evidence-toggle {
+    right: 12px; bottom: calc(var(--sheet-h) + 12px);
+    min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .evidence-panel {
+    left: 12px; right: 12px; width: auto;
+    bottom: calc(var(--sheet-h) + 60px); max-height: 28vh;
+  }
+  .app-shell:not(.paper) .toast {
+    left: 12px; right: 12px; border-radius: 12px;
+    bottom: calc(var(--sheet-h) + 60px);
+  }
+
+  /* map attribution must not sit behind the sheet */
+  .map-canvas .maplibregl-ctrl-bottom-right { bottom: calc(var(--sheet-h) + 56px); }
+
+  /* overlays open as sheets too */
+  .overlay { padding: 0; align-items: flex-end; }
+  .hand-sheet, .dest-sheet, .booking-sheet {
+    width: 100%; max-height: 90vh; border-radius: 20px 20px 0 0;
+  }
+  .hand-sheet { padding: 16px 16px 24px; }
+  .dest-sheet { padding: 12px 12px 18px; }
+  .dest-sheet .onboard { max-width: none; min-height: 0; padding: 0 2px 8px; gap: 12px; }
+  .booking-sheet { overflow-y: auto; }
+
+  /* touch targets — 44px minimum on the tappables */
+  .composer-bar button { width: 44px; height: 44px; }
+  .example-chip { min-height: 44px; }
+  .nearby-btn { min-height: 44px; }
+  .alt-nav button { width: 44px; height: 44px; }
+  .stop { padding: 9px 0; }
+  .stop.sealed { min-height: 44px; }
+  .back, .dest-deck-btn, .deal-taste, .book-btn {
+    min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .deal-taste { padding: 0 14px; }
+  .close { width: 44px; height: 44px; }
+  .day-tabs button { padding: 10px 4px; }
+
+  /* flight rows wrap the action under the details */
+  .flight-row { flex-wrap: wrap; }
+  .flight-main { flex: 1 1 100%; min-height: 48px; }
+  .flight-row .book-btn, .swap-hint { flex: 1 1 100%; }
+  .swap-hint { text-align: right; padding-top: 2px; }
+  .route-take { font-size: 11px; }
+}
