@@ -66,6 +66,7 @@ export interface Deal {
   destination: string;
   cityName: string;
   city: string;
+  hasCityFile: boolean;
   offer: Offer;
   totalWithBag: number;
   score: number;
@@ -119,17 +120,23 @@ export const api = {
   vibes: () => req<{ tags: string[]; min: number }>("/api/meta/vibes"),
   mode: () => req<{ mode: string; environment: string }>("/api/meta/mode"),
   deck: () => req<{ cards: Card[] }>("/api/taste/deck"),
+  destinationDeck: (destination: string) =>
+    req<{ cards: Card[] }>(`/api/taste/deck/${destination}`),
   seed: (tags: string[]) =>
     req<{ ok: boolean; summary: TasteSummary }>("/api/taste/seed", {
       method: "POST",
       body: JSON.stringify({ tags }),
     }),
-  swipe: (cardId: string, action: "like" | "pass" | "mustgo") =>
+  swipe: (cardId: string, action: "like" | "pass" | "mustgo", destination?: string) =>
     req<{ done: boolean; summary: TasteSummary }>("/api/taste/swipe", {
       method: "POST",
-      body: JSON.stringify({ cardId, action }),
+      body: JSON.stringify({ cardId, action, destination }),
     }),
-  undo: () => req<{ summary: TasteSummary }>("/api/taste/undo", { method: "POST" }),
+  undo: (destination?: string) =>
+    req<{ summary: TasteSummary }>("/api/taste/undo", {
+      method: "POST",
+      body: JSON.stringify({ destination }),
+    }),
   planChat: (text: string) =>
     req<PlanResult>("/api/plan/chat", { method: "POST", body: JSON.stringify({ text }) }),
   alert: () => req<AlertResult>("/api/fareboard/alert"),

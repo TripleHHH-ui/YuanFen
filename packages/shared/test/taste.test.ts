@@ -55,7 +55,7 @@ describe("applySwipe / undo (FR-003)", () => {
     const liked = applySwipe(s0, c, "like");
     const must = applySwipe(s0, c, "mustgo");
     expect(must.vector.views).toBeGreaterThan(liked.vector.views);
-    expect(must.mustGo).toContain("sg-mbs-skypark");
+    expect(must.mustGoByDestination.home).toContain("sg-mbs-skypark");
   });
 
   it("undo restores the exact previous state including must-go list", () => {
@@ -64,7 +64,7 @@ describe("applySwipe / undo (FR-003)", () => {
     const s1 = applySwipe(s0, c, "mustgo");
     const s2 = undoSwipe(s1);
     expect(s2.vector).toEqual(s0.vector);
-    expect(s2.mustGo).toEqual(s0.mustGo);
+    expect(s2.mustGoByDestination.home).toEqual(s0.mustGoByDestination.home);
     expect(s2.swipeCount).toBe(0);
   });
 
@@ -72,6 +72,42 @@ describe("applySwipe / undo (FR-003)", () => {
     let s = initialTasteState(seedVector(["food"]));
     for (let i = 0; i < 3; i++) s = applySwipe(s, card(`c${i}`, ["food"]), "like");
     expect(s.swipeCount).toBe(3);
+  });
+});
+
+describe("destination-scoped must-go (FR-019)", () => {
+  const mustCard = (id: string, placeId: string, tags: string[]): DeckCard => ({
+    ...card(id, tags),
+    placeId,
+  });
+
+  it("persists per destination and stays independent", () => {
+    const s0 = initialTasteState(seedVector(["food"]));
+    const s1 = applySwipe(s0, mustCard("c", "p1", ["views"]), "mustgo");
+    const s2 = applySwipe(s1, mustCard("d", "dn-1", ["beach"]), "mustgo", "da-nang");
+    const s3 = applySwipe(s2, mustCard("e", "bk-1", ["nightlife"]), "mustgo", "bangkok");
+    expect(s3.mustGoByDestination.home).toEqual(["p1"]);
+    expect(s3.mustGoByDestination["da-nang"]).toEqual(["dn-1"]);
+    expect(s3.mustGoByDestination.bangkok).toEqual(["bk-1"]);
+    expect(s3.swipeCount).toBe(3);
+  });
+
+  it("undo restores the swiped destination's list, not another's", () => {
+    const s0 = initialTasteState(seedVector(["food"]));
+    const dn = applySwipe(s0, mustCard("d", "dn-1", ["beach"]), "mustgo", "da-nang");
+    const both = applySwipe(dn, mustCard("c", "p1", ["views"]), "mustgo");
+    const undone = undoSwipe(both);
+    expect(undone.mustGoByDestination.home ?? []).toEqual([]);
+    expect(undone.mustGoByDestination["da-nang"]).toEqual(["dn-1"]);
+  });
+
+  it("undo of a destination swipe leaves the home list intact", () => {
+    const s0 = initialTasteState(seedVector(["food"]));
+    const home = applySwipe(s0, mustCard("c", "p1", ["views"]), "mustgo");
+    const both = applySwipe(home, mustCard("d", "dn-1", ["beach"]), "mustgo", "da-nang");
+    const undone = undoSwipe(both);
+    expect(undone.mustGoByDestination.home).toEqual(["p1"]);
+    expect(undone.mustGoByDestination["da-nang"]).toBeUndefined();
   });
 });
 

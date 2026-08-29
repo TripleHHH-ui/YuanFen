@@ -1,5 +1,7 @@
 import { useStore } from "../../store";
 import type { Deal } from "../../api";
+import { DestinationDeck } from "../plan/DestinationDeck";
+import { useState } from "react";
 
 /**
  * S3: the unprompted long-weekend hand — 3 open cards + one sealed wildcard
@@ -24,7 +26,17 @@ export function AlertBanner() {
 
 export function DealHand() {
   const { alert, alertOpen, openAlert, expandDeal, wildcardDealRevealed, revealWildcardDeal, mode } = useStore();
+  const [destDeckTarget, setDestDeckTarget] = useState<{ destination: string; cityName: string } | null>(null);
   if (!alertOpen || !alert?.hand) return null;
+  if (destDeckTarget) {
+    return (
+      <DestinationDeck
+        destination={destDeckTarget.destination}
+        cityName={destDeckTarget.cityName}
+        onClose={() => setDestDeckTarget(null)}
+      />
+    );
+  }
   const { top, wildcard } = alert.hand;
   const w = alert.weekend!;
   return (
@@ -41,7 +53,14 @@ export function DealHand() {
         </header>
         <div className="hand-cards">
           {top.map((d, i) => (
-            <DealCard key={d.destination} deal={d} rank={i + 1} mode={mode} onExpand={() => void expandDeal(d.destination)} />
+            <DealCard
+              key={d.destination}
+              deal={d}
+              rank={i + 1}
+              mode={mode}
+              onExpand={() => void expandDeal(d.destination)}
+              onTaste={() => setDestDeckTarget({ destination: d.city, cityName: d.cityName })}
+            />
           ))}
           <WildcardCard
             deal={wildcard}
@@ -49,6 +68,7 @@ export function DealHand() {
             mode={mode}
             onReveal={revealWildcardDeal}
             onExpand={() => void expandDeal(wildcard.destination)}
+            onTaste={() => setDestDeckTarget({ destination: wildcard.city, cityName: wildcard.cityName })}
           />
         </div>
         <footer className="hand-foot">
@@ -59,7 +79,7 @@ export function DealHand() {
   );
 }
 
-function DealCard({ deal, rank, mode, onExpand }: { deal: Deal; rank: number; mode: string; onExpand: () => void }) {
+function DealCard({ deal, rank, mode, onExpand, onTaste }: { deal: Deal; rank: number; mode: string; onExpand: () => void; onTaste: () => void }) {
   return (
     <button className="deal-card" onClick={onExpand} style={{ transitionDelay: `${rank * 60}ms` }}>
       {mode === "fixture" && <span className="fixture-badge">FIXTURE</span>}
@@ -74,6 +94,16 @@ function DealCard({ deal, rank, mode, onExpand }: { deal: Deal; rank: number; mo
       </div>
       <div className="deal-tags">
         {deal.novelTags.length > 0 && <span className="tag">new: {deal.novelTags[0]}</span>}
+        {deal.hasCityFile && (
+          <span
+            className="deal-taste"
+            role="button"
+            tabIndex={0}
+            onClick={(e) => { e.stopPropagation(); onTaste(); }}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); e.stopPropagation(); onTaste(); } }}
+            title={`Swipe ${deal.cityName} favourites`}
+          >✦ taste</span>
+        )}
         <span className="deal-expand">tap → full plan</span>
       </div>
     </button>
@@ -86,12 +116,14 @@ function WildcardCard({
   mode,
   onReveal,
   onExpand,
+  onTaste,
 }: {
   deal: Deal;
   revealed: boolean;
   mode: string;
   onReveal: () => void;
   onExpand: () => void;
+  onTaste: () => void;
 }) {
   if (!revealed) {
     return (
@@ -119,6 +151,16 @@ function WildcardCard({
         {deal.novelTags.map((t) => (
           <span key={t} className="tag">new: {t}</span>
         ))}
+        {deal.hasCityFile && (
+          <span
+            className="deal-taste"
+            role="button"
+            tabIndex={0}
+            onClick={(e) => { e.stopPropagation(); onTaste(); }}
+            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); e.stopPropagation(); onTaste(); } }}
+            title={`Swipe ${deal.cityName} favourites`}
+          >✦ taste</span>
+        )}
         <span className="deal-expand">tap → full plan</span>
       </div>
     </button>

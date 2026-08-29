@@ -23,6 +23,7 @@ export interface RankedDeal {
   destination: string;
   cityName: string;
   city: string;
+  hasCityFile: boolean;
   offer: FlightOption;
   totalWithBag: number;
   score: number;
@@ -132,6 +133,7 @@ export function rankHand(
         destination: e.destination,
         cityName: profile.cityName,
         city: profile.city,
+        hasCityFile: profile.hasCityFile,
         offer: e.offer,
         totalWithBag: totalWithBag(e.offer),
         score: W_TASTE * affinity + W_FARE_MOMENT * fare,

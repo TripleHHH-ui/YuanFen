@@ -78,9 +78,9 @@ export type SwipeAction = "like" | "pass" | "mustgo";
 
 export interface TasteState {
   vector: TasteVector;
-  mustGo: string[];
+  mustGoByDestination: Record<string, string[]>; // key: city id, e.g. "da-nang"; "home" for the onboarding deck
   swipeCount: number;
-  history: Array<{ vector: TasteVector; mustGo: string[] }>;
+  history: Array<{ vector: TasteVector; mustGoByDestination: Record<string, string[]> }>;
 }
 
 export interface FlightOption {

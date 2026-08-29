@@ -15,22 +15,19 @@ interface Props {
   stops: MapStop[];
 }
 
-// Desaturated Positron basemap: the vermilion thread owns the color.
+// Desaturated OSM basemap: the vermilion thread owns the color.
 const STYLE: maplibregl.StyleSpecification = {
   version: 8,
   sources: {
-    carto: {
+    osm: {
       type: "raster",
-      tiles: [
-        "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
-        "https://b.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png",
-      ],
+      tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
       tileSize: 256,
-      attribution: "© OpenStreetMap contributors © CARTO",
+      attribution: "© OpenStreetMap contributors",
     },
   },
   layers: [
-    { id: "carto", type: "raster", source: "carto", paint: { "raster-saturation": -0.85, "raster-opacity": 0.92 } },
+    { id: "osm", type: "raster", source: "osm", paint: { "raster-saturation": -0.9, "raster-brightness-min": 0.62, "raster-brightness-max": 0.92, "raster-opacity": 0.92 } },
   ],
 };
 
