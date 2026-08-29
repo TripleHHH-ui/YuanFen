@@ -20,6 +20,14 @@ export function DestinationDeck({
   const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") onClose();
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [onClose]);
+
+  useEffect(() => {
     if (!entry && !loadError) {
       loadDestinationDeck(destination).catch((e) => {
         setLoadError(String(e instanceof Error ? e.message : e));
@@ -27,50 +35,46 @@ export function DestinationDeck({
     }
   }, [destination, entry, loadDestinationDeck, loadError]);
 
-  if (loadError) {
-    return (
-      <div className="onboard deck-stage">
-        <header className="deck-head">
-          <button className="back" onClick={onClose}>‹ back</button>
-        </header>
-        <div className="deck-area">
-          <div className="swipe-card live done-card">{loadError}</div>
-        </div>
-      </div>
-    );
-  }
-
-  if (!entry) {
-    return (
-      <div className="onboard deck-stage">
-        <header className="deck-head">
-          <button className="back" onClick={onClose}>‹ back</button>
-          <div className="deck-progress">loading…</div>
-        </header>
-      </div>
-    );
-  }
-
-  const mustGoCount = entry.summary?.mustGo.length ?? 0;
-
   return (
-    <SwipeDeck
-      cards={entry.deck}
-      index={entry.index}
-      onSwipe={(action) => void swipeDestination(destination, action)}
-      onUndo={() => void undoDestination(destination)}
-      headContent={
-        <div className="dest-head">
-          <button className="back" onClick={onClose}>‹ back</button>
-          <div className="dest-title">Swipe {cityName} favourites for next time</div>
-        </div>
-      }
-      meterContent={
-        <div className="dest-meter">
-          <span>{mustGoCount} must-go{mustGoCount !== 1 ? "s" : ""} marked for {cityName}</span>
-        </div>
-      }
-      emptyMessage={`Done swiping ${cityName} — your must-gos are saved.`}
-    />
+    <div className="overlay" onClick={onClose}>
+      <div className="dest-sheet" onClick={(e) => e.stopPropagation()}>
+        {loadError ? (
+          <div className="onboard deck-stage">
+            <header className="deck-head">
+              <button className="back" onClick={onClose}>‹ back</button>
+            </header>
+            <div className="deck-area">
+              <div className="swipe-card live done-card">{loadError}</div>
+            </div>
+          </div>
+        ) : !entry ? (
+          <div className="onboard deck-stage">
+            <header className="deck-head">
+              <button className="back" onClick={onClose}>‹ back</button>
+              <div className="deck-progress">loading…</div>
+            </header>
+          </div>
+        ) : (
+          <SwipeDeck
+            cards={entry.deck}
+            index={entry.index}
+            onSwipe={(action) => void swipeDestination(destination, action)}
+            onUndo={() => void undoDestination(destination)}
+            headContent={
+              <div className="dest-head">
+                <button className="back" onClick={onClose}>‹ back</button>
+                <div className="dest-title">Swipe {cityName} favourites for next time</div>
+              </div>
+            }
+            meterContent={
+              <div className="dest-meter">
+                <span>{(entry.summary?.mustGo.length ?? 0)} must-go{(entry.summary?.mustGo.length ?? 0) !== 1 ? "s" : ""} marked for {cityName}</span>
+              </div>
+            }
+            emptyMessage={`Done swiping ${cityName} — your must-gos are saved.`}
+          />
+        )}
+      </div>
+    </div>
   );
 }
