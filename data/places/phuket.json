@@ -533,6 +533,50 @@
       "priceBand": 2,
       "emoji": "🛍️",
       "blurb": "Patong's main mall with a food hall, cinema, and street-food market."
+    },
+    {
+      "id": "phuket-chinpracha-house",
+      "name": "Chinpracha House",
+      "lat": 7.8856,
+      "lng": 98.3868,
+      "area": "Old Town",
+      "vibeTags": ["art", "history", "culture"],
+      "openHours": {
+        "mon": [["09:00", "17:00"]],
+        "tue": [["09:00", "17:00"]],
+        "wed": [["09:00", "17:00"]],
+        "thu": [["09:00", "17:00"]],
+        "fri": [["09:00", "17:00"]],
+        "sat": [["09:00", "17:00"]],
+        "sun": [["09:00", "17:00"]]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 6,
+      "priceBand": 1,
+      "emoji": "🏛️",
+      "blurb": "Restored 1903 Sino-Portuguese mansion with period furnishings and rotating cultural exhibits."
+    },
+    {
+      "id": "phuket-blue-elephant",
+      "name": "Blue Elephant Restaurant",
+      "lat": 7.8850,
+      "lng": 98.3874,
+      "area": "Old Town",
+      "vibeTags": ["art", "food", "culture"],
+      "openHours": {
+        "mon": [["11:30", "22:00"]],
+        "tue": [["11:30", "22:00"]],
+        "wed": [["11:30", "22:00"]],
+        "thu": [["11:30", "22:00"]],
+        "fri": [["11:30", "22:00"]],
+        "sat": [["11:30", "22:00"]],
+        "sun": [["11:30", "22:00"]]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 30,
+      "priceBand": 3,
+      "emoji": "🐘",
+      "blurb": "Royal Thai cuisine inside a beautifully restored 1913 Sino-Portuguese governor's mansion."
     }
   ]
 }
