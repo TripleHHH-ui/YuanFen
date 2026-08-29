@@ -1,0 +1,19 @@
+{
+  "name": "trip-graph-agent",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev --workspace=apps/api\" \"npm run dev --workspace=apps/web\"",
+    "test": "vitest run --reporter=verbose",
+    "fareboard": "echo \"fareboard placeholder — not yet implemented\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.0"
+  }
+}
