@@ -313,6 +313,226 @@
       "priceBand": 3,
       "emoji": "🌆",
       "blurb": "Glass-floored deck atop Thailand's pixelated skyscraper."
+    },
+    {
+      "id": "bangkok-roots-coffee",
+      "name": "Roots Coffee Roaster",
+      "lat": 13.7278,
+      "lng": 100.5350,
+      "area": "Silom / Sathorn",
+      "vibeTags": ["coffee", "chill"],
+      "openHours": {
+        "mon": [["08:00", "18:00"]],
+        "tue": [["08:00", "18:00"]],
+        "wed": [["08:00", "18:00"]],
+        "thu": [["08:00", "18:00"]],
+        "fri": [["08:00", "18:00"]],
+        "sat": [["09:00", "18:00"]],
+        "sun": [["09:00", "18:00"]]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 7,
+      "priceBand": 2,
+      "emoji": "☕",
+      "blurb": "Bangkok's leading specialty roaster with single-origin Thai and regional beans."
+    },
+    {
+      "id": "bangkok-gallery-drip-coffee",
+      "name": "Gallery Drip Coffee",
+      "lat": 13.7534,
+      "lng": 100.5003,
+      "area": "Phra Nakhon",
+      "vibeTags": ["coffee", "art", "culture"],
+      "openHours": {
+        "mon": [["09:00", "18:00"]],
+        "tue": [["09:00", "18:00"]],
+        "wed": [["09:00", "18:00"]],
+        "thu": [["09:00", "18:00"]],
+        "fri": [["09:00", "18:00"]],
+        "sat": [["09:00", "18:00"]],
+        "sun": [["09:00", "18:00"]]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 6,
+      "priceBand": 2,
+      "emoji": "☕",
+      "blurb": "Historic-district pour-over bar inside a restored Rattanakosin building."
+    },
+    {
+      "id": "bangkok-bang-krachao",
+      "name": "Bang Krachao Green Lung",
+      "lat": 13.6830,
+      "lng": 100.5440,
+      "area": "Phra Pradaeng",
+      "vibeTags": ["nature", "sports", "chill"],
+      "openHours": {
+        "mon": [["06:00", "18:00"]],
+        "tue": [["06:00", "18:00"]],
+        "wed": [["06:00", "18:00"]],
+        "thu": [["06:00", "18:00"]],
+        "fri": [["06:00", "18:00"]],
+        "sat": [["06:00", "18:00"]],
+        "sun": [["06:00", "18:00"]]
+      },
+      "estStayMin": 150,
+      "estCostSGD": 5,
+      "priceBand": 1,
+      "emoji": "🚲",
+      "blurb": "River-bend jungle island best cycled by rented bicycle through mangroves."
+    },
+    {
+      "id": "bangkok-lumpini-muay-thai",
+      "name": "Lumpini Muay Thai Stadium",
+      "lat": 13.7315,
+      "lng": 100.5415,
+      "area": "Pathum Wan",
+      "vibeTags": ["sports", "culture"],
+      "openHours": {
+        "mon": [],
+        "tue": [["18:00", "23:00"]],
+        "wed": [],
+        "thu": [],
+        "fri": [["18:00", "23:00"]],
+        "sat": [["17:30", "23:00"]],
+        "sun": []
+      },
+      "estStayMin": 150,
+      "estCostSGD": 25,
+      "priceBand": 2,
+      "emoji": "🥊",
+      "blurb": "Iconic Muay Thai venue with electrifying ringside atmosphere."
+    },
+    {
+      "id": "bangkok-oasis-spa",
+      "name": "Oasis Spa Bangkok",
+      "lat": 13.7370,
+      "lng": 100.5652,
+      "area": "Sukhumvit Soi 31",
+      "vibeTags": ["wellness", "chill"],
+      "openHours": {
+        "mon": [["10:00", "22:00"]],
+        "tue": [["10:00", "22:00"]],
+        "wed": [["10:00", "22:00"]],
+        "thu": [["10:00", "22:00"]],
+        "fri": [["10:00", "22:00"]],
+        "sat": [["10:00", "22:00"]],
+        "sun": [["10:00", "22:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 45,
+      "priceBand": 3,
+      "emoji": "💆",
+      "blurb": "Garden villa spa offering traditional Thai massage and herbal steam."
+    },
+    {
+      "id": "bangkok-wat-pho-massage",
+      "name": "Wat Pho Thai Traditional Massage School",
+      "lat": 13.7462,
+      "lng": 100.4935,
+      "area": "Rattanakosin",
+      "vibeTags": ["wellness", "culture", "history"],
+      "openHours": {
+        "mon": [["08:00", "17:00"]],
+        "tue": [["08:00", "17:00"]],
+        "wed": [["08:00", "17:00"]],
+        "thu": [["08:00", "17:00"]],
+        "fri": [["08:00", "17:00"]],
+        "sat": [["08:00", "17:00"]],
+        "sun": [["08:00", "17:00"]]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 12,
+      "priceBand": 1,
+      "emoji": "🧘",
+      "blurb": "Government-certified school within the temple for authentic Thai massage."
+    },
+    {
+      "id": "bangkok-ko-kret",
+      "name": "Ko Kret Island",
+      "lat": 13.9060,
+      "lng": 100.4640,
+      "area": "Nonthaburi",
+      "vibeTags": ["culture", "food", "nature"],
+      "openHours": {
+        "mon": [["08:00", "17:00"]],
+        "tue": [["08:00", "17:00"]],
+        "wed": [["08:00", "17:00"]],
+        "thu": [["08:00", "17:00"]],
+        "fri": [["08:00", "17:00"]],
+        "sat": [["08:00", "18:00"]],
+        "sun": [["08:00", "18:00"]]
+      },
+      "estStayMin": 180,
+      "estCostSGD": 10,
+      "priceBand": 1,
+      "emoji": "🏝️",
+      "blurb": "Car-free river island of Mon pottery workshops and riverside food stalls."
+    },
+    {
+      "id": "bangkok-the-jam-factory",
+      "name": "The Jam Factory",
+      "lat": 13.7182,
+      "lng": 100.5015,
+      "area": "Charoen Nakhon riverside",
+      "vibeTags": ["art", "shopping", "food"],
+      "openHours": {
+        "mon": [["11:00", "22:00"]],
+        "tue": [["11:00", "22:00"]],
+        "wed": [["11:00", "22:00"]],
+        "thu": [["11:00", "22:00"]],
+        "fri": [["11:00", "22:00"]],
+        "sat": [["11:00", "22:00"]],
+        "sun": [["11:00", "22:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 12,
+      "priceBand": 2,
+      "emoji": "🏭",
+      "blurb": "Converted 1920s warehouse of design studios and riverside restaurants."
+    },
+    {
+      "id": "bangkok-bang-saen-beach",
+      "name": "Bang Saen Beach",
+      "lat": 13.2945,
+      "lng": 100.9130,
+      "area": "Chonburi, ~100km east of Bangkok",
+      "vibeTags": ["beach", "chill", "food"],
+      "openHours": {
+        "mon": [["00:00", "23:59"]],
+        "tue": [["00:00", "23:59"]],
+        "wed": [["00:00", "23:59"]],
+        "thu": [["00:00", "23:59"]],
+        "fri": [["00:00", "23:59"]],
+        "sat": [["00:00", "23:59"]],
+        "sun": [["00:00", "23:59"]]
+      },
+      "estStayMin": 180,
+      "estCostSGD": 8,
+      "priceBand": 1,
+      "emoji": "🏖️",
+      "blurb": "Closest Thai beach to Bangkok, popular for cheap seafood and calm shallows."
+    },
+    {
+      "id": "bangkok-koh-samet-ferry",
+      "name": "Koh Samet (Ban Phe ferry point)",
+      "lat": 12.5734,
+      "lng": 101.4507,
+      "area": "Rayong, ~220km east",
+      "vibeTags": ["beach", "nature", "adventure"],
+      "openHours": {
+        "mon": [["06:00", "18:00"]],
+        "tue": [["06:00", "18:00"]],
+        "wed": [["06:00", "18:00"]],
+        "thu": [["06:00", "18:00"]],
+        "fri": [["06:00", "18:00"]],
+        "sat": [["06:00", "18:00"]],
+        "sun": [["06:00", "18:00"]]
+      },
+      "estStayMin": 360,
+      "estCostSGD": 25,
+      "priceBand": 2,
+      "emoji": "⛵",
+      "blurb": "White-sand national-park island reachable by ferry for a day trip."
     }
   ]
 }

@@ -11,6 +11,8 @@ export const VIBE_TAGS = [
   "history",
   "beach",
   "views",
+  "sports",
+  "wellness",
 ] as const;
 
 export type VibeTag = (typeof VIBE_TAGS)[number];

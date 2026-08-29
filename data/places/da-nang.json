@@ -313,6 +313,226 @@
       "priceBand": 1,
       "emoji": "🌊",
       "blurb": "Quieter resort beach south of My Khe, near the Marble Mountains."
+    },
+    {
+      "id": "da-nang-surf-school",
+      "name": "Da Nang Surf School",
+      "lat": 16.0598,
+      "lng": 108.2470,
+      "area": "My Khe Beach",
+      "vibeTags": ["sports", "beach", "adventure"],
+      "openHours": {
+        "mon": [["06:00", "17:00"]],
+        "tue": [["06:00", "17:00"]],
+        "wed": [["06:00", "17:00"]],
+        "thu": [["06:00", "17:00"]],
+        "fri": [["06:00", "17:00"]],
+        "sat": [["06:00", "17:00"]],
+        "sun": [["06:00", "17:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 20,
+      "priceBand": 2,
+      "emoji": "🏄",
+      "blurb": "Board rental and beginner lessons on My Khe's consistent beach break."
+    },
+    {
+      "id": "da-nang-olympic-sports",
+      "name": "Da Nang Olympic Sports Center",
+      "lat": 16.0519,
+      "lng": 108.2143,
+      "area": "Hai Chau",
+      "vibeTags": ["sports", "chill"],
+      "openHours": {
+        "mon": [["05:30", "21:30"]],
+        "tue": [["05:30", "21:30"]],
+        "wed": [["05:30", "21:30"]],
+        "thu": [["05:30", "21:30"]],
+        "fri": [["05:30", "21:30"]],
+        "sat": [["05:30", "21:30"]],
+        "sun": [["05:30", "21:30"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 4,
+      "priceBand": 1,
+      "emoji": "🏊",
+      "blurb": "Public Olympic pool and sports complex in the city centre."
+    },
+    {
+      "id": "da-nang-zenith-spa",
+      "name": "Zenith Spa Da Nang",
+      "lat": 16.0523,
+      "lng": 108.2463,
+      "area": "My An",
+      "vibeTags": ["wellness", "chill"],
+      "openHours": {
+        "mon": [["09:00", "21:00"]],
+        "tue": [["09:00", "21:00"]],
+        "wed": [["09:00", "21:00"]],
+        "thu": [["09:00", "21:00"]],
+        "fri": [["09:00", "21:00"]],
+        "sat": [["09:00", "21:00"]],
+        "sun": [["09:00", "21:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 22,
+      "priceBand": 2,
+      "emoji": "💆",
+      "blurb": "Vietnamese spa with hot stone massage and ocean-view treatment rooms."
+    },
+    {
+      "id": "da-nang-naman-retreat-spa",
+      "name": "Naman Retreat Beach Spa",
+      "lat": 15.9700,
+      "lng": 108.2748,
+      "area": "Non Nuoc, Ngu Hanh Son",
+      "vibeTags": ["wellness", "beach", "nature"],
+      "openHours": {
+        "mon": [["09:00", "21:00"]],
+        "tue": [["09:00", "21:00"]],
+        "wed": [["09:00", "21:00"]],
+        "thu": [["09:00", "21:00"]],
+        "fri": [["09:00", "21:00"]],
+        "sat": [["09:00", "21:00"]],
+        "sun": [["09:00", "21:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 60,
+      "priceBand": 3,
+      "emoji": "🌿",
+      "blurb": "Luxury beachside spa retreat offering bamboo herbal treatments."
+    },
+    {
+      "id": "da-nang-han-river-bridge-walk",
+      "name": "Han River Waterfront Promenade",
+      "lat": 16.0617,
+      "lng": 108.2220,
+      "area": "Bach Dang, Han Riverfront",
+      "vibeTags": ["views", "chill", "nightlife"],
+      "openHours": {
+        "mon": [["00:00", "23:59"]],
+        "tue": [["00:00", "23:59"]],
+        "wed": [["00:00", "23:59"]],
+        "thu": [["00:00", "23:59"]],
+        "fri": [["00:00", "23:59"]],
+        "sat": [["00:00", "23:59"]],
+        "sun": [["00:00", "23:59"]]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🌉",
+      "blurb": "Evening stroll along the river promenade between lit-up bridges."
+    },
+    {
+      "id": "da-nang-43-factory-coffee",
+      "name": "43 Factory Coffee Roaster",
+      "lat": 16.0670,
+      "lng": 108.2197,
+      "area": "Hai Chau",
+      "vibeTags": ["coffee", "art", "chill"],
+      "openHours": {
+        "mon": [["07:30", "21:00"]],
+        "tue": [["07:30", "21:00"]],
+        "wed": [["07:30", "21:00"]],
+        "thu": [["07:30", "21:00"]],
+        "fri": [["07:30", "21:00"]],
+        "sat": [["07:30", "21:00"]],
+        "sun": [["07:30", "21:00"]]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 6,
+      "priceBand": 2,
+      "emoji": "☕",
+      "blurb": "Da Nang's leading specialty roastery in an industrial-chic space."
+    },
+    {
+      "id": "da-nang-museum-fine-arts",
+      "name": "Da Nang Museum of Fine Arts",
+      "lat": 16.0644,
+      "lng": 108.2255,
+      "area": "Hai Chau",
+      "vibeTags": ["art", "culture", "history"],
+      "openHours": {
+        "mon": [],
+        "tue": [["08:00", "17:00"]],
+        "wed": [["08:00", "17:00"]],
+        "thu": [["08:00", "17:00"]],
+        "fri": [["08:00", "17:00"]],
+        "sat": [["08:00", "17:00"]],
+        "sun": [["08:00", "17:00"]]
+      },
+      "estStayMin": 75,
+      "estCostSGD": 2,
+      "priceBand": 1,
+      "emoji": "🖼️",
+      "blurb": "Central Vietnam's best gallery of lacquer, silk, and folk art."
+    },
+    {
+      "id": "da-nang-sky36-bar",
+      "name": "Sky36 Rooftop Bar",
+      "lat": 16.0637,
+      "lng": 108.2228,
+      "area": "Novotel, Hai Chau",
+      "vibeTags": ["nightlife", "views", "food"],
+      "openHours": {
+        "mon": [["18:00", "01:00"]],
+        "tue": [["18:00", "01:00"]],
+        "wed": [["18:00", "01:00"]],
+        "thu": [["18:00", "01:00"]],
+        "fri": [["18:00", "02:00"]],
+        "sat": [["18:00", "02:00"]],
+        "sun": [["18:00", "01:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 18,
+      "priceBand": 3,
+      "emoji": "🍸",
+      "blurb": "Vietnam's highest outdoor bar atop the Novotel with Dragon Bridge views."
+    },
+    {
+      "id": "da-nang-my-an-cooking",
+      "name": "Red Bridge Cooking School",
+      "lat": 15.8830,
+      "lng": 108.3321,
+      "area": "Hoi An (day trip from Da Nang)",
+      "vibeTags": ["food", "culture", "chill"],
+      "openHours": {
+        "mon": [["08:00", "14:00"]],
+        "tue": [["08:00", "14:00"]],
+        "wed": [["08:00", "14:00"]],
+        "thu": [["08:00", "14:00"]],
+        "fri": [["08:00", "14:00"]],
+        "sat": [["08:00", "14:00"]],
+        "sun": [["08:00", "14:00"]]
+      },
+      "estStayMin": 270,
+      "estCostSGD": 40,
+      "priceBand": 3,
+      "emoji": "🍜",
+      "blurb": "Half-day class on Central Vietnamese cuisine in a riverside garden kitchen."
+    },
+    {
+      "id": "da-nang-my-son-sanctuary",
+      "name": "My Son Sanctuary",
+      "lat": 15.7677,
+      "lng": 108.1215,
+      "area": "Duy Xuyen, ~70km south-west",
+      "vibeTags": ["history", "culture", "nature"],
+      "openHours": {
+        "mon": [["06:30", "17:00"]],
+        "tue": [["06:30", "17:00"]],
+        "wed": [["06:30", "17:00"]],
+        "thu": [["06:30", "17:00"]],
+        "fri": [["06:30", "17:00"]],
+        "sat": [["06:30", "17:00"]],
+        "sun": [["06:30", "17:00"]]
+      },
+      "estStayMin": 180,
+      "estCostSGD": 8,
+      "priceBand": 1,
+      "emoji": "🏛️",
+      "blurb": "UNESCO Hindu Cham tower complex of the 4th–13th centuries in a jungle valley."
     }
   ]
 }

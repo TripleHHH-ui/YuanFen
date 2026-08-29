@@ -313,6 +313,226 @@
       "priceBand": 1,
       "emoji": "🌿",
       "blurb": "Waterfall valley gardens patrolled by cheeky macaques."
+    },
+    {
+      "id": "penang-mugshot-coffee",
+      "name": "Mugshot Cafe",
+      "lat": 5.4168,
+      "lng": 100.3380,
+      "area": "Muntri Street, George Town",
+      "vibeTags": ["coffee", "art", "chill"],
+      "openHours": {
+        "mon": [["09:00", "17:30"]],
+        "tue": [["09:00", "17:30"]],
+        "wed": [["09:00", "17:30"]],
+        "thu": [["09:00", "17:30"]],
+        "fri": [["09:00", "17:30"]],
+        "sat": [["09:00", "17:30"]],
+        "sun": []
+      },
+      "estStayMin": 60,
+      "estCostSGD": 7,
+      "priceBand": 2,
+      "emoji": "☕",
+      "blurb": "Beloved George Town cafe pouring espresso in a heritage shophouse."
+    },
+    {
+      "id": "penang-ome-coffee",
+      "name": "Ome by Spacebar",
+      "lat": 5.4152,
+      "lng": 100.3396,
+      "area": "Cannon Street, George Town",
+      "vibeTags": ["coffee", "chill"],
+      "openHours": {
+        "mon": [["09:00", "18:00"]],
+        "tue": [["09:00", "18:00"]],
+        "wed": [["09:00", "18:00"]],
+        "thu": [["09:00", "18:00"]],
+        "fri": [["09:00", "18:00"]],
+        "sat": [["09:00", "18:00"]],
+        "sun": [["09:00", "18:00"]]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 6,
+      "priceBand": 2,
+      "emoji": "☕",
+      "blurb": "Minimalist specialty bar in a colonial-era lane near the clan jetties."
+    },
+    {
+      "id": "penang-komtar-tower",
+      "name": "KOMTAR Tower Rainbow Skywalk",
+      "lat": 5.4163,
+      "lng": 100.3313,
+      "area": "George Town centre",
+      "vibeTags": ["adventure", "views", "shopping"],
+      "openHours": {
+        "mon": [["10:00", "21:00"]],
+        "tue": [["10:00", "21:00"]],
+        "wed": [["10:00", "21:00"]],
+        "thu": [["10:00", "21:00"]],
+        "fri": [["10:00", "21:00"]],
+        "sat": [["10:00", "21:00"]],
+        "sun": [["10:00", "21:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 15,
+      "priceBand": 2,
+      "emoji": "🌈",
+      "blurb": "Glass-floored skywalk on the 68th floor of Penang's iconic tower."
+    },
+    {
+      "id": "penang-queensbay-mall",
+      "name": "Queensbay Mall",
+      "lat": 5.3360,
+      "lng": 100.3066,
+      "area": "Bayan Lepas",
+      "vibeTags": ["shopping", "food"],
+      "openHours": {
+        "mon": [["10:00", "22:00"]],
+        "tue": [["10:00", "22:00"]],
+        "wed": [["10:00", "22:00"]],
+        "thu": [["10:00", "22:00"]],
+        "fri": [["10:00", "22:00"]],
+        "sat": [["10:00", "22:00"]],
+        "sun": [["10:00", "22:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 12,
+      "priceBand": 2,
+      "emoji": "🏬",
+      "blurb": "Penang's largest mall with a bayside food court."
+    },
+    {
+      "id": "penang-gurney-paragon",
+      "name": "Gurney Paragon Mall",
+      "lat": 5.4350,
+      "lng": 100.3108,
+      "area": "Gurney Drive",
+      "vibeTags": ["shopping", "nightlife", "food"],
+      "openHours": {
+        "mon": [["10:00", "22:00"]],
+        "tue": [["10:00", "22:00"]],
+        "wed": [["10:00", "22:00"]],
+        "thu": [["10:00", "22:00"]],
+        "fri": [["10:00", "22:00"]],
+        "sat": [["10:00", "22:00"]],
+        "sun": [["10:00", "22:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 10,
+      "priceBand": 2,
+      "emoji": "🛍️",
+      "blurb": "Upmarket mall at the Gurney waterfront with a rooftop garden."
+    },
+    {
+      "id": "penang-penang-hill-trails",
+      "name": "Penang Hill Nature Trail",
+      "lat": 5.4169,
+      "lng": 100.2710,
+      "area": "Air Itam / Penang Hill",
+      "vibeTags": ["adventure", "nature", "sports"],
+      "openHours": {
+        "mon": [["06:00", "18:00"]],
+        "tue": [["06:00", "18:00"]],
+        "wed": [["06:00", "18:00"]],
+        "thu": [["06:00", "18:00"]],
+        "fri": [["06:00", "18:00"]],
+        "sat": [["06:00", "18:00"]],
+        "sun": [["06:00", "18:00"]]
+      },
+      "estStayMin": 180,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🥾",
+      "blurb": "Steep jungle trail to the summit — a 3km alternative to the funicular."
+    },
+    {
+      "id": "penang-batu-ferringhi-watersports",
+      "name": "Batu Ferringhi Watersports",
+      "lat": 5.4740,
+      "lng": 100.2480,
+      "area": "Batu Ferringhi",
+      "vibeTags": ["sports", "beach", "adventure"],
+      "openHours": {
+        "mon": [["09:00", "17:00"]],
+        "tue": [["09:00", "17:00"]],
+        "wed": [["09:00", "17:00"]],
+        "thu": [["09:00", "17:00"]],
+        "fri": [["09:00", "17:00"]],
+        "sat": [["09:00", "17:00"]],
+        "sun": [["09:00", "17:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 25,
+      "priceBand": 2,
+      "emoji": "🤿",
+      "blurb": "Parasailing, jet-ski, and banana boat rentals on Batu Ferringhi."
+    },
+    {
+      "id": "penang-angsana-spa",
+      "name": "Angsana Spa Penang",
+      "lat": 5.4749,
+      "lng": 100.2440,
+      "area": "Batu Ferringhi resort strip",
+      "vibeTags": ["wellness", "chill"],
+      "openHours": {
+        "mon": [["10:00", "21:00"]],
+        "tue": [["10:00", "21:00"]],
+        "wed": [["10:00", "21:00"]],
+        "thu": [["10:00", "21:00"]],
+        "fri": [["10:00", "21:00"]],
+        "sat": [["10:00", "21:00"]],
+        "sun": [["10:00", "21:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 55,
+      "priceBand": 3,
+      "emoji": "💆",
+      "blurb": "Beach resort spa with traditional Malay herbal treatments."
+    },
+    {
+      "id": "penang-spa-village",
+      "name": "Spa Village at Rasa Sayang",
+      "lat": 5.4739,
+      "lng": 100.2443,
+      "area": "Batu Ferringhi",
+      "vibeTags": ["wellness", "culture", "history"],
+      "openHours": {
+        "mon": [["09:00", "21:00"]],
+        "tue": [["09:00", "21:00"]],
+        "wed": [["09:00", "21:00"]],
+        "thu": [["09:00", "21:00"]],
+        "fri": [["09:00", "21:00"]],
+        "sat": [["09:00", "21:00"]],
+        "sun": [["09:00", "21:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 80,
+      "priceBand": 3,
+      "emoji": "🌺",
+      "blurb": "Award-winning heritage spa featuring Nyonya and Malay wellness rituals."
+    },
+    {
+      "id": "penang-street-art-trail",
+      "name": "George Town Street Art Trail",
+      "lat": 5.4142,
+      "lng": 100.3390,
+      "area": "George Town UNESCO zone",
+      "vibeTags": ["art", "culture", "chill"],
+      "openHours": {
+        "mon": [["00:00", "23:59"]],
+        "tue": [["00:00", "23:59"]],
+        "wed": [["00:00", "23:59"]],
+        "thu": [["00:00", "23:59"]],
+        "fri": [["00:00", "23:59"]],
+        "sat": [["00:00", "23:59"]],
+        "sun": [["00:00", "23:59"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🎨",
+      "blurb": "Self-guided walk through 50+ steel-rod sculptures and painted murals."
     }
   ]
 }

@@ -313,6 +313,226 @@
       "priceBand": 1,
       "emoji": "☕",
       "blurb": "Tiny roaster of Sarawak-grown liberica and robusta beans."
+    },
+    {
+      "id": "kuching-rainforest-world-music",
+      "name": "Rainforest World Music Festival Grounds",
+      "lat": 1.7456,
+      "lng": 110.3172,
+      "area": "Damai, Santubong Peninsula",
+      "vibeTags": ["culture", "art", "nature"],
+      "openHours": {
+        "mon": [["09:00", "17:00"]],
+        "tue": [["09:00", "17:00"]],
+        "wed": [["09:00", "17:00"]],
+        "thu": [["09:00", "17:00"]],
+        "fri": [["09:00", "17:00"]],
+        "sat": [["09:00", "17:00"]],
+        "sun": [["09:00", "17:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 5,
+      "priceBand": 1,
+      "emoji": "🎵",
+      "blurb": "Annual world-music festival venue at the Sarawak Cultural Village beach."
+    },
+    {
+      "id": "kuching-damai-beach",
+      "name": "Damai Beach",
+      "lat": 1.7310,
+      "lng": 110.2980,
+      "area": "Santubong Peninsula",
+      "vibeTags": ["beach", "chill", "nature"],
+      "openHours": {
+        "mon": [["00:00", "23:59"]],
+        "tue": [["00:00", "23:59"]],
+        "wed": [["00:00", "23:59"]],
+        "thu": [["00:00", "23:59"]],
+        "fri": [["00:00", "23:59"]],
+        "sat": [["00:00", "23:59"]],
+        "sun": [["00:00", "23:59"]]
+      },
+      "estStayMin": 150,
+      "estCostSGD": 5,
+      "priceBand": 1,
+      "emoji": "🏖️",
+      "blurb": "Quiet palm-fringed beach at the foot of Gunung Santubong."
+    },
+    {
+      "id": "kuching-gunung-santubong",
+      "name": "Gunung Santubong Hike",
+      "lat": 1.7699,
+      "lng": 110.3218,
+      "area": "Santubong Peninsula",
+      "vibeTags": ["adventure", "nature", "sports"],
+      "openHours": {
+        "mon": [["06:00", "14:00"]],
+        "tue": [["06:00", "14:00"]],
+        "wed": [["06:00", "14:00"]],
+        "thu": [["06:00", "14:00"]],
+        "fri": [["06:00", "14:00"]],
+        "sat": [["06:00", "14:00"]],
+        "sun": [["06:00", "14:00"]]
+      },
+      "estStayMin": 300,
+      "estCostSGD": 5,
+      "priceBand": 1,
+      "emoji": "🧗",
+      "blurb": "Challenging 810m peak with rope-and-root scramble through rainforest."
+    },
+    {
+      "id": "kuching-badminton-kuching",
+      "name": "Stadium Perpaduan Kuching",
+      "lat": 1.5379,
+      "lng": 110.3499,
+      "area": "Jalan Stadium, south of city",
+      "vibeTags": ["sports", "culture"],
+      "openHours": {
+        "mon": [["08:00", "22:00"]],
+        "tue": [["08:00", "22:00"]],
+        "wed": [["08:00", "22:00"]],
+        "thu": [["08:00", "22:00"]],
+        "fri": [["08:00", "22:00"]],
+        "sat": [["08:00", "22:00"]],
+        "sun": [["08:00", "22:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 5,
+      "priceBand": 1,
+      "emoji": "🏸",
+      "blurb": "Drop-in badminton and squash courts at Sarawak's main multi-sport complex."
+    },
+    {
+      "id": "kuching-borneo-spa",
+      "name": "Mien Spa at Pullman Kuching",
+      "lat": 1.5560,
+      "lng": 110.3461,
+      "area": "City centre",
+      "vibeTags": ["wellness", "chill"],
+      "openHours": {
+        "mon": [["10:00", "21:00"]],
+        "tue": [["10:00", "21:00"]],
+        "wed": [["10:00", "21:00"]],
+        "thu": [["10:00", "21:00"]],
+        "fri": [["10:00", "21:00"]],
+        "sat": [["10:00", "21:00"]],
+        "sun": [["10:00", "21:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 50,
+      "priceBand": 3,
+      "emoji": "💆",
+      "blurb": "Hotel spa offering Borneo herbal-compress massage and deep-tissue treatments."
+    },
+    {
+      "id": "kuching-sarawak-wellness",
+      "name": "Bintang Traditional Massage",
+      "lat": 1.5574,
+      "lng": 110.3490,
+      "area": "Padungan",
+      "vibeTags": ["wellness", "culture"],
+      "openHours": {
+        "mon": [["10:00", "22:00"]],
+        "tue": [["10:00", "22:00"]],
+        "wed": [["10:00", "22:00"]],
+        "thu": [["10:00", "22:00"]],
+        "fri": [["10:00", "22:00"]],
+        "sat": [["10:00", "22:00"]],
+        "sun": [["10:00", "22:00"]]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 18,
+      "priceBand": 2,
+      "emoji": "🌿",
+      "blurb": "Traditional Malaysian and Malay reflexology centre in the Padungan strip."
+    },
+    {
+      "id": "kuching-niah-caves",
+      "name": "Niah National Park Caves",
+      "lat": 3.8124,
+      "lng": 113.7780,
+      "area": "Miri Division, ~120km north",
+      "vibeTags": ["history", "nature", "adventure"],
+      "openHours": {
+        "mon": [["08:00", "17:00"]],
+        "tue": [["08:00", "17:00"]],
+        "wed": [["08:00", "17:00"]],
+        "thu": [["08:00", "17:00"]],
+        "fri": [["08:00", "17:00"]],
+        "sat": [["08:00", "17:00"]],
+        "sun": [["08:00", "17:00"]]
+      },
+      "estStayMin": 300,
+      "estCostSGD": 10,
+      "priceBand": 1,
+      "emoji": "🦇",
+      "blurb": "Prehistoric caves with 40,000-year-old human remains and millions of bats."
+    },
+    {
+      "id": "kuching-topspot-coffee-boom",
+      "name": "Boom Coffee Kuching",
+      "lat": 1.5572,
+      "lng": 110.3512,
+      "area": "Padungan",
+      "vibeTags": ["coffee", "art", "chill"],
+      "openHours": {
+        "mon": [["09:00", "21:00"]],
+        "tue": [["09:00", "21:00"]],
+        "wed": [["09:00", "21:00"]],
+        "thu": [["09:00", "21:00"]],
+        "fri": [["09:00", "21:00"]],
+        "sat": [["09:00", "21:00"]],
+        "sun": [["09:00", "21:00"]]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 5,
+      "priceBand": 1,
+      "emoji": "☕",
+      "blurb": "Specialty micro-roaster and gallery hybrid on the Padungan coffee strip."
+    },
+    {
+      "id": "kuching-fook-hin-kopitiam",
+      "name": "Fook Hin Kopitiam",
+      "lat": 1.5575,
+      "lng": 110.3453,
+      "area": "Carpenter Street",
+      "vibeTags": ["food", "history", "chill"],
+      "openHours": {
+        "mon": [["07:00", "17:00"]],
+        "tue": [["07:00", "17:00"]],
+        "wed": [["07:00", "17:00"]],
+        "thu": [["07:00", "17:00"]],
+        "fri": [["07:00", "17:00"]],
+        "sat": [["07:00", "17:00"]],
+        "sun": [["07:00", "17:00"]]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 4,
+      "priceBand": 1,
+      "emoji": "🥐",
+      "blurb": "Old-school kopitiam on Carpenter Street serving kaya toast and kolo mee."
+    },
+    {
+      "id": "kuching-siniawan-old-bazaar",
+      "name": "Siniawan Old Bazaar Night Market",
+      "lat": 1.4555,
+      "lng": 110.2189,
+      "area": "Siniawan, ~25km west of city",
+      "vibeTags": ["food", "nightlife", "shopping"],
+      "openHours": {
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thu": [],
+        "fri": [["18:00", "23:00"]],
+        "sat": [["18:00", "23:00"]],
+        "sun": [["18:00", "23:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 6,
+      "priceBand": 1,
+      "emoji": "🏮",
+      "blurb": "Well-preserved 19th-century Chinese bazaar with street food on weekends."
     }
   ]
 }

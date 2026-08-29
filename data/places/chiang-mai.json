@@ -313,6 +313,226 @@
       "priceBand": 3,
       "emoji": "🛶",
       "blurb": "Flooded quarry with an inflatable obstacle course and cliff jumps."
+    },
+    {
+      "id": "chiang-mai-doi-inthanon",
+      "name": "Doi Inthanon National Park",
+      "lat": 18.5876,
+      "lng": 98.4870,
+      "area": "Chom Thong, ~80km south-west",
+      "vibeTags": ["nature", "views", "adventure"],
+      "openHours": {
+        "mon": [["06:00", "18:00"]],
+        "tue": [["06:00", "18:00"]],
+        "wed": [["06:00", "18:00"]],
+        "thu": [["06:00", "18:00"]],
+        "fri": [["06:00", "18:00"]],
+        "sat": [["06:00", "18:00"]],
+        "sun": [["06:00", "18:00"]]
+      },
+      "estStayMin": 240,
+      "estCostSGD": 12,
+      "priceBand": 2,
+      "emoji": "🌄",
+      "blurb": "Thailand's highest peak at 2,565m with twin royal pagodas and cloud forest."
+    },
+    {
+      "id": "chiang-mai-muay-thai-training",
+      "name": "Lanna Muay Thai Training Camp",
+      "lat": 18.7728,
+      "lng": 98.9637,
+      "area": "Hang Dong Road, south Chiang Mai",
+      "vibeTags": ["sports", "culture"],
+      "openHours": {
+        "mon": [["07:00", "11:00"], ["15:00", "18:00"]],
+        "tue": [["07:00", "11:00"], ["15:00", "18:00"]],
+        "wed": [["07:00", "11:00"], ["15:00", "18:00"]],
+        "thu": [["07:00", "11:00"], ["15:00", "18:00"]],
+        "fri": [["07:00", "11:00"], ["15:00", "18:00"]],
+        "sat": [["07:00", "11:00"]],
+        "sun": []
+      },
+      "estStayMin": 120,
+      "estCostSGD": 18,
+      "priceBand": 2,
+      "emoji": "🥊",
+      "blurb": "Serious training camp offering drop-in Muay Thai classes for visitors."
+    },
+    {
+      "id": "chiang-mai-cycling-ping-river",
+      "name": "Ping River Cycling Trail",
+      "lat": 18.7780,
+      "lng": 99.0110,
+      "area": "Along Mae Ping, east of city",
+      "vibeTags": ["sports", "nature", "chill"],
+      "openHours": {
+        "mon": [["06:00", "18:00"]],
+        "tue": [["06:00", "18:00"]],
+        "wed": [["06:00", "18:00"]],
+        "thu": [["06:00", "18:00"]],
+        "fri": [["06:00", "18:00"]],
+        "sat": [["06:00", "18:00"]],
+        "sun": [["06:00", "18:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 6,
+      "priceBand": 1,
+      "emoji": "🚲",
+      "blurb": "Rent a bike and trace the Ping River bank through farmland and temples."
+    },
+    {
+      "id": "chiang-mai-oasis-spa",
+      "name": "Oasis Spa Chiang Mai",
+      "lat": 18.7982,
+      "lng": 98.9625,
+      "area": "Nimman",
+      "vibeTags": ["wellness", "chill"],
+      "openHours": {
+        "mon": [["10:00", "22:00"]],
+        "tue": [["10:00", "22:00"]],
+        "wed": [["10:00", "22:00"]],
+        "thu": [["10:00", "22:00"]],
+        "fri": [["10:00", "22:00"]],
+        "sat": [["10:00", "22:00"]],
+        "sun": [["10:00", "22:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 40,
+      "priceBand": 3,
+      "emoji": "💆",
+      "blurb": "Garden spa with Thai herbal treatments in a teak house compound."
+    },
+    {
+      "id": "chiang-mai-fah-lanna-spa",
+      "name": "Fah Lanna Spa",
+      "lat": 18.7908,
+      "lng": 98.9857,
+      "area": "Sri Poom, Old City edge",
+      "vibeTags": ["wellness", "history"],
+      "openHours": {
+        "mon": [["09:00", "20:00"]],
+        "tue": [["09:00", "20:00"]],
+        "wed": [["09:00", "20:00"]],
+        "thu": [["09:00", "20:00"]],
+        "fri": [["09:00", "20:00"]],
+        "sat": [["09:00", "20:00"]],
+        "sun": [["09:00", "20:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 28,
+      "priceBand": 2,
+      "emoji": "🌸",
+      "blurb": "Lanna-style spa in a restored heritage building inside the old moat."
+    },
+    {
+      "id": "chiang-mai-mae-ping-river",
+      "name": "Mae Ping River Park",
+      "lat": 18.7793,
+      "lng": 99.0045,
+      "area": "Chiang Mai Riverside",
+      "vibeTags": ["beach", "nature", "chill"],
+      "openHours": {
+        "mon": [["06:00", "20:00"]],
+        "tue": [["06:00", "20:00"]],
+        "wed": [["06:00", "20:00"]],
+        "thu": [["06:00", "20:00"]],
+        "fri": [["06:00", "20:00"]],
+        "sat": [["06:00", "20:00"]],
+        "sun": [["06:00", "20:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 2,
+      "priceBand": 1,
+      "emoji": "🏞️",
+      "blurb": "Gravel riverbanks popular for picnics and wading in the shallow Mae Ping."
+    },
+    {
+      "id": "chiang-mai-kad-klang-wiang",
+      "name": "Kad Klang Wiang Night Market",
+      "lat": 18.7871,
+      "lng": 98.9909,
+      "area": "Old City",
+      "vibeTags": ["food", "shopping", "nightlife"],
+      "openHours": {
+        "mon": [["17:00", "22:00"]],
+        "tue": [["17:00", "22:00"]],
+        "wed": [["17:00", "22:00"]],
+        "thu": [["17:00", "22:00"]],
+        "fri": [["17:00", "22:00"]],
+        "sat": [["17:00", "22:00"]],
+        "sun": [["17:00", "22:00"]]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 6,
+      "priceBand": 1,
+      "emoji": "🌃",
+      "blurb": "Intimate Old City night market for khao soi and northern Thai snacks."
+    },
+    {
+      "id": "chiang-mai-elephant-jungle",
+      "name": "Elephant Jungle Sanctuary",
+      "lat": 18.8860,
+      "lng": 99.0020,
+      "area": "Mae Taeng, 50km north",
+      "vibeTags": ["nature", "adventure", "culture"],
+      "openHours": {
+        "mon": [["07:00", "17:00"]],
+        "tue": [["07:00", "17:00"]],
+        "wed": [["07:00", "17:00"]],
+        "thu": [["07:00", "17:00"]],
+        "fri": [["07:00", "17:00"]],
+        "sat": [["07:00", "17:00"]],
+        "sun": [["07:00", "17:00"]]
+      },
+      "estStayMin": 300,
+      "estCostSGD": 80,
+      "priceBand": 3,
+      "emoji": "🐘",
+      "blurb": "Ethical half-day sanctuary for feeding and bathing rescued elephants."
+    },
+    {
+      "id": "chiang-mai-ping-river-kayak",
+      "name": "Chiang Mai Kayaking",
+      "lat": 18.7748,
+      "lng": 99.0076,
+      "area": "Pratu Tha Phae waterfront",
+      "vibeTags": ["beach", "adventure", "sports"],
+      "openHours": {
+        "mon": [["08:00", "17:00"]],
+        "tue": [["08:00", "17:00"]],
+        "wed": [["08:00", "17:00"]],
+        "thu": [["08:00", "17:00"]],
+        "fri": [["08:00", "17:00"]],
+        "sat": [["08:00", "17:00"]],
+        "sun": [["08:00", "17:00"]]
+      },
+      "estStayMin": 180,
+      "estCostSGD": 30,
+      "priceBand": 2,
+      "emoji": "🛶",
+      "blurb": "Half-day kayak tour on the Ping River through jungle and hill-tribe villages."
+    },
+    {
+      "id": "chiang-mai-akha-ama-coffee",
+      "name": "Akha Ama Coffee",
+      "lat": 18.7952,
+      "lng": 98.9668,
+      "area": "Nimman / Sri Poom",
+      "vibeTags": ["coffee", "culture", "art"],
+      "openHours": {
+        "mon": [["08:00", "18:00"]],
+        "tue": [["08:00", "18:00"]],
+        "wed": [["08:00", "18:00"]],
+        "thu": [["08:00", "18:00"]],
+        "fri": [["08:00", "18:00"]],
+        "sat": [["08:00", "18:00"]],
+        "sun": [["08:00", "18:00"]]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 5,
+      "priceBand": 1,
+      "emoji": "☕",
+      "blurb": "Social enterprise roasting beans from Akha hill-tribe farmers."
     }
   ]
 }

@@ -313,6 +313,226 @@
       "priceBand": 2,
       "emoji": "☕",
       "blurb": "Specialty coffee stalwart in a pre-war shophouse."
+    },
+    {
+      "id": "kuala-lumpur-klcc-aquaria",
+      "name": "Aquaria KLCC",
+      "lat": 3.1548,
+      "lng": 101.7112,
+      "area": "KLCC",
+      "vibeTags": ["nature", "culture", "chill"],
+      "openHours": {
+        "mon": [["10:00", "20:00"]],
+        "tue": [["10:00", "20:00"]],
+        "wed": [["10:00", "20:00"]],
+        "thu": [["10:00", "20:00"]],
+        "fri": [["10:00", "21:00"]],
+        "sat": [["10:00", "21:00"]],
+        "sun": [["10:00", "20:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 25,
+      "priceBand": 3,
+      "emoji": "🦈",
+      "blurb": "Walk-through tunnel aquarium beneath the convention centre."
+    },
+    {
+      "id": "kuala-lumpur-maharajalela-stadium",
+      "name": "Axiata Arena (sports events)",
+      "lat": 3.1194,
+      "lng": 101.6942,
+      "area": "Bukit Jalil",
+      "vibeTags": ["sports", "culture"],
+      "openHours": {
+        "mon": [["09:00", "18:00"]],
+        "tue": [["09:00", "18:00"]],
+        "wed": [["09:00", "18:00"]],
+        "thu": [["09:00", "18:00"]],
+        "fri": [["09:00", "18:00"]],
+        "sat": [["09:00", "23:00"]],
+        "sun": [["09:00", "23:00"]]
+      },
+      "estStayMin": 150,
+      "estCostSGD": 20,
+      "priceBand": 2,
+      "emoji": "🏟️",
+      "blurb": "Malaysia's largest indoor arena hosting badminton, football, and concerts."
+    },
+    {
+      "id": "kuala-lumpur-bukit-jalil-park",
+      "name": "Bukit Jalil Recreational Park",
+      "lat": 3.0630,
+      "lng": 101.6930,
+      "area": "Bukit Jalil",
+      "vibeTags": ["sports", "nature", "chill"],
+      "openHours": {
+        "mon": [["06:00", "21:00"]],
+        "tue": [["06:00", "21:00"]],
+        "wed": [["06:00", "21:00"]],
+        "thu": [["06:00", "21:00"]],
+        "fri": [["06:00", "21:00"]],
+        "sat": [["06:00", "21:00"]],
+        "sun": [["06:00", "21:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🏃",
+      "blurb": "Sprawling park with jogging trails, a lake, and outdoor gym stations."
+    },
+    {
+      "id": "kuala-lumpur-mandara-spa",
+      "name": "Mandara Spa at Mandarin Oriental",
+      "lat": 3.1568,
+      "lng": 101.7117,
+      "area": "KLCC",
+      "vibeTags": ["wellness", "chill"],
+      "openHours": {
+        "mon": [["09:00", "21:00"]],
+        "tue": [["09:00", "21:00"]],
+        "wed": [["09:00", "21:00"]],
+        "thu": [["09:00", "21:00"]],
+        "fri": [["09:00", "21:00"]],
+        "sat": [["09:00", "21:00"]],
+        "sun": [["09:00", "21:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 85,
+      "priceBand": 3,
+      "emoji": "💆",
+      "blurb": "Five-star spa above the KLCC park with signature Balinese treatments."
+    },
+    {
+      "id": "kuala-lumpur-hammam-spa",
+      "name": "Hammam Spa KL",
+      "lat": 3.1577,
+      "lng": 101.7023,
+      "area": "Chow Kit",
+      "vibeTags": ["wellness", "history", "culture"],
+      "openHours": {
+        "mon": [["10:00", "22:00"]],
+        "tue": [["10:00", "22:00"]],
+        "wed": [["10:00", "22:00"]],
+        "thu": [["10:00", "22:00"]],
+        "fri": [["10:00", "22:00"]],
+        "sat": [["10:00", "22:00"]],
+        "sun": [["10:00", "22:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 40,
+      "priceBand": 3,
+      "emoji": "🛁",
+      "blurb": "Ottoman-style hammam with steam rooms, scrubs, and relaxation pools."
+    },
+    {
+      "id": "kuala-lumpur-port-dickson",
+      "name": "Port Dickson Beach",
+      "lat": 2.5226,
+      "lng": 101.7917,
+      "area": "Port Dickson, ~100km south",
+      "vibeTags": ["beach", "chill", "nature"],
+      "openHours": {
+        "mon": [["00:00", "23:59"]],
+        "tue": [["00:00", "23:59"]],
+        "wed": [["00:00", "23:59"]],
+        "thu": [["00:00", "23:59"]],
+        "fri": [["00:00", "23:59"]],
+        "sat": [["00:00", "23:59"]],
+        "sun": [["00:00", "23:59"]]
+      },
+      "estStayMin": 300,
+      "estCostSGD": 10,
+      "priceBand": 1,
+      "emoji": "🏖️",
+      "blurb": "KL's closest beach escape, 90 minutes south on the Negeri Sembilan coast."
+    },
+    {
+      "id": "kuala-lumpur-sepang-beach",
+      "name": "Bagan Lalang Beach",
+      "lat": 2.8106,
+      "lng": 101.7154,
+      "area": "Sepang, Selangor",
+      "vibeTags": ["beach", "nature", "chill"],
+      "openHours": {
+        "mon": [["00:00", "23:59"]],
+        "tue": [["00:00", "23:59"]],
+        "wed": [["00:00", "23:59"]],
+        "thu": [["00:00", "23:59"]],
+        "fri": [["00:00", "23:59"]],
+        "sat": [["00:00", "23:59"]],
+        "sun": [["00:00", "23:59"]]
+      },
+      "estStayMin": 180,
+      "estCostSGD": 5,
+      "priceBand": 1,
+      "emoji": "🌅",
+      "blurb": "Quiet Selangor fishing-village beach less than an hour from central KL."
+    },
+    {
+      "id": "kuala-lumpur-street-food-tour-tt",
+      "name": "Taman Tun Food Court",
+      "lat": 3.1430,
+      "lng": 101.6310,
+      "area": "Taman Tun Dr Ismail",
+      "vibeTags": ["food", "nightlife"],
+      "openHours": {
+        "mon": [["17:00", "23:30"]],
+        "tue": [["17:00", "23:30"]],
+        "wed": [["17:00", "23:30"]],
+        "thu": [["17:00", "23:30"]],
+        "fri": [["17:00", "23:30"]],
+        "sat": [["17:00", "23:30"]],
+        "sun": [["17:00", "23:30"]]
+      },
+      "estStayMin": 75,
+      "estCostSGD": 7,
+      "priceBand": 1,
+      "emoji": "🍛",
+      "blurb": "Neighbourhood nasi lemak and laksa hawker court popular with locals."
+    },
+    {
+      "id": "kuala-lumpur-sunway-lagoon",
+      "name": "Sunway Lagoon",
+      "lat": 3.0731,
+      "lng": 101.6074,
+      "area": "Sunway, Petaling Jaya",
+      "vibeTags": ["adventure", "sports", "chill"],
+      "openHours": {
+        "mon": [],
+        "tue": [["10:00", "18:00"]],
+        "wed": [["10:00", "18:00"]],
+        "thu": [["10:00", "18:00"]],
+        "fri": [["10:00", "18:00"]],
+        "sat": [["10:00", "18:00"]],
+        "sun": [["10:00", "18:00"]]
+      },
+      "estStayMin": 300,
+      "estCostSGD": 40,
+      "priceBand": 3,
+      "emoji": "🎢",
+      "blurb": "Multi-park theme resort with water slides, wildlife, and a surf beach."
+    },
+    {
+      "id": "kuala-lumpur-ante-coffee",
+      "name": "Ante Coffee",
+      "lat": 3.1423,
+      "lng": 101.6870,
+      "area": "Brickfields",
+      "vibeTags": ["coffee", "art", "chill"],
+      "openHours": {
+        "mon": [["09:00", "18:00"]],
+        "tue": [["09:00", "18:00"]],
+        "wed": [["09:00", "18:00"]],
+        "thu": [["09:00", "18:00"]],
+        "fri": [["09:00", "18:00"]],
+        "sat": [["09:00", "18:00"]],
+        "sun": [["09:00", "18:00"]]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 7,
+      "priceBand": 2,
+      "emoji": "☕",
+      "blurb": "Gallery-café showcasing local artists alongside natural-process single-origins."
     }
   ]
 }

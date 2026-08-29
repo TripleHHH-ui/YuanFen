@@ -313,6 +313,226 @@
       "priceBand": 2,
       "emoji": "🦞",
       "blurb": "Pick fresh seafood, then have it grilled next door."
+    },
+    {
+      "id": "phuket-tiger-muay-thai",
+      "name": "Tiger Muay Thai & MMA",
+      "lat": 7.8489,
+      "lng": 98.3118,
+      "area": "Chalong",
+      "vibeTags": ["sports", "culture"],
+      "openHours": {
+        "mon": [["07:00", "21:00"]],
+        "tue": [["07:00", "21:00"]],
+        "wed": [["07:00", "21:00"]],
+        "thu": [["07:00", "21:00"]],
+        "fri": [["07:00", "21:00"]],
+        "sat": [["07:00", "21:00"]],
+        "sun": [["07:00", "21:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 20,
+      "priceBand": 2,
+      "emoji": "🥊",
+      "blurb": "World-famous Muay Thai camp with drop-in training sessions."
+    },
+    {
+      "id": "phuket-kata-surf",
+      "name": "Kata Surf School",
+      "lat": 7.8185,
+      "lng": 98.2980,
+      "area": "Kata Beach",
+      "vibeTags": ["sports", "beach", "adventure"],
+      "openHours": {
+        "mon": [["07:00", "17:00"]],
+        "tue": [["07:00", "17:00"]],
+        "wed": [["07:00", "17:00"]],
+        "thu": [["07:00", "17:00"]],
+        "fri": [["07:00", "17:00"]],
+        "sat": [["07:00", "17:00"]],
+        "sun": [["07:00", "17:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 25,
+      "priceBand": 2,
+      "emoji": "🏄",
+      "blurb": "Beginner surf lessons on one of Phuket's best waves in low season."
+    },
+    {
+      "id": "phuket-hideaway-spa",
+      "name": "Hideaway Day Spa",
+      "lat": 7.8852,
+      "lng": 98.3876,
+      "area": "Old Town",
+      "vibeTags": ["wellness", "chill"],
+      "openHours": {
+        "mon": [["10:00", "20:00"]],
+        "tue": [["10:00", "20:00"]],
+        "wed": [["10:00", "20:00"]],
+        "thu": [["10:00", "20:00"]],
+        "fri": [["10:00", "20:00"]],
+        "sat": [["10:00", "20:00"]],
+        "sun": [["10:00", "20:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 35,
+      "priceBand": 2,
+      "emoji": "💆",
+      "blurb": "Peaceful day spa in the Old Town with Thai herbal treatments."
+    },
+    {
+      "id": "phuket-banyan-tree-spa",
+      "name": "Banyan Tree Spa Phuket",
+      "lat": 7.9725,
+      "lng": 98.2984,
+      "area": "Laguna, Bang Tao",
+      "vibeTags": ["wellness", "nature", "views"],
+      "openHours": {
+        "mon": [["09:00", "22:00"]],
+        "tue": [["09:00", "22:00"]],
+        "wed": [["09:00", "22:00"]],
+        "thu": [["09:00", "22:00"]],
+        "fri": [["09:00", "22:00"]],
+        "sat": [["09:00", "22:00"]],
+        "sun": [["09:00", "22:00"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 100,
+      "priceBand": 3,
+      "emoji": "🌿",
+      "blurb": "Award-winning resort spa pioneering Royal Banyan massage rituals."
+    },
+    {
+      "id": "phuket-phi-phi-daytrip",
+      "name": "Koh Phi Phi Day Trip",
+      "lat": 7.7407,
+      "lng": 98.7784,
+      "area": "Krabi (ferry from Rassada Pier)",
+      "vibeTags": ["beach", "adventure", "nature"],
+      "openHours": {
+        "mon": [["07:00", "18:00"]],
+        "tue": [["07:00", "18:00"]],
+        "wed": [["07:00", "18:00"]],
+        "thu": [["07:00", "18:00"]],
+        "fri": [["07:00", "18:00"]],
+        "sat": [["07:00", "18:00"]],
+        "sun": [["07:00", "18:00"]]
+      },
+      "estStayMin": 480,
+      "estCostSGD": 50,
+      "priceBand": 3,
+      "emoji": "⛵",
+      "blurb": "Day trip to Maya Bay and the Phi Phi archipelago by speedboat."
+    },
+    {
+      "id": "phuket-chalong-bay-rum",
+      "name": "Chalong Bay Rum Distillery",
+      "lat": 7.8434,
+      "lng": 98.3536,
+      "area": "Chalong",
+      "vibeTags": ["culture", "food", "chill"],
+      "openHours": {
+        "mon": [["11:00", "22:00"]],
+        "tue": [["11:00", "22:00"]],
+        "wed": [["11:00", "22:00"]],
+        "thu": [["11:00", "22:00"]],
+        "fri": [["11:00", "22:00"]],
+        "sat": [["11:00", "22:00"]],
+        "sun": [["11:00", "22:00"]]
+      },
+      "estStayMin": 75,
+      "estCostSGD": 15,
+      "priceBand": 2,
+      "emoji": "🥃",
+      "blurb": "Tour and tasting at the farm-to-bottle artisan rum distillery."
+    },
+    {
+      "id": "phuket-sino-portuguese-museum",
+      "name": "Phuket Mining Museum",
+      "lat": 7.8784,
+      "lng": 98.3817,
+      "area": "Old Town outskirts",
+      "vibeTags": ["history", "culture"],
+      "openHours": {
+        "mon": [["09:00", "17:00"]],
+        "tue": [["09:00", "17:00"]],
+        "wed": [["09:00", "17:00"]],
+        "thu": [["09:00", "17:00"]],
+        "fri": [["09:00", "17:00"]],
+        "sat": [["09:00", "17:00"]],
+        "sun": [["09:00", "17:00"]]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 5,
+      "priceBand": 1,
+      "emoji": "⛏️",
+      "blurb": "Diorama museum charting Phuket's tin-mining and Sino-Portuguese heritage."
+    },
+    {
+      "id": "phuket-nai-harn-beach",
+      "name": "Nai Harn Beach",
+      "lat": 7.7638,
+      "lng": 98.3074,
+      "area": "Rawai / Nai Harn",
+      "vibeTags": ["beach", "chill", "views"],
+      "openHours": {
+        "mon": [["00:00", "23:59"]],
+        "tue": [["00:00", "23:59"]],
+        "wed": [["00:00", "23:59"]],
+        "thu": [["00:00", "23:59"]],
+        "fri": [["00:00", "23:59"]],
+        "sat": [["00:00", "23:59"]],
+        "sun": [["00:00", "23:59"]]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🌊",
+      "blurb": "Hidden cove south of Rawai with yachts anchored in a jade-green bay."
+    },
+    {
+      "id": "phuket-sunday-brunch-siam",
+      "name": "Kopitiam by Wilai",
+      "lat": 7.8854,
+      "lng": 98.3872,
+      "area": "Old Town",
+      "vibeTags": ["food", "coffee", "culture"],
+      "openHours": {
+        "mon": [["09:00", "17:00"]],
+        "tue": [["09:00", "17:00"]],
+        "wed": [["09:00", "17:00"]],
+        "thu": [["09:00", "17:00"]],
+        "fri": [["09:00", "17:00"]],
+        "sat": [["09:00", "17:00"]],
+        "sun": [["09:00", "17:00"]]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 6,
+      "priceBand": 1,
+      "emoji": "🍛",
+      "blurb": "Old Town kopitiam famous for Peranakan Hokkien cuisine at enamel tables."
+    },
+    {
+      "id": "phuket-patong-shopping",
+      "name": "Jungceylon Shopping Mall",
+      "lat": 7.8969,
+      "lng": 98.2972,
+      "area": "Patong",
+      "vibeTags": ["shopping", "food", "nightlife"],
+      "openHours": {
+        "mon": [["11:00", "23:00"]],
+        "tue": [["11:00", "23:00"]],
+        "wed": [["11:00", "23:00"]],
+        "thu": [["11:00", "23:00"]],
+        "fri": [["11:00", "23:00"]],
+        "sat": [["11:00", "23:00"]],
+        "sun": [["11:00", "23:00"]]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 10,
+      "priceBand": 2,
+      "emoji": "🛍️",
+      "blurb": "Patong's main mall with a food hall, cinema, and street-food market."
     }
   ]
 }
