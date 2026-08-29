@@ -102,6 +102,11 @@ export interface FlightOption {
   price_status: "current" | "reference";
   bookable: boolean;
   fare_family: string;
+  /** Optional fare-moment distress signal. Stripped by the live CLI; populated by fixtures. */
+  seatCount?: number | null;
+  familySpreadPct?: number | null;
+  refundable?: boolean | null;
+  changeable?: boolean | null;
 }
 
 export type StopRole = "anchor" | "food" | "quiet" | "wildcard" | "must";

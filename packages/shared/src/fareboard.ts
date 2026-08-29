@@ -1,5 +1,16 @@
 import type { FareSnapshotEntry, FlightOption, TasteVector, VibeTag } from "./types.js";
 
+// Taste leads the ranking, but a scarce or restrictive fare moment can promote
+// a destination a rank or two. The weights are applied to two 0..1 components,
+// so the effective split is the agreed 65 % taste affinity / 35 % fare moment.
+export const W_TASTE = 0.65;
+export const W_FARE_MOMENT = 0.35;
+
+const STRONG_TAG_THRESHOLD = 0.6;
+const MAX_AFFINITY = 1.0;
+const SEAT_SCARCITY_WINDOW = 8;
+const SPREAD_REFERENCE = 0.4;
+
 export interface DestinationProfile {
   iata: string;
   cityName: string;
@@ -24,6 +35,13 @@ export interface HandResult {
   wildcard: RankedDeal;
 }
 
+export interface DistressSignal {
+  seatCount?: number | null; // lower = scarcer
+  familySpreadPct?: number | null; // (next-tier price - this price) / this price
+  refundable: boolean | null;
+  changeable: boolean | null;
+}
+
 export function totalWithBag(offer: FlightOption): number {
   return offer.price.base + (offer.bags.included ? 0 : offer.bags.checked_fee);
 }
@@ -31,18 +49,63 @@ export function totalWithBag(offer: FlightOption): number {
 function tagScore(taste: TasteVector, tags: VibeTag[]): number {
   let s = 0;
   for (const t of tags) s += taste[t];
-  return s / Math.sqrt(tags.length || 1);
+  return s / (tags.length || 1);
+}
+
+export function fareMoment(signal: DistressSignal): number {
+  const scores: number[] = [];
+
+  if (signal.seatCount != null) {
+    const n = signal.seatCount;
+    scores.push(n <= 1 ? 1 : Math.max(0, 1 - (n - 1) / SEAT_SCARCITY_WINDOW));
+  }
+
+  if (signal.familySpreadPct != null) {
+    scores.push(Math.min(1, Math.max(0, signal.familySpreadPct / SPREAD_REFERENCE)));
+  }
+
+  if (typeof signal.refundable === "boolean") {
+    scores.push(signal.refundable ? 0 : 1);
+  }
+
+  if (typeof signal.changeable === "boolean") {
+    scores.push(signal.changeable ? 0 : 1);
+  }
+
+  if (scores.length === 0) return 0.5;
+  return scores.reduce((a, b) => a + b, 0) / scores.length;
+}
+
+export function unexpectedness(taste: TasteVector, destinationTags: VibeTag[]): number {
+  if (destinationTags.length === 0) return 1;
+
+  let overlap = 0;
+  for (const tag of destinationTags) {
+    const v = taste[tag];
+    if (v > STRONG_TAG_THRESHOLD) {
+      overlap += Math.min(1, (v - STRONG_TAG_THRESHOLD) / (MAX_AFFINITY - STRONG_TAG_THRESHOLD));
+    }
+  }
+  return 1 - overlap / destinationTags.length;
+}
+
+function buildSignal(offer: FlightOption): DistressSignal {
+  return {
+    seatCount: offer.seatCount,
+    familySpreadPct: offer.familySpreadPct,
+    refundable: offer.refundable ?? null,
+    changeable: offer.changeable ?? null,
+  };
 }
 
 /**
- * FR-009: rank stored snapshots against the taste vector. Pure ranking — no
- * live fare call belongs anywhere near this function. FR-010: headline number
- * is always total with checked bag.
+ * FR-009/FR-021/FR-022: rank stored snapshots against the taste vector using a
+ * taste-led blend of tag affinity, fare-moment distress, and unexpectedness.
+ * FR-010: headline number is always total with checked bag.
  *
- * Hand = top 3 by taste score (ties -> cheaper total first, then IATA).
- * Wildcard = best-ranked remaining destination that (a) has full trip data so
- * the sealed card can expand into a real planned trip, and (b) introduces at
- * least one vibe tag the open hand doesn't already cover.
+ * Hand = top 3 by blend score (ties -> cheaper total first, then IATA).
+ * Wildcard = the remaining destination with full trip data that introduces the
+ * most novelty relative to what the user has already strongly expressed.
  */
 export function rankHand(
   snapshots: FareSnapshotEntry[],
@@ -61,13 +124,17 @@ export function rankHand(
     .map((e) => {
       const profile = profiles[e.destination];
       if (!profile) return null;
+      const signal = buildSignal(e.offer);
+      const fare = fareMoment(signal);
+      const surprise = unexpectedness(taste, profile.tags);
+      const affinity = (tagScore(taste, profile.tags) + surprise) / 2;
       return {
         destination: e.destination,
         cityName: profile.cityName,
         city: profile.city,
         offer: e.offer,
         totalWithBag: totalWithBag(e.offer),
-        score: tagScore(taste, profile.tags),
+        score: W_TASTE * affinity + W_FARE_MOMENT * fare,
         novelTags: [] as VibeTag[],
         sealed: false,
       };
@@ -84,13 +151,25 @@ export function rankHand(
   const handTags = new Set(top.flatMap((d) => profiles[d.destination]!.tags));
 
   const rest = ranked.slice(3);
-  const wildcard =
-    rest.find((cand) => {
-      const profile = profiles[cand.destination]!;
-      if (!profile.hasCityFile) return false;
-      cand.novelTags = profile.tags.filter((t) => !handTags.has(t));
-      return cand.novelTags.length > 0;
-    }) ?? rest[0];
+  let wildcard: RankedDeal | undefined;
+  let bestSurprise = -Infinity;
+  for (const cand of rest) {
+    const profile = profiles[cand.destination]!;
+    if (!profile.hasCityFile) continue;
+    const surprise = unexpectedness(taste, profile.tags);
+    cand.novelTags = profile.tags.filter((t) => !handTags.has(t));
+    if (surprise > bestSurprise) {
+      bestSurprise = surprise;
+      wildcard = cand;
+    }
+  }
+  if (!wildcard) {
+    wildcard = rest[0];
+    if (wildcard) {
+      const profile = profiles[wildcard.destination]!;
+      wildcard.novelTags = profile.tags.filter((t) => !handTags.has(t));
+    }
+  }
   if (!wildcard) throw new Error("rankHand needs at least 4 destinations");
   wildcard.sealed = true;
 

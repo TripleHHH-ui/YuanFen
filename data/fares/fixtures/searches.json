@@ -44,7 +44,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             },
             {
               "offer_id": "fxo-vj642-1106",
@@ -73,7 +77,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Eco"
+              "fare_family": "Eco",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -122,7 +130,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -171,7 +183,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -220,7 +236,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             },
             {
               "offer_id": "fxo-qz509-1106",
@@ -249,7 +269,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Value"
+              "fare_family": "Value",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -298,7 +322,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -347,7 +375,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Value"
+              "fare_family": "Value",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -396,7 +428,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -445,7 +481,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -494,7 +534,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -543,7 +587,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -592,7 +640,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -641,7 +693,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Value"
+              "fare_family": "Value",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -690,7 +746,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -739,7 +799,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -788,7 +852,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -837,7 +905,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Value"
+              "fare_family": "Value",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -886,7 +958,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Value"
+              "fare_family": "Value",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -935,7 +1011,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -984,7 +1064,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -1033,7 +1117,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Value"
+              "fare_family": "Value",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -1082,7 +1170,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -1131,7 +1223,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -1180,7 +1276,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Economy"
+              "fare_family": "Economy",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
@@ -1229,7 +1329,11 @@
               },
               "price_status": "current",
               "bookable": true,
-              "fare_family": "Value"
+              "fare_family": "Value",
+              "seatCount": 5,
+              "familySpreadPct": 0.25,
+              "refundable": false,
+              "changeable": false
             }
           ]
         }
