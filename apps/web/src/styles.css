@@ -5,18 +5,18 @@
    gold wax seals for what fate hasn't shown you yet                       */
 
 :root {
-  --paper: #f6f2ea;
-  --paper-2: #efe9dc;
-  --ink: #22252e;
-  --ink-soft: #5b5e69;
+  --paper: #eaf0ea;
+  --paper-2: #dde7dd;
+  --ink: #1a231f;
+  --ink-soft: #4f5d57;
   --thread: #c8372d; /* cinnabar — the red thread */
-  --thread-deep: #a02a22;
-  --jade: #3d7a63;
-  --gold: #c9a227;
-  --gold-deep: #a8841a;
-  --line: rgba(34, 37, 46, 0.14);
-  --card: #fbf8f2;
-  --shadow: 0 18px 50px -18px rgba(34, 37, 46, 0.35);
+  --thread-deep: #9d2a21;
+  --jade: #2f6b56;
+  --gold: #b8912a;
+  --gold-deep: #97761f;
+  --line: rgba(26,35,31,.15);
+  --card: #f4f8f3;
+  --shadow: 0 20px 54px -18px rgba(26,35,31,.32);
   --display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --body: "Schibsted Grotesk", "Avenir Next", "Segoe UI", sans-serif;
   --mono: "Spline Sans Mono", "Cascadia Mono", Consolas, monospace;
@@ -40,8 +40,8 @@ input { font-family: var(--body); }
 .app-shell.paper {
   overflow-y: auto;
   background:
-    radial-gradient(1200px 500px at 85% -10%, rgba(200, 55, 45, 0.07), transparent 60%),
-    radial-gradient(900px 500px at -10% 110%, rgba(201, 162, 39, 0.08), transparent 60%),
+    radial-gradient(1200px 500px at 85% -10%, rgba(226, 86, 74, 0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(47,107,86,.13), transparent 60%),
     var(--paper);
 }
 .app-shell.paper::after {
@@ -125,7 +125,7 @@ input { font-family: var(--body); }
 .cta:disabled { opacity: 0.35; cursor: default; }
 
 /* ---------- taste deck ---------- */
-.deck-stage { max-width: 460px; gap: 14px; padding-top: 4vh; }
+.deck-stage { max-width: 560px; gap: 14px; padding-top: 4vh; justify-content: center; }
 .deck-head { display: flex; justify-content: space-between; align-items: center; }
 .deck-progress { font-family: var(--mono); font-size: 13px; }
 
@@ -156,7 +156,7 @@ input { font-family: var(--body); }
 }
 .dest-meter span { font-weight: 600; }
 
-.deck-area { position: relative; height: 380px; margin-top: 6px; }
+.deck-area { position: relative; height: min(52vh, 470px); min-height: 350px; margin-top: 6px; }
 .swipe-card {
   position: absolute; inset: 0;
   background: var(--card); border: 1.5px solid var(--line); border-radius: 20px;
@@ -172,7 +172,7 @@ input { font-family: var(--body); }
 
 /* Photo-led card: the image bleeds to the top edge, text sits under it. */
 .swipe-card.has-photo { justify-content: flex-start; padding: 0 0 22px; gap: 9px; overflow: hidden; }
-.card-photo { position: relative; width: 100%; height: 216px; flex: none; background: var(--line); }
+.card-photo { position: relative; width: 100%; height: 62%; flex: none; background: var(--line); }
 .card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card-photo::after {
   content: ""; position: absolute; inset: auto 0 0 0; height: 60px;
@@ -217,6 +217,9 @@ input { font-family: var(--body); }
 
 /* ---------- map shell ---------- */
 .map-canvas { position: absolute; inset: 0; }
+.map-canvas-inner { position: absolute; inset: 0; }
+/* the forage overlay sits above the tiles, below the pins */
+.forage-layer { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; }
 .map-canvas .maplibregl-ctrl-attrib { font-size: 10px; opacity: 0.7; }
 
 .topbar {
@@ -377,13 +380,13 @@ input { font-family: var(--body); }
 /* Places with no matching photo keep the same tile so the list stays even. */
 .stop-thumb.is-emoji {
   display: flex; align-items: center; justify-content: center;
-  background: rgba(0, 0, 0, 0.035); font-size: 17px;
+  background: rgba(26,35,31,.05); font-size: 17px;
 }
 .stop-body { min-width: 0; flex: 1; }
 .stop-name { font-weight: 700; font-size: 14px; }
 .stop-meta { font-size: 12.5px; color: var(--ink-soft); font-family: var(--mono); }
 .stop.sealed { cursor: pointer; border-radius: 10px; }
-.stop.sealed:hover { background: rgba(201, 162, 39, 0.08); }
+.stop.sealed:hover { background: rgba(47,107,86,.13); }
 .seal-glyph {
   font-family: var(--display); color: var(--gold-deep); font-size: 19px;
   border: 1.5px dashed var(--gold); border-radius: 50%;
@@ -560,7 +563,7 @@ input { font-family: var(--body); }
   cursor: pointer;
   transition: border-color 0.15s, background 0.15s;
 }
-.deal-taste:hover { border-color: var(--thread); background: rgba(200, 55, 45, 0.07); }
+.deal-taste:hover { border-color: var(--thread); background: rgba(226, 86, 74, 0.10); }
 .deal-taste:focus-visible { outline: 2px solid var(--thread); outline-offset: 2px; }
 .hand-foot { margin-top: 18px; font-size: 12.5px; color: var(--ink-soft); font-style: italic; }
 
@@ -605,7 +608,7 @@ input { font-family: var(--body); }
   padding: 6px 13px; font-weight: 700; font-size: 13px; color: var(--thread);
   transition: border-color 0.15s, background 0.15s, color 0.15s;
 }
-.dest-deck-btn:hover { border-color: var(--thread); background: rgba(200, 55, 45, 0.07); }
+.dest-deck-btn:hover { border-color: var(--thread); background: rgba(226, 86, 74, 0.10); }
 .block-label {
   font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase;
   color: var(--ink-soft); font-weight: 800; margin-bottom: 9px;
@@ -692,7 +695,7 @@ input { font-family: var(--body); }
 }
 .ms-row:last-child { border-bottom: none; }
 .ms-row span { color: var(--ink-soft); }
-.ms-row.total { background: rgba(200, 55, 45, 0.07); }
+.ms-row.total { background: rgba(226, 86, 74, 0.10); }
 .ms-row.total b { color: var(--thread-deep); font-size: 15.5px; }
 .cta.consent { font-size: 15px; padding: 13px 20px; border-radius: 13px; background: var(--jade); align-self: stretch; }
 .cta.consent:hover:not(:disabled) { background: #2f6350; transform: none; }
@@ -755,8 +758,23 @@ input { font-family: var(--body); }
 
 /* ---------- phone (≤520px) — a native sheet, not a squeezed desktop ---------- */
 @media (max-width: 520px) {
+  /* on a phone the map is only a strip, so the alert has to stay a slim
+     banner — at full width it covered the route it is talking about. */
+  .alert-slip {
+    top: 50px; left: 10px; right: 10px; width: auto;
+    padding: 7px 11px; gap: 7px; font-size: 12px; line-height: 1.25;
+    border-radius: 12px; align-items: center;
+  }
+  .alert-slip > div {
+    display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;
+    overflow: hidden; min-width: 0;
+  }
+  .alert-slip b { font-size: 13px; }
+  .alert-open { font-size: 11.5px; }
+  .alert-dot { margin-top: 0; }
+
   /* the itinerary sheet cap; narration, receipts and attribution ride above it */
-  :root { --sheet-h: 64vh; }
+  :root { --sheet-h: 54vh; }
 
   /* header — wordmark on one line, tagline cedes, badge never breaks */
   .topbar { padding: 10px 14px; }

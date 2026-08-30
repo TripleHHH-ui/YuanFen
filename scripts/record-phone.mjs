@@ -9,7 +9,7 @@ import { join } from "node:path";
 
 const OUT = process.env.RECORD_OUT ?? join(process.cwd(), "recordings");
 const URL = "http://localhost:5173";
-const W = 1600, H = 900;
+const W = 430, H = 932; // phone frame — the product is a phone app
 
 mkdirSync(OUT, { recursive: true });
 
@@ -44,7 +44,9 @@ const browser = await chromium.launch({
 });
 const ctx = await browser.newContext({
   viewport: { width: W, height: H },
-  deviceScaleFactor: 1,
+  deviceScaleFactor: 2,
+  isMobile: true,
+  hasTouch: true,
   recordVideo: { dir: OUT, size: { width: W, height: H } },
 });
 const page = await ctx.newPage();
@@ -234,10 +236,10 @@ try {
   if (vid) {
     const p = await vid.path();
     const stamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
-    const dest = join(OUT, `yuanfen-raw-${stamp}.webm`);
+    const dest = join(OUT, `yuanfen-phone-${stamp}.webm`);
     renameSync(p, dest);
     writeFileSync(
-      join(OUT, `yuanfen-raw-${stamp}.beats.txt`),
+      join(OUT, `yuanfen-phone-${stamp}.beats.txt`),
       `beat sheet — ${dest}\n(times are from the start of the recording)\n\n${marks.join("\n")}\n`,
     );
     console.log(`video: ${dest}`);

@@ -78,7 +78,7 @@ export function RoutePanel() {
             <div>
               <div className="route-city">{plan.city?.name} · {plan.date}</div>
               <div className="route-take">
-                take {planAlt + 1}/{plan.alternatives!.length}
+                take {planAlt + 1} · keep going for another
               </div>
             </div>
             <div className="alt-nav">

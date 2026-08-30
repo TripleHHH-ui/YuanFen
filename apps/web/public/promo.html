@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>YuanFen — taste & thread</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Schibsted+Grotesk:wght@400..900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#eaf0ea; --paper-2:#dde7dd; --ink:#1a231f; --ink-soft:#4f5d57;
+    --thread:#c8372d; --thread-deep:#9d2a21; --jade:#2f6b56; --gold:#b8912a;
+    --line:rgba(26,35,31,.15); --card:#f4f8f3;
+    --display:"Fraunces",Georgia,serif; --body:"Schibsted Grotesk",sans-serif;
+    --mono:"Spline Sans Mono",Consolas,monospace;
+    --spring:cubic-bezier(.34,1.4,.5,1);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;overflow:hidden;background:var(--paper)}
+  body{color:var(--ink);font-family:var(--body)}
+
+  .ground{
+    position:fixed;inset:0;
+    background:
+      radial-gradient(1200px 600px at 82% -12%, rgba(200,55,45,.07), transparent 60%),
+      radial-gradient(900px 560px at -8% 112%, rgba(47,107,86,.13), transparent 60%),
+      var(--paper);
+  }
+  .grain{
+    position:fixed;inset:0;pointer-events:none;opacity:.5;z-index:60;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .03 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .scene{position:fixed;inset:0;opacity:0;transition:opacity .9s ease;z-index:10}
+  .scene.on{opacity:1}
+  .scene.out{opacity:0}
+
+  #mark{position:fixed;left:46px;top:40px;z-index:50;display:flex;align-items:baseline;gap:10px;
+    font-family:var(--display);font-size:19px;font-weight:640;opacity:0;transition:opacity .9s}
+  #mark.on{opacity:1}
+  #mark .seal{color:var(--thread);border:1.5px solid var(--thread);border-radius:6px;
+    padding:1px 6px 2px;transform:rotate(-2deg);box-shadow:2px 2px 0 rgba(200,55,45,.25)}
+
+  #caption{
+    position:fixed;left:0;right:0;bottom:62px;text-align:center;z-index:55;
+    font-family:var(--display);font-size:46px;font-weight:600;letter-spacing:-.012em;
+    opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s var(--spring);
+  }
+  #caption.on{opacity:1;transform:none}
+  #caption .zh{color:var(--thread);margin-right:16px;font-weight:700}
+  #caption .sub{display:block;font-family:var(--body);font-size:17px;font-weight:500;
+    color:var(--ink-soft);margin-top:9px;letter-spacing:0}
+
+  /* ---------- scene A: vibes ---------- */
+  #vibes{display:flex;align-items:center;justify-content:center}
+  .vibe-grid{
+    display:grid;grid-template-columns:repeat(5,190px);gap:16px;
+    transform:scale(1);transition:transform 1.2s var(--spring), opacity .8s;
+  }
+  .vibe-grid.recede{transform:scale(.82);opacity:0}
+  .chip{
+    display:flex;align-items:center;gap:10px;padding:17px 19px;border-radius:14px;
+    border:1.6px solid var(--line);background:var(--card);
+    font-size:16px;font-weight:650;
+    opacity:0;transform:translateY(20px) scale(.96);
+    transition:opacity .5s, transform .55s var(--spring), background .35s, color .35s, border-color .35s, box-shadow .35s;
+  }
+  .chip.in{opacity:1;transform:none}
+  .chip.sel{
+    background:var(--thread);border-color:var(--thread-deep);color:#fff;
+    transform:rotate(-1.6deg) scale(1.06);
+    box-shadow:4px 4px 0 rgba(157,42,33,.32);
+  }
+  .chip .e{font-size:21px}
+  #vcount{
+    position:absolute;top:calc(50% - 250px);left:50%;transform:translateX(-50%);
+    font-family:var(--mono);font-size:15px;color:var(--ink-soft);opacity:0;transition:opacity .5s
+  }
+  #vcount.on{opacity:1}
+  #vcount b{color:var(--thread);font-size:19px}
+
+  /* ---------- scene B: taste cards ---------- */
+  #taste{}
+  .fan{position:absolute;left:50%;top:46%;width:0;height:0}
+  .tcard{
+    position:absolute;width:250px;height:320px;margin:-160px 0 0 -125px;
+    background:var(--card);border:1.5px solid var(--line);border-radius:18px;overflow:hidden;
+    box-shadow:0 22px 50px -22px rgba(26,35,31,.32);
+    opacity:0;transform:translateY(60px) scale(.9);
+    transition:opacity .6s, transform .85s var(--spring);
+  }
+  .tcard.in{opacity:1}
+  .tcard img{width:100%;height:66%;object-fit:cover;display:block}
+  .tcard .t-t{font-family:var(--display);font-size:17px;font-weight:620;padding:11px 14px 0;line-height:1.15}
+  .tcard .t-s{font-size:12.5px;color:var(--ink-soft);padding:4px 14px 0;line-height:1.3}
+  .stamp{
+    position:absolute;top:26px;left:50%;transform:translateX(-50%) rotate(-11deg) scale(.7);
+    padding:5px 16px;border:3px solid;border-radius:8px;
+    font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.06em;
+    opacity:0;transition:opacity .25s, transform .3s var(--spring);
+  }
+  .stamp.on{opacity:1;transform:translateX(-50%) rotate(-11deg) scale(1)}
+  .stamp.keep{color:var(--jade);border-color:var(--jade)}
+  .stamp.pass{color:var(--ink-soft);border-color:var(--ink-soft)}
+  .stamp.must{color:var(--gold);border-color:var(--gold)}
+
+  /* the thread meter — the product's own metaphor */
+  #meter{
+    position:absolute;left:50%;transform:translateX(-50%);bottom:188px;width:620px;
+    opacity:0;transition:opacity .7s;
+  }
+  #meter.on{opacity:1}
+  .m-rail{position:relative;height:9px;border-radius:99px;background:var(--paper-2)}
+  .m-fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:99px;
+    background:linear-gradient(90deg,var(--thread-deep),var(--thread));
+    transition:width .55s cubic-bezier(.2,.8,.2,1)}
+  .knot{
+    position:absolute;top:50%;width:13px;height:13px;border-radius:50%;
+    transform:translate(-50%,-50%) scale(.55);background:var(--paper);
+    border:2.5px solid var(--line);
+    transition:all .4s var(--spring);
+  }
+  .knot.tied{background:var(--thread);border-color:var(--thread-deep);transform:translate(-50%,-50%) scale(1.2)}
+  .m-tags{margin-top:13px;text-align:center;font-size:15px;color:var(--ink-soft)}
+  .m-tags b{color:var(--thread);margin-left:10px;font-weight:750}
+
+  /* ---------- scene C: map ---------- */
+  #mapwrap{position:fixed;inset:0}
+  #map{position:absolute;inset:0}
+  .maplibregl-ctrl-attrib{font-size:9px;opacity:.5}
+  #slime{position:absolute;inset:0;pointer-events:none;z-index:5}
+  #mapveil{position:absolute;inset:0;pointer-events:none;z-index:6;
+    background:linear-gradient(90deg, rgba(234,240,234,.95) 0 270px, rgba(234,240,234,0) 560px)}
+  .pin{
+    width:34px;height:34px;border-radius:50% 50% 50% 8px;background:var(--thread);
+    transform:rotate(-45deg) scale(0);border:2.5px solid #fff;
+    box-shadow:0 6px 16px -4px rgba(157,42,33,.32);
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .5s var(--spring);
+  }
+  .pin.drop{transform:rotate(-45deg) scale(1)}
+  .pin span{transform:rotate(45deg);color:#fff;font-weight:800;font-size:14px;font-family:var(--body)}
+
+  #stoplist{
+    position:absolute;left:52px;top:50%;transform:translateY(-50%);width:330px;z-index:20;
+  }
+  .srow{
+    display:flex;gap:11px;align-items:center;padding:9px 0;
+    opacity:0;transform:translateX(-26px);
+    transition:opacity .5s, transform .6s var(--spring);
+  }
+  .srow.in{opacity:1;transform:none}
+  .srow img{width:42px;height:42px;border-radius:9px;object-fit:cover;flex:0 0 42px;border:1px solid var(--line)}
+  .srow .s-e{width:42px;height:42px;border-radius:9px;display:flex;align-items:center;justify-content:center;
+    background:rgba(26,35,31,.05);font-size:19px;flex:0 0 42px}
+  .srow .s-n{font-size:15.5px;font-weight:680;line-height:1.15}
+  .srow .s-m{font-family:var(--mono);font-size:12px;color:var(--ink-soft);margin-top:1px}
+  .s-num{position:absolute;left:-30px;font-family:var(--mono);font-size:12px;color:var(--thread);font-weight:600}
+
+  #err{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:99;
+    font-family:var(--mono);font-size:14px;color:var(--thread);padding:40px;text-align:center;background:var(--paper)}
+</style>
+</head>
+<body>
+  <div class="ground"></div>
+
+  <section class="scene" id="vibes">
+    <div id="vcount">picked <b>0</b>/5</div>
+    <div class="vibe-grid" id="vgrid"></div>
+  </section>
+
+  <section class="scene" id="taste">
+    <div class="fan" id="fan"></div>
+    <div id="meter">
+      <div class="m-rail"><div class="m-fill"></div></div>
+      <div class="m-tags">learning<b id="mtags"></b></div>
+    </div>
+  </section>
+
+  <section class="scene" id="mapscene">
+    <div id="mapwrap"><div id="map"></div><canvas id="slime"></canvas><div id="mapveil"></div></div>
+    <div id="stoplist"></div>
+  </section>
+
+  <div id="mark"><span class="seal">缘分</span> YuanFen</div>
+  <div id="caption"></div>
+  <div class="grain"></div>
+  <div id="err"></div>
+
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script type="module">
+const $ = (s) => document.querySelector(s);
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function api(path, body) {
+  const res = await fetch(path, body
+    ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }
+    : undefined);
+  if (!res.ok) throw new Error(`${path} -> ${res.status}`);
+  return res.json();
+}
+
+const VIBES = [
+  ["🍜","Food-led"],["☕","Café slow"],["🏮","Culture"],["🌅","Big views"],["🍃","Unhurried"],
+  ["🌿","Green & wild"],["🎨","Art"],["🏛️","History"],["🌊","Salt air"],["🌙","After dark"],
+];
+const PICKS = [0, 1, 2, 3, 4];
+
+function caption(zh, text, sub) {
+  const c = $("#caption");
+  c.classList.remove("on");
+  setTimeout(() => {
+    c.innerHTML = `${zh ? `<span class="zh">${zh}</span>` : ""}${text}${sub ? `<span class="sub">${sub}</span>` : ""}`;
+    c.classList.add("on");
+  }, 400);
+}
+const hideCaption = () => $("#caption").classList.remove("on");
+
+async function sceneVibes() {
+  const grid = $("#vgrid");
+  VIBES.forEach(([e, l]) => {
+    const d = document.createElement("div");
+    d.className = "chip";
+    d.innerHTML = `<span class="e">${e}</span>${l}`;
+    grid.appendChild(d);
+  });
+  $("#vibes").classList.add("on");
+  $("#mark").classList.add("on");
+  const chips = [...grid.children];
+  chips.forEach((c, i) => setTimeout(() => c.classList.add("in"), i * 55));
+  await wait(900);
+  caption("挑", "Tell it what you like.", "five taps — that is the whole setup");
+  $("#vcount").classList.add("on");
+  await wait(900);
+  for (let n = 0; n < PICKS.length; n++) {
+    chips[PICKS[n]].classList.add("sel");
+    $("#vcount").innerHTML = `picked <b>${n + 1}</b>/5`;
+    await wait(430);
+  }
+  await wait(1500);
+  hideCaption();
+  grid.classList.add("recede");
+  $("#vcount").classList.remove("on");
+  await wait(700);
+  $("#vibes").classList.remove("on");
+}
+
+async function sceneTaste(cards) {
+  const fan = $("#fan");
+  const use = cards.filter((c) => c.photoUrl).slice(0, 7);
+  const els = use.map((c, i) => {
+    const el = document.createElement("div");
+    el.className = "tcard";
+    el.innerHTML = `<img src="${c.photoUrl}" alt=""><div class="t-t">${c.title}</div>
+      <div class="t-s">${c.subtitle ?? ""}</div>
+      <div class="stamp keep">KEEP</div><div class="stamp pass">PASS</div><div class="stamp must">MUST-GO</div>`;
+    fan.appendChild(el);
+    return el;
+  });
+  $("#taste").classList.add("on");
+
+  // fan the real cards into an arc
+  const spread = 128, tilt = 7;
+  els.forEach((el, i) => {
+    const mid = (els.length - 1) / 2;
+    const dx = (i - mid) * spread;
+    const rot = (i - mid) * tilt;
+    const dy = Math.abs(i - mid) * 16;
+    setTimeout(() => {
+      el.style.transform = `translate(${dx}px, ${dy}px) rotate(${rot}deg) scale(1)`;
+      el.classList.add("in");
+    }, i * 95);
+  });
+  await wait(1100);
+  caption("", "Fifteen swipes.", "each one pulls the thread tighter");
+  $("#meter").classList.add("on");
+
+  // knots on the rail
+  const rail = $(".m-rail");
+  const KN = 7;
+  for (let i = 0; i < KN; i++) {
+    const k = document.createElement("div");
+    k.className = "knot";
+    k.style.left = `${((i + 1) / (KN + 1)) * 100}%`;
+    rail.appendChild(k);
+  }
+  const knots = [...rail.querySelectorAll(".knot")];
+  await wait(700);
+
+  // swipe them off, one by one, tying a knot each time
+  const acts = ["keep", "must", "pass", "keep", "keep", "must", "keep"];
+  for (let n = 0; n < els.length; n++) {
+    // the rightmost card is last in the DOM, so it sits on top — swipe that one first
+    const i = els.length - 1 - n;
+    const el = els[i];
+    const a = acts[n % acts.length];
+    el.querySelector(`.stamp.${a}`).classList.add("on");
+    await wait(300);
+    const fly = a === "pass"
+      ? "translate(-120vw,-10vh) rotate(-26deg)"
+      : a === "must"
+        ? "translate(0,-120vh) rotate(-5deg) scale(1.06)"
+        : "translate(120vw,-10vh) rotate(26deg)";
+    el.style.transition = "transform .8s cubic-bezier(.4,0,.7,.2), opacity .8s";
+    el.style.transform = fly;
+    knots[n].classList.add("tied");
+    $(".m-fill").style.width = `${((n + 1) / els.length) * 100}%`;
+    await wait(360);
+  }
+  $("#mtags").textContent = "culture · food · views";
+  await wait(400);
+  caption("", "One taste thread.", "no forms, no filters, no questionnaire");
+  await wait(2600);
+  hideCaption();
+  $("#taste").classList.add("out");
+  await wait(900);
+  $("#taste").classList.remove("on");
+}
+
+function animate(ms, fn) {
+  return new Promise((done) => {
+    const t0 = performance.now();
+    (function step(now) {
+      const t = Math.min(1, (now - t0) / ms);
+      fn(t);
+      if (t < 1) requestAnimationFrame(step);
+      else done();
+    })(t0);
+  });
+}
+
+/**
+ * The map beat, as Physarum: the agent forages every nearby candidate, then
+ * the redundant tubes retract and one route is left. The candidates are real —
+ * they come from /api/places/nearby, ranked against the taste vector.
+ */
+async function sceneMap(mesh) {
+  const stops = mesh.stops;
+  const center = mesh.city.center;
+
+  const map = new maplibregl.Map({
+    container: "map",
+    style: {
+      version: 8,
+      sources: { osm: { type: "raster", tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"], tileSize: 256, attribution: "© OpenStreetMap contributors" } },
+      layers: [{ id: "osm", type: "raster", source: "osm", paint: { "raster-saturation": -0.92, "raster-brightness-min": 0.7, "raster-brightness-max": 0.95, "raster-opacity": 0.9 } }, { id: "tint", type: "background", paint: { "background-color": "#2f6b56", "background-opacity": 0.22 } }],
+    },
+    center: [center.lng, center.lat],
+    zoom: 12.6,
+    attributionControl: false,
+    interactive: false,
+  });
+  await new Promise((r) => map.on("load", r));
+  $("#mapscene").classList.add("on");
+
+  // nodes: what it kept, plus what it considered and dropped
+  const nodes = mesh.nodes;
+  const chosen = nodes.filter((n) => n.stop);
+
+  // frame everything it looked at, not only what survived
+  const all = nodes.map((n) => [n.lng, n.lat]);
+  const bounds = all.reduce((acc, c) => acc.extend(c), new maplibregl.LngLatBounds(all[0], all[0]));
+  map.fitBounds(bounds, { padding: { top: 140, bottom: 190, left: 450, right: 140 }, duration: 0, maxZoom: 15.2 });
+  await wait(600);
+
+  // edges come precomputed by scripts/build-route-mesh.mjs: real walking
+  // geometry from a genuine foot router, resolved once and checked in.
+  const edges = mesh.edges;
+  function arcPath(A, B) {
+    const pts = [], N = 26;
+    const dx = B.lng - A.lng, dy = B.lat - A.lat;
+    const px = -dy * 0.16, py = dx * 0.16;
+    for (let i = 0; i <= N; i++) {
+      const t = i / N, k = Math.sin(t * Math.PI);
+      pts.push([A.lng + dx * t + px * k, A.lat + dy * t + py * k]);
+    }
+    return pts;
+  }
+  edges.forEach((e) => {
+    if (!e.pts || !e.pts.length) e.pts = arcPath(nodes[e.a], nodes[e.b]);
+    e.grow = 0; e.fade = 1; e.resolved = false;
+  });
+
+  const cv = $("#slime"), c2 = cv.getContext("2d");
+  const dpr = window.devicePixelRatio || 1;
+  cv.width = innerWidth * dpr; cv.height = innerHeight * dpr;
+  cv.style.width = innerWidth + "px"; cv.style.height = innerHeight + "px";
+  c2.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  function draw() {
+    c2.clearRect(0, 0, innerWidth, innerHeight);
+    c2.lineCap = "round"; c2.lineJoin = "round";
+    for (const e of edges) {
+      if (e.grow <= 0 || e.fade <= 0) continue;
+      const pts = e.pts.map(([lng, lat]) => map.project([lng, lat]));
+      const n = Math.max(2, Math.round((pts.length - 1) * e.grow) + 1);
+      c2.beginPath();
+      c2.moveTo(pts[0].x, pts[0].y);
+      for (let i = 1; i < n; i++) c2.lineTo(pts[i].x, pts[i].y);
+      if (e.resolved) {
+        c2.strokeStyle = `rgba(200,55,45,${0.95 * e.fade})`;
+        c2.lineWidth = 4.4;
+      } else {
+        c2.strokeStyle = `rgba(201,162,39,${0.42 * e.fade})`;
+        c2.lineWidth = 2.4 + 1.6 * (1 - e.fade) * 0;
+      }
+      c2.stroke();
+    }
+    for (const nd of nodes) {
+      if (nd.stop) continue;
+      const p = map.project([nd.lng, nd.lat]);
+      c2.beginPath(); c2.arc(p.x, p.y, 4.5, 0, 7);
+      c2.fillStyle = `rgba(201,162,39,${0.5 * (nd.alive ?? 1)})`; c2.fill();
+    }
+  }
+  let running = true;
+  (function loop() { if (!running) return; draw(); requestAnimationFrame(loop); })();
+
+  caption("缘", "It forages before it chooses.", "every nearby option gets explored first");
+  await wait(400);
+
+  // phase 1 — forage outward, all tubes at once
+  await animate(2400, (t) => {
+    edges.forEach((e, k) => {
+      const delay = (k % 9) * 0.045;
+      e.grow = Math.max(0, Math.min(1, (t - delay) / 0.5));
+    });
+  });
+  await wait(900);
+
+  // phase 2 — redundant tubes retract, the route thickens
+  caption("缘", "The thread finds the order.", "redundant paths retract — one route remains");
+  edges.forEach((e) => { if (e.chosen) e.resolved = true; });
+  await animate(1900, (t) => {
+    edges.forEach((e) => { if (!e.chosen) { e.fade = 1 - t; e.grow = 1 - t * 0.55; } });
+    nodes.forEach((n) => { if (!n.stop) n.alive = 1 - t * 0.75; });
+  });
+  await wait(400);
+
+  // converge — the camera settles onto what actually survived
+  const rb = chosen.reduce(
+    (acc, n) => acc.extend([n.lng, n.lat]),
+    new maplibregl.LngLatBounds([chosen[0].lng, chosen[0].lat], [chosen[0].lng, chosen[0].lat]),
+  );
+  map.fitBounds(rb, { padding: { top: 150, bottom: 250, left: 470, right: 160 }, duration: 1900, maxZoom: 15.6 });
+  await wait(2100);
+
+  // the surviving stops get their pins and their row in the itinerary
+  stops.forEach((s, i) => {
+    const el = document.createElement("div");
+    el.className = "pin";
+    el.innerHTML = `<span>${i + 1}</span>`;
+    new maplibregl.Marker({ element: el }).setLngLat([s.place.lng, s.place.lat]).addTo(map);
+    setTimeout(() => el.classList.add("drop"), i * 150);
+  });
+  await wait(900);
+
+  const list = $("#stoplist");
+  stops.forEach((s, i) => {
+    const p = s.place;
+    const row = document.createElement("div");
+    row.className = "srow";
+    row.style.position = "relative";
+    row.innerHTML = `<span class="s-num">${i + 1}</span>` +
+      (p.photoUrl ? `<img src="${p.photoUrl}" alt="">` : `<span class="s-e">${p.emoji ?? "📍"}</span>`) +
+      `<div><div class="s-n">${p.name}</div><div class="s-m">${s.arrive}–${s.depart}</div></div>`;
+    list.appendChild(row);
+    setTimeout(() => row.classList.add("in"), i * 150);
+  });
+  await wait(1600);
+
+  map.easeTo({ zoom: map.getZoom() + 0.5, duration: 6000, easing: (t) => t });
+  await wait(1800);
+  if (mesh.narration) caption("", mesh.narration, "");
+  await wait(4200);
+  hideCaption();
+  await wait(700);
+  running = false;
+}
+
+async function run() {
+  let deck, mesh;
+  try {
+    await api("/api/taste/seed", { tags: ["food", "coffee", "culture", "views", "chill"] });
+    deck = await api("/api/taste/deck");
+    for (const c of deck.cards.slice(0, 8)) await api("/api/taste/swipe", { cardId: c.id, action: "like" });
+    // the forage mesh is resolved offline by scripts/build-route-mesh.mjs
+    mesh = await api("/route-mesh.json");
+    if (!mesh.edges?.length) throw new Error("route-mesh.json has no edges");
+  } catch (e) {
+    $("#err").style.display = "flex";
+    $("#err").textContent = `API problem: ${e.message}`;
+    return;
+  }
+
+  await sceneVibes();
+  await sceneTaste(deck.cards);
+  await sceneMap(mesh);
+  document.title = "done";
+}
+run();
+</script>
+</body>
+</html>

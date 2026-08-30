@@ -23,6 +23,37 @@ interface Props {
   recommendations?: MapRec[];
 }
 
+/** Walking geometry resolved offline by scripts/build-route-mesh.mjs. */
+interface Mesh {
+  takes?: Array<{ stops: number; path: [number, number][] }>;
+  legs?: Record<string, [number, number][]>;
+}
+
+const legKey = (a: MapStop, b: MapStop) =>
+  [a.lng.toFixed(5), a.lat.toFixed(5), b.lng.toFixed(5), b.lat.toFixed(5)].join(",");
+
+/**
+ * The thread should walk the streets, not cut across blocks. Where we have a
+ * routed leg for a pair of stops we use it; anything unrouted falls back to the
+ * straight hop so the line is never broken.
+ */
+function threadCoords(stops: MapStop[], mesh: Mesh | null): [number, number][] {
+  const out: [number, number][] = [];
+  for (let i = 0; i < stops.length - 1; i++) {
+    const a = stops[i]!, b = stops[i + 1]!;
+    const leg = mesh?.legs?.[legKey(a, b)] ?? mesh?.legs?.[legKey(b, a)];
+    if (leg?.length) {
+      const seg = mesh!.legs![legKey(a, b)] ? leg : [...leg].reverse();
+      if (out.length) seg.shift();
+      out.push(...seg);
+    } else {
+      if (!out.length) out.push([a.lng, a.lat]);
+      out.push([b.lng, b.lat]);
+    }
+  }
+  return out;
+}
+
 // Desaturated OSM basemap: the vermilion thread owns the color.
 const STYLE: maplibregl.StyleSpecification = {
   version: 8,
@@ -35,7 +66,7 @@ const STYLE: maplibregl.StyleSpecification = {
     },
   },
   layers: [
-    { id: "osm", type: "raster", source: "osm", paint: { "raster-saturation": -0.9, "raster-brightness-min": 0.62, "raster-brightness-max": 0.92, "raster-opacity": 0.92 } },
+    { id: "osm", type: "raster", source: "osm", paint: { "raster-saturation": -0.9, "raster-brightness-min": 0.62, "raster-brightness-max": 0.88, "raster-opacity": 0.92 } }, { id: "tint", type: "background", paint: { "background-color": "#2f6b56", "background-opacity": 0.22 } },
   ],
 };
 
@@ -45,6 +76,9 @@ export function MapCanvas({ center, stops, recommendations = [] }: Props) {
   const markersRef = useRef<Marker[]>([]);
   const recMarkersRef = useRef<Marker[]>([]);
   const readyRef = useRef(false);
+  const forageRef = useRef<HTMLCanvasElement>(null);
+  const foragedRef = useRef(false);
+  const meshRef = useRef<Mesh | null>(null);
   // Latest props live in refs so the style-load callback and the effect both
   // draw the CURRENT stops — a plan arriving before the style finishes loading
   // must not be lost (the load event may lag the first route by seconds).
@@ -77,6 +111,86 @@ export function MapCanvas({ center, stops, recommendations = [] }: Props) {
     }
   }
 
+  /**
+   * FR-006: the takes the planner actually produced, drawn as the paths they
+   * are. They grow the way Physarum forages, then thin to a trace that stays —
+   * the alternatives never leave the table, they just stop being the one you
+   * are looking at. Walking geometry is resolved offline by
+   * scripts/build-route-mesh.mjs; if it is missing we simply skip the beat.
+   */
+  async function playForage(map: MLMap) {
+    if (foragedRef.current) return;
+    foragedRef.current = true;
+    const cv = forageRef.current;
+    if (!cv) return;
+    const mesh = meshRef.current;
+    if (!mesh?.takes?.length) return;
+    // every take the planner produced, as its real walking path. The one you
+    // are looking at is drawn in cinnabar by the map's own route layer; these
+    // are the others, still on the table.
+    const edges = mesh.takes
+      .filter((t) => t.path?.length)
+      .map((t) => ({ pts: t.path, grow: 0, fade: 1 }));
+    if (!edges.length) return;
+
+    const ctx = cv.getContext("2d");
+    if (!ctx) return;
+    const dpr = window.devicePixelRatio || 1;
+    const fit = () => {
+      cv.width = cv.clientWidth * dpr;
+      cv.height = cv.clientHeight * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    fit();
+
+    let alive = true;
+    const draw = () => {
+      if (!alive) return;
+      ctx.clearRect(0, 0, cv.clientWidth, cv.clientHeight);
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      for (const e of edges) {
+        if (e.grow <= 0 || e.fade <= 0) continue;
+        const pts = e.pts.map(([lng, lat]) => map.project([lng, lat]));
+        const n = Math.max(2, Math.round((pts.length - 1) * e.grow) + 1);
+        ctx.beginPath();
+        ctx.moveTo(pts[0]!.x, pts[0]!.y);
+        for (let i = 1; i < n; i++) ctx.lineTo(pts[i]!.x, pts[i]!.y);
+        ctx.strokeStyle = `rgba(184,145,42,${0.52 * e.fade})`;
+        ctx.lineWidth = 3;
+        ctx.stroke();
+      }
+      requestAnimationFrame(draw);
+    };
+    draw();
+
+    const run = (ms: number, fn: (t: number) => void) =>
+      new Promise<void>((done) => {
+        const t0 = performance.now();
+        const step = (now: number) => {
+          const t = Math.min(1, (now - t0) / ms);
+          fn(t);
+          if (t < 1) requestAnimationFrame(step);
+          else done();
+        };
+        requestAnimationFrame(step);
+      });
+
+    await run(1600, (t) => {
+      edges.forEach((e, k) => {
+        e.grow = Math.max(0, Math.min(1, (t - k * 0.11) / 0.6));
+      });
+    });
+    await new Promise((r) => setTimeout(r, 700));
+    // The rejected tubes thin out but never fully disappear: the point of the
+    // beat is that the agent is still holding the alternatives it considered.
+    await run(1300, (t) => {
+      edges.forEach((e) => { e.fade = 1 - t * 0.5; });
+    });
+    // the loop keeps running so the trace re-projects as the map moves
+    void alive;
+  }
+
   function sync() {
     const map = mapRef.current;
     if (!map || !readyRef.current) return;
@@ -84,12 +198,13 @@ export function MapCanvas({ center, stops, recommendations = [] }: Props) {
     for (const m of markersRef.current) m.remove();
     markersRef.current = [];
     const line = current.map((s) => [s.lng, s.lat] as [number, number]);
+    const walked = threadCoords(current, meshRef.current);
     const source = map.getSource("thread") as maplibregl.GeoJSONSource | undefined;
     source?.setData({
       type: "FeatureCollection",
       features:
-        line.length > 1
-          ? [{ type: "Feature", geometry: { type: "LineString", coordinates: line }, properties: {} }]
+        walked.length > 1
+          ? [{ type: "Feature", geometry: { type: "LineString", coordinates: walked }, properties: {} }]
           : [],
     });
     current.forEach((s, i) => {
@@ -111,7 +226,11 @@ export function MapCanvas({ center, stops, recommendations = [] }: Props) {
         (acc, c) => acc.extend(c),
         new maplibregl.LngLatBounds(line[0]!, line[0]!),
       );
-      map.fitBounds(b, { padding: frame, duration: 900, maxZoom: 14.6 });
+      // 14.6 left a tight CBD day using a third of the frame, with OSM's
+      // city-level labels drawn larger than the route itself.
+      map.fitBounds(b, { padding: frame, duration: 900, maxZoom: 15.5 });
+      // once the camera has settled, show the search that produced this route
+      window.setTimeout(() => void playForage(map), 950);
     } else if (phone) {
       // A near-point bounds keeps fitBounds' padding math while holding the
       // city in the strip above the sheet (maxZoom matches the desktop zoom).
@@ -142,7 +261,7 @@ export function MapCanvas({ center, stops, recommendations = [] }: Props) {
         id: "thread-casing",
         type: "line",
         source: "thread",
-        paint: { "line-color": "#f6f2ea", "line-width": 7, "line-opacity": 0.9 },
+        paint: { "line-color": "#eaf0ea", "line-width": 7, "line-opacity": 0.9 },
         layout: { "line-cap": "round", "line-join": "round" },
       });
       map.addLayer({
@@ -153,7 +272,11 @@ export function MapCanvas({ center, stops, recommendations = [] }: Props) {
         layout: { "line-cap": "round", "line-join": "round" },
       });
       readyRef.current = true;
-      sync();
+      void fetch("/route-mesh.json")
+        .then((r) => (r.ok ? r.json() : null))
+        .then((m) => { meshRef.current = m; })
+        .catch(() => { meshRef.current = null; })
+        .finally(() => sync());
     });
     mapRef.current = map;
     return () => {
@@ -174,5 +297,10 @@ export function MapCanvas({ center, stops, recommendations = [] }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [JSON.stringify(recommendations), JSON.stringify(stops)]);
 
-  return <div ref={containerRef} className="map-canvas" />;
+  return (
+    <div className="map-canvas">
+      <div ref={containerRef} className="map-canvas-inner" />
+      <canvas ref={forageRef} className="forage-layer" />
+    </div>
+  );
 }

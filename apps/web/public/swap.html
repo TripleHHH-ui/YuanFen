@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>YuanFen — it proposes, you decide</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Schibsted+Grotesk:wght@400..900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eaf0ea; --paper-2:#dde7dd; --ink:#1a231f; --ink-soft:#4f5d57;
+    --thread:#c8372d; --thread-deep:#9d2a21; --jade:#2f6b56; --gold:#b8912a;
+    --line:rgba(26,35,31,.15); --card:#f4f8f3;
+    --display:"Fraunces",Georgia,serif; --body:"Schibsted Grotesk",sans-serif;
+    --mono:"Spline Sans Mono",Consolas,monospace;
+    --spring:cubic-bezier(.34,1.4,.5,1);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;overflow:hidden}
+  body{
+    color:var(--ink);font-family:var(--body);
+    background:
+      radial-gradient(1200px 600px at 82% -12%, rgba(200,55,45,.07), transparent 60%),
+      radial-gradient(900px 560px at -8% 112%, rgba(47,107,86,.13), transparent 60%),
+      var(--paper);
+  }
+  .grain{position:fixed;inset:0;pointer-events:none;opacity:.5;z-index:60;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .03 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  #mark{position:fixed;left:46px;top:40px;z-index:50;font-family:var(--display);
+    font-size:19px;font-weight:640;opacity:0;transition:opacity .9s}
+  #mark.on{opacity:1}
+  #mark .seal{color:var(--thread);border:1.5px solid var(--thread);border-radius:6px;
+    padding:1px 6px 2px;transform:rotate(-2deg);display:inline-block;
+    box-shadow:2px 2px 0 rgba(200,55,45,.25);margin-right:8px}
+
+  .stage{position:fixed;inset:0;display:grid;grid-template-columns:1fr 1fr;
+    align-items:center;gap:70px;padding:0 100px}
+
+  /* ---- the day, as the product shows it ---- */
+  .day{justify-self:end;width:430px;opacity:0;transform:translateY(16px);
+    transition:opacity .7s,transform .7s var(--spring)}
+  .day.on{opacity:1;transform:none}
+  .day-h{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-soft);margin-bottom:4px}
+  .day-t{font-family:var(--display);font-size:26px;font-weight:600;margin-bottom:16px}
+  .stop{display:flex;gap:12px;align-items:center;padding:10px 12px;border-radius:11px;
+    border:1.5px solid transparent;transition:all .5s var(--spring)}
+  .stop img{width:44px;height:44px;border-radius:9px;object-fit:cover;flex:0 0 44px;border:1px solid var(--line)}
+  .stop .e{width:44px;height:44px;border-radius:9px;display:flex;align-items:center;
+    justify-content:center;background:rgba(26,35,31,.05);font-size:20px;flex:0 0 44px}
+  .stop .n{font-size:16px;font-weight:680;line-height:1.15}
+  .stop .m{font-family:var(--mono);font-size:12px;color:var(--ink-soft);margin-top:2px}
+  .stop.target{border-color:var(--thread);background:rgba(200,55,45,.05)}
+  .stop.target .n{color:var(--thread)}
+  .stop.done{border-color:var(--jade);background:rgba(61,122,99,.07)}
+  .badge{margin-left:8px;font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;
+    text-transform:uppercase;padding:2px 7px;border-radius:99px;
+    background:var(--jade);color:#fff;vertical-align:middle;
+    opacity:0;transition:opacity .5s}
+  .badge.on{opacity:1}
+
+  /* ---- the agent's proposal ---- */
+  .prop{justify-self:start;width:430px;position:relative;height:470px}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--thread);margin-bottom:10px;opacity:0;transition:opacity .6s}
+  .kicker.on{opacity:1}
+  .pcard{
+    position:absolute;inset:26px 0 auto 0;background:var(--card);
+    border:1.5px solid var(--line);border-radius:18px;overflow:hidden;
+    box-shadow:0 26px 60px -26px rgba(26,35,31,.32);
+    opacity:0;transform:translateY(40px) scale(.94);
+    transition:opacity .55s, transform .7s var(--spring);
+  }
+  .pcard.on{opacity:1;transform:none}
+  .pcard.leave{opacity:0;transform:translateX(-90px) rotate(-6deg)}
+  .pcard img{width:100%;height:186px;object-fit:cover;display:block}
+  .pbody{padding:15px 18px 18px}
+  .instead{font-size:13px;color:var(--ink-soft)}
+  .instead s{color:var(--ink-soft);opacity:.75}
+  .pname{font-family:var(--display);font-size:25px;font-weight:620;line-height:1.1;margin:3px 0 8px}
+  .ptags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+  .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
+    padding:3px 8px;border-radius:99px;border:1px solid var(--line);color:var(--ink-soft)}
+  .deltas{display:flex;gap:9px}
+  .chip{font-family:var(--body);font-size:13px;font-weight:700;padding:4px 11px;border-radius:99px}
+  .chip.up{background:var(--thread);color:#fff}
+  .chip.flat{background:var(--paper-2);color:var(--ink-soft)}
+  .chip.time{background:var(--gold);color:#1a1508}
+
+  .acts{position:absolute;left:0;right:0;bottom:0;display:flex;gap:16px;justify-content:center;
+    opacity:0;transition:opacity .6s}
+  .acts.on{opacity:1}
+  .act{width:62px;height:62px;border-radius:50%;border:1.5px solid var(--line);
+    background:var(--card);display:flex;align-items:center;justify-content:center;
+    font-size:23px;box-shadow:0 8px 22px -10px rgba(26,35,31,.32);
+    transition:transform .3s var(--spring), background .3s, color .3s, border-color .3s}
+  .act.again{color:var(--ink-soft)}
+  .act.accept{background:var(--jade);border-color:var(--jade);color:#fff;width:70px;height:70px;font-size:27px}
+  .act.fire{transform:scale(1.22)}
+  .act-note{position:absolute;left:0;right:0;bottom:-30px;text-align:center;
+    font-family:var(--mono);font-size:11.5px;color:var(--ink-soft)}
+
+  #caption{position:fixed;left:0;right:0;bottom:58px;text-align:center;z-index:55;
+    font-family:var(--display);font-size:42px;font-weight:600;letter-spacing:-.012em;
+    opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s var(--spring)}
+  #caption.on{opacity:1;transform:none}
+  #caption .zh{color:var(--thread);margin-right:14px;font-weight:700}
+  #caption .sub{display:block;font-family:var(--body);font-size:16px;font-weight:500;
+    color:var(--ink-soft);margin-top:8px}
+  #err{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:99;
+    font-family:var(--mono);font-size:14px;color:var(--thread);padding:40px;text-align:center}
+</style>
+</head>
+<body>
+  <div id="mark"><span class="seal">缘分</span>YuanFen</div>
+  <div class="stage">
+    <div class="day" id="day"></div>
+    <div class="prop">
+      <div class="kicker" id="kicker">YuanFen suggests</div>
+      <div id="cards"></div>
+      <div class="acts" id="acts">
+        <div class="act again" id="again">↻</div>
+        <div class="act accept" id="accept">✓</div>
+        <div class="act-note">it proposes · you accept or ask again</div>
+      </div>
+    </div>
+  </div>
+  <div id="caption"></div>
+  <div class="grain"></div>
+  <div id="err"></div>
+
+<script type="module">
+const $ = (s) => document.querySelector(s);
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function api(path, body) {
+  const res = await fetch(path, body
+    ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }
+    : undefined);
+  if (!res.ok) throw new Error(`${path} -> ${res.status}`);
+  return res.json();
+}
+function caption(zh, text, sub) {
+  const c = $("#caption");
+  c.classList.remove("on");
+  setTimeout(() => {
+    c.innerHTML = `${zh ? `<span class="zh">${zh}</span>` : ""}${text}${sub ? `<span class="sub">${sub}</span>` : ""}`;
+    c.classList.add("on");
+  }, 380);
+}
+
+const DAY = 1, STOP = 2;
+
+function thumb(p) {
+  return p.photoUrl
+    ? `<img src="${p.photoUrl}" alt="">`
+    : `<span class="e">${p.emoji ?? "📍"}</span>`;
+}
+
+function proposalCard(altItem, replacing) {
+  const el = document.createElement("div");
+  el.className = "pcard";
+  const cost = altItem.estCostSGD > 0 ? `~S$${altItem.estCostSGD}` : "free";
+  el.innerHTML =
+    (altItem.photoUrl ? `<img src="${altItem.photoUrl}" alt="">` : "") +
+    `<div class="pbody">
+       <div class="instead">instead of <s>${replacing}</s></div>
+       <div class="pname">${altItem.name}</div>
+       <div class="ptags">${(altItem.vibeTags ?? []).slice(0, 3).map((t) => `<span class="tag">${t}</span>`).join("")}</div>
+       <div class="deltas">
+         <span class="chip ${altItem.estCostSGD > 0 ? "up" : "flat"}">${cost}</span>
+         <span class="chip time">${altItem.travelMinFromPrev} min from the last stop</span>
+       </div>
+     </div>`;
+  return el;
+}
+
+async function run() {
+  let trip, alts;
+  try {
+    await api("/api/taste/seed", { tags: ["food", "coffee", "culture", "views", "chill"] });
+    const deck = await api("/api/taste/deck");
+    for (const c of deck.cards.slice(0, 8)) await api("/api/taste/swipe", { cardId: c.id, action: "like" });
+    const alert = await api("/api/fareboard/alert");
+    trip = await api("/api/trips", { destination: alert.hand.top[0].destination });
+    alts = await api(`/api/trips/${trip.graph.id}/day/${DAY}/stop/${STOP}/alternatives`);
+    if (!alts.alternatives?.length) throw new Error("no alternatives for that stop");
+  } catch (e) {
+    $("#err").style.display = "flex";
+    $("#err").textContent = `API problem: ${e.message}`;
+    return;
+  }
+
+  const day = trip.graph.days[DAY];
+  const dow = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][new Date(`${day.date}T00:00:00Z`).getUTCDay()];
+  const dayEl = $("#day");
+  dayEl.innerHTML = `<div class="day-h">${dow} ${day.date.slice(5)} · ${trip.cityName}</div>
+    <div class="day-t">day ${DAY + 1}</div>` +
+    day.stops.map((s, i) => {
+      const p = s.place ?? { name: s.placeId, emoji: "📍" };
+      const name = s.sealed ? "Sealed wildcard" : p.name;
+      return `<div class="stop" data-i="${i}">${thumb(p)}
+        <div><div class="n">${name}<span class="badge">swapped</span></div>
+        <div class="m">${s.arrive}–${s.depart}</div></div></div>`;
+    }).join("");
+
+  $("#mark").classList.add("on");
+  await wait(500);
+  dayEl.classList.add("on");
+  await wait(1200);
+
+  // the stop under review
+  const rows = [...dayEl.querySelectorAll(".stop")];
+  const target = rows[STOP];
+  const replacing = target.querySelector(".n").childNodes[0].textContent.trim();
+  target.classList.add("target");
+  caption("定", "It proposes. You keep the veto.", "no menus to scroll — the agent brings its best option");
+  await wait(1600);
+
+  // first proposal — the agent's own top rank
+  $("#kicker").classList.add("on");
+  const cards = $("#cards");
+  let card = proposalCard(alts.alternatives[0], replacing);
+  cards.appendChild(card);
+  await wait(60);
+  card.classList.add("on");
+  $("#acts").classList.add("on");
+  await wait(3400);
+
+  // ask again — it ranks more than one
+  $("#again").classList.add("fire");
+  await wait(320);
+  $("#again").classList.remove("fire");
+  card.classList.add("leave");
+  await wait(420);
+  card.remove();
+  const second = alts.alternatives[1] ?? alts.alternatives[0];
+  card = proposalCard(second, replacing);
+  cards.appendChild(card);
+  await wait(60);
+  card.classList.add("on");
+  await wait(3000);
+
+  // ask again once more — and it comes back to the one it ranked first
+  $("#again").classList.add("fire");
+  await wait(320);
+  $("#again").classList.remove("fire");
+  card.classList.add("leave");
+  await wait(420);
+  card.remove();
+  const pick = alts.alternatives[0];
+  card = proposalCard(pick, replacing);
+  cards.appendChild(card);
+  await wait(60);
+  card.classList.add("on");
+  await wait(2600);
+
+  // accept — and the trip actually re-plans
+  $("#accept").classList.add("fire");
+  await wait(340);
+  $("#accept").classList.remove("fire");
+  let res;
+  try {
+    res = await api(`/api/trips/${trip.graph.id}/day/${DAY}/stop/${STOP}/swap`, { place_id: pick.id });
+  } catch (e) {
+    res = null;
+  }
+  card.classList.add("leave");
+  await wait(500);
+  card.remove();
+  $("#acts").classList.remove("on");
+  $("#kicker").classList.remove("on");
+
+  // the row updates in place
+  target.classList.remove("target");
+  target.classList.add("done");
+  const nameNode = target.querySelector(".n");
+  nameNode.childNodes[0].textContent = pick.name + " ";
+  target.querySelector(".badge").classList.add("on");
+  const img = target.querySelector("img");
+  if (img && pick.photoUrl) img.src = pick.photoUrl;
+  await wait(1400);
+
+  if (res?.narration) caption("", res.narration, "");
+  else caption("", "One stop swapped — the rest of the day re-planned around it.", "");
+  await wait(4200);
+
+  caption("", "It brings the option. You keep the veto.", "");
+  await wait(3400);
+  document.title = "done";
+}
+run();
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>YuanFen — title cards</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Schibsted+Grotesk:wght@400..900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eaf0ea; --ink:#1a231f; --ink-soft:#4f5d57;
+    --thread:#c8372d; --gold:#b8912a;
+    --display:"Fraunces",Georgia,serif; --body:"Schibsted Grotesk",sans-serif;
+    --spring:cubic-bezier(.22,.9,.24,1);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;overflow:hidden}
+  body{
+    color:var(--ink);font-family:var(--body);
+    background:
+      radial-gradient(1300px 640px at 80% -14%, rgba(200,55,45,.07), transparent 62%),
+      radial-gradient(980px 580px at -10% 114%, rgba(47,107,86,.13), transparent 62%),
+      var(--paper);
+  }
+  .grain{position:fixed;inset:0;pointer-events:none;opacity:.5;z-index:60;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .03 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  .stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+
+  /* one line at a time, with a faint echo of itself above and below */
+  .line{position:absolute;text-align:center;opacity:0;transform:translateY(22px);
+    transition:opacity .55s, transform .8s var(--spring);
+    font-family:var(--display);font-weight:520;font-size:clamp(40px,5.6vw,74px);
+    letter-spacing:-.018em;line-height:1.06}
+  .line.on{opacity:1;transform:none}
+  .line.out{opacity:0;transform:translateY(-20px)}
+  .line .echo{position:absolute;left:0;right:0;color:var(--ink);opacity:.055;pointer-events:none}
+  .line .echo.up{top:-1.06em}
+  .line .echo.down{top:1.06em}
+
+  /* the beat that carries the idea */
+  .hanzi{position:absolute;opacity:0;transform:scale(.9);
+    transition:opacity .8s, transform 1.3s var(--spring);
+    font-family:var(--display);font-weight:700;color:var(--thread);
+    font-size:clamp(120px,17vw,230px);line-height:1;letter-spacing:.02em}
+  .hanzi.on{opacity:1;transform:none}
+  .hanzi.out{opacity:0;transform:scale(1.06)}
+  .gloss{display:block;font-family:var(--body);font-weight:500;font-size:19px;
+    color:var(--ink-soft);letter-spacing:.02em;margin-top:18px}
+
+  /* wordmark lockup */
+  .mark{position:absolute;text-align:center;opacity:0;transform:translateY(16px);
+    transition:opacity .8s, transform .9s var(--spring)}
+  .mark.on{opacity:1;transform:none}
+  .seal{display:inline-block;color:var(--thread);border:2.5px solid var(--thread);
+    border-radius:11px;padding:4px 16px 7px;font-family:var(--display);font-weight:700;
+    font-size:62px;transform:rotate(-2deg);box-shadow:6px 6px 0 rgba(200,55,45,.25)}
+  .name{font-family:var(--display);font-size:52px;font-weight:600;margin-left:22px;
+    letter-spacing:-.01em;vertical-align:middle}
+  .tag{display:block;margin-top:22px;font-family:var(--body);font-size:20px;
+    color:var(--ink-soft);font-weight:500}
+
+  /* the thread that draws itself off frame */
+  svg.thread{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
+  svg.thread path{fill:none;stroke:var(--thread);stroke-width:2.6;
+    stroke-dasharray:9 7;opacity:.85}
+</style>
+</head>
+<body>
+  <div class="stage" id="stage"></div>
+  <svg class="thread" id="thread" viewBox="0 0 1600 900" preserveAspectRatio="none"></svg>
+  <div class="grain"></div>
+
+<script type="module">
+const stage = document.getElementById("stage");
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+function line(text) {
+  const el = document.createElement("div");
+  el.className = "line";
+  el.innerHTML = `<span class="echo up">${text}</span>${text}<span class="echo down">${text}</span>`;
+  stage.appendChild(el);
+  return el;
+}
+
+async function showLine(text, hold) {
+  const el = line(text);
+  await wait(40);
+  el.classList.add("on");
+  await wait(hold);
+  el.classList.add("out");
+  await wait(620);
+  el.remove();
+}
+
+async function opener() {
+  await wait(900);
+  await showLine("You don't plan it.", 1500);
+  await showLine("You don't chase it.", 1500);
+  await showLine("You just say what you like.", 1700);
+  await showLine("Once.", 1400);
+
+  const h = document.createElement("div");
+  h.className = "hanzi";
+  h.innerHTML = `随缘<span class="gloss">go with the flow — let it find you</span>`;
+  stage.appendChild(h);
+  await wait(40);
+  h.classList.add("on");
+  await wait(3200);
+  h.classList.add("out");
+  await wait(900);
+  h.remove();
+}
+
+async function closer() {
+  const m = document.createElement("div");
+  m.className = "mark";
+  m.innerHTML = `<span class="seal">缘分</span><span class="name">YuanFen</span>
+    <span class="tag">One swipe. One graph. One budget.</span>`;
+  stage.appendChild(m);
+  await wait(60);
+  m.classList.add("on");
+  await wait(1200);
+
+  // a single thread draws across and leaves the frame
+  const svg = document.getElementById("thread");
+  const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  p.setAttribute("d", "M -40 640 C 320 640, 520 700, 800 700 S 1280 620, 1660 560");
+  svg.appendChild(p);
+  const len = p.getTotalLength();
+  p.style.strokeDasharray = `${len}`;
+  p.style.strokeDashoffset = `${len}`;
+  p.getBoundingClientRect();
+  p.style.transition = "stroke-dashoffset 2.6s cubic-bezier(.4,0,.5,1)";
+  p.style.strokeDashoffset = "0";
+  await wait(3000);
+  p.style.transition = "stroke-dashoffset 1.6s cubic-bezier(.5,0,.7,.3), opacity .9s";
+  p.style.strokeDashoffset = `${-len}`;
+  await wait(1500);
+  m.classList.remove("on");
+  await wait(900);
+  m.remove();
+  svg.innerHTML = "";
+}
+
+async function run() {
+  document.title = "part-open";
+  await opener();
+  // a beat of clean paper — the editor cuts here
+  document.title = "gap";
+  await wait(1400);
+  document.title = "part-close";
+  await closer();
+  await wait(600);
+  document.title = "done";
+}
+run();
+</script>
+</body>
+</html>
