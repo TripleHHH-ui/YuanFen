@@ -3,7 +3,10 @@
   "cityName": "Bali",
   "country": "Indonesia",
   "airport": "DPS",
-  "center": {"lat": -8.6705, "lng": 115.2126},
+  "center": {
+    "lat": -8.6705,
+    "lng": 115.2126
+  },
   "provenance": "Curated extract, 2026-08-24. Well-known POIs, approximate coordinates — verify hours before production use.",
   "places": [
     {
@@ -12,21 +15,62 @@
       "lat": -8.8291,
       "lng": 115.0849,
       "area": "Uluwatu, Bukit Peninsula",
-      "vibeTags": ["culture", "history", "views"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "views"
+      ],
       "openHours": {
-        "mon": [["07:00", "19:00"]],
-        "tue": [["07:00", "19:00"]],
-        "wed": [["07:00", "19:00"]],
-        "thu": [["07:00", "19:00"]],
-        "fri": [["07:00", "19:00"]],
-        "sat": [["07:00", "19:00"]],
-        "sun": [["07:00", "19:00"]]
+        "mon": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 8,
       "priceBand": 2,
       "emoji": "🌅",
-      "blurb": "Clifftop sea temple with a sunset kecak fire dance."
+      "blurb": "Clifftop sea temple with a sunset kecak fire dance.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Pura_Luhur_Uluwatu_2017-08-17_%2834%29.jpg/330px-Pura_Luhur_Uluwatu_2017-08-17_%2834%29.jpg",
+      "photoCredit": "Wikipedia · Uluwatu Temple"
     },
     {
       "id": "bali-tanah-lot",
@@ -34,21 +78,62 @@
       "lat": -8.6212,
       "lng": 115.0868,
       "area": "Beraban, Tabanan",
-      "vibeTags": ["culture", "views", "history"],
+      "vibeTags": [
+        "culture",
+        "views",
+        "history"
+      ],
       "openHours": {
-        "mon": [["06:00", "19:00"]],
-        "tue": [["06:00", "19:00"]],
-        "wed": [["06:00", "19:00"]],
-        "thu": [["06:00", "19:00"]],
-        "fri": [["06:00", "19:00"]],
-        "sat": [["06:00", "19:00"]],
-        "sun": [["06:00", "19:00"]]
+        "mon": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 6,
       "priceBand": 2,
       "emoji": "🌊",
-      "blurb": "Tidal rock temple best seen at low tide or sunset."
+      "blurb": "Tidal rock temple best seen at low tide or sunset.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/TanahLot_2014.JPG/330px-TanahLot_2014.JPG",
+      "photoCredit": "Wikipedia · Tanah Lot"
     },
     {
       "id": "bali-ubud-monkey-forest",
@@ -56,21 +141,61 @@
       "lat": -8.5194,
       "lng": 115.2587,
       "area": "Ubud",
-      "vibeTags": ["nature", "culture"],
+      "vibeTags": [
+        "nature",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "18:00"]],
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "mon": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 7,
       "priceBand": 2,
       "emoji": "🐒",
-      "blurb": "Forested temple grounds home to hundreds of long-tailed macaques."
+      "blurb": "Forested temple grounds home to hundreds of long-tailed macaques.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Monkey_Forest.jpg/330px-Monkey_Forest.jpg",
+      "photoCredit": "Wikipedia · Ubud Monkey Forest"
     },
     {
       "id": "bali-tegallalang-rice-terraces",
@@ -78,21 +203,62 @@
       "lat": -8.4312,
       "lng": 115.2777,
       "area": "Tegallalang, north of Ubud",
-      "vibeTags": ["nature", "views", "chill"],
+      "vibeTags": [
+        "nature",
+        "views",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🌾",
-      "blurb": "Sculpted valley of rice paddies with ridge-side cafes."
+      "blurb": "Sculpted valley of rice paddies with ridge-side cafes.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Tegallalang_Rice_Terraces.jpg/960px-Tegallalang_Rice_Terraces.jpg",
+      "photoCredit": "EverettSlane · CC BY-SA 4.0"
     },
     {
       "id": "bali-campuhan-ridge-walk",
@@ -100,21 +266,62 @@
       "lat": -8.5049,
       "lng": 115.2553,
       "area": "Ubud",
-      "vibeTags": ["nature", "chill", "views"],
+      "vibeTags": [
+        "nature",
+        "chill",
+        "views"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🥾",
-      "blurb": "Paved ridge path through tall grass, best before 9am heat."
+      "blurb": "Paved ridge path through tall grass, best before 9am heat.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Campuhan_Ridge_Walk%2C_Ubud%2C_Bali_%2815003626658%29.jpg/960px-Campuhan_Ridge_Walk%2C_Ubud%2C_Bali_%2815003626658%29.jpg",
+      "photoCredit": "Fabio Achilli from Milano, Italy · CC BY 2.0"
     },
     {
       "id": "bali-ubud-art-market",
@@ -122,21 +329,62 @@
       "lat": -8.5068,
       "lng": 115.2625,
       "area": "Ubud",
-      "vibeTags": ["shopping", "art", "culture"],
+      "vibeTags": [
+        "shopping",
+        "art",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "18:00"]],
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "mon": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 10,
       "priceBand": 2,
       "emoji": "🧺",
-      "blurb": "Stalls of rattan bags, sarongs, and carvings opposite the palace."
+      "blurb": "Stalls of rattan bags, sarongs, and carvings opposite the palace.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Ubud_Palace_%2816872334519%29.jpg/960px-Ubud_Palace_%2816872334519%29.jpg",
+      "photoCredit": "Jorge Láscar from Melbourne, Australia · CC BY 2.0"
     },
     {
       "id": "bali-ubud-palace",
@@ -144,21 +392,62 @@
       "lat": -8.5065,
       "lng": 115.2624,
       "area": "Ubud",
-      "vibeTags": ["culture", "history", "art"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "art"
+      ],
       "openHours": {
-        "mon": [["08:00", "19:00"]],
-        "tue": [["08:00", "19:00"]],
-        "wed": [["08:00", "19:00"]],
-        "thu": [["08:00", "19:00"]],
-        "fri": [["08:00", "19:00"]],
-        "sat": [["08:00", "19:00"]],
-        "sun": [["08:00", "19:00"]]
+        "mon": [
+          [
+            "08:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🏯",
-      "blurb": "Royal family compound hosting evening legong dance performances."
+      "blurb": "Royal family compound hosting evening legong dance performances.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Ubud_Palace_%282022%29.jpg/330px-Ubud_Palace_%282022%29.jpg",
+      "photoCredit": "Wikipedia · Ubud Palace"
     },
     {
       "id": "bali-tirta-empul",
@@ -166,81 +455,242 @@
       "lat": -8.4156,
       "lng": 115.3153,
       "area": "Tampaksiring",
-      "vibeTags": ["culture", "history"],
+      "vibeTags": [
+        "culture",
+        "history"
+      ],
       "openHours": {
-        "mon": [["08:00", "18:00"]],
-        "tue": [["08:00", "18:00"]],
-        "wed": [["08:00", "18:00"]],
-        "thu": [["08:00", "18:00"]],
-        "fri": [["08:00", "18:00"]],
-        "sat": [["08:00", "18:00"]],
-        "sun": [["08:00", "18:00"]]
+        "mon": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 6,
       "priceBand": 1,
       "emoji": "⛲",
-      "blurb": "Holy spring temple where Balinese queue for purification baths."
+      "blurb": "Holy spring temple where Balinese queue for purification baths.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bali_-_bathing_%28Melukat%29_at_Pura_Tirta_Empul_%282025%29_-_img_07.jpg/330px-Bali_-_bathing_%28Melukat%29_at_Pura_Tirta_Empul_%282025%29_-_img_07.jpg",
+      "photoCredit": "Wikipedia · Tirta Empul"
     },
     {
       "id": "bali-seminyak-beach",
       "name": "Seminyak Beach",
-      "lat": -8.6910,
+      "lat": -8.691,
       "lng": 115.1571,
       "area": "Seminyak",
-      "vibeTags": ["beach", "chill", "nightlife"],
+      "vibeTags": [
+        "beach",
+        "chill",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 5,
       "priceBand": 2,
       "emoji": "🏖️",
-      "blurb": "Wide grey-sand beach lined with sunset beanbag bars."
+      "blurb": "Wide grey-sand beach lined with sunset beanbag bars.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Seminyak%2C_Bali.jpg/960px-Seminyak%2C_Bali.jpg",
+      "photoCredit": "Flickr user: tboothhk · CC BY 2.0"
     },
     {
       "id": "bali-kuta-beach",
       "name": "Kuta Beach",
-      "lat": -8.7180,
+      "lat": -8.718,
       "lng": 115.1686,
       "area": "Kuta",
-      "vibeTags": ["beach", "adventure", "chill"],
+      "vibeTags": [
+        "beach",
+        "adventure",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 8,
       "priceBand": 1,
       "emoji": "🏄",
-      "blurb": "Bali's original surf beach with cheap board rentals."
+      "blurb": "Bali's original surf beach with cheap board rentals.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Kuta_Beach_%286924448550%29.jpg/330px-Kuta_Beach_%286924448550%29.jpg",
+      "photoCredit": "Wikipedia · Kuta, Bali"
     },
     {
       "id": "bali-potato-head",
       "name": "Potato Head Beach Club",
       "lat": -8.6768,
-      "lng": 115.1520,
+      "lng": 115.152,
       "area": "Seminyak",
-      "vibeTags": ["nightlife", "chill", "food"],
+      "vibeTags": [
+        "nightlife",
+        "chill",
+        "food"
+      ],
       "openHours": {
-        "mon": [["10:00", "23:59"]],
-        "tue": [["10:00", "23:59"]],
-        "wed": [["10:00", "23:59"]],
-        "thu": [["10:00", "23:59"]],
-        "fri": [["10:00", "23:59"]],
-        "sat": [["10:00", "23:59"]],
-        "sun": [["10:00", "23:59"]]
+        "mon": [
+          [
+            "10:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 30,
@@ -254,15 +704,54 @@
       "lat": -8.5052,
       "lng": 115.2637,
       "area": "Ubud",
-      "vibeTags": ["coffee", "art", "chill"],
+      "vibeTags": [
+        "coffee",
+        "art",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["07:30", "22:00"]],
-        "tue": [["07:30", "22:00"]],
-        "wed": [["07:30", "22:00"]],
-        "thu": [["07:30", "22:00"]],
-        "fri": [["07:30", "22:00"]],
-        "sat": [["07:30", "22:00"]],
-        "sun": [["07:30", "22:00"]]
+        "mon": [
+          [
+            "07:30",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:30",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:30",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:30",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:30",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:30",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:30",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 6,
@@ -273,18 +762,57 @@
     {
       "id": "bali-sindhu-night-market",
       "name": "Sindhu Night Market",
-      "lat": -8.6820,
-      "lng": 115.2630,
+      "lat": -8.682,
+      "lng": 115.263,
       "area": "Sanur",
-      "vibeTags": ["food", "nightlife", "shopping"],
+      "vibeTags": [
+        "food",
+        "nightlife",
+        "shopping"
+      ],
       "openHours": {
-        "mon": [["16:00", "23:00"]],
-        "tue": [["16:00", "23:00"]],
-        "wed": [["16:00", "23:00"]],
-        "thu": [["16:00", "23:00"]],
-        "fri": [["16:00", "23:00"]],
-        "sat": [["16:00", "23:00"]],
-        "sun": [["16:00", "23:00"]]
+        "mon": [
+          [
+            "16:00",
+            "23:00"
+          ]
+        ],
+        "tue": [
+          [
+            "16:00",
+            "23:00"
+          ]
+        ],
+        "wed": [
+          [
+            "16:00",
+            "23:00"
+          ]
+        ],
+        "thu": [
+          [
+            "16:00",
+            "23:00"
+          ]
+        ],
+        "fri": [
+          [
+            "16:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "16:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "16:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 6,
@@ -298,15 +826,54 @@
       "lat": -8.2422,
       "lng": 115.3753,
       "area": "Kintamani",
-      "vibeTags": ["adventure", "nature", "views"],
+      "vibeTags": [
+        "adventure",
+        "nature",
+        "views"
+      ],
       "openHours": {
-        "mon": [["03:00", "10:00"]],
-        "tue": [["03:00", "10:00"]],
-        "wed": [["03:00", "10:00"]],
-        "thu": [["03:00", "10:00"]],
-        "fri": [["03:00", "10:00"]],
-        "sat": [["03:00", "10:00"]],
-        "sun": [["03:00", "10:00"]]
+        "mon": [
+          [
+            "03:00",
+            "10:00"
+          ]
+        ],
+        "tue": [
+          [
+            "03:00",
+            "10:00"
+          ]
+        ],
+        "wed": [
+          [
+            "03:00",
+            "10:00"
+          ]
+        ],
+        "thu": [
+          [
+            "03:00",
+            "10:00"
+          ]
+        ],
+        "fri": [
+          [
+            "03:00",
+            "10:00"
+          ]
+        ],
+        "sat": [
+          [
+            "03:00",
+            "10:00"
+          ]
+        ],
+        "sun": [
+          [
+            "03:00",
+            "10:00"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 40,
@@ -320,21 +887,62 @@
       "lat": -8.7128,
       "lng": 115.1685,
       "area": "Kuta",
-      "vibeTags": ["sports", "adventure", "chill"],
+      "vibeTags": [
+        "sports",
+        "adventure",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["09:00", "18:00"]],
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "mon": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 240,
       "estCostSGD": 50,
       "priceBand": 3,
       "emoji": "🌊",
-      "blurb": "Award-winning water park in Kuta with high-speed slides and a lazy river."
+      "blurb": "Award-winning water park in Kuta with high-speed slides and a lazy river.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/WaterbomParkLazyRiver.jpg/960px-WaterbomParkLazyRiver.jpg",
+      "photoCredit": "Scoreed · CC BY 2.5"
     },
     {
       "id": "bali-finns-recreation",
@@ -342,15 +950,54 @@
       "lat": -8.6523,
       "lng": 115.1269,
       "area": "Canggu",
-      "vibeTags": ["sports", "wellness", "chill"],
+      "vibeTags": [
+        "sports",
+        "wellness",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["06:00", "22:00"]],
-        "tue": [["06:00", "22:00"]],
-        "wed": [["06:00", "22:00"]],
-        "thu": [["06:00", "22:00"]],
-        "fri": [["06:00", "22:00"]],
-        "sat": [["06:00", "22:00"]],
-        "sun": [["06:00", "22:00"]]
+        "mon": [
+          [
+            "06:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 35,
@@ -364,15 +1011,54 @@
       "lat": -8.5182,
       "lng": 115.2777,
       "area": "Mambal, Ubud outskirts",
-      "vibeTags": ["wellness", "nature", "chill"],
+      "vibeTags": [
+        "wellness",
+        "nature",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["09:00", "20:00"]],
-        "tue": [["09:00", "20:00"]],
-        "wed": [["09:00", "20:00"]],
-        "thu": [["09:00", "20:00"]],
-        "fri": [["09:00", "20:00"]],
-        "sat": [["09:00", "20:00"]],
-        "sun": [["09:00", "20:00"]]
+        "mon": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 80,
@@ -386,15 +1072,53 @@
       "lat": -8.5003,
       "lng": 115.2619,
       "area": "Ubud",
-      "vibeTags": ["food", "nightlife"],
+      "vibeTags": [
+        "food",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["11:00", "22:00"]],
-        "tue": [["11:00", "22:00"]],
-        "wed": [["11:00", "22:00"]],
-        "thu": [["11:00", "22:00"]],
-        "fri": [["11:00", "22:00"]],
-        "sat": [["11:00", "22:00"]],
-        "sun": [["11:00", "22:00"]]
+        "mon": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 14,
@@ -408,21 +1132,61 @@
       "lat": -8.5258,
       "lng": 115.2715,
       "area": "Ubud",
-      "vibeTags": ["art", "culture"],
+      "vibeTags": [
+        "art",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "18:00"]],
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "mon": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 9,
       "priceBand": 2,
       "emoji": "🖼️",
-      "blurb": "Museum of Balinese and Indonesian masters in lush garden grounds."
+      "blurb": "Museum of Balinese and Indonesian masters in lush garden grounds.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/AgungRaiMuseum.JPG/960px-AgungRaiMuseum.JPG",
+      "photoCredit": "Arabsalam · CC BY 3.0"
     },
     {
       "id": "bali-finns-beach-club",
@@ -430,15 +1194,54 @@
       "lat": -8.6509,
       "lng": 115.1265,
       "area": "Canggu",
-      "vibeTags": ["beach", "nightlife", "chill"],
+      "vibeTags": [
+        "beach",
+        "nightlife",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["08:00", "23:00"]],
-        "tue": [["08:00", "23:00"]],
-        "wed": [["08:00", "23:00"]],
-        "thu": [["08:00", "23:00"]],
-        "fri": [["08:00", "23:00"]],
-        "sat": [["08:00", "23:00"]],
-        "sun": [["08:00", "23:00"]]
+        "mon": [
+          [
+            "08:00",
+            "23:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "23:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "23:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "23:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 25,
@@ -450,23 +1253,64 @@
       "id": "bali-jatiluwih-rice-terraces",
       "name": "Jatiluwih Rice Terraces",
       "lat": -8.3592,
-      "lng": 115.1310,
+      "lng": 115.131,
       "area": "Tabanan highlands",
-      "vibeTags": ["nature", "views", "history"],
+      "vibeTags": [
+        "nature",
+        "views",
+        "history"
+      ],
       "openHours": {
-        "mon": [["07:00", "18:00"]],
-        "tue": [["07:00", "18:00"]],
-        "wed": [["07:00", "18:00"]],
-        "thu": [["07:00", "18:00"]],
-        "fri": [["07:00", "18:00"]],
-        "sat": [["07:00", "18:00"]],
-        "sun": [["07:00", "18:00"]]
+        "mon": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 4,
       "priceBand": 1,
       "emoji": "🌾",
-      "blurb": "UNESCO subak rice terraces across a broad highland valley."
+      "blurb": "UNESCO subak rice terraces across a broad highland valley.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Rice_terraces_in_Jatiluwih%2C_Tabanan_Regency%2C_Bali%2C_Indonesia.jpg/960px-Rice_terraces_in_Jatiluwih%2C_Tabanan_Regency%2C_Bali%2C_Indonesia.jpg",
+      "photoCredit": "Globe-trotter · CC BY-SA 4.0"
     },
     {
       "id": "bali-semara-ratih",
@@ -474,15 +1318,53 @@
       "lat": -8.4947,
       "lng": 115.2639,
       "area": "Ubud",
-      "vibeTags": ["wellness", "chill"],
+      "vibeTags": [
+        "wellness",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["07:00", "19:00"]],
-        "tue": [["07:00", "19:00"]],
-        "wed": [["07:00", "19:00"]],
-        "thu": [["07:00", "19:00"]],
-        "fri": [["07:00", "19:00"]],
-        "sat": [["07:00", "19:00"]],
-        "sun": [["07:00", "19:00"]]
+        "mon": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 12,
@@ -494,17 +1376,56 @@
       "id": "bali-kuta-surf-school",
       "name": "Rip Curl School of Surf Kuta",
       "lat": -8.7199,
-      "lng": 115.1700,
+      "lng": 115.17,
       "area": "Kuta",
-      "vibeTags": ["sports", "adventure", "beach"],
+      "vibeTags": [
+        "sports",
+        "adventure",
+        "beach"
+      ],
       "openHours": {
-        "mon": [["07:00", "17:00"]],
-        "tue": [["07:00", "17:00"]],
-        "wed": [["07:00", "17:00"]],
-        "thu": [["07:00", "17:00"]],
-        "fri": [["07:00", "17:00"]],
-        "sat": [["07:00", "17:00"]],
-        "sun": [["07:00", "17:00"]]
+        "mon": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 30,
@@ -515,18 +1436,57 @@
     {
       "id": "bali-coffee-plantation-kintamani",
       "name": "Kintamani Coffee Plantation",
-      "lat": -8.2390,
-      "lng": 115.3640,
+      "lat": -8.239,
+      "lng": 115.364,
       "area": "Kintamani",
-      "vibeTags": ["coffee", "nature", "shopping"],
+      "vibeTags": [
+        "coffee",
+        "nature",
+        "shopping"
+      ],
       "openHours": {
-        "mon": [["08:00", "17:00"]],
-        "tue": [["08:00", "17:00"]],
-        "wed": [["08:00", "17:00"]],
-        "thu": [["08:00", "17:00"]],
-        "fri": [["08:00", "17:00"]],
-        "sat": [["08:00", "17:00"]],
-        "sun": [["08:00", "17:00"]]
+        "mon": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 5,

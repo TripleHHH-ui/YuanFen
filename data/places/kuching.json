@@ -3,7 +3,10 @@
   "cityName": "Kuching",
   "country": "Malaysia",
   "airport": "KCH",
-  "center": {"lat": 1.5533, "lng": 110.3592},
+  "center": {
+    "lat": 1.5533,
+    "lng": 110.3592
+  },
   "provenance": "Curated extract, 2026-08-24. Well-known POIs, approximate coordinates — verify hours before production use.",
   "places": [
     {
@@ -12,21 +15,62 @@
       "lat": 1.5587,
       "lng": 110.3448,
       "area": "City centre, Sarawak River",
-      "vibeTags": ["chill", "views", "food"],
+      "vibeTags": [
+        "chill",
+        "views",
+        "food"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 3,
       "priceBand": 1,
       "emoji": "🌉",
-      "blurb": "Riverside promenade with hawker stalls and sampan crossings."
+      "blurb": "Riverside promenade with hawker stalls and sampan crossings.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Kuching_Waterfront_at_night_%2815834807985%29.jpg/330px-Kuching_Waterfront_at_night_%2815834807985%29.jpg",
+      "photoCredit": "Wikipedia · Kuching Waterfront"
     },
     {
       "id": "kuching-sarawak-cultural-village",
@@ -34,37 +78,117 @@
       "lat": 1.7466,
       "lng": 110.3163,
       "area": "Damai, Santubong Peninsula",
-      "vibeTags": ["culture", "history", "art"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "art"
+      ],
       "openHours": {
-        "mon": [["09:00", "17:00"]],
-        "tue": [["09:00", "17:00"]],
-        "wed": [["09:00", "17:00"]],
-        "thu": [["09:00", "17:00"]],
-        "fri": [["09:00", "17:00"]],
-        "sat": [["09:00", "17:00"]],
-        "sun": [["09:00", "17:00"]]
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 29,
       "priceBand": 3,
       "emoji": "🏡",
-      "blurb": "Living museum of seven traditional Bornean longhouses."
+      "blurb": "Living museum of seven traditional Bornean longhouses.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Sarawak_Cultural_Village%2C_Kuching.jpg/960px-Sarawak_Cultural_Village%2C_Kuching.jpg",
+      "photoCredit": "The original uploader was Raydeness at English Wikipedia. · CC BY 2.5"
     },
     {
       "id": "kuching-cat-museum",
       "name": "Cat Museum",
       "lat": 1.6033,
-      "lng": 110.3600,
+      "lng": 110.36,
       "area": "Petra Jaya, Kuching North",
-      "vibeTags": ["art", "chill", "culture"],
+      "vibeTags": [
+        "art",
+        "chill",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "17:00"]],
-        "tue": [["09:00", "17:00"]],
-        "wed": [["09:00", "17:00"]],
-        "thu": [["09:00", "17:00"]],
-        "fri": [["09:00", "17:00"]],
-        "sat": [["09:00", "17:00"]],
-        "sun": [["09:00", "17:00"]]
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 1,
@@ -75,24 +199,92 @@
     {
       "id": "kuching-semenggoh",
       "name": "Semenggoh Nature Reserve",
-      "lat": 1.4000,
-      "lng": 110.3130,
+      "lat": 1.4,
+      "lng": 110.313,
       "area": "Semenggoh, 20km south",
-      "vibeTags": ["nature", "adventure"],
+      "vibeTags": [
+        "nature",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["08:00", "10:00"], ["14:00", "16:00"]],
-        "tue": [["08:00", "10:00"], ["14:00", "16:00"]],
-        "wed": [["08:00", "10:00"], ["14:00", "16:00"]],
-        "thu": [["08:00", "10:00"], ["14:00", "16:00"]],
-        "fri": [["08:00", "10:00"], ["14:00", "16:00"]],
-        "sat": [["08:00", "10:00"], ["14:00", "16:00"]],
-        "sun": [["08:00", "10:00"], ["14:00", "16:00"]]
+        "mon": [
+          [
+            "08:00",
+            "10:00"
+          ],
+          [
+            "14:00",
+            "16:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "10:00"
+          ],
+          [
+            "14:00",
+            "16:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "10:00"
+          ],
+          [
+            "14:00",
+            "16:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "10:00"
+          ],
+          [
+            "14:00",
+            "16:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "10:00"
+          ],
+          [
+            "14:00",
+            "16:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "10:00"
+          ],
+          [
+            "14:00",
+            "16:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "10:00"
+          ],
+          [
+            "14:00",
+            "16:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 3,
       "priceBand": 1,
       "emoji": "🦧",
-      "blurb": "Semi-wild orangutans appear at morning and afternoon feedings."
+      "blurb": "Semi-wild orangutans appear at morning and afternoon feedings.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Main_entrance_into_Semenggoh_Wildlife_Centre.jpg/960px-Main_entrance_into_Semenggoh_Wildlife_Centre.jpg",
+      "photoCredit": "Cerevisae · CC BY-SA 4.0"
     },
     {
       "id": "kuching-bako-national-park",
@@ -100,21 +292,63 @@
       "lat": 1.7167,
       "lng": 110.4667,
       "area": "Muara Tebas, boat from Kampung Bako",
-      "vibeTags": ["nature", "adventure", "beach", "views"],
+      "vibeTags": [
+        "nature",
+        "adventure",
+        "beach",
+        "views"
+      ],
       "openHours": {
-        "mon": [["08:00", "17:00"]],
-        "tue": [["08:00", "17:00"]],
-        "wed": [["08:00", "17:00"]],
-        "thu": [["08:00", "17:00"]],
-        "fri": [["08:00", "17:00"]],
-        "sat": [["08:00", "17:00"]],
-        "sun": [["08:00", "17:00"]]
+        "mon": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 20,
       "priceBand": 2,
       "emoji": "🐗",
-      "blurb": "Day-trip park of proboscis monkeys, sea stacks, and trails."
+      "blurb": "Day-trip park of proboscis monkeys, sea stacks, and trails.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Bako_NP.jpg/330px-Bako_NP.jpg",
+      "photoCredit": "Wikipedia · Bako National Park"
     },
     {
       "id": "kuching-carpenter-street",
@@ -122,37 +356,116 @@
       "lat": 1.5578,
       "lng": 110.3462,
       "area": "Old Chinatown",
-      "vibeTags": ["food", "history", "culture"],
+      "vibeTags": [
+        "food",
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "22:00"]],
-        "tue": [["09:00", "22:00"]],
-        "wed": [["09:00", "22:00"]],
-        "thu": [["09:00", "22:00"]],
-        "fri": [["09:00", "22:00"]],
-        "sat": [["09:00", "22:00"]],
-        "sun": [["09:00", "22:00"]]
+        "mon": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🏮",
-      "blurb": "Old Chinatown lane of kopitiams, temples, and murals."
+      "blurb": "Old Chinatown lane of kopitiams, temples, and murals.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Chinese_Temple_on_Carpenter_Street%2C_Kuching.jpg/960px-Chinese_Temple_on_Carpenter_Street%2C_Kuching.jpg",
+      "photoCredit": "chipmunk_1 · CC BY-SA 2.0"
     },
     {
       "id": "kuching-top-spot",
       "name": "Top Spot Food Court",
-      "lat": 1.5580,
-      "lng": 110.3500,
+      "lat": 1.558,
+      "lng": 110.35,
       "area": "Jalan Padungan, rooftop of a car park",
-      "vibeTags": ["food", "nightlife"],
+      "vibeTags": [
+        "food",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["17:00", "23:00"]],
-        "tue": [["17:00", "23:00"]],
-        "wed": [["17:00", "23:00"]],
-        "thu": [["17:00", "23:00"]],
-        "fri": [["17:00", "23:00"]],
-        "sat": [["17:00", "23:00"]],
-        "sun": [["17:00", "23:00"]]
+        "mon": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "tue": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "wed": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "thu": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "fri": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 15,
@@ -166,21 +479,57 @@
       "lat": 1.5555,
       "lng": 110.3439,
       "area": "City centre",
-      "vibeTags": ["history", "culture", "art"],
+      "vibeTags": [
+        "history",
+        "culture",
+        "art"
+      ],
       "openHours": {
         "mon": [],
-        "tue": [["09:00", "16:45"]],
-        "wed": [["09:00", "16:45"]],
-        "thu": [["09:00", "16:45"]],
-        "fri": [["09:00", "16:45"]],
-        "sat": [["09:00", "16:45"]],
-        "sun": [["09:00", "16:45"]]
+        "tue": [
+          [
+            "09:00",
+            "16:45"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "16:45"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "16:45"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "16:45"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "16:45"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "16:45"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 15,
       "priceBand": 2,
       "emoji": "🏛️",
-      "blurb": "Five floors of Bornean archaeology and rainforest life."
+      "blurb": "Five floors of Bornean archaeology and rainforest life.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Borneo_Cultures_Museum_view_from_the_backyard_garden.jpg/330px-Borneo_Cultures_Museum_view_from_the_backyard_garden.jpg",
+      "photoCredit": "Wikipedia · Borneo Cultures Museum"
     },
     {
       "id": "kuching-main-bazaar",
@@ -188,21 +537,62 @@
       "lat": 1.5589,
       "lng": 110.3455,
       "area": "Waterfront, Old Town",
-      "vibeTags": ["shopping", "history", "culture"],
+      "vibeTags": [
+        "shopping",
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "18:00"]],
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "mon": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 8,
       "priceBand": 1,
       "emoji": "🛍️",
-      "blurb": "Oldest street in town, lined with antique and craft shophouses."
+      "blurb": "Oldest street in town, lined with antique and craft shophouses.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Main_Bazaar_wharf%2C_Kuching.jpg",
+      "photoCredit": "The National Archives UK headquartered in Kew, Richmond, Greater London. · Public domain"
     },
     {
       "id": "kuching-darul-hana-bridge",
@@ -210,21 +600,61 @@
       "lat": 1.5601,
       "lng": 110.3472,
       "area": "Sarawak River",
-      "vibeTags": ["views", "chill"],
+      "vibeTags": [
+        "views",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 30,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🌁",
-      "blurb": "S-shaped pedestrian bridge lit up after dark."
+      "blurb": "S-shaped pedestrian bridge lit up after dark.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/New_Sarawak_State_Legislative_Assembly_Building_from_Darul_Hana_Bridge%2C_Kuching%2C_Sarawak.jpg/330px-New_Sarawak_State_Legislative_Assembly_Building_from_Darul_Hana_Bridge%2C_Kuching%2C_Sarawak.jpg",
+      "photoCredit": "Wikipedia · Darul Hana Bridge"
     },
     {
       "id": "kuching-tua-pek-kong",
@@ -232,80 +662,210 @@
       "lat": 1.5588,
       "lng": 110.3475,
       "area": "Padungan end of waterfront",
-      "vibeTags": ["culture", "history"],
+      "vibeTags": [
+        "culture",
+        "history"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 30,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🐲",
-      "blurb": "1876 Chinese temple guarding the city's oldest crossroads."
+      "blurb": "1876 Chinese temple guarding the city's oldest crossroads.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Kusu_Island_Tua_Pek_Kong_Temple_Photo.jpg/330px-Kusu_Island_Tua_Pek_Kong_Temple_Photo.jpg",
+      "photoCredit": "Wikipedia · Kusu Island Tua Pek Kong Temple"
     },
     {
       "id": "kuching-satok-market",
       "name": "Satok Weekend Market",
       "lat": 1.5589,
-      "lng": 110.3260,
+      "lng": 110.326,
       "area": "Medan Niaga Satok, Kubah Ria",
-      "vibeTags": ["food", "shopping", "culture"],
+      "vibeTags": [
+        "food",
+        "shopping",
+        "culture"
+      ],
       "openHours": {
         "mon": [],
         "tue": [],
         "wed": [],
         "thu": [],
         "fri": [],
-        "sat": [["06:00", "17:00"]],
-        "sun": [["06:00", "17:00"]]
+        "sat": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🥭",
-      "blurb": "Weekend produce market for jungle ferns and local fruit."
+      "blurb": "Weekend produce market for jungle ferns and local fruit.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Weekend_market_aquarium_%2827152900836%29.jpg/960px-Weekend_market_aquarium_%2827152900836%29.jpg",
+      "photoCredit": "Thomas Quine · CC BY 2.0"
     },
     {
       "id": "kuching-jalan-padungan",
       "name": "Jalan Padungan",
       "lat": 1.5581,
-      "lng": 110.3540,
+      "lng": 110.354,
       "area": "Padungan",
-      "vibeTags": ["food", "nightlife", "coffee"],
+      "vibeTags": [
+        "food",
+        "nightlife",
+        "coffee"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 10,
       "priceBand": 2,
       "emoji": "🍜",
-      "blurb": "Kolo mee shops by day, bars under old shophouses by night."
+      "blurb": "Kolo mee shops by day, bars under old shophouses by night.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Gerbang-Padungan-Kuching.jpg",
+      "photoCredit": "Syafsanai at ms.wikipedia · Public domain"
     },
     {
       "id": "kuching-black-bean-coffee",
       "name": "Black Bean Coffee & Tea",
       "lat": 1.5576,
-      "lng": 110.3460,
+      "lng": 110.346,
       "area": "Carpenter Street",
-      "vibeTags": ["coffee", "chill"],
+      "vibeTags": [
+        "coffee",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["09:00", "18:00"]],
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
+        "mon": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
         "sun": []
       },
       "estStayMin": 45,
@@ -320,15 +880,54 @@
       "lat": 1.7456,
       "lng": 110.3172,
       "area": "Damai, Santubong Peninsula",
-      "vibeTags": ["culture", "art", "nature"],
+      "vibeTags": [
+        "culture",
+        "art",
+        "nature"
+      ],
       "openHours": {
-        "mon": [["09:00", "17:00"]],
-        "tue": [["09:00", "17:00"]],
-        "wed": [["09:00", "17:00"]],
-        "thu": [["09:00", "17:00"]],
-        "fri": [["09:00", "17:00"]],
-        "sat": [["09:00", "17:00"]],
-        "sun": [["09:00", "17:00"]]
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 5,
@@ -339,24 +938,65 @@
     {
       "id": "kuching-damai-beach",
       "name": "Damai Beach",
-      "lat": 1.7310,
-      "lng": 110.2980,
+      "lat": 1.731,
+      "lng": 110.298,
       "area": "Santubong Peninsula",
-      "vibeTags": ["beach", "chill", "nature"],
+      "vibeTags": [
+        "beach",
+        "chill",
+        "nature"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 150,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🏖️",
-      "blurb": "Quiet palm-fringed beach at the foot of Gunung Santubong."
+      "blurb": "Quiet palm-fringed beach at the foot of Gunung Santubong.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Coastline_of_Damai_Beach_Resort%2C_Damai_Golf_%26_Country_Club_and_Century_Santubong_Beach_Resort.jpg/960px-Coastline_of_Damai_Beach_Resort%2C_Damai_Golf_%26_Country_Club_and_Century_Santubong_Beach_Resort.jpg",
+      "photoCredit": "Esther Siaw · CC BY 4.0"
     },
     {
       "id": "kuching-gunung-santubong",
@@ -364,15 +1004,54 @@
       "lat": 1.7699,
       "lng": 110.3218,
       "area": "Santubong Peninsula",
-      "vibeTags": ["adventure", "nature", "sports"],
+      "vibeTags": [
+        "adventure",
+        "nature",
+        "sports"
+      ],
       "openHours": {
-        "mon": [["06:00", "14:00"]],
-        "tue": [["06:00", "14:00"]],
-        "wed": [["06:00", "14:00"]],
-        "thu": [["06:00", "14:00"]],
-        "fri": [["06:00", "14:00"]],
-        "sat": [["06:00", "14:00"]],
-        "sun": [["06:00", "14:00"]]
+        "mon": [
+          [
+            "06:00",
+            "14:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "14:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "14:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "14:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "14:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "14:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "14:00"
+          ]
+        ]
       },
       "estStayMin": 300,
       "estCostSGD": 5,
@@ -386,37 +1065,115 @@
       "lat": 1.5379,
       "lng": 110.3499,
       "area": "Jalan Stadium, south of city",
-      "vibeTags": ["sports", "culture"],
+      "vibeTags": [
+        "sports",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["08:00", "22:00"]],
-        "tue": [["08:00", "22:00"]],
-        "wed": [["08:00", "22:00"]],
-        "thu": [["08:00", "22:00"]],
-        "fri": [["08:00", "22:00"]],
-        "sat": [["08:00", "22:00"]],
-        "sun": [["08:00", "22:00"]]
+        "mon": [
+          [
+            "08:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🏸",
-      "blurb": "Drop-in badminton and squash courts at Sarawak's main multi-sport complex."
+      "blurb": "Drop-in badminton and squash courts at Sarawak's main multi-sport complex.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Live_in_stadium_perpaduan_Kuching_during_Dayak_Rock_Concert.jpg",
+      "photoCredit": "Ciscopb84 · CC BY-SA 4.0"
     },
     {
       "id": "kuching-borneo-spa",
       "name": "Mien Spa at Pullman Kuching",
-      "lat": 1.5560,
+      "lat": 1.556,
       "lng": 110.3461,
       "area": "City centre",
-      "vibeTags": ["wellness", "chill"],
+      "vibeTags": [
+        "wellness",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["10:00", "21:00"]],
-        "tue": [["10:00", "21:00"]],
-        "wed": [["10:00", "21:00"]],
-        "thu": [["10:00", "21:00"]],
-        "fri": [["10:00", "21:00"]],
-        "sat": [["10:00", "21:00"]],
-        "sun": [["10:00", "21:00"]]
+        "mon": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 50,
@@ -428,17 +1185,55 @@
       "id": "kuching-sarawak-wellness",
       "name": "Bintang Traditional Massage",
       "lat": 1.5574,
-      "lng": 110.3490,
+      "lng": 110.349,
       "area": "Padungan",
-      "vibeTags": ["wellness", "culture"],
+      "vibeTags": [
+        "wellness",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["10:00", "22:00"]],
-        "tue": [["10:00", "22:00"]],
-        "wed": [["10:00", "22:00"]],
-        "thu": [["10:00", "22:00"]],
-        "fri": [["10:00", "22:00"]],
-        "sat": [["10:00", "22:00"]],
-        "sun": [["10:00", "22:00"]]
+        "mon": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 18,
@@ -450,23 +1245,64 @@
       "id": "kuching-niah-caves",
       "name": "Niah National Park Caves",
       "lat": 3.8124,
-      "lng": 113.7780,
+      "lng": 113.778,
       "area": "Miri Division, ~120km north",
-      "vibeTags": ["history", "nature", "adventure"],
+      "vibeTags": [
+        "history",
+        "nature",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["08:00", "17:00"]],
-        "tue": [["08:00", "17:00"]],
-        "wed": [["08:00", "17:00"]],
-        "thu": [["08:00", "17:00"]],
-        "fri": [["08:00", "17:00"]],
-        "sat": [["08:00", "17:00"]],
-        "sun": [["08:00", "17:00"]]
+        "mon": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 300,
       "estCostSGD": 10,
       "priceBand": 1,
       "emoji": "🦇",
-      "blurb": "Prehistoric caves with 40,000-year-old human remains and millions of bats."
+      "blurb": "Prehistoric caves with 40,000-year-old human remains and millions of bats.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Replika_Gua_Niah_di_Muzium_Budaya_Borneo%2C_Sarawak.jpg/960px-Replika_Gua_Niah_di_Muzium_Budaya_Borneo%2C_Sarawak.jpg",
+      "photoCredit": "Rruunnaa · CC BY 4.0"
     },
     {
       "id": "kuching-topspot-coffee-boom",
@@ -474,15 +1310,54 @@
       "lat": 1.5572,
       "lng": 110.3512,
       "area": "Padungan",
-      "vibeTags": ["coffee", "art", "chill"],
+      "vibeTags": [
+        "coffee",
+        "art",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["09:00", "21:00"]],
-        "tue": [["09:00", "21:00"]],
-        "wed": [["09:00", "21:00"]],
-        "thu": [["09:00", "21:00"]],
-        "fri": [["09:00", "21:00"]],
-        "sat": [["09:00", "21:00"]],
-        "sun": [["09:00", "21:00"]]
+        "mon": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 5,
@@ -496,15 +1371,54 @@
       "lat": 1.5575,
       "lng": 110.3453,
       "area": "Carpenter Street",
-      "vibeTags": ["food", "history", "chill"],
+      "vibeTags": [
+        "food",
+        "history",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["07:00", "17:00"]],
-        "tue": [["07:00", "17:00"]],
-        "wed": [["07:00", "17:00"]],
-        "thu": [["07:00", "17:00"]],
-        "fri": [["07:00", "17:00"]],
-        "sat": [["07:00", "17:00"]],
-        "sun": [["07:00", "17:00"]]
+        "mon": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 4,
@@ -518,15 +1432,34 @@
       "lat": 1.4555,
       "lng": 110.2189,
       "area": "Siniawan, ~25km west of city",
-      "vibeTags": ["food", "nightlife", "shopping"],
+      "vibeTags": [
+        "food",
+        "nightlife",
+        "shopping"
+      ],
       "openHours": {
         "mon": [],
         "tue": [],
         "wed": [],
         "thu": [],
-        "fri": [["18:00", "23:00"]],
-        "sat": [["18:00", "23:00"]],
-        "sun": [["18:00", "23:00"]]
+        "fri": [
+          [
+            "18:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "18:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "18:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 6,

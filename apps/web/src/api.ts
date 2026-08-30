@@ -16,6 +16,7 @@ export interface Card {
   emoji: string;
   vibeTags: string[];
   subtitle?: string;
+  photoUrl?: string;
 }
 
 export interface WireStop {
@@ -35,6 +36,7 @@ export interface WireStop {
     area: string;
     vibeTags: string[];
     estCostSGD: number;
+    photoUrl?: string;
   } | null;
 }
 
@@ -101,6 +103,7 @@ export interface StopAlternative {
   id: string;
   name: string;
   emoji: string;
+  photoUrl?: string;
   vibeTags: string[];
   estCostSGD: number;
   travelMinFromPrev: number;

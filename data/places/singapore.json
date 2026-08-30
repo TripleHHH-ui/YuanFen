@@ -3,54 +3,1407 @@
   "cityName": "Singapore",
   "country": "Singapore",
   "airport": "SIN",
-  "center": { "lat": 1.2903, "lng": 103.852 },
+  "center": {
+    "lat": 1.2903,
+    "lng": 103.852
+  },
   "provenance": "Curated extract, 2026-08-24. Well-known POIs, approximate coordinates and typical hours — verify hours before production use. openHours may use a 'daily' key applying to all days unless a weekday key overrides; [] = closed.",
   "places": [
-    { "id": "sg-maxwell-food-centre", "name": "Maxwell Food Centre", "lat": 1.2802, "lng": 103.8446, "area": "Chinatown / CBD", "vibeTags": ["food", "culture"], "openHours": { "daily": [["08:00", "21:00"]] }, "estStayMin": 60, "estCostSGD": 8, "priceBand": 1, "emoji": "🍗", "blurb": "Hawker classic — home of Tian Tian Hainanese chicken rice.", "tags": ["chicken rice", "hawker"] },
-    { "id": "sg-tian-tian-chicken-rice", "name": "Tian Tian Chicken Rice (Maxwell)", "lat": 1.28025, "lng": 103.84465, "area": "Chinatown / CBD", "vibeTags": ["food"], "openHours": { "daily": [["10:00", "19:30"]], "mon": [] }, "estStayMin": 45, "estCostSGD": 7, "priceBand": 1, "emoji": "🍚", "blurb": "The queue-worthy chicken rice stall inside Maxwell.", "tags": ["chicken rice", "hawker"] },
-    { "id": "sg-lau-pa-sat", "name": "Lau Pa Sat", "lat": 1.2807, "lng": 103.8504, "area": "CBD", "vibeTags": ["food", "history", "nightlife"], "openHours": { "daily": [["07:00", "23:00"]] }, "estStayMin": 60, "estCostSGD": 12, "priceBand": 1, "emoji": "🍢", "blurb": "Victorian cast-iron market; satay street fires up at dusk.", "tags": ["hawker", "satay"] },
-    { "id": "sg-amoy-street-food-centre", "name": "Amoy Street Food Centre", "lat": 1.2793, "lng": 103.8464, "area": "CBD", "vibeTags": ["food"], "openHours": { "daily": [["07:00", "20:00"]], "sun": [] }, "estStayMin": 50, "estCostSGD": 8, "priceBand": 1, "emoji": "🍜", "blurb": "Office-crowd hawker gems, lunchtime at its loudest.", "tags": ["hawker"] },
-    { "id": "sg-chinatown-complex", "name": "Chinatown Complex Food Centre", "lat": 1.2823, "lng": 103.8437, "area": "Chinatown", "vibeTags": ["food", "culture"], "openHours": { "daily": [["08:00", "22:00"]] }, "estStayMin": 60, "estCostSGD": 9, "priceBand": 1, "emoji": "🥟", "blurb": "Singapore's biggest hawker centre, 260-plus stalls.", "tags": ["hawker", "chicken rice"] },
-    { "id": "sg-merlion-park", "name": "Merlion Park", "lat": 1.2868, "lng": 103.8545, "area": "Marina Bay", "vibeTags": ["views", "culture"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 30, "estCostSGD": 0, "priceBand": 1, "emoji": "🦁", "blurb": "The postcard shot across Marina Bay.", "tags": ["landmark"] },
-    { "id": "sg-gardens-by-the-bay", "name": "Gardens by the Bay (Supertree Grove)", "lat": 1.2816, "lng": 103.8636, "area": "Marina Bay", "vibeTags": ["nature", "views"], "openHours": { "daily": [["05:00", "23:59"]] }, "estStayMin": 90, "estCostSGD": 0, "priceBand": 1, "emoji": "🌳", "blurb": "Supertrees and waterfront gardens, free to wander.", "tags": ["garden", "landmark"] },
-    { "id": "sg-cloud-forest", "name": "Cloud Forest", "lat": 1.2839, "lng": 103.8659, "area": "Marina Bay", "vibeTags": ["nature", "chill"], "openHours": { "daily": [["09:00", "21:00"]] }, "estStayMin": 90, "estCostSGD": 32, "priceBand": 3, "emoji": "🌫️", "blurb": "A cooled mountain of ferns under glass.", "tags": ["garden", "indoor"] },
-    { "id": "sg-marina-barrage", "name": "Marina Barrage", "lat": 1.2806, "lng": 103.8714, "area": "Marina Bay", "vibeTags": ["chill", "views", "nature"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 60, "estCostSGD": 0, "priceBand": 1, "emoji": "🪁", "blurb": "Rooftop lawn where the city flies kites at sunset.", "tags": ["quiet", "sunset"] },
-    { "id": "sg-artscience-museum", "name": "ArtScience Museum", "lat": 1.2863, "lng": 103.8593, "area": "Marina Bay", "vibeTags": ["art", "chill"], "openHours": { "daily": [["10:00", "19:00"]] }, "estStayMin": 90, "estCostSGD": 25, "priceBand": 3, "emoji": "🪷", "blurb": "The lotus building; Future World is the crowd favourite.", "tags": ["museum", "indoor"] },
-    { "id": "sg-mbs-skypark", "name": "Marina Bay Sands SkyPark", "lat": 1.2834, "lng": 103.8607, "area": "Marina Bay", "vibeTags": ["views", "nightlife"], "openHours": { "daily": [["11:00", "21:00"]] }, "estStayMin": 60, "estCostSGD": 32, "priceBand": 3, "emoji": "🏙️", "blurb": "57 floors up, the whole bay at your feet.", "tags": ["viewpoint"] },
-    { "id": "sg-esplanade", "name": "Esplanade — Theatres on the Bay", "lat": 1.2897, "lng": 103.8555, "area": "Marina Bay", "vibeTags": ["art", "culture", "views"], "openHours": { "daily": [["10:00", "23:00"]] }, "estStayMin": 45, "estCostSGD": 0, "priceBand": 1, "emoji": "🎭", "blurb": "The durian domes; free waterfront gigs most evenings.", "tags": ["music"] },
-    { "id": "sg-singapore-flyer", "name": "Singapore Flyer", "lat": 1.2893, "lng": 103.8631, "area": "Marina Bay", "vibeTags": ["views", "chill"], "openHours": { "daily": [["14:00", "22:00"]] }, "estStayMin": 60, "estCostSGD": 40, "priceBand": 3, "emoji": "🎡", "blurb": "Slow wheel, big skyline.", "tags": ["viewpoint"] },
-    { "id": "sg-national-gallery", "name": "National Gallery Singapore", "lat": 1.2902, "lng": 103.8515, "area": "Civic District / CBD", "vibeTags": ["art", "history", "chill"], "openHours": { "daily": [["10:00", "19:00"]] }, "estStayMin": 120, "estCostSGD": 20, "priceBand": 2, "emoji": "🖼️", "blurb": "Southeast Asian art inside the old Supreme Court.", "tags": ["museum", "indoor", "quiet"] },
-    { "id": "sg-national-museum", "name": "National Museum of Singapore", "lat": 1.2966, "lng": 103.8485, "area": "Civic District", "vibeTags": ["history", "culture"], "openHours": { "daily": [["10:00", "19:00"]] }, "estStayMin": 90, "estCostSGD": 15, "priceBand": 2, "emoji": "🏛️", "blurb": "The island's story under one 1887 dome.", "tags": ["museum", "indoor"] },
-    { "id": "sg-fort-canning", "name": "Fort Canning Park", "lat": 1.2949, "lng": 103.846, "area": "Civic District", "vibeTags": ["nature", "history", "chill"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 60, "estCostSGD": 0, "priceBand": 1, "emoji": "🌿", "blurb": "Hilltop lawns, spice garden, and that photogenic tree tunnel.", "tags": ["quiet", "park"] },
-    { "id": "sg-thian-hock-keng", "name": "Thian Hock Keng Temple", "lat": 1.2809, "lng": 103.8477, "area": "Telok Ayer / CBD", "vibeTags": ["history", "culture", "chill"], "openHours": { "daily": [["07:30", "17:00"]] }, "estStayMin": 30, "estCostSGD": 0, "priceBand": 1, "emoji": "🏮", "blurb": "1840s Hokkien temple built without a single nail.", "tags": ["temple", "quiet"] },
-    { "id": "sg-buddha-tooth-relic", "name": "Buddha Tooth Relic Temple", "lat": 1.2815, "lng": 103.8443, "area": "Chinatown", "vibeTags": ["culture", "history"], "openHours": { "daily": [["07:00", "17:00"]] }, "estStayMin": 45, "estCostSGD": 0, "priceBand": 1, "emoji": "🛕", "blurb": "Tang-style temple with a rooftop orchid garden.", "tags": ["temple"] },
-    { "id": "sg-sri-mariamman", "name": "Sri Mariamman Temple", "lat": 1.2828, "lng": 103.8452, "area": "Chinatown", "vibeTags": ["culture", "history"], "openHours": { "daily": [["07:00", "12:00"], ["18:00", "21:00"]] }, "estStayMin": 30, "estCostSGD": 0, "priceBand": 1, "emoji": "🕉️", "blurb": "Singapore's oldest Hindu temple, gopuram and all.", "tags": ["temple"] },
-    { "id": "sg-ann-siang-hill", "name": "Ann Siang Hill & Club Street", "lat": 1.2803, "lng": 103.846, "area": "Chinatown / CBD", "vibeTags": ["chill", "nightlife", "coffee"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 45, "estCostSGD": 10, "priceBand": 2, "emoji": "🏘️", "blurb": "Shophouse lanes that turn into bar terraces after dark.", "tags": ["quiet", "bars"] },
-    { "id": "sg-telok-ayer-green", "name": "Telok Ayer Green", "lat": 1.2806, "lng": 103.8481, "area": "Telok Ayer / CBD", "vibeTags": ["chill", "history"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 20, "estCostSGD": 0, "priceBand": 1, "emoji": "🍃", "blurb": "A pocket garden tucked between temples.", "tags": ["quiet", "park"] },
-    { "id": "sg-tiong-bahru", "name": "Tiong Bahru Market & Estate", "lat": 1.2849, "lng": 103.8323, "area": "Tiong Bahru", "vibeTags": ["food", "coffee", "chill"], "openHours": { "daily": [["07:00", "20:00"]] }, "estStayMin": 75, "estCostSGD": 10, "priceBand": 1, "emoji": "🥐", "blurb": "Art-deco estate, old-school hawkers, third-wave coffee.", "tags": ["hawker", "cafe", "quiet"] },
-    { "id": "sg-botanic-gardens", "name": "Singapore Botanic Gardens", "lat": 1.3138, "lng": 103.8159, "area": "Tanglin", "vibeTags": ["nature", "chill"], "openHours": { "daily": [["05:00", "23:59"]] }, "estStayMin": 120, "estCostSGD": 0, "priceBand": 1, "emoji": "🌺", "blurb": "UNESCO-listed lawns and the National Orchid Garden.", "tags": ["quiet", "park", "garden"] },
-    { "id": "sg-haji-lane", "name": "Haji Lane", "lat": 1.3008, "lng": 103.859, "area": "Kampong Glam", "vibeTags": ["shopping", "art", "coffee"], "openHours": { "daily": [["11:00", "21:00"]] }, "estStayMin": 60, "estCostSGD": 15, "priceBand": 2, "emoji": "🎨", "blurb": "Mural-lined alley of indie boutiques.", "tags": ["street art"] },
-    { "id": "sg-sultan-mosque", "name": "Sultan Mosque", "lat": 1.3024, "lng": 103.859, "area": "Kampong Glam", "vibeTags": ["culture", "history"], "openHours": { "daily": [["10:00", "12:00"], ["14:00", "16:00"]], "fri": [["14:30", "16:00"]] }, "estStayMin": 30, "estCostSGD": 0, "priceBand": 1, "emoji": "🕌", "blurb": "Golden-domed heart of the Malay quarter.", "tags": ["mosque"] },
-    { "id": "sg-tekka-centre", "name": "Tekka Centre", "lat": 1.3063, "lng": 103.8492, "area": "Little India", "vibeTags": ["food", "culture", "shopping"], "openHours": { "daily": [["06:30", "21:00"]] }, "estStayMin": 60, "estCostSGD": 8, "priceBand": 1, "emoji": "🍛", "blurb": "Biryani, dosa and wet-market bustle under one roof.", "tags": ["hawker", "market"] },
-    { "id": "sg-little-india-arcade", "name": "Little India (Serangoon Road walk)", "lat": 1.3066, "lng": 103.8518, "area": "Little India", "vibeTags": ["culture", "shopping", "food"], "openHours": { "daily": [["09:00", "21:30"]] }, "estStayMin": 75, "estCostSGD": 5, "priceBand": 1, "emoji": "🪔", "blurb": "Garlands, gold and spice shops down Serangoon Road.", "tags": ["market"] },
-    { "id": "sg-clarke-quay", "name": "Clarke Quay", "lat": 1.2906, "lng": 103.8465, "area": "River", "vibeTags": ["nightlife", "food"], "openHours": { "daily": [["17:00", "23:59"]] }, "estStayMin": 90, "estCostSGD": 30, "priceBand": 3, "emoji": "🍸", "blurb": "Riverside warehouses turned party strip.", "tags": ["bars"] },
-    { "id": "sg-boat-quay", "name": "Boat Quay", "lat": 1.2871, "lng": 103.8498, "area": "River / CBD", "vibeTags": ["nightlife", "food", "views"], "openHours": { "daily": [["11:00", "23:59"]] }, "estStayMin": 75, "estCostSGD": 25, "priceBand": 2, "emoji": "🛶", "blurb": "Shophouse row of riverfront bars facing the skyline.", "tags": ["bars"] },
-    { "id": "sg-chijmes", "name": "CHIJMES", "lat": 1.2951, "lng": 103.8524, "area": "Civic District", "vibeTags": ["food", "nightlife", "history"], "openHours": { "daily": [["11:00", "23:00"]] }, "estStayMin": 75, "estCostSGD": 28, "priceBand": 3, "emoji": "⛪", "blurb": "A 19th-century convent turned lantern-lit dining courtyard.", "tags": ["bars", "restaurant"] },
-    { "id": "sg-mount-faber", "name": "Mount Faber Park", "lat": 1.2717, "lng": 103.818, "area": "Southern Ridges", "vibeTags": ["nature", "views", "adventure"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 75, "estCostSGD": 0, "priceBand": 1, "emoji": "⛰️", "blurb": "Ridge-top viewpoint where the cable car swings to Sentosa.", "tags": ["viewpoint", "hike", "quiet"] },
-    { "id": "sg-henderson-waves", "name": "Henderson Waves", "lat": 1.2764, "lng": 103.818, "area": "Southern Ridges", "vibeTags": ["nature", "views", "adventure"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 45, "estCostSGD": 0, "priceBand": 1, "emoji": "🌉", "blurb": "The rippling timber bridge 36 metres above the forest.", "tags": ["hike", "quiet"] },
-    { "id": "sg-labrador-park", "name": "Labrador Nature Reserve", "lat": 1.2662, "lng": 103.8022, "area": "Labrador", "vibeTags": ["nature", "chill", "history"], "openHours": { "daily": [["07:00", "19:00"]] }, "estStayMin": 60, "estCostSGD": 0, "priceBand": 1, "emoji": "🌊", "blurb": "Seafront cliffs, WWII gun emplacements, quiet boardwalks.", "tags": ["quiet", "park"] },
-    { "id": "sg-east-coast-park", "name": "East Coast Park", "lat": 1.301, "lng": 103.912, "area": "East Coast", "vibeTags": ["beach", "nature", "food"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 120, "estCostSGD": 10, "priceBand": 1, "emoji": "🏖️", "blurb": "Fifteen kilometres of seaside cycling and satay by the sand.", "tags": ["beach", "cycling"] },
-    { "id": "sg-macritchie", "name": "MacRitchie Reservoir (TreeTop Walk)", "lat": 1.3418, "lng": 103.8352, "area": "Central Catchment", "vibeTags": ["nature", "adventure"], "openHours": { "daily": [["07:00", "19:00"]], "mon": [] }, "estStayMin": 150, "estCostSGD": 0, "priceBand": 1, "emoji": "🐒", "blurb": "Rainforest loop with a canopy-level suspension bridge.", "tags": ["hike"] },
-    { "id": "sg-jewel-changi", "name": "Jewel Changi (Rain Vortex)", "lat": 1.3602, "lng": 103.9897, "area": "Changi", "vibeTags": ["shopping", "nature", "views"], "openHours": { "daily": [["10:00", "22:00"]] }, "estStayMin": 90, "estCostSGD": 5, "priceBand": 2, "emoji": "💧", "blurb": "The world's tallest indoor waterfall, minutes from the gate.", "tags": ["airport", "indoor"] },
-    { "id": "sg-atlas-bar", "name": "ATLAS Bar", "lat": 1.3, "lng": 103.8582, "area": "Bugis", "vibeTags": ["nightlife", "art", "chill"], "openHours": { "daily": [["12:00", "23:59"]], "sun": [] }, "estStayMin": 90, "estCostSGD": 30, "priceBand": 3, "emoji": "🥂", "blurb": "Art-deco gin tower inside Parkview Square.", "tags": ["bars", "quiet"] },
-    { "id": "sg-siloso-beach", "name": "Siloso Beach", "lat": 1.2536, "lng": 103.8163, "area": "Sentosa", "vibeTags": ["beach", "chill", "adventure"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 120, "estCostSGD": 4, "priceBand": 1, "emoji": "🏖️", "blurb": "Sentosa's liveliest stretch — volleyball, bars, and cable-car views overhead.", "tags": ["beach", "sentosa"] },
-    { "id": "sg-palawan-beach", "name": "Palawan Beach", "lat": 1.2396, "lng": 103.8219, "area": "Sentosa", "vibeTags": ["beach", "chill", "nature"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 120, "estCostSGD": 0, "priceBand": 1, "emoji": "🏝️", "blurb": "Family-friendly Sentosa beach with a suspension bridge to the 'southernmost point of Asia'.", "tags": ["beach", "sentosa"] },
-    { "id": "sg-tanjong-beach", "name": "Tanjong Beach", "lat": 1.2371, "lng": 103.8261, "area": "Sentosa", "vibeTags": ["beach", "chill", "wellness"], "openHours": { "daily": [["00:00", "23:59"]] }, "estStayMin": 90, "estCostSGD": 0, "priceBand": 1, "emoji": "🌴", "blurb": "The quietest of Sentosa's three beaches, ringed by palms and beach clubs.", "tags": ["beach", "sentosa", "quiet"] },
-    { "id": "sg-singapore-sports-hub", "name": "Singapore Sports Hub", "lat": 1.3005, "lng": 103.8747, "area": "Kallang", "vibeTags": ["sports", "culture", "views"], "openHours": { "daily": [["06:00", "22:00"]] }, "estStayMin": 90, "estCostSGD": 20, "priceBand": 2, "emoji": "🏟️", "blurb": "National Stadium and waterfront promenade — catch a match or jog the 100plus trail.", "tags": ["stadium"] },
-    { "id": "sg-climb-central", "name": "Climb Central", "lat": 1.2989, "lng": 103.8724, "area": "Kallang", "vibeTags": ["sports", "adventure", "chill"], "openHours": { "daily": [["10:00", "22:00"]] }, "estStayMin": 90, "estCostSGD": 28, "priceBand": 2, "emoji": "🧗", "blurb": "Singapore's largest indoor climbing gym — bouldering and top-rope walls at Kallang Wave.", "tags": ["climbing", "indoor"] },
-    { "id": "sg-kallang-wave", "name": "Kallang Wave Mall", "lat": 1.2998, "lng": 103.8731, "area": "Kallang", "vibeTags": ["sports", "food", "shopping"], "openHours": { "daily": [["10:00", "22:00"]] }, "estStayMin": 60, "estCostSGD": 15, "priceBand": 2, "emoji": "🏊", "blurb": "Sports-lifestyle hub beside the stadium — pool, fitness studios, and post-workout eats.", "tags": ["sports", "mall"] },
-    { "id": "sg-spa-botanica", "name": "Spa Botanica", "lat": 1.2457, "lng": 103.8195, "area": "Sentosa", "vibeTags": ["wellness", "nature", "chill"], "openHours": { "daily": [["10:00", "21:00"]] }, "estStayMin": 120, "estCostSGD": 80, "priceBand": 3, "emoji": "💆", "blurb": "Garden-set spa on Sentosa with mud baths, reflexology, and tropical rain showers.", "tags": ["spa", "sentosa"] },
-    { "id": "sg-sembawang-hot-spring", "name": "Sembawang Hot Spring Park", "lat": 1.4458, "lng": 103.8009, "area": "Sembawang", "vibeTags": ["wellness", "nature", "history"], "openHours": { "daily": [["06:00", "19:00"]] }, "estStayMin": 45, "estCostSGD": 0, "priceBand": 1, "emoji": "♨️", "blurb": "Singapore's only mainland hot spring, now a free public park with foot-soak basins.", "tags": ["park", "quiet"] },
-    { "id": "sg-yoga-movement", "name": "Yoga Movement (Tanjong Pagar)", "lat": 1.2797, "lng": 103.8434, "area": "Tanjong Pagar", "vibeTags": ["wellness", "chill"], "openHours": { "daily": [["07:00", "21:00"]] }, "estStayMin": 75, "estCostSGD": 30, "priceBand": 2, "emoji": "🧘", "blurb": "Drop-in hot yoga and vinyasa classes in a sleek CBD studio.", "tags": ["yoga", "indoor"] }
+    {
+      "id": "sg-maxwell-food-centre",
+      "name": "Maxwell Food Centre",
+      "lat": 1.2802,
+      "lng": 103.8446,
+      "area": "Chinatown / CBD",
+      "vibeTags": [
+        "food",
+        "culture"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "08:00",
+            "21:00"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 8,
+      "priceBand": 1,
+      "emoji": "🍗",
+      "blurb": "Hawker classic — home of Tian Tian Hainanese chicken rice.",
+      "tags": [
+        "chicken rice",
+        "hawker"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Maxwell_Food_Centre.jpg/330px-Maxwell_Food_Centre.jpg",
+      "photoCredit": "Wikipedia · Maxwell Food Centre"
+    },
+    {
+      "id": "sg-tian-tian-chicken-rice",
+      "name": "Tian Tian Chicken Rice (Maxwell)",
+      "lat": 1.28025,
+      "lng": 103.84465,
+      "area": "Chinatown / CBD",
+      "vibeTags": [
+        "food"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "10:00",
+            "19:30"
+          ]
+        ],
+        "mon": []
+      },
+      "estStayMin": 45,
+      "estCostSGD": 7,
+      "priceBand": 1,
+      "emoji": "🍚",
+      "blurb": "The queue-worthy chicken rice stall inside Maxwell.",
+      "tags": [
+        "chicken rice",
+        "hawker"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Tiantian_chixrice.JPG/960px-Tiantian_chixrice.JPG",
+      "photoCredit": "Destron Commander · CC BY-SA 3.0"
+    },
+    {
+      "id": "sg-lau-pa-sat",
+      "name": "Lau Pa Sat",
+      "lat": 1.2807,
+      "lng": 103.8504,
+      "area": "CBD",
+      "vibeTags": [
+        "food",
+        "history",
+        "nightlife"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "07:00",
+            "23:00"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 12,
+      "priceBand": 1,
+      "emoji": "🍢",
+      "blurb": "Victorian cast-iron market; satay street fires up at dusk.",
+      "tags": [
+        "hawker",
+        "satay"
+      ]
+    },
+    {
+      "id": "sg-amoy-street-food-centre",
+      "name": "Amoy Street Food Centre",
+      "lat": 1.2793,
+      "lng": 103.8464,
+      "area": "CBD",
+      "vibeTags": [
+        "food"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "07:00",
+            "20:00"
+          ]
+        ],
+        "sun": []
+      },
+      "estStayMin": 50,
+      "estCostSGD": 8,
+      "priceBand": 1,
+      "emoji": "🍜",
+      "blurb": "Office-crowd hawker gems, lunchtime at its loudest.",
+      "tags": [
+        "hawker"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/MND_Building%2C_Annexe_B%2C_Amoy_Street_Food_Centre%2C_Dec_05.JPG/330px-MND_Building%2C_Annexe_B%2C_Amoy_Street_Food_Centre%2C_Dec_05.JPG",
+      "photoCredit": "Wikipedia · Amoy Street Food Centre"
+    },
+    {
+      "id": "sg-chinatown-complex",
+      "name": "Chinatown Complex Food Centre",
+      "lat": 1.2823,
+      "lng": 103.8437,
+      "area": "Chinatown",
+      "vibeTags": [
+        "food",
+        "culture"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "08:00",
+            "22:00"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 9,
+      "priceBand": 1,
+      "emoji": "🥟",
+      "blurb": "Singapore's biggest hawker centre, 260-plus stalls.",
+      "tags": [
+        "hawker",
+        "chicken rice"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Chinatown_Complex_Food_Centre_%2812849049294%29.jpg/960px-Chinatown_Complex_Food_Centre_%2812849049294%29.jpg",
+      "photoCredit": "KimonBerlin · CC BY-SA 2.0"
+    },
+    {
+      "id": "sg-merlion-park",
+      "name": "Merlion Park",
+      "lat": 1.2868,
+      "lng": 103.8545,
+      "area": "Marina Bay",
+      "vibeTags": [
+        "views",
+        "culture"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 30,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🦁",
+      "blurb": "The postcard shot across Marina Bay.",
+      "tags": [
+        "landmark"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Singapore_Merlion_BCT.jpg/330px-Singapore_Merlion_BCT.jpg",
+      "photoCredit": "Wikipedia · Merlion Park"
+    },
+    {
+      "id": "sg-gardens-by-the-bay",
+      "name": "Gardens by the Bay (Supertree Grove)",
+      "lat": 1.2816,
+      "lng": 103.8636,
+      "area": "Marina Bay",
+      "vibeTags": [
+        "nature",
+        "views"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "05:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🌳",
+      "blurb": "Supertrees and waterfront gardens, free to wander.",
+      "tags": [
+        "garden",
+        "landmark"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Singapore_Supertree-Grove-in-The-Gardens-01.jpg/960px-Singapore_Supertree-Grove-in-The-Gardens-01.jpg",
+      "photoCredit": "CEphoto, Uwe Aranas · CC BY-SA 3.0"
+    },
+    {
+      "id": "sg-cloud-forest",
+      "name": "Cloud Forest",
+      "lat": 1.2839,
+      "lng": 103.8659,
+      "area": "Marina Bay",
+      "vibeTags": [
+        "nature",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 32,
+      "priceBand": 3,
+      "emoji": "🌫️",
+      "blurb": "A cooled mountain of ferns under glass.",
+      "tags": [
+        "garden",
+        "indoor"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Cloud_forest_mount_kinabalu.jpg/330px-Cloud_forest_mount_kinabalu.jpg",
+      "photoCredit": "Wikipedia · Cloud forest"
+    },
+    {
+      "id": "sg-marina-barrage",
+      "name": "Marina Barrage",
+      "lat": 1.2806,
+      "lng": 103.8714,
+      "area": "Marina Bay",
+      "vibeTags": [
+        "chill",
+        "views",
+        "nature"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🪁",
+      "blurb": "Rooftop lawn where the city flies kites at sunset.",
+      "tags": [
+        "quiet",
+        "sunset"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Marina_Barrage_Closeup_300522.jpg/330px-Marina_Barrage_Closeup_300522.jpg",
+      "photoCredit": "Wikipedia · Marina Barrage"
+    },
+    {
+      "id": "sg-artscience-museum",
+      "name": "ArtScience Museum",
+      "lat": 1.2863,
+      "lng": 103.8593,
+      "area": "Marina Bay",
+      "vibeTags": [
+        "art",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "10:00",
+            "19:00"
+          ]
+        ]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 25,
+      "priceBand": 3,
+      "emoji": "🪷",
+      "blurb": "The lotus building; Future World is the crowd favourite.",
+      "tags": [
+        "museum",
+        "indoor"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/ArtScience_Museum%2C_Marina_Bay_Sands%2C_Singapore.jpg/330px-ArtScience_Museum%2C_Marina_Bay_Sands%2C_Singapore.jpg",
+      "photoCredit": "Wikipedia · ArtScience Museum"
+    },
+    {
+      "id": "sg-mbs-skypark",
+      "name": "Marina Bay Sands SkyPark",
+      "lat": 1.2834,
+      "lng": 103.8607,
+      "area": "Marina Bay",
+      "vibeTags": [
+        "views",
+        "nightlife"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "11:00",
+            "21:00"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 32,
+      "priceBand": 3,
+      "emoji": "🏙️",
+      "blurb": "57 floors up, the whole bay at your feet.",
+      "tags": [
+        "viewpoint"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Singapore_%28SG%29%2C_Marina_Bay_--_2019_--_4701-6.jpg/960px-Singapore_%28SG%29%2C_Marina_Bay_--_2019_--_4701-6.jpg",
+      "photoCredit": "Dietmar Rabich · CC BY-SA 4.0"
+    },
+    {
+      "id": "sg-esplanade",
+      "name": "Esplanade — Theatres on the Bay",
+      "lat": 1.2897,
+      "lng": 103.8555,
+      "area": "Marina Bay",
+      "vibeTags": [
+        "art",
+        "culture",
+        "views"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🎭",
+      "blurb": "The durian domes; free waterfront gigs most evenings.",
+      "tags": [
+        "music"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Singapore_Esplanade-Theatres-on-the-Bay-01.jpg/960px-Singapore_Esplanade-Theatres-on-the-Bay-01.jpg",
+      "photoCredit": "CEphoto, Uwe Aranas · CC BY-SA 3.0"
+    },
+    {
+      "id": "sg-singapore-flyer",
+      "name": "Singapore Flyer",
+      "lat": 1.2893,
+      "lng": 103.8631,
+      "area": "Marina Bay",
+      "vibeTags": [
+        "views",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "14:00",
+            "22:00"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 40,
+      "priceBand": 3,
+      "emoji": "🎡",
+      "blurb": "Slow wheel, big skyline.",
+      "tags": [
+        "viewpoint"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Singapore_Flyer_20250903.jpg/330px-Singapore_Flyer_20250903.jpg",
+      "photoCredit": "Wikipedia · Singapore Flyer"
+    },
+    {
+      "id": "sg-national-gallery",
+      "name": "National Gallery Singapore",
+      "lat": 1.2902,
+      "lng": 103.8515,
+      "area": "Civic District / CBD",
+      "vibeTags": [
+        "art",
+        "history",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "10:00",
+            "19:00"
+          ]
+        ]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 20,
+      "priceBand": 2,
+      "emoji": "🖼️",
+      "blurb": "Southeast Asian art inside the old Supreme Court.",
+      "tags": [
+        "museum",
+        "indoor",
+        "quiet"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Interior_of_the_National_Gallery_Singapore.jpg/330px-Interior_of_the_National_Gallery_Singapore.jpg",
+      "photoCredit": "Wikipedia · National Gallery Singapore"
+    },
+    {
+      "id": "sg-national-museum",
+      "name": "National Museum of Singapore",
+      "lat": 1.2966,
+      "lng": 103.8485,
+      "area": "Civic District",
+      "vibeTags": [
+        "history",
+        "culture"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "10:00",
+            "19:00"
+          ]
+        ]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 15,
+      "priceBand": 2,
+      "emoji": "🏛️",
+      "blurb": "The island's story under one 1887 dome.",
+      "tags": [
+        "museum",
+        "indoor"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Singapore_%28SG%29%2C_Marina_Bay_--_2019_--_4701-6.jpg/960px-Singapore_%28SG%29%2C_Marina_Bay_--_2019_--_4701-6.jpg",
+      "photoCredit": "Dietmar Rabich · CC BY-SA 4.0"
+    },
+    {
+      "id": "sg-fort-canning",
+      "name": "Fort Canning Park",
+      "lat": 1.2949,
+      "lng": 103.846,
+      "area": "Civic District",
+      "vibeTags": [
+        "nature",
+        "history",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🌿",
+      "blurb": "Hilltop lawns, spice garden, and that photogenic tree tunnel.",
+      "tags": [
+        "quiet",
+        "park"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Fort_Canning_Park_sign%2C_Singapore_-_20110506.jpg/330px-Fort_Canning_Park_sign%2C_Singapore_-_20110506.jpg",
+      "photoCredit": "Wikipedia · Fort Canning Hill"
+    },
+    {
+      "id": "sg-thian-hock-keng",
+      "name": "Thian Hock Keng Temple",
+      "lat": 1.2809,
+      "lng": 103.8477,
+      "area": "Telok Ayer / CBD",
+      "vibeTags": [
+        "history",
+        "culture",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "07:30",
+            "17:00"
+          ]
+        ]
+      },
+      "estStayMin": 30,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🏮",
+      "blurb": "1840s Hokkien temple built without a single nail.",
+      "tags": [
+        "temple",
+        "quiet"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Singapore_Tempel_Thian_Hock_Keng_1.jpg/330px-Singapore_Tempel_Thian_Hock_Keng_1.jpg",
+      "photoCredit": "Wikipedia · Thian Hock Keng Temple"
+    },
+    {
+      "id": "sg-buddha-tooth-relic",
+      "name": "Buddha Tooth Relic Temple",
+      "lat": 1.2815,
+      "lng": 103.8443,
+      "area": "Chinatown",
+      "vibeTags": [
+        "culture",
+        "history"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🛕",
+      "blurb": "Tang-style temple with a rooftop orchid garden.",
+      "tags": [
+        "temple"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/BTRTM_as_seen_from_Maxwell_MRT_entrance_%282025%29_-_img_05.jpg/330px-BTRTM_as_seen_from_Maxwell_MRT_entrance_%282025%29_-_img_05.jpg",
+      "photoCredit": "Wikipedia · Buddha Tooth Relic Temple and Museum"
+    },
+    {
+      "id": "sg-sri-mariamman",
+      "name": "Sri Mariamman Temple",
+      "lat": 1.2828,
+      "lng": 103.8452,
+      "area": "Chinatown",
+      "vibeTags": [
+        "culture",
+        "history"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "07:00",
+            "12:00"
+          ],
+          [
+            "18:00",
+            "21:00"
+          ]
+        ]
+      },
+      "estStayMin": 30,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🕉️",
+      "blurb": "Singapore's oldest Hindu temple, gopuram and all.",
+      "tags": [
+        "temple"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Sri_Mariamman_Temple_Singapore_2_amk.jpg/960px-Sri_Mariamman_Temple_Singapore_2_amk.jpg",
+      "photoCredit": "AngMoKio · CC BY-SA 3.0"
+    },
+    {
+      "id": "sg-ann-siang-hill",
+      "name": "Ann Siang Hill & Club Street",
+      "lat": 1.2803,
+      "lng": 103.846,
+      "area": "Chinatown / CBD",
+      "vibeTags": [
+        "chill",
+        "nightlife",
+        "coffee"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 10,
+      "priceBand": 2,
+      "emoji": "🏘️",
+      "blurb": "Shophouse lanes that turn into bar terraces after dark.",
+      "tags": [
+        "quiet",
+        "bars"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/2016_Singapur%2C_Chinatown%2C_Skrzy%C5%BCowanie_dw%C3%B3ch_ulic_Ann_Siang_Hill_i_Club_Street_%2801%29.jpg/960px-2016_Singapur%2C_Chinatown%2C_Skrzy%C5%BCowanie_dw%C3%B3ch_ulic_Ann_Siang_Hill_i_Club_Street_%2801%29.jpg",
+      "photoCredit": "Marcin Konsek · CC BY-SA 4.0"
+    },
+    {
+      "id": "sg-telok-ayer-green",
+      "name": "Telok Ayer Green",
+      "lat": 1.2806,
+      "lng": 103.8481,
+      "area": "Telok Ayer / CBD",
+      "vibeTags": [
+        "chill",
+        "history"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 20,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🍃",
+      "blurb": "A pocket garden tucked between temples.",
+      "tags": [
+        "quiet",
+        "park"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Chinese_Procession_%282001%29_by_Lim_Leong_Seng%2C_Telok_Ayer_Green%2C_Singapore_-_20051231.jpg/960px-Chinese_Procession_%282001%29_by_Lim_Leong_Seng%2C_Telok_Ayer_Green%2C_Singapore_-_20051231.jpg",
+      "photoCredit": "Sengkang of ENglish.Wikipedia. · Copyrighted free use"
+    },
+    {
+      "id": "sg-tiong-bahru",
+      "name": "Tiong Bahru Market & Estate",
+      "lat": 1.2849,
+      "lng": 103.8323,
+      "area": "Tiong Bahru",
+      "vibeTags": [
+        "food",
+        "coffee",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "07:00",
+            "20:00"
+          ]
+        ]
+      },
+      "estStayMin": 75,
+      "estCostSGD": 10,
+      "priceBand": 1,
+      "emoji": "🥐",
+      "blurb": "Art-deco estate, old-school hawkers, third-wave coffee.",
+      "tags": [
+        "hawker",
+        "cafe",
+        "quiet"
+      ]
+    },
+    {
+      "id": "sg-botanic-gardens",
+      "name": "Singapore Botanic Gardens",
+      "lat": 1.3138,
+      "lng": 103.8159,
+      "area": "Tanglin",
+      "vibeTags": [
+        "nature",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "05:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🌺",
+      "blurb": "UNESCO-listed lawns and the National Orchid Garden.",
+      "tags": [
+        "quiet",
+        "park",
+        "garden"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Symphony_Lake%2C_Singapore_Botanic_Gardens_-_20041025.jpg/330px-Symphony_Lake%2C_Singapore_Botanic_Gardens_-_20041025.jpg",
+      "photoCredit": "Wikipedia · Singapore Botanic Gardens"
+    },
+    {
+      "id": "sg-haji-lane",
+      "name": "Haji Lane",
+      "lat": 1.3008,
+      "lng": 103.859,
+      "area": "Kampong Glam",
+      "vibeTags": [
+        "shopping",
+        "art",
+        "coffee"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "11:00",
+            "21:00"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 15,
+      "priceBand": 2,
+      "emoji": "🎨",
+      "blurb": "Mural-lined alley of indie boutiques.",
+      "tags": [
+        "street art"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Haji_Lane%2C_November_2016.jpg/330px-Haji_Lane%2C_November_2016.jpg",
+      "photoCredit": "Wikipedia · Haji Lane"
+    },
+    {
+      "id": "sg-sultan-mosque",
+      "name": "Sultan Mosque",
+      "lat": 1.3024,
+      "lng": 103.859,
+      "area": "Kampong Glam",
+      "vibeTags": [
+        "culture",
+        "history"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "10:00",
+            "12:00"
+          ],
+          [
+            "14:00",
+            "16:00"
+          ]
+        ],
+        "fri": [
+          [
+            "14:30",
+            "16:00"
+          ]
+        ]
+      },
+      "estStayMin": 30,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🕌",
+      "blurb": "Golden-domed heart of the Malay quarter.",
+      "tags": [
+        "mosque"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/The_facade_of_the_Sultan_Mosque_facing_Bussorah_Street_%28Cropped%29.jpg/330px-The_facade_of_the_Sultan_Mosque_facing_Bussorah_Street_%28Cropped%29.jpg",
+      "photoCredit": "Wikipedia · Sultan Mosque"
+    },
+    {
+      "id": "sg-tekka-centre",
+      "name": "Tekka Centre",
+      "lat": 1.3063,
+      "lng": 103.8492,
+      "area": "Little India",
+      "vibeTags": [
+        "food",
+        "culture",
+        "shopping"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "06:30",
+            "21:00"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 8,
+      "priceBand": 1,
+      "emoji": "🍛",
+      "blurb": "Biryani, dosa and wet-market bustle under one roof.",
+      "tags": [
+        "hawker",
+        "market"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Tekka_Centre%2C_Aug_06.JPG/960px-Tekka_Centre%2C_Aug_06.JPG",
+      "photoCredit": "User:Sengkang · Copyrighted free use"
+    },
+    {
+      "id": "sg-little-india-arcade",
+      "name": "Little India (Serangoon Road walk)",
+      "lat": 1.3066,
+      "lng": 103.8518,
+      "area": "Little India",
+      "vibeTags": [
+        "culture",
+        "shopping",
+        "food"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "09:00",
+            "21:30"
+          ]
+        ]
+      },
+      "estStayMin": 75,
+      "estCostSGD": 5,
+      "priceBand": 1,
+      "emoji": "🪔",
+      "blurb": "Garlands, gold and spice shops down Serangoon Road.",
+      "tags": [
+        "market"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Serangoon_Road_%287448731220%29.jpg/960px-Serangoon_Road_%287448731220%29.jpg",
+      "photoCredit": "shankar s. from Poona (pune), India, India · CC BY 2.0"
+    },
+    {
+      "id": "sg-clarke-quay",
+      "name": "Clarke Quay",
+      "lat": 1.2906,
+      "lng": 103.8465,
+      "area": "River",
+      "vibeTags": [
+        "nightlife",
+        "food"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 30,
+      "priceBand": 3,
+      "emoji": "🍸",
+      "blurb": "Riverside warehouses turned party strip.",
+      "tags": [
+        "bars"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/1_clarke_quay_singapore_night_2014.jpg/330px-1_clarke_quay_singapore_night_2014.jpg",
+      "photoCredit": "Wikipedia · Clarke Quay"
+    },
+    {
+      "id": "sg-boat-quay",
+      "name": "Boat Quay",
+      "lat": 1.2871,
+      "lng": 103.8498,
+      "area": "River / CBD",
+      "vibeTags": [
+        "nightlife",
+        "food",
+        "views"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "11:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 75,
+      "estCostSGD": 25,
+      "priceBand": 2,
+      "emoji": "🛶",
+      "blurb": "Shophouse row of riverfront bars facing the skyline.",
+      "tags": [
+        "bars"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Boat_quay_sct.JPG/330px-Boat_quay_sct.JPG",
+      "photoCredit": "Wikipedia · Boat Quay"
+    },
+    {
+      "id": "sg-chijmes",
+      "name": "CHIJMES",
+      "lat": 1.2951,
+      "lng": 103.8524,
+      "area": "Civic District",
+      "vibeTags": [
+        "food",
+        "nightlife",
+        "history"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "11:00",
+            "23:00"
+          ]
+        ]
+      },
+      "estStayMin": 75,
+      "estCostSGD": 28,
+      "priceBand": 3,
+      "emoji": "⛪",
+      "blurb": "A 19th-century convent turned lantern-lit dining courtyard.",
+      "tags": [
+        "bars",
+        "restaurant"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/CHIJMES_3%2C_Jan_06.JPG/330px-CHIJMES_3%2C_Jan_06.JPG",
+      "photoCredit": "Wikipedia · CHIJMES"
+    },
+    {
+      "id": "sg-mount-faber",
+      "name": "Mount Faber Park",
+      "lat": 1.2717,
+      "lng": 103.818,
+      "area": "Southern Ridges",
+      "vibeTags": [
+        "nature",
+        "views",
+        "adventure"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 75,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "⛰️",
+      "blurb": "Ridge-top viewpoint where the cable car swings to Sentosa.",
+      "tags": [
+        "viewpoint",
+        "hike",
+        "quiet"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Faber_Point_4%2C_Nov_06.JPG/330px-Faber_Point_4%2C_Nov_06.JPG",
+      "photoCredit": "Wikipedia · Mount Faber"
+    },
+    {
+      "id": "sg-henderson-waves",
+      "name": "Henderson Waves",
+      "lat": 1.2764,
+      "lng": 103.818,
+      "area": "Southern Ridges",
+      "vibeTags": [
+        "nature",
+        "views",
+        "adventure"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🌉",
+      "blurb": "The rippling timber bridge 36 metres above the forest.",
+      "tags": [
+        "hike",
+        "quiet"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/HendersonWaves-Singapore-externalview-20090220.jpg/330px-HendersonWaves-Singapore-externalview-20090220.jpg",
+      "photoCredit": "Wikipedia · Henderson Waves"
+    },
+    {
+      "id": "sg-labrador-park",
+      "name": "Labrador Nature Reserve",
+      "lat": 1.2662,
+      "lng": 103.8022,
+      "area": "Labrador",
+      "vibeTags": [
+        "nature",
+        "chill",
+        "history"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🌊",
+      "blurb": "Seafront cliffs, WWII gun emplacements, quiet boardwalks.",
+      "tags": [
+        "quiet",
+        "park"
+      ]
+    },
+    {
+      "id": "sg-east-coast-park",
+      "name": "East Coast Park",
+      "lat": 1.301,
+      "lng": 103.912,
+      "area": "East Coast",
+      "vibeTags": [
+        "beach",
+        "nature",
+        "food"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 10,
+      "priceBand": 1,
+      "emoji": "🏖️",
+      "blurb": "Fifteen kilometres of seaside cycling and satay by the sand.",
+      "tags": [
+        "beach",
+        "cycling"
+      ]
+    },
+    {
+      "id": "sg-macritchie",
+      "name": "MacRitchie Reservoir (TreeTop Walk)",
+      "lat": 1.3418,
+      "lng": 103.8352,
+      "area": "Central Catchment",
+      "vibeTags": [
+        "nature",
+        "adventure"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "mon": []
+      },
+      "estStayMin": 150,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🐒",
+      "blurb": "Rainforest loop with a canopy-level suspension bridge.",
+      "tags": [
+        "hike"
+      ]
+    },
+    {
+      "id": "sg-jewel-changi",
+      "name": "Jewel Changi (Rain Vortex)",
+      "lat": 1.3602,
+      "lng": 103.9897,
+      "area": "Changi",
+      "vibeTags": [
+        "shopping",
+        "nature",
+        "views"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 5,
+      "priceBand": 2,
+      "emoji": "💧",
+      "blurb": "The world's tallest indoor waterfall, minutes from the gate.",
+      "tags": [
+        "airport",
+        "indoor"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/JewelSingaporeVortex1.jpg/960px-JewelSingaporeVortex1.jpg",
+      "photoCredit": "Matteo Morando · CC BY-SA 4.0"
+    },
+    {
+      "id": "sg-atlas-bar",
+      "name": "ATLAS Bar",
+      "lat": 1.3,
+      "lng": 103.8582,
+      "area": "Bugis",
+      "vibeTags": [
+        "nightlife",
+        "art",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "12:00",
+            "23:59"
+          ]
+        ],
+        "sun": []
+      },
+      "estStayMin": 90,
+      "estCostSGD": 30,
+      "priceBand": 3,
+      "emoji": "🥂",
+      "blurb": "Art-deco gin tower inside Parkview Square.",
+      "tags": [
+        "bars",
+        "quiet"
+      ]
+    },
+    {
+      "id": "sg-siloso-beach",
+      "name": "Siloso Beach",
+      "lat": 1.2536,
+      "lng": 103.8163,
+      "area": "Sentosa",
+      "vibeTags": [
+        "beach",
+        "chill",
+        "adventure"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 4,
+      "priceBand": 1,
+      "emoji": "🏖️",
+      "blurb": "Sentosa's liveliest stretch — volleyball, bars, and cable-car views overhead.",
+      "tags": [
+        "beach",
+        "sentosa"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Siloso_Beach_7.JPG/960px-Siloso_Beach_7.JPG",
+      "photoCredit": "Terence Ong · CC BY 2.5"
+    },
+    {
+      "id": "sg-palawan-beach",
+      "name": "Palawan Beach",
+      "lat": 1.2396,
+      "lng": 103.8219,
+      "area": "Sentosa",
+      "vibeTags": [
+        "beach",
+        "chill",
+        "nature"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🏝️",
+      "blurb": "Family-friendly Sentosa beach with a suspension bridge to the 'southernmost point of Asia'.",
+      "tags": [
+        "beach",
+        "sentosa"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Suspension_bridge_at_Palawan_Beach%2C_Sentosa%2C_Singapore_-_20110401.jpg/960px-Suspension_bridge_at_Palawan_Beach%2C_Sentosa%2C_Singapore_-_20110401.jpg",
+      "photoCredit": "alantankenghoe (Alan Tan Keng Hoe). · CC BY 2.0"
+    },
+    {
+      "id": "sg-tanjong-beach",
+      "name": "Tanjong Beach",
+      "lat": 1.2371,
+      "lng": 103.8261,
+      "area": "Sentosa",
+      "vibeTags": [
+        "beach",
+        "chill",
+        "wellness"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "🌴",
+      "blurb": "The quietest of Sentosa's three beaches, ringed by palms and beach clubs.",
+      "tags": [
+        "beach",
+        "sentosa",
+        "quiet"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Tanjong_Beach_4%2C_Sentosa%2C_Aug_06.JPG/960px-Tanjong_Beach_4%2C_Sentosa%2C_Aug_06.JPG",
+      "photoCredit": "User:Sengkang · Copyrighted free use"
+    },
+    {
+      "id": "sg-singapore-sports-hub",
+      "name": "Singapore Sports Hub",
+      "lat": 1.3005,
+      "lng": 103.8747,
+      "area": "Kallang",
+      "vibeTags": [
+        "sports",
+        "culture",
+        "views"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "06:00",
+            "22:00"
+          ]
+        ]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 20,
+      "priceBand": 2,
+      "emoji": "🏟️",
+      "blurb": "National Stadium and waterfront promenade — catch a match or jog the 100plus trail.",
+      "tags": [
+        "stadium"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Blazing_hot_day_Singapore_Sports_Hub_dome.jpg/330px-Blazing_hot_day_Singapore_Sports_Hub_dome.jpg",
+      "photoCredit": "Wikipedia · The Kallang"
+    },
+    {
+      "id": "sg-climb-central",
+      "name": "Climb Central",
+      "lat": 1.2989,
+      "lng": 103.8724,
+      "area": "Kallang",
+      "vibeTags": [
+        "sports",
+        "adventure",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      "estStayMin": 90,
+      "estCostSGD": 28,
+      "priceBand": 2,
+      "emoji": "🧗",
+      "blurb": "Singapore's largest indoor climbing gym — bouldering and top-rope walls at Kallang Wave.",
+      "tags": [
+        "climbing",
+        "indoor"
+      ]
+    },
+    {
+      "id": "sg-kallang-wave",
+      "name": "Kallang Wave Mall",
+      "lat": 1.2998,
+      "lng": 103.8731,
+      "area": "Kallang",
+      "vibeTags": [
+        "sports",
+        "food",
+        "shopping"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
+      },
+      "estStayMin": 60,
+      "estCostSGD": 15,
+      "priceBand": 2,
+      "emoji": "🏊",
+      "blurb": "Sports-lifestyle hub beside the stadium — pool, fitness studios, and post-workout eats.",
+      "tags": [
+        "sports",
+        "mall"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Kallang_Wave_Mall_06-08-2025.jpg/960px-Kallang_Wave_Mall_06-08-2025.jpg",
+      "photoCredit": "LN9267 · CC BY-SA 4.0"
+    },
+    {
+      "id": "sg-spa-botanica",
+      "name": "Spa Botanica",
+      "lat": 1.2457,
+      "lng": 103.8195,
+      "area": "Sentosa",
+      "vibeTags": [
+        "wellness",
+        "nature",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ]
+      },
+      "estStayMin": 120,
+      "estCostSGD": 80,
+      "priceBand": 3,
+      "emoji": "💆",
+      "blurb": "Garden-set spa on Sentosa with mud baths, reflexology, and tropical rain showers.",
+      "tags": [
+        "spa",
+        "sentosa"
+      ]
+    },
+    {
+      "id": "sg-sembawang-hot-spring",
+      "name": "Sembawang Hot Spring Park",
+      "lat": 1.4458,
+      "lng": 103.8009,
+      "area": "Sembawang",
+      "vibeTags": [
+        "wellness",
+        "nature",
+        "history"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ]
+      },
+      "estStayMin": 45,
+      "estCostSGD": 0,
+      "priceBand": 1,
+      "emoji": "♨️",
+      "blurb": "Singapore's only mainland hot spring, now a free public park with foot-soak basins.",
+      "tags": [
+        "park",
+        "quiet"
+      ],
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Sembawang_Hot_Spring_Park_Entrance.jpg/330px-Sembawang_Hot_Spring_Park_Entrance.jpg",
+      "photoCredit": "Wikipedia · Sembawang Hot Spring Park"
+    },
+    {
+      "id": "sg-yoga-movement",
+      "name": "Yoga Movement (Tanjong Pagar)",
+      "lat": 1.2797,
+      "lng": 103.8434,
+      "area": "Tanjong Pagar",
+      "vibeTags": [
+        "wellness",
+        "chill"
+      ],
+      "openHours": {
+        "daily": [
+          [
+            "07:00",
+            "21:00"
+          ]
+        ]
+      },
+      "estStayMin": 75,
+      "estCostSGD": 30,
+      "priceBand": 2,
+      "emoji": "🧘",
+      "blurb": "Drop-in hot yoga and vinyasa classes in a sleek CBD studio.",
+      "tags": [
+        "yoga",
+        "indoor"
+      ]
+    }
   ]
 }

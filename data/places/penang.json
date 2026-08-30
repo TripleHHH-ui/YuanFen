@@ -3,24 +3,66 @@
   "cityName": "Penang",
   "country": "Malaysia",
   "airport": "PEN",
-  "center": {"lat": 5.4141, "lng": 100.3288},
+  "center": {
+    "lat": 5.4141,
+    "lng": 100.3288
+  },
   "provenance": "Curated extract, 2026-08-24. Well-known POIs, approximate coordinates — verify hours before production use.",
   "places": [
     {
       "id": "penang-kek-lok-si",
       "name": "Kek Lok Si Temple",
-      "lat": 5.3990,
+      "lat": 5.399,
       "lng": 100.2735,
       "area": "Air Itam",
-      "vibeTags": ["culture", "history", "views"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "views"
+      ],
       "openHours": {
-        "mon": [["08:30", "17:30"]],
-        "tue": [["08:30", "17:30"]],
-        "wed": [["08:30", "17:30"]],
-        "thu": [["08:30", "17:30"]],
-        "fri": [["08:30", "17:30"]],
-        "sat": [["08:30", "17:30"]],
-        "sun": [["08:30", "17:30"]]
+        "mon": [
+          [
+            "08:30",
+            "17:30"
+          ]
+        ],
+        "tue": [
+          [
+            "08:30",
+            "17:30"
+          ]
+        ],
+        "wed": [
+          [
+            "08:30",
+            "17:30"
+          ]
+        ],
+        "thu": [
+          [
+            "08:30",
+            "17:30"
+          ]
+        ],
+        "fri": [
+          [
+            "08:30",
+            "17:30"
+          ]
+        ],
+        "sat": [
+          [
+            "08:30",
+            "17:30"
+          ]
+        ],
+        "sun": [
+          [
+            "08:30",
+            "17:30"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 3,
@@ -34,21 +76,62 @@
       "lat": 5.4234,
       "lng": 100.2695,
       "area": "Air Itam",
-      "vibeTags": ["nature", "views", "chill"],
+      "vibeTags": [
+        "nature",
+        "views",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["06:30", "22:00"]],
-        "tue": [["06:30", "22:00"]],
-        "wed": [["06:30", "22:00"]],
-        "thu": [["06:30", "22:00"]],
-        "fri": [["06:30", "22:00"]],
-        "sat": [["06:30", "22:00"]],
-        "sun": [["06:30", "22:00"]]
+        "mon": [
+          [
+            "06:30",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:30",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:30",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:30",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:30",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:30",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:30",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 150,
       "estCostSGD": 9,
       "priceBand": 2,
       "emoji": "🚞",
-      "blurb": "Funicular climb to cool ridge-top views over George Town."
+      "blurb": "Funicular climb to cool ridge-top views over George Town.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Penang_Hil%2C_George_Town%2C_Penang_2023.jpg/330px-Penang_Hil%2C_George_Town%2C_Penang_2023.jpg",
+      "photoCredit": "Wikipedia · Penang Hill"
     },
     {
       "id": "penang-armenian-street",
@@ -56,43 +139,125 @@
       "lat": 5.4146,
       "lng": 100.3384,
       "area": "George Town",
-      "vibeTags": ["art", "culture", "chill"],
+      "vibeTags": [
+        "art",
+        "culture",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🎨",
-      "blurb": "Heritage lane famous for the Kids on Bicycle mural."
+      "blurb": "Heritage lane famous for the Kids on Bicycle mural.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Street_art_mural_of_a_monkey%27s_face_on_Lebuh_Armenian_in_George_Town%2C_Penang_-_53830175193.jpg/960px-Street_art_mural_of_a_monkey%27s_face_on_Lebuh_Armenian_in_George_Town%2C_Penang_-_53830175193.jpg",
+      "photoCredit": "philip.mallis · CC BY-SA 2.0"
     },
     {
       "id": "penang-clan-jetties",
       "name": "Clan Jetties",
       "lat": 5.4116,
-      "lng": 100.3400,
+      "lng": 100.34,
       "area": "Weld Quay, George Town",
-      "vibeTags": ["culture", "history", "views"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "views"
+      ],
       "openHours": {
-        "mon": [["09:00", "21:00"]],
-        "tue": [["09:00", "21:00"]],
-        "wed": [["09:00", "21:00"]],
-        "thu": [["09:00", "21:00"]],
-        "fri": [["09:00", "21:00"]],
-        "sat": [["09:00", "21:00"]],
-        "sun": [["09:00", "21:00"]]
+        "mon": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🛶",
-      "blurb": "Century-old Chinese stilt villages stretching over the harbour."
+      "blurb": "Century-old Chinese stilt villages stretching over the harbour.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Lim_Jetty_in_George_Town%2C_Penang.jpg/330px-Lim_Jetty_in_George_Town%2C_Penang.jpg",
+      "photoCredit": "Wikipedia · Clan Jetties"
     },
     {
       "id": "penang-gurney-drive-hawker",
@@ -100,21 +265,61 @@
       "lat": 5.4373,
       "lng": 100.3097,
       "area": "Gurney Drive",
-      "vibeTags": ["food", "nightlife"],
+      "vibeTags": [
+        "food",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["17:00", "23:00"]],
-        "tue": [["17:00", "23:00"]],
-        "wed": [["17:00", "23:00"]],
-        "thu": [["17:00", "23:00"]],
-        "fri": [["17:00", "23:00"]],
-        "sat": [["17:00", "23:00"]],
-        "sun": [["17:00", "23:00"]]
+        "mon": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "tue": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "wed": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "thu": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "fri": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 8,
       "priceBand": 1,
       "emoji": "🍢",
-      "blurb": "Seafront hawker rows for char kway teow and rojak."
+      "blurb": "Seafront hawker rows for char kway teow and rojak.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Gurneydrive1.jpg/960px-Gurneydrive1.jpg",
+      "photoCredit": "Htgoon at en.wikipedia · CC BY-SA 3.0"
     },
     {
       "id": "penang-chulia-street",
@@ -122,15 +327,54 @@
       "lat": 5.4171,
       "lng": 100.3345,
       "area": "George Town",
-      "vibeTags": ["food", "nightlife", "culture"],
+      "vibeTags": [
+        "food",
+        "nightlife",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["18:00", "23:30"]],
-        "tue": [["18:00", "23:30"]],
-        "wed": [["18:00", "23:30"]],
-        "thu": [["18:00", "23:30"]],
-        "fri": [["18:00", "23:30"]],
-        "sat": [["18:00", "23:30"]],
-        "sun": [["18:00", "23:30"]]
+        "mon": [
+          [
+            "18:00",
+            "23:30"
+          ]
+        ],
+        "tue": [
+          [
+            "18:00",
+            "23:30"
+          ]
+        ],
+        "wed": [
+          [
+            "18:00",
+            "23:30"
+          ]
+        ],
+        "thu": [
+          [
+            "18:00",
+            "23:30"
+          ]
+        ],
+        "fri": [
+          [
+            "18:00",
+            "23:30"
+          ]
+        ],
+        "sat": [
+          [
+            "18:00",
+            "23:30"
+          ]
+        ],
+        "sun": [
+          [
+            "18:00",
+            "23:30"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 6,
@@ -141,24 +385,65 @@
     {
       "id": "penang-blue-mansion",
       "name": "Cheong Fatt Tze Blue Mansion",
-      "lat": 5.4180,
+      "lat": 5.418,
       "lng": 100.3364,
       "area": "George Town",
-      "vibeTags": ["history", "culture", "art"],
+      "vibeTags": [
+        "history",
+        "culture",
+        "art"
+      ],
       "openHours": {
-        "mon": [["09:30", "17:00"]],
-        "tue": [["09:30", "17:00"]],
-        "wed": [["09:30", "17:00"]],
-        "thu": [["09:30", "17:00"]],
-        "fri": [["09:30", "17:00"]],
-        "sat": [["09:30", "17:00"]],
-        "sun": [["09:30", "17:00"]]
+        "mon": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 8,
       "priceBand": 2,
       "emoji": "🏛️",
-      "blurb": "Indigo courtyard mansion of tycoon Cheong Fatt Tze."
+      "blurb": "Indigo courtyard mansion of tycoon Cheong Fatt Tze.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Penang_Malaysia-_Cheong-Fatt-Tze-Mansion-01.jpg/960px-Penang_Malaysia-_Cheong-Fatt-Tze-Mansion-01.jpg",
+      "photoCredit": "CEphoto, Uwe Aranas · CC BY-SA 3.0"
     },
     {
       "id": "penang-batu-ferringhi",
@@ -166,21 +451,62 @@
       "lat": 5.4749,
       "lng": 100.2469,
       "area": "Batu Ferringhi",
-      "vibeTags": ["beach", "chill", "nightlife"],
+      "vibeTags": [
+        "beach",
+        "chill",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🏖️",
-      "blurb": "Resort beach strip with parasailing and an evening bazaar."
+      "blurb": "Resort beach strip with parasailing and an evening bazaar.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Batu_Ferringhi_Penang_Dec_2006_001.jpg/960px-Batu_Ferringhi_Penang_Dec_2006_001.jpg",
+      "photoCredit": "Gryffindor · CC BY 2.5"
     },
     {
       "id": "penang-khoo-kongsi",
@@ -188,43 +514,124 @@
       "lat": 5.4145,
       "lng": 100.3389,
       "area": "George Town",
-      "vibeTags": ["culture", "history", "art"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "art"
+      ],
       "openHours": {
-        "mon": [["09:00", "17:00"]],
-        "tue": [["09:00", "17:00"]],
-        "wed": [["09:00", "17:00"]],
-        "thu": [["09:00", "17:00"]],
-        "fri": [["09:00", "17:00"]],
-        "sat": [["09:00", "17:00"]],
-        "sun": [["09:00", "17:00"]]
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🏮",
-      "blurb": "Penang's grandest clanhouse, carved and gilded to excess."
+      "blurb": "Penang's grandest clanhouse, carved and gilded to excess.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Khoo_Kongsi_%28I%29.jpg/330px-Khoo_Kongsi_%28I%29.jpg",
+      "photoCredit": "Wikipedia · Khoo Kongsi"
     },
     {
       "id": "penang-fort-cornwallis",
       "name": "Fort Cornwallis",
       "lat": 5.4204,
-      "lng": 100.3440,
+      "lng": 100.344,
       "area": "George Town Esplanade",
-      "vibeTags": ["history", "culture"],
+      "vibeTags": [
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "19:00"]],
-        "tue": [["09:00", "19:00"]],
-        "wed": [["09:00", "19:00"]],
-        "thu": [["09:00", "19:00"]],
-        "fri": [["09:00", "19:00"]],
-        "sat": [["09:00", "19:00"]],
-        "sun": [["09:00", "19:00"]]
+        "mon": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 6,
       "priceBand": 1,
       "emoji": "🏰",
-      "blurb": "Star-shaped 1786 fort marking where Francis Light landed."
+      "blurb": "Star-shaped 1786 fort marking where Francis Light landed.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Fort_Cornwallis%2C_Penang_2023_01.jpg/330px-Fort_Cornwallis%2C_Penang_2023_01.jpg",
+      "photoCredit": "Wikipedia · Fort Cornwallis"
     },
     {
       "id": "penang-peranakan-mansion",
@@ -232,21 +639,62 @@
       "lat": 5.4174,
       "lng": 100.3399,
       "area": "George Town",
-      "vibeTags": ["culture", "history", "art"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "art"
+      ],
       "openHours": {
-        "mon": [["09:30", "17:00"]],
-        "tue": [["09:30", "17:00"]],
-        "wed": [["09:30", "17:00"]],
-        "thu": [["09:30", "17:00"]],
-        "fri": [["09:30", "17:00"]],
-        "sat": [["09:30", "17:00"]],
-        "sun": [["09:30", "17:00"]]
+        "mon": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:30",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 8,
       "priceBand": 2,
       "emoji": "🏠",
-      "blurb": "Green mansion stuffed with Baba-Nyonya antiques and heirlooms."
+      "blurb": "Green mansion stuffed with Baba-Nyonya antiques and heirlooms.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pinang_Peranakan_Mansion_%28I%29.jpg/330px-Pinang_Peranakan_Mansion_%28I%29.jpg",
+      "photoCredit": "Wikipedia · Pinang Peranakan Mansion"
     },
     {
       "id": "penang-love-lane",
@@ -254,21 +702,62 @@
       "lat": 5.4177,
       "lng": 100.3358,
       "area": "George Town",
-      "vibeTags": ["nightlife", "chill", "food"],
+      "vibeTags": [
+        "nightlife",
+        "chill",
+        "food"
+      ],
       "openHours": {
-        "mon": [["17:00", "23:59"]],
-        "tue": [["17:00", "23:59"]],
-        "wed": [["17:00", "23:59"]],
-        "thu": [["17:00", "23:59"]],
-        "fri": [["17:00", "23:59"]],
-        "sat": [["17:00", "23:59"]],
-        "sun": [["17:00", "23:59"]]
+        "mon": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 12,
       "priceBand": 2,
       "emoji": "🍻",
-      "blurb": "Compact bar lane buzzing after dark in George Town."
+      "blurb": "Compact bar lane buzzing after dark in George Town.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Lovers_Lane_Sign_-_geograph.org.uk_-_2915011.jpg/330px-Lovers_Lane_Sign_-_geograph.org.uk_-_2915011.jpg",
+      "photoCredit": "Wikipedia · Lovers' lane"
     },
     {
       "id": "penang-teochew-chendul",
@@ -276,15 +765,53 @@
       "lat": 5.4168,
       "lng": 100.3327,
       "area": "Penang Road, George Town",
-      "vibeTags": ["food", "chill"],
+      "vibeTags": [
+        "food",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["10:30", "19:00"]],
-        "tue": [["10:30", "19:00"]],
-        "wed": [["10:30", "19:00"]],
-        "thu": [["10:30", "19:00"]],
-        "fri": [["10:30", "19:00"]],
-        "sat": [["10:30", "19:00"]],
-        "sun": [["10:30", "19:00"]]
+        "mon": [
+          [
+            "10:30",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:30",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:30",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:30",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:30",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:30",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:30",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 30,
       "estCostSGD": 3,
@@ -295,39 +822,113 @@
     {
       "id": "penang-botanic-gardens",
       "name": "Penang Botanic Gardens",
-      "lat": 5.4390,
-      "lng": 100.2900,
+      "lat": 5.439,
+      "lng": 100.29,
       "area": "Waterfall Road",
-      "vibeTags": ["nature", "chill"],
+      "vibeTags": [
+        "nature",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["05:00", "20:00"]],
-        "tue": [["05:00", "20:00"]],
-        "wed": [["05:00", "20:00"]],
-        "thu": [["05:00", "20:00"]],
-        "fri": [["05:00", "20:00"]],
-        "sat": [["05:00", "20:00"]],
-        "sun": [["05:00", "20:00"]]
+        "mon": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "05:00",
+            "20:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🌿",
-      "blurb": "Waterfall valley gardens patrolled by cheeky macaques."
+      "blurb": "Waterfall valley gardens patrolled by cheeky macaques.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Pg_botanic_gardens_trees.JPG/330px-Pg_botanic_gardens_trees.JPG",
+      "photoCredit": "Wikipedia · Penang Botanic Gardens"
     },
     {
       "id": "penang-mugshot-coffee",
       "name": "Mugshot Cafe",
       "lat": 5.4168,
-      "lng": 100.3380,
+      "lng": 100.338,
       "area": "Muntri Street, George Town",
-      "vibeTags": ["coffee", "art", "chill"],
+      "vibeTags": [
+        "coffee",
+        "art",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["09:00", "17:30"]],
-        "tue": [["09:00", "17:30"]],
-        "wed": [["09:00", "17:30"]],
-        "thu": [["09:00", "17:30"]],
-        "fri": [["09:00", "17:30"]],
-        "sat": [["09:00", "17:30"]],
+        "mon": [
+          [
+            "09:00",
+            "17:30"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:30"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:30"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:30"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:30"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:30"
+          ]
+        ],
         "sun": []
       },
       "estStayMin": 60,
@@ -342,15 +943,53 @@
       "lat": 5.4152,
       "lng": 100.3396,
       "area": "Cannon Street, George Town",
-      "vibeTags": ["coffee", "chill"],
+      "vibeTags": [
+        "coffee",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["09:00", "18:00"]],
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "mon": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 6,
@@ -364,15 +1003,54 @@
       "lat": 5.4163,
       "lng": 100.3313,
       "area": "George Town centre",
-      "vibeTags": ["adventure", "views", "shopping"],
+      "vibeTags": [
+        "adventure",
+        "views",
+        "shopping"
+      ],
       "openHours": {
-        "mon": [["10:00", "21:00"]],
-        "tue": [["10:00", "21:00"]],
-        "wed": [["10:00", "21:00"]],
-        "thu": [["10:00", "21:00"]],
-        "fri": [["10:00", "21:00"]],
-        "sat": [["10:00", "21:00"]],
-        "sun": [["10:00", "21:00"]]
+        "mon": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 15,
@@ -383,62 +1061,182 @@
     {
       "id": "penang-queensbay-mall",
       "name": "Queensbay Mall",
-      "lat": 5.3360,
+      "lat": 5.336,
       "lng": 100.3066,
       "area": "Bayan Lepas",
-      "vibeTags": ["shopping", "food"],
+      "vibeTags": [
+        "shopping",
+        "food"
+      ],
       "openHours": {
-        "mon": [["10:00", "22:00"]],
-        "tue": [["10:00", "22:00"]],
-        "wed": [["10:00", "22:00"]],
-        "thu": [["10:00", "22:00"]],
-        "fri": [["10:00", "22:00"]],
-        "sat": [["10:00", "22:00"]],
-        "sun": [["10:00", "22:00"]]
+        "mon": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 12,
       "priceBand": 2,
       "emoji": "🏬",
-      "blurb": "Penang's largest mall with a bayside food court."
+      "blurb": "Penang's largest mall with a bayside food court.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Drone_photo_of_Queensbay_Mall_2024.jpg/330px-Drone_photo_of_Queensbay_Mall_2024.jpg",
+      "photoCredit": "Wikipedia · Queensbay Mall"
     },
     {
       "id": "penang-gurney-paragon",
       "name": "Gurney Paragon Mall",
-      "lat": 5.4350,
+      "lat": 5.435,
       "lng": 100.3108,
       "area": "Gurney Drive",
-      "vibeTags": ["shopping", "nightlife", "food"],
+      "vibeTags": [
+        "shopping",
+        "nightlife",
+        "food"
+      ],
       "openHours": {
-        "mon": [["10:00", "22:00"]],
-        "tue": [["10:00", "22:00"]],
-        "wed": [["10:00", "22:00"]],
-        "thu": [["10:00", "22:00"]],
-        "fri": [["10:00", "22:00"]],
-        "sat": [["10:00", "22:00"]],
-        "sun": [["10:00", "22:00"]]
+        "mon": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 10,
       "priceBand": 2,
       "emoji": "🛍️",
-      "blurb": "Upmarket mall at the Gurney waterfront with a rooftop garden."
+      "blurb": "Upmarket mall at the Gurney waterfront with a rooftop garden.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gurney_Paragon%2C_George_Town%2C_Penang.jpg/960px-Gurney_Paragon%2C_George_Town%2C_Penang.jpg",
+      "photoCredit": "Vnonymous · CC BY-SA 4.0"
     },
     {
       "id": "penang-penang-hill-trails",
       "name": "Penang Hill Nature Trail",
       "lat": 5.4169,
-      "lng": 100.2710,
+      "lng": 100.271,
       "area": "Air Itam / Penang Hill",
-      "vibeTags": ["adventure", "nature", "sports"],
+      "vibeTags": [
+        "adventure",
+        "nature",
+        "sports"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 0,
@@ -449,18 +1247,57 @@
     {
       "id": "penang-batu-ferringhi-watersports",
       "name": "Batu Ferringhi Watersports",
-      "lat": 5.4740,
-      "lng": 100.2480,
+      "lat": 5.474,
+      "lng": 100.248,
       "area": "Batu Ferringhi",
-      "vibeTags": ["sports", "beach", "adventure"],
+      "vibeTags": [
+        "sports",
+        "beach",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["09:00", "17:00"]],
-        "tue": [["09:00", "17:00"]],
-        "wed": [["09:00", "17:00"]],
-        "thu": [["09:00", "17:00"]],
-        "fri": [["09:00", "17:00"]],
-        "sat": [["09:00", "17:00"]],
-        "sun": [["09:00", "17:00"]]
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 25,
@@ -472,17 +1309,55 @@
       "id": "penang-angsana-spa",
       "name": "Angsana Spa Penang",
       "lat": 5.4749,
-      "lng": 100.2440,
+      "lng": 100.244,
       "area": "Batu Ferringhi resort strip",
-      "vibeTags": ["wellness", "chill"],
+      "vibeTags": [
+        "wellness",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["10:00", "21:00"]],
-        "tue": [["10:00", "21:00"]],
-        "wed": [["10:00", "21:00"]],
-        "thu": [["10:00", "21:00"]],
-        "fri": [["10:00", "21:00"]],
-        "sat": [["10:00", "21:00"]],
-        "sun": [["10:00", "21:00"]]
+        "mon": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 55,
@@ -496,15 +1371,54 @@
       "lat": 5.4739,
       "lng": 100.2443,
       "area": "Batu Ferringhi",
-      "vibeTags": ["wellness", "culture", "history"],
+      "vibeTags": [
+        "wellness",
+        "culture",
+        "history"
+      ],
       "openHours": {
-        "mon": [["09:00", "21:00"]],
-        "tue": [["09:00", "21:00"]],
-        "wed": [["09:00", "21:00"]],
-        "thu": [["09:00", "21:00"]],
-        "fri": [["09:00", "21:00"]],
-        "sat": [["09:00", "21:00"]],
-        "sun": [["09:00", "21:00"]]
+        "mon": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 80,
@@ -516,17 +1430,56 @@
       "id": "penang-street-art-trail",
       "name": "George Town Street Art Trail",
       "lat": 5.4142,
-      "lng": 100.3390,
+      "lng": 100.339,
       "area": "George Town UNESCO zone",
-      "vibeTags": ["art", "culture", "chill"],
+      "vibeTags": [
+        "art",
+        "culture",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 0,

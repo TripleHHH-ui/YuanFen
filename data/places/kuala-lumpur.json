@@ -3,7 +3,10 @@
   "cityName": "Kuala Lumpur",
   "country": "Malaysia",
   "airport": "KUL",
-  "center": {"lat": 3.1478, "lng": 101.6953},
+  "center": {
+    "lat": 3.1478,
+    "lng": 101.6953
+  },
   "provenance": "Curated extract, 2026-08-24. Well-known POIs, approximate coordinates — verify hours before production use.",
   "places": [
     {
@@ -12,43 +15,120 @@
       "lat": 3.1579,
       "lng": 101.7116,
       "area": "KLCC",
-      "vibeTags": ["views", "culture", "shopping"],
+      "vibeTags": [
+        "views",
+        "culture",
+        "shopping"
+      ],
       "openHours": {
         "mon": [],
-        "tue": [["09:00", "21:00"]],
-        "wed": [["09:00", "21:00"]],
-        "thu": [["09:00", "21:00"]],
-        "fri": [["09:00", "21:00"]],
-        "sat": [["09:00", "21:00"]],
-        "sun": [["09:00", "21:00"]]
+        "tue": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 28,
       "priceBand": 3,
       "emoji": "🏙️",
-      "blurb": "Twin 452-metre icons with a skybridge and observation deck."
+      "blurb": "Twin 452-metre icons with a skybridge and observation deck.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Petronas_Panorama_II.jpg/960px-Petronas_Panorama_II.jpg",
+      "photoCredit": "Someformofhuman · CC BY-SA 4.0"
     },
     {
       "id": "kuala-lumpur-klcc-park",
       "name": "KLCC Park",
-      "lat": 3.1560,
+      "lat": 3.156,
       "lng": 101.7135,
       "area": "KLCC",
-      "vibeTags": ["nature", "chill", "views"],
+      "vibeTags": [
+        "nature",
+        "chill",
+        "views"
+      ],
       "openHours": {
-        "mon": [["07:00", "22:00"]],
-        "tue": [["07:00", "22:00"]],
-        "wed": [["07:00", "22:00"]],
-        "thu": [["07:00", "22:00"]],
-        "fri": [["07:00", "22:00"]],
-        "sat": [["07:00", "22:00"]],
-        "sun": [["07:00", "22:00"]]
+        "mon": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "⛲",
-      "blurb": "Manicured tower-base park with nightly lake fountain shows."
+      "blurb": "Manicured tower-base park with nightly lake fountain shows.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Taman_KLCC%2C_Kuala_Lumpur_20260428_102802.jpg/330px-Taman_KLCC%2C_Kuala_Lumpur_20260428_102802.jpg",
+      "photoCredit": "Wikipedia · KLCC Park"
     },
     {
       "id": "kuala-lumpur-batu-caves",
@@ -56,43 +136,125 @@
       "lat": 3.2379,
       "lng": 101.6841,
       "area": "Gombak",
-      "vibeTags": ["culture", "history", "adventure", "nature"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "adventure",
+        "nature"
+      ],
       "openHours": {
-        "mon": [["06:00", "21:00"]],
-        "tue": [["06:00", "21:00"]],
-        "wed": [["06:00", "21:00"]],
-        "thu": [["06:00", "21:00"]],
-        "fri": [["06:00", "21:00"]],
-        "sat": [["06:00", "21:00"]],
-        "sun": [["06:00", "21:00"]]
+        "mon": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🐒",
-      "blurb": "Rainbow staircase of 272 steps up to a Hindu cave shrine."
+      "blurb": "Rainbow staircase of 272 steps up to a Hindu cave shrine.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Batu_Caves_stairs_2022-05.jpg/330px-Batu_Caves_stairs_2022-05.jpg",
+      "photoCredit": "Wikipedia · Batu Caves"
     },
     {
       "id": "kuala-lumpur-jalan-alor",
       "name": "Jalan Alor Food Street",
-      "lat": 3.1450,
+      "lat": 3.145,
       "lng": 101.7089,
       "area": "Bukit Bintang",
-      "vibeTags": ["food", "nightlife"],
+      "vibeTags": [
+        "food",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["17:00", "23:59"]],
-        "tue": [["17:00", "23:59"]],
-        "wed": [["17:00", "23:59"]],
-        "thu": [["17:00", "23:59"]],
-        "fri": [["17:00", "23:59"]],
-        "sat": [["17:00", "23:59"]],
-        "sun": [["17:00", "23:59"]]
+        "mon": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "17:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 10,
       "priceBand": 1,
       "emoji": "🍢",
-      "blurb": "Lantern-lit food street of grilled wings and satay."
+      "blurb": "Lantern-lit food street of grilled wings and satay.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/KL-Jalan_Alor.JPG/960px-KL-Jalan_Alor.JPG",
+      "photoCredit": "Azreey · CC BY-SA 3.0"
     },
     {
       "id": "kuala-lumpur-central-market",
@@ -100,43 +262,125 @@
       "lat": 3.1459,
       "lng": 101.6955,
       "area": "Chinatown edge",
-      "vibeTags": ["shopping", "art", "culture"],
+      "vibeTags": [
+        "shopping",
+        "art",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["10:00", "21:30"]],
-        "tue": [["10:00", "21:30"]],
-        "wed": [["10:00", "21:30"]],
-        "thu": [["10:00", "21:30"]],
-        "fri": [["10:00", "21:30"]],
-        "sat": [["10:00", "21:30"]],
-        "sun": [["10:00", "21:30"]]
+        "mon": [
+          [
+            "10:00",
+            "21:30"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "21:30"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "21:30"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "21:30"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "21:30"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "21:30"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "21:30"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 8,
       "priceBand": 1,
       "emoji": "🧺",
-      "blurb": "Art-deco 1928 hall of batik, crafts, and local art."
+      "blurb": "Art-deco 1928 hall of batik, crafts, and local art.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Sapeh_player%2C_Central_Market%2C_Kuala_Lumpur%2C_Malaysia_-_20070401.jpg",
+      "photoCredit": "Fwbaker at en.wikipedia (http://www.scv.com.my); later version was uploaded by Bility. · CC BY-SA 3.0"
     },
     {
       "id": "kuala-lumpur-thean-hou-temple",
       "name": "Thean Hou Temple",
       "lat": 3.1214,
-      "lng": 101.6870,
+      "lng": 101.687,
       "area": "Seputeh",
-      "vibeTags": ["culture", "history", "views"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "views"
+      ],
       "openHours": {
-        "mon": [["08:00", "21:00"]],
-        "tue": [["08:00", "21:00"]],
-        "wed": [["08:00", "21:00"]],
-        "thu": [["08:00", "21:00"]],
-        "fri": [["08:00", "21:00"]],
-        "sat": [["08:00", "21:00"]],
-        "sun": [["08:00", "21:00"]]
+        "mon": [
+          [
+            "08:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🏮",
-      "blurb": "Six-tiered Chinese temple with skyline panoramas."
+      "blurb": "Six-tiered Chinese temple with skyline panoramas.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Thean_Hou_Temple%2C_Kuala_Lumpur-1.jpg/330px-Thean_Hou_Temple%2C_Kuala_Lumpur-1.jpg",
+      "photoCredit": "Wikipedia · Thean Hou Temple"
     },
     {
       "id": "kuala-lumpur-merdeka-square",
@@ -144,65 +388,187 @@
       "lat": 3.1478,
       "lng": 101.6935,
       "area": "City Centre",
-      "vibeTags": ["history", "culture"],
+      "vibeTags": [
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🕰️",
-      "blurb": "Colonial parade ground where independence was declared in 1957."
+      "blurb": "Colonial parade ground where independence was declared in 1957.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Merdeka_Square_Malaysia.jpg/960px-Merdeka_Square_Malaysia.jpg",
+      "photoCredit": "This photo was taken by Anton Zelenov.\nPlease credit this with : Photo : Anton Zelenov in the immediate vicinity of the image.\nIf you use one of my photos, please email me (account needed) or leave me a short message on my discussion page.\nIt would be greatly appreciated.\nDo not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain.\n\nIf you would like special permission to use, license, or purchase the image please contact me to negotiate terms. · CC BY-SA 3.0"
     },
     {
       "id": "kuala-lumpur-bukit-bintang",
       "name": "Bukit Bintang",
       "lat": 3.1466,
-      "lng": 101.7110,
+      "lng": 101.711,
       "area": "Bukit Bintang",
-      "vibeTags": ["shopping", "nightlife", "food"],
+      "vibeTags": [
+        "shopping",
+        "nightlife",
+        "food"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 15,
       "priceBand": 2,
       "emoji": "🌃",
-      "blurb": "KL's buzzing shopping and entertainment crossroads."
+      "blurb": "KL's buzzing shopping and entertainment crossroads.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/View_from_Lot_10_-_Forest_in_the_City_to_Bukti_Bintang_junction_1.jpg/330px-View_from_Lot_10_-_Forest_in_the_City_to_Bukti_Bintang_junction_1.jpg",
+      "photoCredit": "Wikipedia · Bukit Bintang"
     },
     {
       "id": "kuala-lumpur-kl-forest-eco-park",
       "name": "KL Forest Eco Park",
-      "lat": 3.1510,
-      "lng": 101.7000,
+      "lat": 3.151,
+      "lng": 101.7,
       "area": "Bukit Nanas",
-      "vibeTags": ["nature", "adventure", "views"],
+      "vibeTags": [
+        "nature",
+        "adventure",
+        "views"
+      ],
       "openHours": {
-        "mon": [["08:00", "17:30"]],
-        "tue": [["08:00", "17:30"]],
-        "wed": [["08:00", "17:30"]],
-        "thu": [["08:00", "17:30"]],
-        "fri": [["08:00", "17:30"]],
-        "sat": [["08:00", "17:30"]],
-        "sun": [["08:00", "17:30"]]
+        "mon": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🌲",
-      "blurb": "Rainforest canopy walkway in the heart of the city."
+      "blurb": "Rainforest canopy walkway in the heart of the city.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/KL_Forest_Eco_Park_at_Kuala_Lumpur_Tower_%28Menara_KL%29%2C_Malaysia_on_28_July_2020_at_151405.jpg/960px-KL_Forest_Eco_Park_at_Kuala_Lumpur_Tower_%28Menara_KL%29%2C_Malaysia_on_28_July_2020_at_151405.jpg",
+      "photoCredit": "Frostpolar · CC BY-SA 4.0"
     },
     {
       "id": "kuala-lumpur-petaling-street",
@@ -210,21 +576,62 @@
       "lat": 3.1445,
       "lng": 101.6976,
       "area": "Chinatown",
-      "vibeTags": ["food", "shopping", "culture"],
+      "vibeTags": [
+        "food",
+        "shopping",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["10:00", "23:00"]],
-        "tue": [["10:00", "23:00"]],
-        "wed": [["10:00", "23:00"]],
-        "thu": [["10:00", "23:00"]],
-        "fri": [["10:00", "23:00"]],
-        "sat": [["10:00", "23:00"]],
-        "sun": [["10:00", "23:00"]]
+        "mon": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 8,
       "priceBand": 1,
       "emoji": "🥟",
-      "blurb": "Chinatown bazaar for street eats and bargain hunting."
+      "blurb": "Chinatown bazaar for street eats and bargain hunting.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Kuala_Lumpur._Jalan_Petaling._2019-12-07_15-24-49.jpg/330px-Kuala_Lumpur._Jalan_Petaling._2019-12-07_15-24-49.jpg",
+      "photoCredit": "Wikipedia · Petaling Street"
     },
     {
       "id": "kuala-lumpur-kl-tower",
@@ -232,43 +639,124 @@
       "lat": 3.1528,
       "lng": 101.7038,
       "area": "Bukit Nanas",
-      "vibeTags": ["views", "adventure"],
+      "vibeTags": [
+        "views",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["09:00", "22:00"]],
-        "tue": [["09:00", "22:00"]],
-        "wed": [["09:00", "22:00"]],
-        "thu": [["09:00", "22:00"]],
-        "fri": [["09:00", "22:00"]],
-        "sat": [["09:00", "22:00"]],
-        "sun": [["09:00", "22:00"]]
+        "mon": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 17,
       "priceBand": 2,
       "emoji": "🗼",
-      "blurb": "Hilltop spire whose sky deck out-views the twin towers."
+      "blurb": "Hilltop spire whose sky deck out-views the twin towers.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/KL_Tower%2C_Kuala_Lumpur%2C_Malaysia.jpg",
+      "photoCredit": "Salmiah La Suma · CC BY-SA 4.0"
     },
     {
       "id": "kuala-lumpur-islamic-arts-museum",
       "name": "Islamic Arts Museum Malaysia",
       "lat": 3.1416,
-      "lng": 101.6890,
+      "lng": 101.689,
       "area": "Perdana / Lake Gardens",
-      "vibeTags": ["art", "culture", "history"],
+      "vibeTags": [
+        "art",
+        "culture",
+        "history"
+      ],
       "openHours": {
-        "mon": [["09:30", "18:00"]],
-        "tue": [["09:30", "18:00"]],
-        "wed": [["09:30", "18:00"]],
-        "thu": [["09:30", "18:00"]],
-        "fri": [["09:30", "18:00"]],
-        "sat": [["09:30", "18:00"]],
-        "sun": [["09:30", "18:00"]]
+        "mon": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:30",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 6,
       "priceBand": 1,
       "emoji": "🕌",
-      "blurb": "Serene galleries of calligraphy, textiles, and domes."
+      "blurb": "Serene galleries of calligraphy, textiles, and domes.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Islamic_Arts_Museum_Malaysia_Exterior_%28May_2022%29_-_img_02.jpg/330px-Islamic_Arts_Museum_Malaysia_Exterior_%28May_2022%29_-_img_02.jpg",
+      "photoCredit": "Wikipedia · Islamic Arts Museum Malaysia"
     },
     {
       "id": "kuala-lumpur-perdana-botanical-garden",
@@ -276,21 +764,61 @@
       "lat": 3.1424,
       "lng": 101.6844,
       "area": "Lake Gardens",
-      "vibeTags": ["nature", "chill"],
+      "vibeTags": [
+        "nature",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["07:00", "20:00"]],
-        "tue": [["07:00", "20:00"]],
-        "wed": [["07:00", "20:00"]],
-        "thu": [["07:00", "20:00"]],
-        "fri": [["07:00", "20:00"]],
-        "sat": [["07:00", "20:00"]],
-        "sun": [["07:00", "20:00"]]
+        "mon": [
+          [
+            "07:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "20:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🌺",
-      "blurb": "Lakeside Victorian-era gardens ringed by bird and orchid parks."
+      "blurb": "Lakeside Victorian-era gardens ringed by bird and orchid parks.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Perdana_Botanical_Gardens%2C_Kuala_Lumpur%2C_Federal_Territory_of_Kuala_Lumpur%2C_Malaysia_-_panoramio_%2811%29.jpg/960px-Perdana_Botanical_Gardens%2C_Kuala_Lumpur%2C_Federal_Territory_of_Kuala_Lumpur%2C_Malaysia_-_panoramio_%2811%29.jpg",
+      "photoCredit": "Daibo Taku · CC BY 3.0"
     },
     {
       "id": "kuala-lumpur-vcr-cafe",
@@ -298,15 +826,53 @@
       "lat": 3.1414,
       "lng": 101.7051,
       "area": "Jalan Galloway, Pudu",
-      "vibeTags": ["coffee", "chill"],
+      "vibeTags": [
+        "coffee",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["08:30", "23:00"]],
-        "tue": [["08:30", "23:00"]],
-        "wed": [["08:30", "23:00"]],
-        "thu": [["08:30", "23:00"]],
-        "fri": [["08:30", "23:00"]],
-        "sat": [["08:30", "23:00"]],
-        "sun": [["08:30", "23:00"]]
+        "mon": [
+          [
+            "08:30",
+            "23:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:30",
+            "23:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:30",
+            "23:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:30",
+            "23:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:30",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:30",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:30",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 9,
@@ -320,21 +886,62 @@
       "lat": 3.1548,
       "lng": 101.7112,
       "area": "KLCC",
-      "vibeTags": ["nature", "culture", "chill"],
+      "vibeTags": [
+        "nature",
+        "culture",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["10:00", "20:00"]],
-        "tue": [["10:00", "20:00"]],
-        "wed": [["10:00", "20:00"]],
-        "thu": [["10:00", "20:00"]],
-        "fri": [["10:00", "21:00"]],
-        "sat": [["10:00", "21:00"]],
-        "sun": [["10:00", "20:00"]]
+        "mon": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 25,
       "priceBand": 3,
       "emoji": "🦈",
-      "blurb": "Walk-through tunnel aquarium beneath the convention centre."
+      "blurb": "Walk-through tunnel aquarium beneath the convention centre.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Underwater_tunnel_in_Aquaria_KLCC.jpg/330px-Underwater_tunnel_in_Aquaria_KLCC.jpg",
+      "photoCredit": "Wikipedia · Aquaria KLCC"
     },
     {
       "id": "kuala-lumpur-maharajalela-stadium",
@@ -342,15 +949,53 @@
       "lat": 3.1194,
       "lng": 101.6942,
       "area": "Bukit Jalil",
-      "vibeTags": ["sports", "culture"],
+      "vibeTags": [
+        "sports",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "18:00"]],
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "23:00"]],
-        "sun": [["09:00", "23:00"]]
+        "mon": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 150,
       "estCostSGD": 20,
@@ -361,18 +1006,57 @@
     {
       "id": "kuala-lumpur-bukit-jalil-park",
       "name": "Bukit Jalil Recreational Park",
-      "lat": 3.0630,
-      "lng": 101.6930,
+      "lat": 3.063,
+      "lng": 101.693,
       "area": "Bukit Jalil",
-      "vibeTags": ["sports", "nature", "chill"],
+      "vibeTags": [
+        "sports",
+        "nature",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["06:00", "21:00"]],
-        "tue": [["06:00", "21:00"]],
-        "wed": [["06:00", "21:00"]],
-        "thu": [["06:00", "21:00"]],
-        "fri": [["06:00", "21:00"]],
-        "sat": [["06:00", "21:00"]],
-        "sun": [["06:00", "21:00"]]
+        "mon": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 0,
@@ -386,15 +1070,53 @@
       "lat": 3.1568,
       "lng": 101.7117,
       "area": "KLCC",
-      "vibeTags": ["wellness", "chill"],
+      "vibeTags": [
+        "wellness",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["09:00", "21:00"]],
-        "tue": [["09:00", "21:00"]],
-        "wed": [["09:00", "21:00"]],
-        "thu": [["09:00", "21:00"]],
-        "fri": [["09:00", "21:00"]],
-        "sat": [["09:00", "21:00"]],
-        "sun": [["09:00", "21:00"]]
+        "mon": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 85,
@@ -408,15 +1130,54 @@
       "lat": 3.1577,
       "lng": 101.7023,
       "area": "Chow Kit",
-      "vibeTags": ["wellness", "history", "culture"],
+      "vibeTags": [
+        "wellness",
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["10:00", "22:00"]],
-        "tue": [["10:00", "22:00"]],
-        "wed": [["10:00", "22:00"]],
-        "thu": [["10:00", "22:00"]],
-        "fri": [["10:00", "22:00"]],
-        "sat": [["10:00", "22:00"]],
-        "sun": [["10:00", "22:00"]]
+        "mon": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 40,
@@ -430,21 +1191,62 @@
       "lat": 2.5226,
       "lng": 101.7917,
       "area": "Port Dickson, ~100km south",
-      "vibeTags": ["beach", "chill", "nature"],
+      "vibeTags": [
+        "beach",
+        "chill",
+        "nature"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 300,
       "estCostSGD": 10,
       "priceBand": 1,
       "emoji": "🏖️",
-      "blurb": "KL's closest beach escape, 90 minutes south on the Negeri Sembilan coast."
+      "blurb": "KL's closest beach escape, 90 minutes south on the Negeri Sembilan coast.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/The_Setting_Sun_in_Port_Dickson.jpg/960px-The_Setting_Sun_in_Port_Dickson.jpg",
+      "photoCredit": "Mohamad Farkhan bin Mohamad Ishak · CC BY-SA 4.0"
     },
     {
       "id": "kuala-lumpur-sepang-beach",
@@ -452,15 +1254,54 @@
       "lat": 2.8106,
       "lng": 101.7154,
       "area": "Sepang, Selangor",
-      "vibeTags": ["beach", "nature", "chill"],
+      "vibeTags": [
+        "beach",
+        "nature",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 5,
@@ -471,18 +1312,56 @@
     {
       "id": "kuala-lumpur-street-food-tour-tt",
       "name": "Taman Tun Food Court",
-      "lat": 3.1430,
-      "lng": 101.6310,
+      "lat": 3.143,
+      "lng": 101.631,
       "area": "Taman Tun Dr Ismail",
-      "vibeTags": ["food", "nightlife"],
+      "vibeTags": [
+        "food",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["17:00", "23:30"]],
-        "tue": [["17:00", "23:30"]],
-        "wed": [["17:00", "23:30"]],
-        "thu": [["17:00", "23:30"]],
-        "fri": [["17:00", "23:30"]],
-        "sat": [["17:00", "23:30"]],
-        "sun": [["17:00", "23:30"]]
+        "mon": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "tue": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "wed": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "thu": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "fri": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "sat": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "sun": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 7,
@@ -496,37 +1375,112 @@
       "lat": 3.0731,
       "lng": 101.6074,
       "area": "Sunway, Petaling Jaya",
-      "vibeTags": ["adventure", "sports", "chill"],
+      "vibeTags": [
+        "adventure",
+        "sports",
+        "chill"
+      ],
       "openHours": {
         "mon": [],
-        "tue": [["10:00", "18:00"]],
-        "wed": [["10:00", "18:00"]],
-        "thu": [["10:00", "18:00"]],
-        "fri": [["10:00", "18:00"]],
-        "sat": [["10:00", "18:00"]],
-        "sun": [["10:00", "18:00"]]
+        "tue": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 300,
       "estCostSGD": 40,
       "priceBand": 3,
       "emoji": "🎢",
-      "blurb": "Multi-park theme resort with water slides, wildlife, and a surf beach."
+      "blurb": "Multi-park theme resort with water slides, wildlife, and a surf beach.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Sunway_Lagoon_%28220711%29.jpg/330px-Sunway_Lagoon_%28220711%29.jpg",
+      "photoCredit": "Wikipedia · Sunway Lagoon"
     },
     {
       "id": "kuala-lumpur-ante-coffee",
       "name": "Ante Coffee",
       "lat": 3.1423,
-      "lng": 101.6870,
+      "lng": 101.687,
       "area": "Brickfields",
-      "vibeTags": ["coffee", "art", "chill"],
+      "vibeTags": [
+        "coffee",
+        "art",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["09:00", "18:00"]],
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "mon": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 7,

@@ -169,6 +169,18 @@ input { font-family: var(--body); }
 .swipe-card.live.dragging { transition: none; }
 .swipe-card.ghost { pointer-events: none; filter: saturate(0.6); }
 .card-emoji { font-size: 64px; line-height: 1; }
+
+/* Photo-led card: the image bleeds to the top edge, text sits under it. */
+.swipe-card.has-photo { justify-content: flex-start; padding: 0 0 22px; gap: 9px; overflow: hidden; }
+.card-photo { position: relative; width: 100%; height: 216px; flex: none; background: var(--line); }
+.card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-photo::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--card));
+}
+.swipe-card.has-photo .card-title,
+.swipe-card.has-photo .card-sub,
+.swipe-card.has-photo .card-tags { padding: 0 24px; }
 .card-title { font-family: var(--display); font-size: 26px; font-weight: 560; line-height: 1.1; }
 .card-sub { color: var(--ink-soft); font-size: 14px; max-width: 300px; }
 .card-tags { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
@@ -358,6 +370,15 @@ input { font-family: var(--body); }
   border: 2px solid var(--card); z-index: 1;
 }
 .stop-n.wax { background: var(--gold); font-family: var(--display); }
+.stop-thumb {
+  flex: 0 0 34px; width: 34px; height: 34px; border-radius: 8px;
+  object-fit: cover; border: 1px solid var(--line); margin-top: -2px;
+}
+/* Places with no matching photo keep the same tile so the list stays even. */
+.stop-thumb.is-emoji {
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, 0.035); font-size: 17px;
+}
 .stop-body { min-width: 0; flex: 1; }
 .stop-name { font-weight: 700; font-size: 14px; }
 .stop-meta { font-size: 12.5px; color: var(--ink-soft); font-family: var(--mono); }
@@ -427,6 +448,7 @@ input { font-family: var(--body); }
 }
 .alt-row:hover { border-color: var(--thread); }
 .alt-emoji { font-size: 16px; line-height: 1; flex: 0 0 auto; }
+.alt-thumb { flex: 0 0 22px; width: 22px; height: 22px; border-radius: 5px; object-fit: cover; }
 .alt-name { font-weight: 600; flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .alt-tags { font-size: 11px; color: var(--ink-soft); white-space: nowrap; flex: 0 0 auto; }
 .alt-cost { font-family: var(--mono); font-size: 11.5px; color: var(--thread-deep); white-space: nowrap; flex: 0 0 auto; }

@@ -3,24 +3,66 @@
   "cityName": "Da Nang",
   "country": "Vietnam",
   "airport": "DAD",
-  "center": {"lat": 16.0544, "lng": 108.2022},
+  "center": {
+    "lat": 16.0544,
+    "lng": 108.2022
+  },
   "provenance": "Curated extract, 2026-08-24. Well-known POIs, approximate coordinates — verify hours before production use.",
   "places": [
     {
       "id": "da-nang-my-khe-beach",
       "name": "My Khe Beach",
-      "lat": 16.0610,
+      "lat": 16.061,
       "lng": 108.2467,
       "area": "My An / Phuoc My",
-      "vibeTags": ["beach", "chill", "views"],
+      "vibeTags": [
+        "beach",
+        "chill",
+        "views"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 0,
@@ -34,21 +76,63 @@
       "lat": 16.0039,
       "lng": 108.2631,
       "area": "Ngu Hanh Son",
-      "vibeTags": ["nature", "history", "adventure", "views"],
+      "vibeTags": [
+        "nature",
+        "history",
+        "adventure",
+        "views"
+      ],
       "openHours": {
-        "mon": [["07:00", "17:30"]],
-        "tue": [["07:00", "17:30"]],
-        "wed": [["07:00", "17:30"]],
-        "thu": [["07:00", "17:30"]],
-        "fri": [["07:00", "17:30"]],
-        "sat": [["07:00", "17:30"]],
-        "sun": [["07:00", "17:30"]]
+        "mon": [
+          [
+            "07:00",
+            "17:30"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "17:30"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "17:30"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "17:30"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "17:30"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "17:30"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "17:30"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 3,
       "priceBand": 1,
       "emoji": "⛰️",
-      "blurb": "Five limestone hills with cave shrines and pagoda viewpoints."
+      "blurb": "Five limestone hills with cave shrines and pagoda viewpoints.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Da_Nang_Marble_Mountains_2020_IMG_4008.jpg/960px-Da_Nang_Marble_Mountains_2020_IMG_4008.jpg",
+      "photoCredit": "Kuroczynski · CC BY-SA 4.0"
     },
     {
       "id": "da-nang-dragon-bridge",
@@ -56,21 +140,62 @@
       "lat": 16.0614,
       "lng": 108.2272,
       "area": "Han Riverfront",
-      "vibeTags": ["views", "nightlife", "culture"],
+      "vibeTags": [
+        "views",
+        "nightlife",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🐉",
-      "blurb": "River-crossing dragon that breathes fire on weekend nights at 9pm."
+      "blurb": "River-crossing dragon that breathes fire on weekend nights at 9pm.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Da_nang_dragon_bridge.jpg/960px-Da_nang_dragon_bridge.jpg",
+      "photoCredit": "Thangphan · CC0"
     },
     {
       "id": "da-nang-han-market",
@@ -78,15 +203,53 @@
       "lat": 16.0682,
       "lng": 108.2243,
       "area": "Hai Chau",
-      "vibeTags": ["food", "shopping"],
+      "vibeTags": [
+        "food",
+        "shopping"
+      ],
       "openHours": {
-        "mon": [["06:00", "19:00"]],
-        "tue": [["06:00", "19:00"]],
-        "wed": [["06:00", "19:00"]],
-        "thu": [["06:00", "19:00"]],
-        "fri": [["06:00", "19:00"]],
-        "sat": [["06:00", "19:00"]],
-        "sun": [["06:00", "19:00"]]
+        "mon": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 8,
@@ -100,15 +263,54 @@
       "lat": 16.0677,
       "lng": 108.2143,
       "area": "Hai Chau",
-      "vibeTags": ["food", "shopping", "culture"],
+      "vibeTags": [
+        "food",
+        "shopping",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["06:00", "19:00"]],
-        "tue": [["06:00", "19:00"]],
-        "wed": [["06:00", "19:00"]],
-        "thu": [["06:00", "19:00"]],
-        "fri": [["06:00", "19:00"]],
-        "sat": [["06:00", "19:00"]],
-        "sun": [["06:00", "19:00"]]
+        "mon": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 6,
@@ -120,45 +322,127 @@
       "id": "da-nang-linh-ung-pagoda",
       "name": "Linh Ung Pagoda",
       "lat": 16.1004,
-      "lng": 108.2780,
+      "lng": 108.278,
       "area": "Son Tra Peninsula",
-      "vibeTags": ["culture", "history", "views"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "views"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🛕",
-      "blurb": "Hillside pagoda with the 67m Lady Buddha facing the bay."
+      "blurb": "Hillside pagoda with the 67m Lady Buddha facing the bay.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Son-Tra-Peninsula_Da-Nang_Vietnam_Linh-Ung-Pagoda-01.jpg/960px-Son-Tra-Peninsula_Da-Nang_Vietnam_Linh-Ung-Pagoda-01.jpg",
+      "photoCredit": "CEphoto, Uwe Aranas · CC BY-SA 3.0"
     },
     {
       "id": "da-nang-son-tra-peninsula",
       "name": "Son Tra Peninsula",
-      "lat": 16.1180,
-      "lng": 108.2870,
+      "lat": 16.118,
+      "lng": 108.287,
       "area": "Son Tra",
-      "vibeTags": ["nature", "adventure", "views"],
+      "vibeTags": [
+        "nature",
+        "adventure",
+        "views"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 150,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🐒",
-      "blurb": "Jungle peninsula with coastal viewpoints and rare langurs."
+      "blurb": "Jungle peninsula with coastal viewpoints and rare langurs.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Son-Tra-Peninsula_Da-Nang_Vietnam_Statue-of-the-Bodhisattva-of-Mercy-01.jpg/960px-Son-Tra-Peninsula_Da-Nang_Vietnam_Statue-of-the-Bodhisattva-of-Mercy-01.jpg",
+      "photoCredit": "CEphoto, Uwe Aranas · CC BY-SA 3.0"
     },
     {
       "id": "da-nang-cham-museum",
@@ -166,21 +450,62 @@
       "lat": 16.0605,
       "lng": 108.2234,
       "area": "Hai Chau",
-      "vibeTags": ["art", "history", "culture"],
+      "vibeTags": [
+        "art",
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["07:00", "17:00"]],
-        "tue": [["07:00", "17:00"]],
-        "wed": [["07:00", "17:00"]],
-        "thu": [["07:00", "17:00"]],
-        "fri": [["07:00", "17:00"]],
-        "sat": [["07:00", "17:00"]],
-        "sun": [["07:00", "17:00"]]
+        "mon": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 3,
       "priceBand": 1,
       "emoji": "🗿",
-      "blurb": "World's largest collection of Cham stone carvings."
+      "blurb": "World's largest collection of Cham stone carvings.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Ecole_Francaise_dExtreme_Orient_Section_des_Antiquites_Chames_en_Tourane..jpg/330px-Ecole_Francaise_dExtreme_Orient_Section_des_Antiquites_Chames_en_Tourane..jpg",
+      "photoCredit": "Wikipedia · Museum of Cham Sculpture"
     },
     {
       "id": "da-nang-cathedral",
@@ -188,21 +513,61 @@
       "lat": 16.0667,
       "lng": 108.2235,
       "area": "Hai Chau",
-      "vibeTags": ["history", "culture"],
+      "vibeTags": [
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["06:00", "17:00"]],
-        "tue": [["06:00", "17:00"]],
-        "wed": [["06:00", "17:00"]],
-        "thu": [["06:00", "17:00"]],
-        "fri": [["06:00", "17:00"]],
-        "sat": [["06:00", "17:00"]],
-        "sun": [["06:00", "17:00"]]
+        "mon": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 30,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "⛪",
-      "blurb": "Pink 1923 French-built church topped with a rooster weathervane."
+      "blurb": "Pink 1923 French-built church topped with a rooster weathervane.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Nha_Tho_Con_Ga_Da_Nang.JPG/960px-Nha_Tho_Con_Ga_Da_Nang.JPG",
+      "photoCredit": "Dragfyre · CC BY-SA 3.0"
     },
     {
       "id": "da-nang-helio-night-market",
@@ -210,15 +575,54 @@
       "lat": 16.0357,
       "lng": 108.2288,
       "area": "Hai Chau South",
-      "vibeTags": ["food", "nightlife", "shopping"],
+      "vibeTags": [
+        "food",
+        "nightlife",
+        "shopping"
+      ],
       "openHours": {
-        "mon": [["17:00", "22:30"]],
-        "tue": [["17:00", "22:30"]],
-        "wed": [["17:00", "22:30"]],
-        "thu": [["17:00", "22:30"]],
-        "fri": [["17:00", "22:30"]],
-        "sat": [["17:00", "22:30"]],
-        "sun": [["17:00", "22:30"]]
+        "mon": [
+          [
+            "17:00",
+            "22:30"
+          ]
+        ],
+        "tue": [
+          [
+            "17:00",
+            "22:30"
+          ]
+        ],
+        "wed": [
+          [
+            "17:00",
+            "22:30"
+          ]
+        ],
+        "thu": [
+          [
+            "17:00",
+            "22:30"
+          ]
+        ],
+        "fri": [
+          [
+            "17:00",
+            "22:30"
+          ]
+        ],
+        "sat": [
+          [
+            "17:00",
+            "22:30"
+          ]
+        ],
+        "sun": [
+          [
+            "17:00",
+            "22:30"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 8,
@@ -232,15 +636,54 @@
       "lat": 16.0508,
       "lng": 108.2455,
       "area": "My An",
-      "vibeTags": ["nightlife", "food", "chill"],
+      "vibeTags": [
+        "nightlife",
+        "food",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 12,
@@ -254,15 +697,53 @@
       "lat": 16.0489,
       "lng": 108.2437,
       "area": "My An",
-      "vibeTags": ["coffee", "chill"],
+      "vibeTags": [
+        "coffee",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["07:00", "22:00"]],
-        "tue": [["07:00", "22:00"]],
-        "wed": [["07:00", "22:00"]],
-        "thu": [["07:00", "22:00"]],
-        "fri": [["07:00", "22:00"]],
-        "sat": [["07:00", "22:00"]],
-        "sun": [["07:00", "22:00"]]
+        "mon": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 7,
@@ -273,62 +754,183 @@
     {
       "id": "da-nang-ba-na-hills",
       "name": "Ba Na Hills",
-      "lat": 15.9990,
-      "lng": 107.9960,
+      "lat": 15.999,
+      "lng": 107.996,
       "area": "Hoa Vang, ~40km west of city",
-      "vibeTags": ["adventure", "views", "culture"],
+      "vibeTags": [
+        "adventure",
+        "views",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["08:00", "17:30"]],
-        "tue": [["08:00", "17:30"]],
-        "wed": [["08:00", "17:30"]],
-        "thu": [["08:00", "17:30"]],
-        "fri": [["08:00", "17:30"]],
-        "sat": [["08:00", "17:30"]],
-        "sun": [["08:00", "17:30"]]
+        "mon": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "17:30"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 40,
       "priceBand": 3,
       "emoji": "🌉",
-      "blurb": "Mountaintop theme park reached by cable car, home of the Golden Bridge."
+      "blurb": "Mountaintop theme park reached by cable car, home of the Golden Bridge.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Linh_Ung_Pagoda.jpg/330px-Linh_Ung_Pagoda.jpg",
+      "photoCredit": "Wikipedia · Bà Nà Hills"
     },
     {
       "id": "da-nang-non-nuoc-beach",
       "name": "Non Nuoc Beach",
-      "lat": 15.9960,
-      "lng": 108.2700,
+      "lat": 15.996,
+      "lng": 108.27,
       "area": "Ngu Hanh Son",
-      "vibeTags": ["beach", "chill", "nature"],
+      "vibeTags": [
+        "beach",
+        "chill",
+        "nature"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🌊",
-      "blurb": "Quieter resort beach south of My Khe, near the Marble Mountains."
+      "blurb": "Quieter resort beach south of My Khe, near the Marble Mountains.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Non_nuoc_Basket_boats.jpg/960px-Non_nuoc_Basket_boats.jpg",
+      "photoCredit": "Vyacheslav Argenberg · CC BY 2.0"
     },
     {
       "id": "da-nang-surf-school",
       "name": "Da Nang Surf School",
       "lat": 16.0598,
-      "lng": 108.2470,
+      "lng": 108.247,
       "area": "My Khe Beach",
-      "vibeTags": ["sports", "beach", "adventure"],
+      "vibeTags": [
+        "sports",
+        "beach",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["06:00", "17:00"]],
-        "tue": [["06:00", "17:00"]],
-        "wed": [["06:00", "17:00"]],
-        "thu": [["06:00", "17:00"]],
-        "fri": [["06:00", "17:00"]],
-        "sat": [["06:00", "17:00"]],
-        "sun": [["06:00", "17:00"]]
+        "mon": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 20,
@@ -342,15 +944,53 @@
       "lat": 16.0519,
       "lng": 108.2143,
       "area": "Hai Chau",
-      "vibeTags": ["sports", "chill"],
+      "vibeTags": [
+        "sports",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["05:30", "21:30"]],
-        "tue": [["05:30", "21:30"]],
-        "wed": [["05:30", "21:30"]],
-        "thu": [["05:30", "21:30"]],
-        "fri": [["05:30", "21:30"]],
-        "sat": [["05:30", "21:30"]],
-        "sun": [["05:30", "21:30"]]
+        "mon": [
+          [
+            "05:30",
+            "21:30"
+          ]
+        ],
+        "tue": [
+          [
+            "05:30",
+            "21:30"
+          ]
+        ],
+        "wed": [
+          [
+            "05:30",
+            "21:30"
+          ]
+        ],
+        "thu": [
+          [
+            "05:30",
+            "21:30"
+          ]
+        ],
+        "fri": [
+          [
+            "05:30",
+            "21:30"
+          ]
+        ],
+        "sat": [
+          [
+            "05:30",
+            "21:30"
+          ]
+        ],
+        "sun": [
+          [
+            "05:30",
+            "21:30"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 4,
@@ -364,15 +1004,53 @@
       "lat": 16.0523,
       "lng": 108.2463,
       "area": "My An",
-      "vibeTags": ["wellness", "chill"],
+      "vibeTags": [
+        "wellness",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["09:00", "21:00"]],
-        "tue": [["09:00", "21:00"]],
-        "wed": [["09:00", "21:00"]],
-        "thu": [["09:00", "21:00"]],
-        "fri": [["09:00", "21:00"]],
-        "sat": [["09:00", "21:00"]],
-        "sun": [["09:00", "21:00"]]
+        "mon": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 22,
@@ -383,18 +1061,57 @@
     {
       "id": "da-nang-naman-retreat-spa",
       "name": "Naman Retreat Beach Spa",
-      "lat": 15.9700,
+      "lat": 15.97,
       "lng": 108.2748,
       "area": "Non Nuoc, Ngu Hanh Son",
-      "vibeTags": ["wellness", "beach", "nature"],
+      "vibeTags": [
+        "wellness",
+        "beach",
+        "nature"
+      ],
       "openHours": {
-        "mon": [["09:00", "21:00"]],
-        "tue": [["09:00", "21:00"]],
-        "wed": [["09:00", "21:00"]],
-        "thu": [["09:00", "21:00"]],
-        "fri": [["09:00", "21:00"]],
-        "sat": [["09:00", "21:00"]],
-        "sun": [["09:00", "21:00"]]
+        "mon": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 60,
@@ -406,17 +1123,56 @@
       "id": "da-nang-han-river-bridge-walk",
       "name": "Han River Waterfront Promenade",
       "lat": 16.0617,
-      "lng": 108.2220,
+      "lng": 108.222,
       "area": "Bach Dang, Han Riverfront",
-      "vibeTags": ["views", "chill", "nightlife"],
+      "vibeTags": [
+        "views",
+        "chill",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
@@ -427,18 +1183,57 @@
     {
       "id": "da-nang-43-factory-coffee",
       "name": "43 Factory Coffee Roaster",
-      "lat": 16.0670,
+      "lat": 16.067,
       "lng": 108.2197,
       "area": "Hai Chau",
-      "vibeTags": ["coffee", "art", "chill"],
+      "vibeTags": [
+        "coffee",
+        "art",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["07:30", "21:00"]],
-        "tue": [["07:30", "21:00"]],
-        "wed": [["07:30", "21:00"]],
-        "thu": [["07:30", "21:00"]],
-        "fri": [["07:30", "21:00"]],
-        "sat": [["07:30", "21:00"]],
-        "sun": [["07:30", "21:00"]]
+        "mon": [
+          [
+            "07:30",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:30",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:30",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:30",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:30",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:30",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:30",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 6,
@@ -452,15 +1247,49 @@
       "lat": 16.0644,
       "lng": 108.2255,
       "area": "Hai Chau",
-      "vibeTags": ["art", "culture", "history"],
+      "vibeTags": [
+        "art",
+        "culture",
+        "history"
+      ],
       "openHours": {
         "mon": [],
-        "tue": [["08:00", "17:00"]],
-        "wed": [["08:00", "17:00"]],
-        "thu": [["08:00", "17:00"]],
-        "fri": [["08:00", "17:00"]],
-        "sat": [["08:00", "17:00"]],
-        "sun": [["08:00", "17:00"]]
+        "tue": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 2,
@@ -474,15 +1303,54 @@
       "lat": 16.0637,
       "lng": 108.2228,
       "area": "Novotel, Hai Chau",
-      "vibeTags": ["nightlife", "views", "food"],
+      "vibeTags": [
+        "nightlife",
+        "views",
+        "food"
+      ],
       "openHours": {
-        "mon": [["18:00", "01:00"]],
-        "tue": [["18:00", "01:00"]],
-        "wed": [["18:00", "01:00"]],
-        "thu": [["18:00", "01:00"]],
-        "fri": [["18:00", "02:00"]],
-        "sat": [["18:00", "02:00"]],
-        "sun": [["18:00", "01:00"]]
+        "mon": [
+          [
+            "18:00",
+            "01:00"
+          ]
+        ],
+        "tue": [
+          [
+            "18:00",
+            "01:00"
+          ]
+        ],
+        "wed": [
+          [
+            "18:00",
+            "01:00"
+          ]
+        ],
+        "thu": [
+          [
+            "18:00",
+            "01:00"
+          ]
+        ],
+        "fri": [
+          [
+            "18:00",
+            "02:00"
+          ]
+        ],
+        "sat": [
+          [
+            "18:00",
+            "02:00"
+          ]
+        ],
+        "sun": [
+          [
+            "18:00",
+            "01:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 18,
@@ -493,18 +1361,57 @@
     {
       "id": "da-nang-my-an-cooking",
       "name": "Red Bridge Cooking School",
-      "lat": 15.8830,
+      "lat": 15.883,
       "lng": 108.3321,
       "area": "Hoi An (day trip from Da Nang)",
-      "vibeTags": ["food", "culture", "chill"],
+      "vibeTags": [
+        "food",
+        "culture",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["08:00", "14:00"]],
-        "tue": [["08:00", "14:00"]],
-        "wed": [["08:00", "14:00"]],
-        "thu": [["08:00", "14:00"]],
-        "fri": [["08:00", "14:00"]],
-        "sat": [["08:00", "14:00"]],
-        "sun": [["08:00", "14:00"]]
+        "mon": [
+          [
+            "08:00",
+            "14:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "14:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "14:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "14:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "14:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "14:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "14:00"
+          ]
+        ]
       },
       "estStayMin": 270,
       "estCostSGD": 40,
@@ -518,21 +1425,62 @@
       "lat": 15.7677,
       "lng": 108.1215,
       "area": "Duy Xuyen, ~70km south-west",
-      "vibeTags": ["history", "culture", "nature"],
+      "vibeTags": [
+        "history",
+        "culture",
+        "nature"
+      ],
       "openHours": {
-        "mon": [["06:30", "17:00"]],
-        "tue": [["06:30", "17:00"]],
-        "wed": [["06:30", "17:00"]],
-        "thu": [["06:30", "17:00"]],
-        "fri": [["06:30", "17:00"]],
-        "sat": [["06:30", "17:00"]],
-        "sun": [["06:30", "17:00"]]
+        "mon": [
+          [
+            "06:30",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:30",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:30",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:30",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:30",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:30",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:30",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 8,
       "priceBand": 1,
       "emoji": "🏛️",
-      "blurb": "UNESCO Hindu Cham tower complex of the 4th–13th centuries in a jungle valley."
+      "blurb": "UNESCO Hindu Cham tower complex of the 4th–13th centuries in a jungle valley.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/2024_-_M%E1%BB%B9_S%C6%A1n_Sanctuary_Temple_E7_-_img_01.jpg/960px-2024_-_M%E1%BB%B9_S%C6%A1n_Sanctuary_Temple_E7_-_img_01.jpg",
+      "photoCredit": "Chainwit. · CC BY 4.0"
     }
   ]
 }

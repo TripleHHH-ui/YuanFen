@@ -4,7 +4,7 @@ interface SwappableStopProps {
   stop: WireStop;
   index: number;
   cityId: string;
-  revealed: Record<string, { name: string; emoji: string; blurb: string }>;
+  revealed: Record<string, { name: string; emoji: string; blurb: string; photoUrl?: string }>;
   onReveal: (city: string, placeId: string) => Promise<void>;
   isChanged?: boolean;
   isSwapping?: boolean;
@@ -50,6 +50,7 @@ export function SwappableStop({
 
   const name = open?.name ?? stop.place?.name ?? stop.placeId;
   const emoji = open?.emoji ?? stop.place?.emoji ?? "📍";
+  const photo = open?.photoUrl ?? stop.place?.photoUrl;
 
   return (
     <li
@@ -57,9 +58,14 @@ export function SwappableStop({
       style={{ animationDelay: `${index * 70}ms` }}
     >
       <span className="stop-n">{index + 1}</span>
+      {photo ? (
+        <img className="stop-thumb" src={photo} alt="" loading="lazy" />
+      ) : (
+        <span className="stop-thumb is-emoji">{emoji}</span>
+      )}
       <div className="stop-body">
         <div className="stop-name">
-          {emoji} {name}
+          {name}
           {showMustBadge && stop.role === "must" && <span className="must-mark">must-go</span>}
           {stop.role === "wildcard" && <span className="wild-mark">wildcard</span>}
           {isChanged && <span className="swapped-mark">swapped</span>}
@@ -87,7 +93,11 @@ export function SwappableStop({
               <div className="alt-scroll">
                 {alternatives.map((a) => (
                   <button key={a.id} className="alt-row" onClick={() => onSwapStop!(a.id)}>
-                    <span className="alt-emoji">{a.emoji}</span>
+                    {a.photoUrl ? (
+                      <img className="alt-thumb" src={a.photoUrl} alt="" loading="lazy" />
+                    ) : (
+                      <span className="alt-emoji">{a.emoji}</span>
+                    )}
                     <span className="alt-name">{a.name}</span>
                     <span className="alt-tags">{a.vibeTags.slice(0, 2).join(" · ")}</span>
                     <span className="alt-cost">{a.estCostSGD > 0 ? `~S$${a.estCostSGD}` : "free"}</span>

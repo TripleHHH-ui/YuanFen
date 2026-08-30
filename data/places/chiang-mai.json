@@ -3,7 +3,10 @@
   "cityName": "Chiang Mai",
   "country": "Thailand",
   "airport": "CNX",
-  "center": {"lat": 18.7883, "lng": 98.9853},
+  "center": {
+    "lat": 18.7883,
+    "lng": 98.9853
+  },
   "provenance": "Curated extract, 2026-08-24. Well-known POIs, approximate coordinates — verify hours before production use.",
   "places": [
     {
@@ -12,21 +15,62 @@
       "lat": 18.8048,
       "lng": 98.9217,
       "area": "Doi Suthep, west of city",
-      "vibeTags": ["culture", "views", "history"],
+      "vibeTags": [
+        "culture",
+        "views",
+        "history"
+      ],
       "openHours": {
-        "mon": [["06:00", "19:00"]],
-        "tue": [["06:00", "19:00"]],
-        "wed": [["06:00", "19:00"]],
-        "thu": [["06:00", "19:00"]],
-        "fri": [["06:00", "19:00"]],
-        "sat": [["06:00", "19:00"]],
-        "sun": [["06:00", "19:00"]]
+        "mon": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 2,
       "priceBand": 1,
       "emoji": "🛕",
-      "blurb": "Golden hilltop stupa reached by a 306-step naga staircase."
+      "blurb": "Golden hilltop stupa reached by a 306-step naga staircase.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Wat_Phra_That_Doi_Suthep_-_Chiang_Mai.jpg/330px-Wat_Phra_That_Doi_Suthep_-_Chiang_Mai.jpg",
+      "photoCredit": "Wikipedia · Wat Phra That Doi Suthep"
     },
     {
       "id": "chiang-mai-wat-phra-singh",
@@ -34,21 +78,61 @@
       "lat": 18.7885,
       "lng": 98.9817,
       "area": "Old City",
-      "vibeTags": ["culture", "history"],
+      "vibeTags": [
+        "culture",
+        "history"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 2,
       "priceBand": 1,
       "emoji": "🙏",
-      "blurb": "Lanna temple housing the revered Phra Singh Buddha image."
+      "blurb": "Lanna temple housing the revered Phra Singh Buddha image.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wat_Phra_Sing%2C_Chiang_Mai_%28I%29.jpg/330px-Wat_Phra_Sing%2C_Chiang_Mai_%28I%29.jpg",
+      "photoCredit": "Wikipedia · Wat Phra Singh"
     },
     {
       "id": "chiang-mai-wat-chedi-luang",
@@ -56,21 +140,61 @@
       "lat": 18.7869,
       "lng": 98.9865,
       "area": "Old City",
-      "vibeTags": ["culture", "history"],
+      "vibeTags": [
+        "culture",
+        "history"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 2,
       "priceBand": 1,
       "emoji": "🏯",
-      "blurb": "Ruined 15th-century chedi that once held the Emerald Buddha."
+      "blurb": "Ruined 15th-century chedi that once held the Emerald Buddha.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87.jpg/330px-%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87.jpg",
+      "photoCredit": "Wikipedia · Wat Chedi Luang"
     },
     {
       "id": "chiang-mai-wat-umong",
@@ -78,21 +202,63 @@
       "lat": 18.7828,
       "lng": 98.9519,
       "area": "Suthep foothills",
-      "vibeTags": ["culture", "nature", "chill", "history"],
+      "vibeTags": [
+        "culture",
+        "nature",
+        "chill",
+        "history"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🌳",
-      "blurb": "Forest temple with ancient brick tunnels beside a quiet lake."
+      "blurb": "Forest temple with ancient brick tunnels beside a quiet lake.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Wat_Umong_Suan_Phutthatham.jpg/330px-Wat_Umong_Suan_Phutthatham.jpg",
+      "photoCredit": "Wikipedia · Wat Umong"
     },
     {
       "id": "chiang-mai-sunday-walking-street",
@@ -100,7 +266,12 @@
       "lat": 18.7879,
       "lng": 98.9887,
       "area": "Ratchadamnoen Road, Old City",
-      "vibeTags": ["shopping", "food", "art", "nightlife"],
+      "vibeTags": [
+        "shopping",
+        "food",
+        "art",
+        "nightlife"
+      ],
       "openHours": {
         "mon": [],
         "tue": [],
@@ -108,13 +279,20 @@
         "thu": [],
         "fri": [],
         "sat": [],
-        "sun": [["16:00", "22:00"]]
+        "sun": [
+          [
+            "16:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 8,
       "priceBand": 1,
       "emoji": "🎪",
-      "blurb": "Sunday-evening craft market filling the Old City's main street."
+      "blurb": "Sunday-evening craft market filling the Old City's main street.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Chiang_mai_sunday_evening_market_01.jpg/960px-Chiang_mai_sunday_evening_market_01.jpg",
+      "photoCredit": "Takeaway · CC BY-SA 3.0"
     },
     {
       "id": "chiang-mai-nimman",
@@ -122,15 +300,55 @@
       "lat": 18.7999,
       "lng": 98.9673,
       "area": "Nimman",
-      "vibeTags": ["coffee", "food", "shopping", "nightlife"],
+      "vibeTags": [
+        "coffee",
+        "food",
+        "shopping",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 12,
@@ -144,21 +362,62 @@
       "lat": 18.7906,
       "lng": 99.0003,
       "area": "Chang Moi, by the Ping River",
-      "vibeTags": ["food", "shopping", "culture"],
+      "vibeTags": [
+        "food",
+        "shopping",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["05:00", "18:00"]],
-        "tue": [["05:00", "18:00"]],
-        "wed": [["05:00", "18:00"]],
-        "thu": [["05:00", "18:00"]],
-        "fri": [["05:00", "18:00"]],
-        "sat": [["05:00", "18:00"]],
-        "sun": [["05:00", "18:00"]]
+        "mon": [
+          [
+            "05:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "05:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "05:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "05:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "05:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "05:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "05:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🧧",
-      "blurb": "Multi-storey local market for sai ua sausage and textiles."
+      "blurb": "Multi-storey local market for sai ua sausage and textiles.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Warorot_Market_01.jpg/330px-Warorot_Market_01.jpg",
+      "photoCredit": "Wikipedia · Warorot Market"
     },
     {
       "id": "chiang-mai-tha-phae-gate",
@@ -166,21 +425,62 @@
       "lat": 18.7876,
       "lng": 98.9933,
       "area": "Old City east edge",
-      "vibeTags": ["history", "chill", "culture"],
+      "vibeTags": [
+        "history",
+        "chill",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 30,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🕊️",
-      "blurb": "Restored brick gate on the 13th-century moat ringing the Old City."
+      "blurb": "Restored brick gate on the 13th-century moat ringing the Old City.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/201703291126a_Chiang_Mai%2C_City_Moat.jpg/960px-201703291126a_Chiang_Mai%2C_City_Moat.jpg",
+      "photoCredit": "Hartmann Linge · CC BY-SA 4.0"
     },
     {
       "id": "chiang-mai-night-bazaar",
@@ -188,21 +488,62 @@
       "lat": 18.7857,
       "lng": 99.0005,
       "area": "Chang Khlan",
-      "vibeTags": ["shopping", "nightlife", "food"],
+      "vibeTags": [
+        "shopping",
+        "nightlife",
+        "food"
+      ],
       "openHours": {
-        "mon": [["17:00", "23:00"]],
-        "tue": [["17:00", "23:00"]],
-        "wed": [["17:00", "23:00"]],
-        "thu": [["17:00", "23:00"]],
-        "fri": [["17:00", "23:00"]],
-        "sat": [["17:00", "23:00"]],
-        "sun": [["17:00", "23:00"]]
+        "mon": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "tue": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "wed": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "thu": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "fri": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 10,
       "priceBand": 2,
       "emoji": "🌃",
-      "blurb": "Nightly stalls of clothes, crafts, and street food."
+      "blurb": "Nightly stalls of clothes, crafts, and street food.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/CHIANG_MAI_NIGHT_BAZAAR_THAILAND_FEB_2012_%286869571256%29.jpg/330px-CHIANG_MAI_NIGHT_BAZAAR_THAILAND_FEB_2012_%286869571256%29.jpg",
+      "photoCredit": "Wikipedia · Chiang Mai Night Bazaar"
     },
     {
       "id": "chiang-mai-chang-phuak-market",
@@ -210,15 +551,53 @@
       "lat": 18.7955,
       "lng": 98.9868,
       "area": "North Gate, Old City",
-      "vibeTags": ["food", "nightlife"],
+      "vibeTags": [
+        "food",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["17:00", "23:00"]],
-        "tue": [["17:00", "23:00"]],
-        "wed": [["17:00", "23:00"]],
-        "thu": [["17:00", "23:00"]],
-        "fri": [["17:00", "23:00"]],
-        "sat": [["17:00", "23:00"]],
-        "sun": [["17:00", "23:00"]]
+        "mon": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "tue": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "wed": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "thu": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "fri": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "17:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 5,
@@ -232,15 +611,54 @@
       "lat": 18.7963,
       "lng": 98.9679,
       "area": "Nimman",
-      "vibeTags": ["coffee", "art", "chill"],
+      "vibeTags": [
+        "coffee",
+        "art",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["07:00", "18:00"]],
-        "tue": [["07:00", "18:00"]],
-        "wed": [["07:00", "18:00"]],
-        "thu": [["07:00", "18:00"]],
-        "fri": [["07:00", "18:00"]],
-        "sat": [["07:00", "18:00"]],
-        "sun": [["07:00", "18:00"]]
+        "mon": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 5,
@@ -254,15 +672,49 @@
       "lat": 18.7907,
       "lng": 98.9873,
       "area": "Three Kings Monument, Old City",
-      "vibeTags": ["art", "history", "culture"],
+      "vibeTags": [
+        "art",
+        "history",
+        "culture"
+      ],
       "openHours": {
         "mon": [],
-        "tue": [["08:30", "17:00"]],
-        "wed": [["08:30", "17:00"]],
-        "thu": [["08:30", "17:00"]],
-        "fri": [["08:30", "17:00"]],
-        "sat": [["08:30", "17:00"]],
-        "sun": [["08:30", "17:00"]]
+        "tue": [
+          [
+            "08:30",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:30",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:30",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:30",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:30",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:30",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 4,
@@ -273,40 +725,119 @@
     {
       "id": "chiang-mai-huay-kaew-waterfall",
       "name": "Huay Kaew Waterfall",
-      "lat": 18.8110,
-      "lng": 98.9450,
+      "lat": 18.811,
+      "lng": 98.945,
       "area": "Doi Suthep-Pui National Park edge",
-      "vibeTags": ["nature", "chill", "adventure"],
+      "vibeTags": [
+        "nature",
+        "chill",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["08:00", "17:00"]],
-        "tue": [["08:00", "17:00"]],
-        "wed": [["08:00", "17:00"]],
-        "thu": [["08:00", "17:00"]],
-        "fri": [["08:00", "17:00"]],
-        "sat": [["08:00", "17:00"]],
-        "sun": [["08:00", "17:00"]]
+        "mon": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "💦",
-      "blurb": "Roadside forest waterfall at the foot of Doi Suthep."
+      "blurb": "Roadside forest waterfall at the foot of Doi Suthep.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Huay_Kaew_waterfall_grill.jpg/960px-Huay_Kaew_waterfall_grill.jpg",
+      "photoCredit": "Takeaway · CC BY-SA 3.0"
     },
     {
       "id": "chiang-mai-grand-canyon",
       "name": "Grand Canyon Water Park",
-      "lat": 18.7280,
-      "lng": 98.9210,
+      "lat": 18.728,
+      "lng": 98.921,
       "area": "Hang Dong",
-      "vibeTags": ["adventure", "chill"],
+      "vibeTags": [
+        "adventure",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["10:00", "18:00"]],
-        "tue": [["10:00", "18:00"]],
-        "wed": [["10:00", "18:00"]],
-        "thu": [["10:00", "18:00"]],
-        "fri": [["10:00", "18:00"]],
-        "sat": [["10:00", "18:00"]],
-        "sun": [["10:00", "18:00"]]
+        "mon": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 150,
       "estCostSGD": 25,
@@ -318,23 +849,64 @@
       "id": "chiang-mai-doi-inthanon",
       "name": "Doi Inthanon National Park",
       "lat": 18.5876,
-      "lng": 98.4870,
+      "lng": 98.487,
       "area": "Chom Thong, ~80km south-west",
-      "vibeTags": ["nature", "views", "adventure"],
+      "vibeTags": [
+        "nature",
+        "views",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 240,
       "estCostSGD": 12,
       "priceBand": 2,
       "emoji": "🌄",
-      "blurb": "Thailand's highest peak at 2,565m with twin royal pagodas and cloud forest."
+      "blurb": "Thailand's highest peak at 2,565m with twin royal pagodas and cloud forest.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%81%E0%B8%A7%E0%B8%8A%E0%B8%B4%E0%B8%A3%E0%B8%98%E0%B8%B2%E0%B8%A3_%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%A5%E0%B8%B3%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%97%E0%B8%B5%E0%B9%8844_%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%99%E0%B8%99%E0%B8%97%E0%B9%8C.jpg/330px-thumbnail.jpg",
+      "photoCredit": "Wikipedia · Doi Inthanon National Park"
     },
     {
       "id": "chiang-mai-muay-thai-training",
@@ -342,14 +914,67 @@
       "lat": 18.7728,
       "lng": 98.9637,
       "area": "Hang Dong Road, south Chiang Mai",
-      "vibeTags": ["sports", "culture"],
+      "vibeTags": [
+        "sports",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["07:00", "11:00"], ["15:00", "18:00"]],
-        "tue": [["07:00", "11:00"], ["15:00", "18:00"]],
-        "wed": [["07:00", "11:00"], ["15:00", "18:00"]],
-        "thu": [["07:00", "11:00"], ["15:00", "18:00"]],
-        "fri": [["07:00", "11:00"], ["15:00", "18:00"]],
-        "sat": [["07:00", "11:00"]],
+        "mon": [
+          [
+            "07:00",
+            "11:00"
+          ],
+          [
+            "15:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "11:00"
+          ],
+          [
+            "15:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "11:00"
+          ],
+          [
+            "15:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "11:00"
+          ],
+          [
+            "15:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "11:00"
+          ],
+          [
+            "15:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "11:00"
+          ]
+        ],
         "sun": []
       },
       "estStayMin": 120,
@@ -361,18 +986,57 @@
     {
       "id": "chiang-mai-cycling-ping-river",
       "name": "Ping River Cycling Trail",
-      "lat": 18.7780,
-      "lng": 99.0110,
+      "lat": 18.778,
+      "lng": 99.011,
       "area": "Along Mae Ping, east of city",
-      "vibeTags": ["sports", "nature", "chill"],
+      "vibeTags": [
+        "sports",
+        "nature",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 6,
@@ -386,15 +1050,53 @@
       "lat": 18.7982,
       "lng": 98.9625,
       "area": "Nimman",
-      "vibeTags": ["wellness", "chill"],
+      "vibeTags": [
+        "wellness",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["10:00", "22:00"]],
-        "tue": [["10:00", "22:00"]],
-        "wed": [["10:00", "22:00"]],
-        "thu": [["10:00", "22:00"]],
-        "fri": [["10:00", "22:00"]],
-        "sat": [["10:00", "22:00"]],
-        "sun": [["10:00", "22:00"]]
+        "mon": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 40,
@@ -408,15 +1110,53 @@
       "lat": 18.7908,
       "lng": 98.9857,
       "area": "Sri Poom, Old City edge",
-      "vibeTags": ["wellness", "history"],
+      "vibeTags": [
+        "wellness",
+        "history"
+      ],
       "openHours": {
-        "mon": [["09:00", "20:00"]],
-        "tue": [["09:00", "20:00"]],
-        "wed": [["09:00", "20:00"]],
-        "thu": [["09:00", "20:00"]],
-        "fri": [["09:00", "20:00"]],
-        "sat": [["09:00", "20:00"]],
-        "sun": [["09:00", "20:00"]]
+        "mon": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "20:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 28,
@@ -430,15 +1170,54 @@
       "lat": 18.7793,
       "lng": 99.0045,
       "area": "Chiang Mai Riverside",
-      "vibeTags": ["beach", "nature", "chill"],
+      "vibeTags": [
+        "beach",
+        "nature",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["06:00", "20:00"]],
-        "tue": [["06:00", "20:00"]],
-        "wed": [["06:00", "20:00"]],
-        "thu": [["06:00", "20:00"]],
-        "fri": [["06:00", "20:00"]],
-        "sat": [["06:00", "20:00"]],
-        "sun": [["06:00", "20:00"]]
+        "mon": [
+          [
+            "06:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "20:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 2,
@@ -452,15 +1231,54 @@
       "lat": 18.7871,
       "lng": 98.9909,
       "area": "Old City",
-      "vibeTags": ["food", "shopping", "nightlife"],
+      "vibeTags": [
+        "food",
+        "shopping",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["17:00", "22:00"]],
-        "tue": [["17:00", "22:00"]],
-        "wed": [["17:00", "22:00"]],
-        "thu": [["17:00", "22:00"]],
-        "fri": [["17:00", "22:00"]],
-        "sat": [["17:00", "22:00"]],
-        "sun": [["17:00", "22:00"]]
+        "mon": [
+          [
+            "17:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "17:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "17:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "17:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "17:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "17:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "17:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 6,
@@ -471,24 +1289,65 @@
     {
       "id": "chiang-mai-elephant-jungle",
       "name": "Elephant Jungle Sanctuary",
-      "lat": 18.8860,
-      "lng": 99.0020,
+      "lat": 18.886,
+      "lng": 99.002,
       "area": "Mae Taeng, 50km north",
-      "vibeTags": ["nature", "adventure", "culture"],
+      "vibeTags": [
+        "nature",
+        "adventure",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["07:00", "17:00"]],
-        "tue": [["07:00", "17:00"]],
-        "wed": [["07:00", "17:00"]],
-        "thu": [["07:00", "17:00"]],
-        "fri": [["07:00", "17:00"]],
-        "sat": [["07:00", "17:00"]],
-        "sun": [["07:00", "17:00"]]
+        "mon": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 300,
       "estCostSGD": 80,
       "priceBand": 3,
       "emoji": "🐘",
-      "blurb": "Ethical half-day sanctuary for feeding and bathing rescued elephants."
+      "blurb": "Ethical half-day sanctuary for feeding and bathing rescued elephants.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Asian_Elephant_in_Thailand.jpg/960px-Asian_Elephant_in_Thailand.jpg",
+      "photoCredit": "James B Cutchin · CC BY 4.0"
     },
     {
       "id": "chiang-mai-ping-river-kayak",
@@ -496,15 +1355,54 @@
       "lat": 18.7748,
       "lng": 99.0076,
       "area": "Pratu Tha Phae waterfront",
-      "vibeTags": ["beach", "adventure", "sports"],
+      "vibeTags": [
+        "beach",
+        "adventure",
+        "sports"
+      ],
       "openHours": {
-        "mon": [["08:00", "17:00"]],
-        "tue": [["08:00", "17:00"]],
-        "wed": [["08:00", "17:00"]],
-        "thu": [["08:00", "17:00"]],
-        "fri": [["08:00", "17:00"]],
-        "sat": [["08:00", "17:00"]],
-        "sun": [["08:00", "17:00"]]
+        "mon": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 30,
@@ -518,21 +1416,62 @@
       "lat": 18.7952,
       "lng": 98.9668,
       "area": "Nimman / Sri Poom",
-      "vibeTags": ["coffee", "culture", "art"],
+      "vibeTags": [
+        "coffee",
+        "culture",
+        "art"
+      ],
       "openHours": {
-        "mon": [["08:00", "18:00"]],
-        "tue": [["08:00", "18:00"]],
-        "wed": [["08:00", "18:00"]],
-        "thu": [["08:00", "18:00"]],
-        "fri": [["08:00", "18:00"]],
-        "sat": [["08:00", "18:00"]],
-        "sun": [["08:00", "18:00"]]
+        "mon": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "☕",
-      "blurb": "Social enterprise roasting beans from Akha hill-tribe farmers."
+      "blurb": "Social enterprise roasting beans from Akha hill-tribe farmers.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Crema_espresso_Akha_Ama.jpg/960px-Crema_espresso_Akha_Ama.jpg",
+      "photoCredit": "Takeaway · CC BY-SA 3.0"
     }
   ]
 }

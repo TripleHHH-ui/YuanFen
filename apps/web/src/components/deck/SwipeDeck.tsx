@@ -93,7 +93,7 @@ export function SwipeDeck({
         ))}
         {card ? (
           <div
-            className={`swipe-card live ${drag ? "dragging" : ""}`}
+            className={`swipe-card live ${card.photoUrl ? "has-photo" : ""} ${drag ? "dragging" : ""}`}
             style={{
               transform:
                 leaveTransform ??
@@ -106,7 +106,13 @@ export function SwipeDeck({
             {drag && drag.dx > 50 && <div className="stamp stamp-like">KEEP</div>}
             {drag && drag.dx < -50 && <div className="stamp stamp-pass">PASS</div>}
             {drag && drag.dy < -50 && <div className="stamp stamp-must">MUST-GO</div>}
-            <div className="card-emoji">{card.emoji}</div>
+            {card.photoUrl ? (
+              <div className="card-photo">
+                <img src={card.photoUrl} alt={card.title} draggable={false} />
+              </div>
+            ) : (
+              <div className="card-emoji">{card.emoji}</div>
+            )}
             <div className="card-title">{card.title}</div>
             <div className="card-sub">{card.subtitle}</div>
             <div className="card-tags">

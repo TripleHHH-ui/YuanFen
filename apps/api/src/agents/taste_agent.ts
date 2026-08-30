@@ -29,6 +29,10 @@ export function seedTaste(tags: VibeTag[]): { ok: boolean; error?: string } {
   const valid = tags.filter((t) => (VIBE_TAGS as readonly string[]).includes(t));
   if (valid.length < MIN_VIBES) return { ok: false, error: `Pick at least ${MIN_VIBES} vibes` };
   state = initialTasteState(seedVector(valid));
+  // A new profile means a new deck session — stale progress would end the next
+  // deck on its first swipe.
+  deckProgress.clear();
+  deckLog.length = 0;
   return { ok: true };
 }
 
@@ -57,6 +61,7 @@ export function tasteDeck(city = "singapore"): DeckCard[] {
           emoji: p.emoji,
           vibeTags: p.vibeTags,
           subtitle: p.blurb,
+          photoUrl: p.photoUrl,
         });
       }
     }

@@ -127,7 +127,7 @@ interface YuanFenState {
   swappingStop: { dayIndex: number; stopIndex: number; alternatives: StopAlternative[] } | null;
   stopSwapDelta: { costDeltaSGD: number; travelDeltaMin: number } | null;
   changedStopId: string | null;
-  revealed: Record<string, { name: string; emoji: string; blurb: string }>;
+  revealed: Record<string, { name: string; emoji: string; blurb: string; photoUrl?: string }>;
   bookingOffer: string | null;
   evidenceOpen: boolean;
   error: string | null;
@@ -463,7 +463,7 @@ export const useStore = create<YuanFenState>((set, get) => ({
       set({
         revealed: {
           ...get().revealed,
-          [placeId]: { name: res.place.name, emoji: res.place.emoji, blurb: res.place.blurb },
+          [placeId]: { name: res.place.name, emoji: res.place.emoji, blurb: res.place.blurb, photoUrl: res.place.photoUrl },
         },
       });
     } catch {

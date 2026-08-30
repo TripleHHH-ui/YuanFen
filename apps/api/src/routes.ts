@@ -174,6 +174,7 @@ export function registerRoutes(app: FastifyInstance, client: AtlasClient): void 
           blurb: p.blurb,
           area: p.area,
           vibeTags: p.vibeTags,
+          photoUrl: p.photoUrl,
         }));
       return { places: scored };
     } catch {

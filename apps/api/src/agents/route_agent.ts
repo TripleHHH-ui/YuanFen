@@ -35,7 +35,10 @@ export interface EnrichedStop {
   travelMinFromPrev: number;
   role: string;
   sealed?: boolean;
-  place: Pick<Place, "id" | "name" | "lat" | "lng" | "emoji" | "blurb" | "area" | "vibeTags" | "estCostSGD"> | null;
+  place: Pick<
+    Place,
+    "id" | "name" | "lat" | "lng" | "emoji" | "blurb" | "area" | "vibeTags" | "estCostSGD" | "photoUrl"
+  > | null;
 }
 
 function enrich(result: DayRouteResult, places: Place[]): { stops: EnrichedStop[]; explanations: string[] } {
@@ -49,7 +52,7 @@ function enrich(result: DayRouteResult, places: Place[]): { stops: EnrichedStop[
             // client-side on tap, but the identity must not leak in the payload.
             s.sealed
             ? { id: p.id, name: "???", lat: p.lat, lng: p.lng, emoji: "🎁", blurb: "Sealed wildcard — tap to reveal", area: p.area, vibeTags: [], estCostSGD: p.estCostSGD }
-            : { id: p.id, name: p.name, lat: p.lat, lng: p.lng, emoji: p.emoji, blurb: p.blurb, area: p.area, vibeTags: p.vibeTags, estCostSGD: p.estCostSGD }
+            : { id: p.id, name: p.name, lat: p.lat, lng: p.lng, emoji: p.emoji, blurb: p.blurb, area: p.area, vibeTags: p.vibeTags, estCostSGD: p.estCostSGD, photoUrl: p.photoUrl }
           : null,
       };
     }),
@@ -259,6 +262,7 @@ export function getStopAlternatives(tripId: string, dayIndex: number, stopIndex:
         id: p.id,
         name: p.name,
         emoji: p.emoji,
+        photoUrl: p.photoUrl,
         vibeTags: p.vibeTags,
         estCostSGD: p.estCostSGD,
         travelMinFromPrev: travelMin,

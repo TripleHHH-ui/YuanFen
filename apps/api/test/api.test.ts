@@ -52,6 +52,28 @@ describe("golden path API", () => {
     expect(res.statusCode).toBe(400);
   });
 
+  it("a re-seed starts a fresh deck session, so the deck survives past card one", async () => {
+    const TAGS = ["food", "chill", "culture", "history", "views"];
+    const deck = (await app.inject({ method: "GET", url: "/api/taste/deck" })).json();
+
+    // Session one: swipe the deck out.
+    await app.inject({ method: "POST", url: "/api/taste/seed", payload: { tags: TAGS } });
+    for (const card of deck.cards) {
+      await app.inject({ method: "POST", url: "/api/taste/swipe", payload: { cardId: card.id, action: "like" } });
+    }
+
+    // Session two: the user reloads and re-picks vibes — same process, no reset.
+    await app.inject({ method: "POST", url: "/api/taste/seed", payload: { tags: TAGS } });
+    const res = await app.inject({
+      method: "POST",
+      url: "/api/taste/swipe",
+      payload: { cardId: deck.cards[0].id, action: "like" },
+    });
+
+    expect(res.json().done).toBe(false);
+    expect(res.json().summary.swipeCount).toBe(1);
+  });
+
   it("S1: chat phrase returns a CBD day plan with chicken rice and a quiet closer", async () => {
     await seedAndSwipe();
     const res = await app.inject({

@@ -46,6 +46,9 @@ export interface Place {
   emoji: string;
   blurb: string;
   tags?: string[];
+  /** Hotlinked Wikimedia photo — absent when no image matched the place by name. */
+  photoUrl?: string;
+  photoCredit?: string;
 }
 
 export interface CityPlaces {
@@ -72,6 +75,7 @@ export interface DeckCard {
   emoji: string;
   vibeTags: VibeTag[];
   subtitle?: string;
+  photoUrl?: string;
 }
 
 export type SwipeAction = "like" | "pass" | "mustgo";

@@ -3,30 +3,73 @@
   "cityName": "Bangkok",
   "country": "Thailand",
   "airport": "BKK",
-  "center": {"lat": 13.7563, "lng": 100.5018},
+  "center": {
+    "lat": 13.7563,
+    "lng": 100.5018
+  },
   "provenance": "Curated extract, 2026-08-24. Well-known POIs, approximate coordinates — verify hours before production use.",
   "places": [
     {
       "id": "bangkok-grand-palace",
       "name": "Grand Palace",
-      "lat": 13.7500,
+      "lat": 13.75,
       "lng": 100.4913,
       "area": "Rattanakosin",
-      "vibeTags": ["history", "culture"],
+      "vibeTags": [
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["08:30", "15:30"]],
-        "tue": [["08:30", "15:30"]],
-        "wed": [["08:30", "15:30"]],
-        "thu": [["08:30", "15:30"]],
-        "fri": [["08:30", "15:30"]],
-        "sat": [["08:30", "15:30"]],
-        "sun": [["08:30", "15:30"]]
+        "mon": [
+          [
+            "08:30",
+            "15:30"
+          ]
+        ],
+        "tue": [
+          [
+            "08:30",
+            "15:30"
+          ]
+        ],
+        "wed": [
+          [
+            "08:30",
+            "15:30"
+          ]
+        ],
+        "thu": [
+          [
+            "08:30",
+            "15:30"
+          ]
+        ],
+        "fri": [
+          [
+            "08:30",
+            "15:30"
+          ]
+        ],
+        "sat": [
+          [
+            "08:30",
+            "15:30"
+          ]
+        ],
+        "sun": [
+          [
+            "08:30",
+            "15:30"
+          ]
+        ]
       },
       "estStayMin": 150,
       "estCostSGD": 19,
       "priceBand": 3,
       "emoji": "👑",
-      "blurb": "Glittering royal compound housing the Emerald Buddha."
+      "blurb": "Glittering royal compound housing the Emerald Buddha.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/0005574_-_Wat_Phra_Kaew_006.jpg/330px-0005574_-_Wat_Phra_Kaew_006.jpg",
+      "photoCredit": "Wikipedia · Grand Palace"
     },
     {
       "id": "bangkok-wat-pho",
@@ -34,15 +77,53 @@
       "lat": 13.7465,
       "lng": 100.4933,
       "area": "Rattanakosin",
-      "vibeTags": ["culture", "history"],
+      "vibeTags": [
+        "culture",
+        "history"
+      ],
       "openHours": {
-        "mon": [["08:00", "18:30"]],
-        "tue": [["08:00", "18:30"]],
-        "wed": [["08:00", "18:30"]],
-        "thu": [["08:00", "18:30"]],
-        "fri": [["08:00", "18:30"]],
-        "sat": [["08:00", "18:30"]],
-        "sun": [["08:00", "18:30"]]
+        "mon": [
+          [
+            "08:00",
+            "18:30"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "18:30"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "18:30"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "18:30"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "18:30"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "18:30"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "18:30"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 12,
@@ -56,21 +137,62 @@
       "lat": 13.7437,
       "lng": 100.4889,
       "area": "Thonburi riverside",
-      "vibeTags": ["culture", "history", "views"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "views"
+      ],
       "openHours": {
-        "mon": [["08:00", "18:00"]],
-        "tue": [["08:00", "18:00"]],
-        "wed": [["08:00", "18:00"]],
-        "thu": [["08:00", "18:00"]],
-        "fri": [["08:00", "18:00"]],
-        "sat": [["08:00", "18:00"]],
-        "sun": [["08:00", "18:00"]]
+        "mon": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 8,
       "priceBand": 1,
       "emoji": "🌅",
-      "blurb": "Porcelain-studded riverside prang, best seen at sunset."
+      "blurb": "Porcelain-studded riverside prang, best seen at sunset.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg/330px-%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg",
+      "photoCredit": "Wikipedia · Wat Arun"
     },
     {
       "id": "bangkok-chatuchak-market",
@@ -78,21 +200,36 @@
       "lat": 13.7999,
       "lng": 100.5502,
       "area": "Chatuchak",
-      "vibeTags": ["shopping", "food"],
+      "vibeTags": [
+        "shopping",
+        "food"
+      ],
       "openHours": {
         "mon": [],
         "tue": [],
         "wed": [],
         "thu": [],
         "fri": [],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 15,
       "priceBand": 2,
       "emoji": "🛍️",
-      "blurb": "Fifteen-thousand-stall weekend maze selling everything imaginable."
+      "blurb": "Fifteen-thousand-stall weekend maze selling everything imaginable.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Bangkok_-_Jatujak_Market_02.JPG/330px-Bangkok_-_Jatujak_Market_02.JPG",
+      "photoCredit": "Wikipedia · Chatuchak Weekend Market"
     },
     {
       "id": "bangkok-jodd-fairs",
@@ -100,15 +237,54 @@
       "lat": 13.7566,
       "lng": 100.5657,
       "area": "Rama IX",
-      "vibeTags": ["food", "nightlife", "shopping"],
+      "vibeTags": [
+        "food",
+        "nightlife",
+        "shopping"
+      ],
       "openHours": {
-        "mon": [["16:00", "23:59"]],
-        "tue": [["16:00", "23:59"]],
-        "wed": [["16:00", "23:59"]],
-        "thu": [["16:00", "23:59"]],
-        "fri": [["16:00", "23:59"]],
-        "sat": [["16:00", "23:59"]],
-        "sun": [["16:00", "23:59"]]
+        "mon": [
+          [
+            "16:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "16:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "16:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "16:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "16:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "16:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "16:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 12,
@@ -122,37 +298,116 @@
       "lat": 13.7314,
       "lng": 100.5414,
       "area": "Pathum Wan / Silom edge",
-      "vibeTags": ["nature", "chill"],
+      "vibeTags": [
+        "nature",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["04:30", "22:00"]],
-        "tue": [["04:30", "22:00"]],
-        "wed": [["04:30", "22:00"]],
-        "thu": [["04:30", "22:00"]],
-        "fri": [["04:30", "22:00"]],
-        "sat": [["04:30", "22:00"]],
-        "sun": [["04:30", "22:00"]]
+        "mon": [
+          [
+            "04:30",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "04:30",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "04:30",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "04:30",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "04:30",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "04:30",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "04:30",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🦎",
-      "blurb": "Green lung with paddle boats and resident water monitors."
+      "blurb": "Green lung with paddle boats and resident water monitors.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Aerial_view_of_Lumphini_Park.jpg/330px-Aerial_view_of_Lumphini_Park.jpg",
+      "photoCredit": "Wikipedia · Lumphini Park"
     },
     {
       "id": "bangkok-iconsiam",
       "name": "ICONSIAM",
       "lat": 13.7267,
-      "lng": 100.5100,
+      "lng": 100.51,
       "area": "Khlong San riverside",
-      "vibeTags": ["shopping", "food", "views"],
+      "vibeTags": [
+        "shopping",
+        "food",
+        "views"
+      ],
       "openHours": {
-        "mon": [["10:00", "22:00"]],
-        "tue": [["10:00", "22:00"]],
-        "wed": [["10:00", "22:00"]],
-        "thu": [["10:00", "22:00"]],
-        "fri": [["10:00", "22:00"]],
-        "sat": [["10:00", "22:00"]],
-        "sun": [["10:00", "22:00"]]
+        "mon": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 15,
@@ -166,43 +421,124 @@
       "lat": 13.7588,
       "lng": 100.4972,
       "area": "Banglamphu",
-      "vibeTags": ["nightlife", "food"],
+      "vibeTags": [
+        "nightlife",
+        "food"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 10,
       "priceBand": 1,
       "emoji": "🎒",
-      "blurb": "Backpacker party street of buckets, pad thai, and bars."
+      "blurb": "Backpacker party street of buckets, pad thai, and bars.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Ulica_Khaosan_%2808%29.jpg/330px-2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Ulica_Khaosan_%2808%29.jpg",
+      "photoCredit": "Wikipedia · Khaosan Road"
     },
     {
       "id": "bangkok-yaowarat-chinatown",
       "name": "Yaowarat Chinatown",
       "lat": 13.7398,
-      "lng": 100.5090,
+      "lng": 100.509,
       "area": "Samphanthawong",
-      "vibeTags": ["food", "culture", "nightlife"],
+      "vibeTags": [
+        "food",
+        "culture",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["17:00", "23:30"]],
-        "tue": [["17:00", "23:30"]],
-        "wed": [["17:00", "23:30"]],
-        "thu": [["17:00", "23:30"]],
-        "fri": [["17:00", "23:30"]],
-        "sat": [["17:00", "23:30"]],
-        "sun": [["17:00", "23:30"]]
+        "mon": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "tue": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "wed": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "thu": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "fri": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "sat": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ],
+        "sun": [
+          [
+            "17:00",
+            "23:30"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 10,
       "priceBand": 1,
       "emoji": "🏮",
-      "blurb": "Neon Chinatown artery whose street-food stalls ignite at dusk."
+      "blurb": "Neon Chinatown artery whose street-food stalls ignite at dusk.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Chinatown_in_Bangkok.JPG/960px-Chinatown_in_Bangkok.JPG",
+      "photoCredit": "Milei.vencel · CC BY-SA 3.0"
     },
     {
       "id": "bangkok-jim-thompson-house",
@@ -210,21 +546,62 @@
       "lat": 13.7492,
       "lng": 100.5282,
       "area": "Pathum Wan",
-      "vibeTags": ["art", "culture", "history"],
+      "vibeTags": [
+        "art",
+        "culture",
+        "history"
+      ],
       "openHours": {
-        "mon": [["10:00", "17:00"]],
-        "tue": [["10:00", "17:00"]],
-        "wed": [["10:00", "17:00"]],
-        "thu": [["10:00", "17:00"]],
-        "fri": [["10:00", "17:00"]],
-        "sat": [["10:00", "17:00"]],
-        "sun": [["10:00", "17:00"]]
+        "mon": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 8,
       "priceBand": 2,
       "emoji": "🧵",
-      "blurb": "Teak house museum of the American silk entrepreneur."
+      "blurb": "Teak house museum of the American silk entrepreneur.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Main_House_of_Jim_Thompson_photo_Don_Ramey_Logan.jpg/330px-Main_House_of_Jim_Thompson_photo_Don_Ramey_Logan.jpg",
+      "photoCredit": "Wikipedia · Jim Thompson House"
     },
     {
       "id": "bangkok-golden-mount",
@@ -232,21 +609,62 @@
       "lat": 13.7539,
       "lng": 100.5065,
       "area": "Pom Prap Sattru Phai",
-      "vibeTags": ["culture", "views", "history"],
+      "vibeTags": [
+        "culture",
+        "views",
+        "history"
+      ],
       "openHours": {
-        "mon": [["07:00", "19:00"]],
-        "tue": [["07:00", "19:00"]],
-        "wed": [["07:00", "19:00"]],
-        "thu": [["07:00", "19:00"]],
-        "fri": [["07:00", "19:00"]],
-        "sat": [["07:00", "19:00"]],
-        "sun": [["07:00", "19:00"]]
+        "mon": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 4,
       "priceBand": 1,
       "emoji": "🔔",
-      "blurb": "Spiral climb of 344 steps to a gilded chedi viewpoint."
+      "blurb": "Spiral climb of 344 steps to a gilded chedi viewpoint.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wat_Saket%2C_Bangkok%2C_Thailand.jpg/960px-Wat_Saket%2C_Bangkok%2C_Thailand.jpg",
+      "photoCredit": "Vyacheslav Argenberg · CC BY 4.0"
     },
     {
       "id": "bangkok-asiatique",
@@ -254,43 +672,125 @@
       "lat": 13.7045,
       "lng": 100.5025,
       "area": "Charoen Krung riverfront",
-      "vibeTags": ["shopping", "nightlife", "views"],
+      "vibeTags": [
+        "shopping",
+        "nightlife",
+        "views"
+      ],
       "openHours": {
-        "mon": [["16:00", "23:30"]],
-        "tue": [["16:00", "23:30"]],
-        "wed": [["16:00", "23:30"]],
-        "thu": [["16:00", "23:30"]],
-        "fri": [["16:00", "23:30"]],
-        "sat": [["16:00", "23:30"]],
-        "sun": [["16:00", "23:30"]]
+        "mon": [
+          [
+            "16:00",
+            "23:30"
+          ]
+        ],
+        "tue": [
+          [
+            "16:00",
+            "23:30"
+          ]
+        ],
+        "wed": [
+          [
+            "16:00",
+            "23:30"
+          ]
+        ],
+        "thu": [
+          [
+            "16:00",
+            "23:30"
+          ]
+        ],
+        "fri": [
+          [
+            "16:00",
+            "23:30"
+          ]
+        ],
+        "sat": [
+          [
+            "16:00",
+            "23:30"
+          ]
+        ],
+        "sun": [
+          [
+            "16:00",
+            "23:30"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 15,
       "priceBand": 2,
       "emoji": "🎡",
-      "blurb": "Riverfront night bazaar under a giant Ferris wheel."
+      "blurb": "Riverfront night bazaar under a giant Ferris wheel.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Asiatique_%28II%29.jpg/330px-Asiatique_%28II%29.jpg",
+      "photoCredit": "Wikipedia · Asiatique"
     },
     {
       "id": "bangkok-benjakitti-park",
       "name": "Benjakitti Forest Park",
       "lat": 13.7227,
-      "lng": 100.5570,
+      "lng": 100.557,
       "area": "Khlong Toei",
-      "vibeTags": ["nature", "chill", "views"],
+      "vibeTags": [
+        "nature",
+        "chill",
+        "views"
+      ],
       "openHours": {
-        "mon": [["05:00", "21:00"]],
-        "tue": [["05:00", "21:00"]],
-        "wed": [["05:00", "21:00"]],
-        "thu": [["05:00", "21:00"]],
-        "fri": [["05:00", "21:00"]],
-        "sat": [["05:00", "21:00"]],
-        "sun": [["05:00", "21:00"]]
+        "mon": [
+          [
+            "05:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "05:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "05:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "05:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "05:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "05:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "05:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🌳",
-      "blurb": "Wetland skyline park with elevated boardwalk loops."
+      "blurb": "Wetland skyline park with elevated boardwalk loops.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bangkok_Benjakiti_Park_2.jpg/330px-Bangkok_Benjakiti_Park_2.jpg",
+      "photoCredit": "Wikipedia · Benjakitti Park"
     },
     {
       "id": "bangkok-mahanakhon-skywalk",
@@ -298,15 +798,53 @@
       "lat": 13.7233,
       "lng": 100.5285,
       "area": "Silom",
-      "vibeTags": ["views", "adventure"],
+      "vibeTags": [
+        "views",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["10:00", "23:00"]],
-        "tue": [["10:00", "23:00"]],
-        "wed": [["10:00", "23:00"]],
-        "thu": [["10:00", "23:00"]],
-        "fri": [["10:00", "23:00"]],
-        "sat": [["10:00", "23:00"]],
-        "sun": [["10:00", "23:00"]]
+        "mon": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 33,
@@ -318,17 +856,55 @@
       "id": "bangkok-roots-coffee",
       "name": "Roots Coffee Roaster",
       "lat": 13.7278,
-      "lng": 100.5350,
+      "lng": 100.535,
       "area": "Silom / Sathorn",
-      "vibeTags": ["coffee", "chill"],
+      "vibeTags": [
+        "coffee",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["08:00", "18:00"]],
-        "tue": [["08:00", "18:00"]],
-        "wed": [["08:00", "18:00"]],
-        "thu": [["08:00", "18:00"]],
-        "fri": [["08:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "mon": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 7,
@@ -342,15 +918,54 @@
       "lat": 13.7534,
       "lng": 100.5003,
       "area": "Phra Nakhon",
-      "vibeTags": ["coffee", "art", "culture"],
+      "vibeTags": [
+        "coffee",
+        "art",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "18:00"]],
-        "tue": [["09:00", "18:00"]],
-        "wed": [["09:00", "18:00"]],
-        "thu": [["09:00", "18:00"]],
-        "fri": [["09:00", "18:00"]],
-        "sat": [["09:00", "18:00"]],
-        "sun": [["09:00", "18:00"]]
+        "mon": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 6,
@@ -361,24 +976,65 @@
     {
       "id": "bangkok-bang-krachao",
       "name": "Bang Krachao Green Lung",
-      "lat": 13.6830,
-      "lng": 100.5440,
+      "lat": 13.683,
+      "lng": 100.544,
       "area": "Phra Pradaeng",
-      "vibeTags": ["nature", "sports", "chill"],
+      "vibeTags": [
+        "nature",
+        "sports",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 150,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🚲",
-      "blurb": "River-bend jungle island best cycled by rented bicycle through mangroves."
+      "blurb": "River-bend jungle island best cycled by rented bicycle through mangroves.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Bang_Kachao_Landsat.jpg",
+      "photoCredit": "NASA Earth Observatory image by Jesse Allen, using Landsat data from the U.S. Geological Survey. · Public domain"
     },
     {
       "id": "bangkok-lumpini-muay-thai",
@@ -386,14 +1042,32 @@
       "lat": 13.7315,
       "lng": 100.5415,
       "area": "Pathum Wan",
-      "vibeTags": ["sports", "culture"],
+      "vibeTags": [
+        "sports",
+        "culture"
+      ],
       "openHours": {
         "mon": [],
-        "tue": [["18:00", "23:00"]],
+        "tue": [
+          [
+            "18:00",
+            "23:00"
+          ]
+        ],
         "wed": [],
         "thu": [],
-        "fri": [["18:00", "23:00"]],
-        "sat": [["17:30", "23:00"]],
+        "fri": [
+          [
+            "18:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "17:30",
+            "23:00"
+          ]
+        ],
         "sun": []
       },
       "estStayMin": 150,
@@ -405,18 +1079,56 @@
     {
       "id": "bangkok-oasis-spa",
       "name": "Oasis Spa Bangkok",
-      "lat": 13.7370,
+      "lat": 13.737,
       "lng": 100.5652,
       "area": "Sukhumvit Soi 31",
-      "vibeTags": ["wellness", "chill"],
+      "vibeTags": [
+        "wellness",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["10:00", "22:00"]],
-        "tue": [["10:00", "22:00"]],
-        "wed": [["10:00", "22:00"]],
-        "thu": [["10:00", "22:00"]],
-        "fri": [["10:00", "22:00"]],
-        "sat": [["10:00", "22:00"]],
-        "sun": [["10:00", "22:00"]]
+        "mon": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 45,
@@ -430,15 +1142,54 @@
       "lat": 13.7462,
       "lng": 100.4935,
       "area": "Rattanakosin",
-      "vibeTags": ["wellness", "culture", "history"],
+      "vibeTags": [
+        "wellness",
+        "culture",
+        "history"
+      ],
       "openHours": {
-        "mon": [["08:00", "17:00"]],
-        "tue": [["08:00", "17:00"]],
-        "wed": [["08:00", "17:00"]],
-        "thu": [["08:00", "17:00"]],
-        "fri": [["08:00", "17:00"]],
-        "sat": [["08:00", "17:00"]],
-        "sun": [["08:00", "17:00"]]
+        "mon": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 12,
@@ -449,24 +1200,65 @@
     {
       "id": "bangkok-ko-kret",
       "name": "Ko Kret Island",
-      "lat": 13.9060,
-      "lng": 100.4640,
+      "lat": 13.906,
+      "lng": 100.464,
       "area": "Nonthaburi",
-      "vibeTags": ["culture", "food", "nature"],
+      "vibeTags": [
+        "culture",
+        "food",
+        "nature"
+      ],
       "openHours": {
-        "mon": [["08:00", "17:00"]],
-        "tue": [["08:00", "17:00"]],
-        "wed": [["08:00", "17:00"]],
-        "thu": [["08:00", "17:00"]],
-        "fri": [["08:00", "17:00"]],
-        "sat": [["08:00", "18:00"]],
-        "sun": [["08:00", "18:00"]]
+        "mon": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "08:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "08:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 10,
       "priceBand": 1,
       "emoji": "🏝️",
-      "blurb": "Car-free river island of Mon pottery workshops and riverside food stalls."
+      "blurb": "Car-free river island of Mon pottery workshops and riverside food stalls.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Nontaburi_Ko_Kret2.jpg/960px-Nontaburi_Ko_Kret2.jpg",
+      "photoCredit": "Mr.Peerapong Prasutr · CC BY-SA 4.0"
     },
     {
       "id": "bangkok-the-jam-factory",
@@ -474,43 +1266,125 @@
       "lat": 13.7182,
       "lng": 100.5015,
       "area": "Charoen Nakhon riverside",
-      "vibeTags": ["art", "shopping", "food"],
+      "vibeTags": [
+        "art",
+        "shopping",
+        "food"
+      ],
       "openHours": {
-        "mon": [["11:00", "22:00"]],
-        "tue": [["11:00", "22:00"]],
-        "wed": [["11:00", "22:00"]],
-        "thu": [["11:00", "22:00"]],
-        "fri": [["11:00", "22:00"]],
-        "sat": [["11:00", "22:00"]],
-        "sun": [["11:00", "22:00"]]
+        "mon": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 12,
       "priceBand": 2,
       "emoji": "🏭",
-      "blurb": "Converted 1920s warehouse of design studios and riverside restaurants."
+      "blurb": "Converted 1920s warehouse of design studios and riverside restaurants.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Jam_factory.jpg/330px-Jam_factory.jpg",
+      "photoCredit": "Wikipedia · The Jam Factory"
     },
     {
       "id": "bangkok-bang-saen-beach",
       "name": "Bang Saen Beach",
       "lat": 13.2945,
-      "lng": 100.9130,
+      "lng": 100.913,
       "area": "Chonburi, ~100km east of Bangkok",
-      "vibeTags": ["beach", "chill", "food"],
+      "vibeTags": [
+        "beach",
+        "chill",
+        "food"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 180,
       "estCostSGD": 8,
       "priceBand": 1,
       "emoji": "🏖️",
-      "blurb": "Closest Thai beach to Bangkok, popular for cheap seafood and calm shallows."
+      "blurb": "Closest Thai beach to Bangkok, popular for cheap seafood and calm shallows.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Bang_Saen_Beach_at_sunset_2.jpg/330px-Bang_Saen_Beach_at_sunset_2.jpg",
+      "photoCredit": "Wikipedia · Bang Saen Beach"
     },
     {
       "id": "bangkok-koh-samet-ferry",
@@ -518,15 +1392,54 @@
       "lat": 12.5734,
       "lng": 101.4507,
       "area": "Rayong, ~220km east",
-      "vibeTags": ["beach", "nature", "adventure"],
+      "vibeTags": [
+        "beach",
+        "nature",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["06:00", "18:00"]],
-        "tue": [["06:00", "18:00"]],
-        "wed": [["06:00", "18:00"]],
-        "thu": [["06:00", "18:00"]],
-        "fri": [["06:00", "18:00"]],
-        "sat": [["06:00", "18:00"]],
-        "sun": [["06:00", "18:00"]]
+        "mon": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 360,
       "estCostSGD": 25,

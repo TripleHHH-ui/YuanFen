@@ -3,30 +3,75 @@
   "cityName": "Phuket",
   "country": "Thailand",
   "airport": "HKT",
-  "center": {"lat": 7.8804, "lng": 98.3923},
+  "center": {
+    "lat": 7.8804,
+    "lng": 98.3923
+  },
   "provenance": "Curated extract, 2026-08-24. Well-known POIs, approximate coordinates — verify hours before production use.",
   "places": [
     {
       "id": "phuket-old-town",
       "name": "Phuket Old Town",
-      "lat": 7.8850,
-      "lng": 98.3870,
+      "lat": 7.885,
+      "lng": 98.387,
       "area": "Old Town",
-      "vibeTags": ["culture", "history", "art", "coffee"],
+      "vibeTags": [
+        "culture",
+        "history",
+        "art",
+        "coffee"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🏘️",
-      "blurb": "Sino-Portuguese shophouse streets in candy colours."
+      "blurb": "Sino-Portuguese shophouse streets in candy colours.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Soi_Rommanee%2C_Phuket_Town.jpg/330px-Soi_Rommanee%2C_Phuket_Town.jpg",
+      "photoCredit": "Wikipedia · Phuket Old Town"
     },
     {
       "id": "phuket-big-buddha",
@@ -34,43 +79,123 @@
       "lat": 7.8276,
       "lng": 98.3128,
       "area": "Nakkerd Hill, Karon",
-      "vibeTags": ["culture", "views"],
+      "vibeTags": [
+        "culture",
+        "views"
+      ],
       "openHours": {
-        "mon": [["06:00", "19:00"]],
-        "tue": [["06:00", "19:00"]],
-        "wed": [["06:00", "19:00"]],
-        "thu": [["06:00", "19:00"]],
-        "fri": [["06:00", "19:00"]],
-        "sat": [["06:00", "19:00"]],
-        "sun": [["06:00", "19:00"]]
+        "mon": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🙏",
-      "blurb": "45-metre white marble Buddha gazing over the island."
+      "blurb": "45-metre white marble Buddha gazing over the island.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Big_Buddha_von_Phuket_02.jpg/960px-Big_Buddha_von_Phuket_02.jpg",
+      "photoCredit": "ADwarf · Public domain"
     },
     {
       "id": "phuket-wat-chalong",
       "name": "Wat Chalong",
-      "lat": 7.8460,
+      "lat": 7.846,
       "lng": 98.3376,
       "area": "Chalong",
-      "vibeTags": ["culture", "history"],
+      "vibeTags": [
+        "culture",
+        "history"
+      ],
       "openHours": {
-        "mon": [["07:00", "17:00"]],
-        "tue": [["07:00", "17:00"]],
-        "wed": [["07:00", "17:00"]],
-        "thu": [["07:00", "17:00"]],
-        "fri": [["07:00", "17:00"]],
-        "sat": [["07:00", "17:00"]],
-        "sun": [["07:00", "17:00"]]
+        "mon": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🛕",
-      "blurb": "Phuket's most revered temple with a relic-topped Grand Pagoda."
+      "blurb": "Phuket's most revered temple with a relic-topped Grand Pagoda.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Wat_chalong_pagoda.jpg/330px-Wat_chalong_pagoda.jpg",
+      "photoCredit": "Wikipedia · Wat Chalong"
     },
     {
       "id": "phuket-patong-beach",
@@ -78,21 +203,62 @@
       "lat": 7.9038,
       "lng": 98.2965,
       "area": "Patong",
-      "vibeTags": ["beach", "chill", "adventure"],
+      "vibeTags": [
+        "beach",
+        "chill",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 150,
       "estCostSGD": 5,
       "priceBand": 1,
       "emoji": "🏖️",
-      "blurb": "Phuket's busiest beach backed by wall-to-wall resorts."
+      "blurb": "Phuket's busiest beach backed by wall-to-wall resorts.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Patong_Beach.jpg/330px-Patong_Beach.jpg",
+      "photoCredit": "Wikipedia · Patong"
     },
     {
       "id": "phuket-bangla-road",
@@ -100,21 +266,61 @@
       "lat": 7.8935,
       "lng": 98.2966,
       "area": "Patong",
-      "vibeTags": ["nightlife", "food"],
+      "vibeTags": [
+        "nightlife",
+        "food"
+      ],
       "openHours": {
-        "mon": [["18:00", "23:59"]],
-        "tue": [["18:00", "23:59"]],
-        "wed": [["18:00", "23:59"]],
-        "thu": [["18:00", "23:59"]],
-        "fri": [["18:00", "23:59"]],
-        "sat": [["18:00", "23:59"]],
-        "sun": [["18:00", "23:59"]]
+        "mon": [
+          [
+            "18:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "18:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "18:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "18:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "18:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "18:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "18:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 20,
       "priceBand": 2,
       "emoji": "🍹",
-      "blurb": "Neon walking street of bars and clubs after dark."
+      "blurb": "Neon walking street of bars and clubs after dark.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Bangla_Road.JPG/960px-Bangla_Road.JPG",
+      "photoCredit": "Kotokot82 · CC0"
     },
     {
       "id": "phuket-kata-beach",
@@ -122,43 +328,124 @@
       "lat": 7.8199,
       "lng": 98.2983,
       "area": "Kata",
-      "vibeTags": ["beach", "chill", "views"],
+      "vibeTags": [
+        "beach",
+        "chill",
+        "views"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 150,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🏄",
-      "blurb": "Palm-fringed crescent loved by surfers in low season."
+      "blurb": "Palm-fringed crescent loved by surfers in low season.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Kata_beach_morning_2.jpg/330px-Kata_beach_morning_2.jpg",
+      "photoCredit": "Wikipedia · Hat Kata"
     },
     {
       "id": "phuket-karon-viewpoint",
       "name": "Karon Viewpoint",
       "lat": 7.7906,
-      "lng": 98.3050,
+      "lng": 98.305,
       "area": "Between Kata Noi and Nai Harn",
-      "vibeTags": ["views", "nature"],
+      "vibeTags": [
+        "views",
+        "nature"
+      ],
       "openHours": {
-        "mon": [["06:00", "19:00"]],
-        "tue": [["06:00", "19:00"]],
-        "wed": [["06:00", "19:00"]],
-        "thu": [["06:00", "19:00"]],
-        "fri": [["06:00", "19:00"]],
-        "sat": [["06:00", "19:00"]],
-        "sun": [["06:00", "19:00"]]
+        "mon": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 30,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🌄",
-      "blurb": "Classic three-bays lookout over Kata and Karon."
+      "blurb": "Classic three-bays lookout over Kata and Karon.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Phuket_Viewpoint.jpg/960px-Phuket_Viewpoint.jpg",
+      "photoCredit": "Wikimedia Commons · CC BY-SA 3.0"
     },
     {
       "id": "phuket-promthep-cape",
@@ -166,21 +453,62 @@
       "lat": 7.7594,
       "lng": 98.3052,
       "area": "Rawai",
-      "vibeTags": ["views", "nature", "chill"],
+      "vibeTags": [
+        "views",
+        "nature",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["06:00", "19:30"]],
-        "tue": [["06:00", "19:30"]],
-        "wed": [["06:00", "19:30"]],
-        "thu": [["06:00", "19:30"]],
-        "fri": [["06:00", "19:30"]],
-        "sat": [["06:00", "19:30"]],
-        "sun": [["06:00", "19:30"]]
+        "mon": [
+          [
+            "06:00",
+            "19:30"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "19:30"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "19:30"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "19:30"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "19:30"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "19:30"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "19:30"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🌇",
-      "blurb": "Island-tip headland famous for fiery sunsets."
+      "blurb": "Island-tip headland famous for fiery sunsets.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Phuket_Promthep_Cape.jpg/960px-Phuket_Promthep_Cape.jpg",
+      "photoCredit": "Ahoerstemeier · CC BY-SA 3.0"
     },
     {
       "id": "phuket-naka-weekend-market",
@@ -188,15 +516,29 @@
       "lat": 7.8935,
       "lng": 98.3667,
       "area": "Wichit",
-      "vibeTags": ["shopping", "food", "nightlife"],
+      "vibeTags": [
+        "shopping",
+        "food",
+        "nightlife"
+      ],
       "openHours": {
         "mon": [],
         "tue": [],
         "wed": [],
         "thu": [],
         "fri": [],
-        "sat": [["16:00", "22:00"]],
-        "sun": [["16:00", "22:00"]]
+        "sat": [
+          [
+            "16:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "16:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 10,
@@ -210,7 +552,11 @@
       "lat": 7.8858,
       "lng": 98.3853,
       "area": "Thalang Road, Old Town",
-      "vibeTags": ["food", "culture", "shopping"],
+      "vibeTags": [
+        "food",
+        "culture",
+        "shopping"
+      ],
       "openHours": {
         "mon": [],
         "tue": [],
@@ -218,7 +564,12 @@
         "thu": [],
         "fri": [],
         "sat": [],
-        "sun": [["16:00", "22:00"]]
+        "sun": [
+          [
+            "16:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 8,
@@ -230,23 +581,64 @@
       "id": "phuket-monkey-hill",
       "name": "Monkey Hill",
       "lat": 7.8944,
-      "lng": 98.4030,
+      "lng": 98.403,
       "area": "Phuket Town",
-      "vibeTags": ["nature", "views", "adventure"],
+      "vibeTags": [
+        "nature",
+        "views",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["06:00", "19:00"]],
-        "tue": [["06:00", "19:00"]],
-        "wed": [["06:00", "19:00"]],
-        "thu": [["06:00", "19:00"]],
-        "fri": [["06:00", "19:00"]],
-        "sat": [["06:00", "19:00"]],
-        "sun": [["06:00", "19:00"]]
+        "mon": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "tue": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "wed": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "thu": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "fri": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sat": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ],
+        "sun": [
+          [
+            "06:00",
+            "19:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🐒",
-      "blurb": "Hilltop viewpoint overrun by hundreds of macaques."
+      "blurb": "Hilltop viewpoint overrun by hundreds of macaques.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Macaque_Monkeys_from_Monkey_Hill%2C_Phuket%2C_Thailand_%2845296838685%29.jpg/960px-Macaque_Monkeys_from_Monkey_Hill%2C_Phuket%2C_Thailand_%2845296838685%29.jpg",
+      "photoCredit": "Mike's Birds from Riverside, CA, US · CC BY-SA 2.0"
     },
     {
       "id": "phuket-thaihua-museum",
@@ -254,15 +646,53 @@
       "lat": 7.8853,
       "lng": 98.3862,
       "area": "Old Town",
-      "vibeTags": ["history", "culture"],
+      "vibeTags": [
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "17:00"]],
-        "tue": [["09:00", "17:00"]],
-        "wed": [["09:00", "17:00"]],
-        "thu": [["09:00", "17:00"]],
-        "fri": [["09:00", "17:00"]],
-        "sat": [["09:00", "17:00"]],
-        "sun": [["09:00", "17:00"]]
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 8,
@@ -276,15 +706,53 @@
       "lat": 7.8905,
       "lng": 98.3669,
       "area": "Wichit",
-      "vibeTags": ["shopping", "food"],
+      "vibeTags": [
+        "shopping",
+        "food"
+      ],
       "openHours": {
-        "mon": [["10:30", "22:00"]],
-        "tue": [["10:30", "22:00"]],
-        "wed": [["10:30", "22:00"]],
-        "thu": [["10:30", "22:00"]],
-        "fri": [["10:30", "22:00"]],
-        "sat": [["10:30", "22:00"]],
-        "sun": [["10:30", "22:00"]]
+        "mon": [
+          [
+            "10:30",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:30",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:30",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:30",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:30",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:30",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:30",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 15,
@@ -298,15 +766,53 @@
       "lat": 7.7767,
       "lng": 98.3266,
       "area": "Rawai",
-      "vibeTags": ["food", "chill"],
+      "vibeTags": [
+        "food",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["10:00", "20:00"]],
-        "tue": [["10:00", "20:00"]],
-        "wed": [["10:00", "20:00"]],
-        "thu": [["10:00", "20:00"]],
-        "fri": [["10:00", "20:00"]],
-        "sat": [["10:00", "20:00"]],
-        "sun": [["10:00", "20:00"]]
+        "mon": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 18,
@@ -320,15 +826,53 @@
       "lat": 7.8489,
       "lng": 98.3118,
       "area": "Chalong",
-      "vibeTags": ["sports", "culture"],
+      "vibeTags": [
+        "sports",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["07:00", "21:00"]],
-        "tue": [["07:00", "21:00"]],
-        "wed": [["07:00", "21:00"]],
-        "thu": [["07:00", "21:00"]],
-        "fri": [["07:00", "21:00"]],
-        "sat": [["07:00", "21:00"]],
-        "sun": [["07:00", "21:00"]]
+        "mon": [
+          [
+            "07:00",
+            "21:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "21:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "21:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "21:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "21:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "21:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "21:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 20,
@@ -340,17 +884,56 @@
       "id": "phuket-kata-surf",
       "name": "Kata Surf School",
       "lat": 7.8185,
-      "lng": 98.2980,
+      "lng": 98.298,
       "area": "Kata Beach",
-      "vibeTags": ["sports", "beach", "adventure"],
+      "vibeTags": [
+        "sports",
+        "beach",
+        "adventure"
+      ],
       "openHours": {
-        "mon": [["07:00", "17:00"]],
-        "tue": [["07:00", "17:00"]],
-        "wed": [["07:00", "17:00"]],
-        "thu": [["07:00", "17:00"]],
-        "fri": [["07:00", "17:00"]],
-        "sat": [["07:00", "17:00"]],
-        "sun": [["07:00", "17:00"]]
+        "mon": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 25,
@@ -364,15 +947,53 @@
       "lat": 7.8852,
       "lng": 98.3876,
       "area": "Old Town",
-      "vibeTags": ["wellness", "chill"],
+      "vibeTags": [
+        "wellness",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["10:00", "20:00"]],
-        "tue": [["10:00", "20:00"]],
-        "wed": [["10:00", "20:00"]],
-        "thu": [["10:00", "20:00"]],
-        "fri": [["10:00", "20:00"]],
-        "sat": [["10:00", "20:00"]],
-        "sun": [["10:00", "20:00"]]
+        "mon": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "tue": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "wed": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "thu": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "fri": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "sat": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ],
+        "sun": [
+          [
+            "10:00",
+            "20:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 35,
@@ -386,15 +1007,54 @@
       "lat": 7.9725,
       "lng": 98.2984,
       "area": "Laguna, Bang Tao",
-      "vibeTags": ["wellness", "nature", "views"],
+      "vibeTags": [
+        "wellness",
+        "nature",
+        "views"
+      ],
       "openHours": {
-        "mon": [["09:00", "22:00"]],
-        "tue": [["09:00", "22:00"]],
-        "wed": [["09:00", "22:00"]],
-        "thu": [["09:00", "22:00"]],
-        "fri": [["09:00", "22:00"]],
-        "sat": [["09:00", "22:00"]],
-        "sun": [["09:00", "22:00"]]
+        "mon": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 100,
@@ -408,15 +1068,54 @@
       "lat": 7.7407,
       "lng": 98.7784,
       "area": "Krabi (ferry from Rassada Pier)",
-      "vibeTags": ["beach", "adventure", "nature"],
+      "vibeTags": [
+        "beach",
+        "adventure",
+        "nature"
+      ],
       "openHours": {
-        "mon": [["07:00", "18:00"]],
-        "tue": [["07:00", "18:00"]],
-        "wed": [["07:00", "18:00"]],
-        "thu": [["07:00", "18:00"]],
-        "fri": [["07:00", "18:00"]],
-        "sat": [["07:00", "18:00"]],
-        "sun": [["07:00", "18:00"]]
+        "mon": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "tue": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "wed": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "thu": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "fri": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "sat": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ],
+        "sun": [
+          [
+            "07:00",
+            "18:00"
+          ]
+        ]
       },
       "estStayMin": 480,
       "estCostSGD": 50,
@@ -430,15 +1129,54 @@
       "lat": 7.8434,
       "lng": 98.3536,
       "area": "Chalong",
-      "vibeTags": ["culture", "food", "chill"],
+      "vibeTags": [
+        "culture",
+        "food",
+        "chill"
+      ],
       "openHours": {
-        "mon": [["11:00", "22:00"]],
-        "tue": [["11:00", "22:00"]],
-        "wed": [["11:00", "22:00"]],
-        "thu": [["11:00", "22:00"]],
-        "fri": [["11:00", "22:00"]],
-        "sat": [["11:00", "22:00"]],
-        "sun": [["11:00", "22:00"]]
+        "mon": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "11:00",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 75,
       "estCostSGD": 15,
@@ -452,15 +1190,53 @@
       "lat": 7.8784,
       "lng": 98.3817,
       "area": "Old Town outskirts",
-      "vibeTags": ["history", "culture"],
+      "vibeTags": [
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "17:00"]],
-        "tue": [["09:00", "17:00"]],
-        "wed": [["09:00", "17:00"]],
-        "thu": [["09:00", "17:00"]],
-        "fri": [["09:00", "17:00"]],
-        "sat": [["09:00", "17:00"]],
-        "sun": [["09:00", "17:00"]]
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 5,
@@ -474,21 +1250,62 @@
       "lat": 7.7638,
       "lng": 98.3074,
       "area": "Rawai / Nai Harn",
-      "vibeTags": ["beach", "chill", "views"],
+      "vibeTags": [
+        "beach",
+        "chill",
+        "views"
+      ],
       "openHours": {
-        "mon": [["00:00", "23:59"]],
-        "tue": [["00:00", "23:59"]],
-        "wed": [["00:00", "23:59"]],
-        "thu": [["00:00", "23:59"]],
-        "fri": [["00:00", "23:59"]],
-        "sat": [["00:00", "23:59"]],
-        "sun": [["00:00", "23:59"]]
+        "mon": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "tue": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "wed": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "thu": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "fri": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sat": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ],
+        "sun": [
+          [
+            "00:00",
+            "23:59"
+          ]
+        ]
       },
       "estStayMin": 120,
       "estCostSGD": 0,
       "priceBand": 1,
       "emoji": "🌊",
-      "blurb": "Hidden cove south of Rawai with yachts anchored in a jade-green bay."
+      "blurb": "Hidden cove south of Rawai with yachts anchored in a jade-green bay.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Phuket_-_Nai_Harn_Beach_001.jpg/960px-Phuket_-_Nai_Harn_Beach_001.jpg",
+      "photoCredit": "ADwarf · Public domain"
     },
     {
       "id": "phuket-sunday-brunch-siam",
@@ -496,21 +1313,62 @@
       "lat": 7.8854,
       "lng": 98.3872,
       "area": "Old Town",
-      "vibeTags": ["food", "coffee", "culture"],
+      "vibeTags": [
+        "food",
+        "coffee",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "17:00"]],
-        "tue": [["09:00", "17:00"]],
-        "wed": [["09:00", "17:00"]],
-        "thu": [["09:00", "17:00"]],
-        "fri": [["09:00", "17:00"]],
-        "sat": [["09:00", "17:00"]],
-        "sun": [["09:00", "17:00"]]
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 6,
       "priceBand": 1,
       "emoji": "🍛",
-      "blurb": "Old Town kopitiam famous for Peranakan Hokkien cuisine at enamel tables."
+      "blurb": "Old Town kopitiam famous for Peranakan Hokkien cuisine at enamel tables.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Kopitiam_by_Wilai%2C_Phuket_%2813271249955%29.jpg/960px-Kopitiam_by_Wilai%2C_Phuket_%2813271249955%29.jpg",
+      "photoCredit": "Thanakrit Gu from Shanghai, China · CC BY 2.0"
     },
     {
       "id": "phuket-patong-shopping",
@@ -518,21 +1376,62 @@
       "lat": 7.8969,
       "lng": 98.2972,
       "area": "Patong",
-      "vibeTags": ["shopping", "food", "nightlife"],
+      "vibeTags": [
+        "shopping",
+        "food",
+        "nightlife"
+      ],
       "openHours": {
-        "mon": [["11:00", "23:00"]],
-        "tue": [["11:00", "23:00"]],
-        "wed": [["11:00", "23:00"]],
-        "thu": [["11:00", "23:00"]],
-        "fri": [["11:00", "23:00"]],
-        "sat": [["11:00", "23:00"]],
-        "sun": [["11:00", "23:00"]]
+        "mon": [
+          [
+            "11:00",
+            "23:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:00",
+            "23:00"
+          ]
+        ],
+        "wed": [
+          [
+            "11:00",
+            "23:00"
+          ]
+        ],
+        "thu": [
+          [
+            "11:00",
+            "23:00"
+          ]
+        ],
+        "fri": [
+          [
+            "11:00",
+            "23:00"
+          ]
+        ],
+        "sat": [
+          [
+            "11:00",
+            "23:00"
+          ]
+        ],
+        "sun": [
+          [
+            "11:00",
+            "23:00"
+          ]
+        ]
       },
       "estStayMin": 90,
       "estCostSGD": 10,
       "priceBand": 2,
       "emoji": "🛍️",
-      "blurb": "Patong's main mall with a food hall, cinema, and street-food market."
+      "blurb": "Patong's main mall with a food hall, cinema, and street-food market.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Jungceylon_Patong_Thajsko_2018_1.jpg/960px-Jungceylon_Patong_Thajsko_2018_1.jpg",
+      "photoCredit": "Karelj · CC BY-SA 4.0"
     },
     {
       "id": "phuket-chinpracha-house",
@@ -540,15 +1439,54 @@
       "lat": 7.8856,
       "lng": 98.3868,
       "area": "Old Town",
-      "vibeTags": ["art", "history", "culture"],
+      "vibeTags": [
+        "art",
+        "history",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["09:00", "17:00"]],
-        "tue": [["09:00", "17:00"]],
-        "wed": [["09:00", "17:00"]],
-        "thu": [["09:00", "17:00"]],
-        "fri": [["09:00", "17:00"]],
-        "sat": [["09:00", "17:00"]],
-        "sun": [["09:00", "17:00"]]
+        "mon": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "tue": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "wed": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "thu": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "fri": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sat": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ],
+        "sun": [
+          [
+            "09:00",
+            "17:00"
+          ]
+        ]
       },
       "estStayMin": 45,
       "estCostSGD": 6,
@@ -559,18 +1497,57 @@
     {
       "id": "phuket-blue-elephant",
       "name": "Blue Elephant Restaurant",
-      "lat": 7.8850,
+      "lat": 7.885,
       "lng": 98.3874,
       "area": "Old Town",
-      "vibeTags": ["art", "food", "culture"],
+      "vibeTags": [
+        "art",
+        "food",
+        "culture"
+      ],
       "openHours": {
-        "mon": [["11:30", "22:00"]],
-        "tue": [["11:30", "22:00"]],
-        "wed": [["11:30", "22:00"]],
-        "thu": [["11:30", "22:00"]],
-        "fri": [["11:30", "22:00"]],
-        "sat": [["11:30", "22:00"]],
-        "sun": [["11:30", "22:00"]]
+        "mon": [
+          [
+            "11:30",
+            "22:00"
+          ]
+        ],
+        "tue": [
+          [
+            "11:30",
+            "22:00"
+          ]
+        ],
+        "wed": [
+          [
+            "11:30",
+            "22:00"
+          ]
+        ],
+        "thu": [
+          [
+            "11:30",
+            "22:00"
+          ]
+        ],
+        "fri": [
+          [
+            "11:30",
+            "22:00"
+          ]
+        ],
+        "sat": [
+          [
+            "11:30",
+            "22:00"
+          ]
+        ],
+        "sun": [
+          [
+            "11:30",
+            "22:00"
+          ]
+        ]
       },
       "estStayMin": 60,
       "estCostSGD": 30,
