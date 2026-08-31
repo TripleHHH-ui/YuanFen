@@ -1,8 +1,43 @@
-# Trip Graph Agent
+# YuanFen 缘分
 
 > The trip is one graph. The flight is node zero. Swipe your taste once, and the agent plans the ground, watches the calendar, catches the fare, and re-plans everything downstream when anything changes.
 
 Built for the **Alibaba Cloud × Atlas Agentic AI Hackathon** (WiT Singapore). Track: travel AI agent on Atlas flight APIs, Alibaba Cloud, and the Qoder platform.
+
+---
+
+## For judges — the live demo
+
+**▶ http://47.245.82.206/** — deployed on Alibaba Cloud ECS (Singapore). Nothing to install.
+
+Source: this repo, `main`. Deployed straight from it via `infra/deploy/bootstrap.sh`.
+
+### The 60-second path
+
+1. **Pick 5 vibes**, then **swipe the deck** — this trains the taste vector that ranks everything after it.
+2. Type the S1 phrase: *"Day trip in Singapore CBD, must eat chicken rice, then somewhere quiet"* — the agent returns a **route**, not a paragraph: real coordinates, real opening hours, real travel times between stops.
+3. **The long-weekend alert arrives unprompted (S3).** Nobody asked for it. The agent watches the SG holiday calendar against the nightly fare board and speaks up on its own — Deepavali, 7–9 Nov, with a ranked hand of destinations your swipes actually justify.
+4. Expand a card, then **swap the flight (S4)**. Day one reflows downstream, the budget delta updates, and the agent narrates the change in one line. This is the rubric's own published "level 4" example, built as the core mechanic.
+5. **Book:** verify → masked summary → explicit exact-total consent → Sandbox order / PNR / ticket.
+6. Open **receipts** for the evidence log — every Atlas call the session made.
+
+### What is real, and what is labeled
+
+The demo runs `ATLAS_MODE=fixture`: flight offers come from checked-in Atlas envelope fixtures and **every one of them carries a visible FIXTURE badge**. That is a standing rule in this repo — nothing is mocked without a label on screen. Flipping to `ATLAS_MODE=cli` points the same code at the authorized Atlas Sandbox CLI with zero application changes.
+
+Everything else is genuinely real: places and coordinates from Foursquare Open Places extracts, pairwise travel-time matrices precomputed from a routing engine, and the Singapore public-holiday calendar from a static file — never from model memory.
+
+The booking and payment path contains **no LLM output whatsoever**. It is deterministic code with human checkpoints, by design.
+
+### Notes before you click
+
+- **Best driven by one person at a time.** The demo keeps a single in-memory taste vector rather than per-visitor sessions, so simultaneous visitors share state. Reload and re-swipe if the deck looks like someone else's taste.
+- Served over **HTTP**, so browsers will say "Not secure". There is no login and nothing is collected.
+- State resets on service restart — that is expected.
+
+Prefer to run it yourself? See [Running it](#running-it-local-first-build) below.
+
+---
 
 ## The idea, in one paragraph
 
